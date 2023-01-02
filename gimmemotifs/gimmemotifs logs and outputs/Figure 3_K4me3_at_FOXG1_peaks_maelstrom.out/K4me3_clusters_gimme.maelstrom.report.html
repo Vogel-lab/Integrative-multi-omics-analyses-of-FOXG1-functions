@@ -1,0 +1,2322 @@
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans"/>
+<style  type="text/css" >
+/* line 2, ../sass/_sortable.sass */
+table[data-sortable] {
+  font-family: 'Nunito Sans';
+  font-size: 90%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 6, ../sass/_sortable.sass */
+table[data-sortable] th {
+  vertical-align: bottom;
+  font-weight: bold;
+}
+/* line 10, ../sass/_sortable.sass */
+table[data-sortable] th, table[data-sortable] td {
+  text-align: left;
+  padding: 2px;
+}
+/* line 14, ../sass/_sortable.sass */
+table[data-sortable] th:not([data-sortable="false"]) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  cursor: pointer;
+}
+/* line 26, ../sass/_sortable.sass */
+table[data-sortable] th:after {
+  content: "";
+  visibility: hidden;
+  display: inline-block;
+  vertical-align: inherit;
+  height: 0;
+  width: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  margin-right: 1px;
+  margin-left: 10px;
+  float: right;
+}
+/* line 40, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted="true"]:after {
+  visibility: visible;
+}
+/* line 43, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted-direction="descending"]:after {
+  border-top-color: inherit;
+  margin-top: 8px;
+}
+/* line 47, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted-direction="ascending"]:after {
+  border-bottom-color: inherit;
+  margin-top: 3px;
+}
+
+/* line 6, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick {
+  color: #333333;
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+/* line 11, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick thead th {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(#ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(#ffffff, #eeeeee);
+  background-image: -o-linear-gradient(#ffffff, #eeeeee);
+  background-image: linear-gradient(#ffffff, #eeeeee);
+  background-color: #f0f0f0;
+}
+/* line 16, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick tbody td {
+  border-top: 1px solid #e0e0e0;
+}
+/* line 19, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick tbody > tr:nth-child(odd) > td {
+  background-color: #f9f9f9;
+}
+/* line 22, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"] {
+  -webkit-box-shadow: inset 1px 0 #bce8f1, inset -1px 0 #bce8f1;
+  -moz-box-shadow: inset 1px 0 #bce8f1, inset -1px 0 #bce8f1;
+  box-shadow: inset 1px 0 #bce8f1, inset -1px 0 #bce8f1;
+  color: #3a87ad;
+  background: #d9edf7;
+  border-bottom-color: #bce8f1;
+}
+/* line 28, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"]:first-child {
+  -webkit-box-shadow: inset -1px 0 #bce8f1;
+  -moz-box-shadow: inset -1px 0 #bce8f1;
+  box-shadow: inset -1px 0 #bce8f1;
+}
+/* line 31, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"]:last-child {
+  -webkit-box-shadow: inset 1px 0 #bce8f1;
+  -moz-box-shadow: inset 1px 0 #bce8f1;
+  box-shadow: inset 1px 0 #bce8f1;
+}
+/* line 34, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"][data-sorted-direction="descending"]:after {
+  border-top-color: #3a87ad;
+}
+/* line 37, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"][data-sorted-direction="ascending"]:after {
+  border-bottom-color: #3a87ad;
+}
+
+
+
+    .col_heading {
+    
+      border-bottom: 1px solid #e0e0e0;
+    
+      border-bottom: 2px solid #444;
+    }
+
+
+
+
+    .circle1 {
+    
+      height: 30px;
+    
+      width: 30px;
+    
+      border-radius: 50%;
+    
+      color: #000;
+    
+      line-height: 30px;
+    
+      display: inline-block;
+    
+      text-align: center;
+    
+      vertical-align: middle;
+    }
+    .circle2 {
+    
+      height: 30px;
+    
+      width: 30px;
+    
+      border-radius: 50%;
+    
+      color: #000;
+    
+      line-height: 30px;
+    
+      display: inline-block;
+    
+      text-align: center;
+    
+      vertical-align: middle;
+    }
+    .circle3 {
+    
+      height: 30px;
+    
+      width: 30px;
+    
+      border-radius: 50%;
+    
+      color: #000;
+    
+      line-height: 30px;
+    
+      display: inline-block;
+    
+      text-align: center;
+    
+      vertical-align: middle;
+    }
+
+
+    .color1_0 {
+    
+      background-color: #ecebf4;
+    }
+    .color1_1 {
+    
+      background-color: #d1d2e7;
+    }
+    .color1_2 {
+    
+      background-color: #afaed4;
+    }
+    .color1_3 {
+    
+      background-color: #8d89c0;
+    }
+    .color1_4 {
+    
+      background-color: #705eaa;
+    }
+    .color1_5 {
+    
+      background-color: #572c92;
+    }
+    .color2_0 {
+    
+      background-color: #ecebf4;
+    }
+    .color2_1 {
+    
+      background-color: #d1d2e7;
+    }
+    .color2_2 {
+    
+      background-color: #afaed4;
+    }
+    .color2_3 {
+    
+      background-color: #8d89c0;
+    }
+    .color2_4 {
+    
+      background-color: #705eaa;
+    }
+    .color2_5 {
+    
+      background-color: #572c92;
+    }
+    .color3_0 {
+    
+      background-color: #ecebf4;
+    }
+    .color3_1 {
+    
+      background-color: #d1d2e7;
+    }
+    .color3_2 {
+    
+      background-color: #afaed4;
+    }
+    .color3_3 {
+    
+      background-color: #8d89c0;
+    }
+    .color3_4 {
+    
+      background-color: #705eaa;
+    }
+    .color3_5 {
+    
+      background-color: #572c92;
+    }
+
+
+
+
+
+#T_1f3c9_row0_col2{
+    
+        background-color:  #fcd7c2;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row0_col3{
+    
+        background-color:  #cae1ee;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row0_col4,#T_1f3c9_row7_col3{
+    
+        background-color:  #b1d5e7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row0_col5,#T_1f3c9_row0_col6,#T_1f3c9_row0_col7,#T_1f3c9_row1_col5,#T_1f3c9_row1_col6,#T_1f3c9_row1_col7,#T_1f3c9_row2_col5,#T_1f3c9_row2_col6,#T_1f3c9_row2_col7,#T_1f3c9_row3_col5,#T_1f3c9_row3_col6,#T_1f3c9_row3_col7,#T_1f3c9_row4_col5,#T_1f3c9_row4_col6,#T_1f3c9_row4_col7,#T_1f3c9_row5_col5,#T_1f3c9_row5_col6,#T_1f3c9_row5_col7,#T_1f3c9_row6_col5,#T_1f3c9_row6_col6,#T_1f3c9_row6_col7,#T_1f3c9_row7_col5,#T_1f3c9_row7_col6,#T_1f3c9_row7_col7,#T_1f3c9_row8_col5,#T_1f3c9_row8_col6,#T_1f3c9_row8_col7,#T_1f3c9_row9_col5,#T_1f3c9_row9_col6,#T_1f3c9_row9_col7,#T_1f3c9_row10_col5,#T_1f3c9_row10_col6,#T_1f3c9_row10_col7,#T_1f3c9_row11_col5,#T_1f3c9_row11_col6,#T_1f3c9_row11_col7,#T_1f3c9_row12_col5,#T_1f3c9_row12_col6,#T_1f3c9_row12_col7,#T_1f3c9_row13_col5,#T_1f3c9_row13_col6,#T_1f3c9_row13_col7,#T_1f3c9_row14_col5,#T_1f3c9_row14_col6,#T_1f3c9_row14_col7,#T_1f3c9_row15_col5,#T_1f3c9_row15_col6,#T_1f3c9_row15_col7,#T_1f3c9_row16_col5,#T_1f3c9_row16_col6,#T_1f3c9_row16_col7,#T_1f3c9_row17_col5,#T_1f3c9_row17_col6,#T_1f3c9_row17_col7,#T_1f3c9_row18_col5,#T_1f3c9_row18_col6,#T_1f3c9_row18_col7,#T_1f3c9_row19_col5,#T_1f3c9_row19_col6,#T_1f3c9_row19_col7,#T_1f3c9_row20_col5,#T_1f3c9_row20_col6,#T_1f3c9_row20_col7,#T_1f3c9_row21_col5,#T_1f3c9_row21_col6,#T_1f3c9_row21_col7,#T_1f3c9_row22_col5,#T_1f3c9_row22_col6,#T_1f3c9_row22_col7,#T_1f3c9_row23_col5,#T_1f3c9_row23_col6,#T_1f3c9_row23_col7,#T_1f3c9_row24_col5,#T_1f3c9_row24_col6,#T_1f3c9_row24_col7,#T_1f3c9_row25_col5,#T_1f3c9_row25_col6,#T_1f3c9_row25_col7,#T_1f3c9_row26_col5,#T_1f3c9_row26_col6,#T_1f3c9_row26_col7,#T_1f3c9_row27_col5,#T_1f3c9_row27_col6,#T_1f3c9_row27_col7,#T_1f3c9_row28_col5,#T_1f3c9_row28_col6,#T_1f3c9_row28_col7,#T_1f3c9_row29_col5,#T_1f3c9_row29_col6,#T_1f3c9_row29_col7,#T_1f3c9_row30_col5,#T_1f3c9_row30_col6,#T_1f3c9_row30_col7,#T_1f3c9_row31_col5,#T_1f3c9_row31_col6,#T_1f3c9_row31_col7,#T_1f3c9_row32_col5,#T_1f3c9_row32_col6,#T_1f3c9_row32_col7,#T_1f3c9_row33_col5,#T_1f3c9_row33_col6,#T_1f3c9_row33_col7,#T_1f3c9_row34_col5,#T_1f3c9_row34_col6,#T_1f3c9_row34_col7,#T_1f3c9_row35_col5,#T_1f3c9_row35_col6,#T_1f3c9_row35_col7,#T_1f3c9_row36_col5,#T_1f3c9_row36_col6,#T_1f3c9_row36_col7,#T_1f3c9_row37_col5,#T_1f3c9_row37_col6,#T_1f3c9_row37_col7,#T_1f3c9_row38_col5,#T_1f3c9_row38_col6,#T_1f3c9_row38_col7,#T_1f3c9_row39_col5,#T_1f3c9_row39_col6,#T_1f3c9_row39_col7{
+    
+        text-align: center;
+    
+        border-left:  2px solid #444;
+    
+    }#T_1f3c9_row1_col2{
+    
+        background-color:  #f2f5f6;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row1_col3,#T_1f3c9_row9_col4,#T_1f3c9_row14_col4,#T_1f3c9_row32_col3{
+    
+        background-color:  #bddbea;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row1_col4,#T_1f3c9_row3_col3,#T_1f3c9_row8_col4,#T_1f3c9_row22_col3{
+    
+        background-color:  #b6d7e8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row2_col2{
+    
+        background-color:  #a9d1e5;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row2_col3,#T_1f3c9_row6_col3{
+    
+        background-color:  #e9f0f4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row2_col4{
+    
+        background-color:  #f3f5f6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row3_col2{
+    
+        background-color:  #f7f6f6;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row3_col4{
+    
+        background-color:  #d2e6f0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row4_col2{
+    
+        background-color:  #bddbea;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row4_col3,#T_1f3c9_row17_col4{
+    
+        background-color:  #deebf2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row4_col4{
+    
+        background-color:  #dbeaf2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row5_col2{
+    
+        background-color:  #c7e0ed;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row5_col3,#T_1f3c9_row23_col3{
+    
+        background-color:  #fce2d2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row5_col4,#T_1f3c9_row16_col3,#T_1f3c9_row29_col3{
+    
+        background-color:  #facab1;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row6_col2,#T_1f3c9_row21_col2,#T_1f3c9_row36_col2{
+    
+        background-color:  #b3d6e8;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row6_col4{
+    
+        background-color:  #f9ede5;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row7_col2,#T_1f3c9_row12_col2{
+    
+        background-color:  #b6d7e8;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row7_col4{
+    
+        background-color:  #fbe3d4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row8_col2{
+    
+        background-color:  #fae8de;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row8_col3{
+    
+        background-color:  #d7e8f1;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row9_col2{
+    
+        background-color:  #e6eff4;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row9_col3{
+    
+        background-color:  #e0ecf3;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row10_col2{
+    
+        background-color:  #fbe5d8;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row10_col3{
+    
+        background-color:  #eff3f5;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row10_col4{
+    
+        background-color:  #a5cee3;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row11_col2{
+    
+        background-color:  #ecf2f5;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row11_col3,#T_1f3c9_row13_col3,#T_1f3c9_row27_col4{
+    
+        background-color:  #fac8af;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row11_col4,#T_1f3c9_row24_col3{
+    
+        background-color:  #fdd9c4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row12_col3{
+    
+        background-color:  #f5f6f7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row12_col4{
+    
+        background-color:  #fbe5d8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row13_col2,#T_1f3c9_row22_col2{
+    
+        background-color:  #f9efe9;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row13_col4{
+    
+        background-color:  #fbe4d6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row14_col2{
+    
+        background-color:  #fddbc7;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row14_col3{
+    
+        background-color:  #d1e5f0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row15_col2{
+    
+        background-color:  #f9f0eb;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row15_col3,#T_1f3c9_row39_col4{
+    
+        background-color:  #b8d8e9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row15_col4,#T_1f3c9_row20_col4{
+    
+        background-color:  #acd2e5;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row16_col2{
+    
+        background-color:  #f8f3f0;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row16_col4{
+    
+        background-color:  #fce0d0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row17_col2{
+    
+        background-color:  #e4eef4;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row17_col3{
+    
+        background-color:  #bbdaea;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row18_col2{
+    
+        background-color:  #f8f4f2;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row18_col3{
+    
+        background-color:  #aed3e6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row18_col4{
+    
+        background-color:  #d8e9f1;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row19_col2,#T_1f3c9_row37_col2{
+    
+        background-color:  #e7f0f4;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row19_col3{
+    
+        background-color:  #fae7dc;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row19_col4,#T_1f3c9_row33_col4,#T_1f3c9_row35_col4{
+    
+        background-color:  #f8bfa4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row20_col2{
+    
+        background-color:  #fce0d0;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row20_col3{
+    
+        background-color:  #f8f3f0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row21_col3,#T_1f3c9_row28_col4{
+    
+        background-color:  #edf2f5;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row21_col4{
+    
+        background-color:  #fcd7c2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row22_col4{
+    
+        background-color:  #e7f0f4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row23_col2,#T_1f3c9_row27_col2,#T_1f3c9_row30_col2{
+    
+        background-color:  #dae9f2;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row23_col4,#T_1f3c9_row31_col4,#T_1f3c9_row35_col3{
+    
+        background-color:  #f9c2a7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row24_col2{
+    
+        background-color:  #e1edf3;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row24_col4{
+    
+        background-color:  #f9c6ac;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row25_col2{
+    
+        background-color:  #f6b191;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row25_col3{
+    
+        background-color:  #f7f5f4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row25_col4{
+    
+        background-color:  #e3edf3;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row26_col2{
+    
+        background-color:  #f7b99c;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row26_col3{
+    
+        background-color:  #fcdecd;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row26_col4{
+    
+        background-color:  #f9efe9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row27_col3{
+    
+        background-color:  #fcd5bf;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row28_col2{
+    
+        background-color:  #f8bda1;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row28_col3{
+    
+        background-color:  #f6f7f7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row29_col2{
+    
+        background-color:  #d8e9f1;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row29_col4{
+    
+        background-color:  #f5a886;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row30_col3{
+    
+        background-color:  #fcd3bc;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row30_col4,#T_1f3c9_row36_col4{
+    
+        background-color:  #f9c4a9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row31_col2,#T_1f3c9_row34_col2{
+    
+        background-color:  #dbeaf2;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row31_col3,#T_1f3c9_row33_col3,#T_1f3c9_row34_col3{
+    
+        background-color:  #fddbc7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row32_col2{
+    
+        background-color:  #faeae1;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row32_col4{
+    
+        background-color:  #cfe4ef;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row33_col2{
+    
+        background-color:  #e9f0f4;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row34_col4,#T_1f3c9_row37_col3{
+    
+        background-color:  #f6b191;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row35_col2{
+    
+        background-color:  #f5f6f7;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row36_col3{
+    
+        background-color:  #faeae1;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row37_col4{
+    
+        background-color:  #f19e7d;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row38_col2{
+    
+        background-color:  #a0cce2;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row38_col3{
+    
+        background-color:  #fddcc9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row38_col4{
+    
+        background-color:  #ea8e70;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row39_col2{
+    
+        background-color:  #fdd9c4;
+    
+        color:  #000000;
+    
+        border-left:  2px solid #444;
+    
+        text-align: center;
+    
+    }#T_1f3c9_row39_col3{
+    
+        background-color:  #c7e0ed;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }
+</style>
+<table id="T_1f3c9_" class="sortable-theme-slick" data-sortable>
+<thead>
+    <tr>
+        <th class="blank level0" ></th>
+        <th class="col_heading level0 col0" ><div title='"Direct" means that there is direct evidence of binding or that this assignment is based on curated information. "Predicted" means that the motif comes from a non-curated ChIP-seq experiment or that the factor was computationally predicted to bind this motif based on its DNA binding domain.'>factors<br/>(<span style='color:black'>direct</span> or <span style='color:#666666'>predicted</span>)</div></th>
+        <th class="col_heading level0 col1" >logo</th>
+        <th class="col_heading level0 col2" >z-score<br/>cluster_1</th>
+        <th class="col_heading level0 col3" >z-score<br/>cluster_2</th>
+        <th class="col_heading level0 col4" >z-score<br/>cluster_3</th>
+        <th class="col_heading level0 col5" >cluster_1<br/>%<br/>with motif</th>
+        <th class="col_heading level0 col6" >cluster_2<br/>%<br/>with motif</th>
+        <th class="col_heading level0 col7" >cluster_3<br/>%<br/>with motif</th>
+    </tr>
+</thead>
+<tbody>
+    
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row0" class="row_heading level0 row0" >GM.5.0.GATA.0029</th>
+        
+        
+        <td id="T_1f3c9_row0_col0" class="data row0 col0" ><div title="direct: GATA1&#10;predicted: GATA2"><span style='color:#666666'>GATA2</span>,<span style='color:black'>GATA1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row0_col1" class="data row0 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_GATA_0029.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row0_col2" class="data row0 col2" >2.48</td>
+        
+        
+        <td id="T_1f3c9_row0_col3" class="data row0 col3" >-2.57</td>
+        
+        
+        <td id="T_1f3c9_row0_col4" class="data row0 col4" >-3.48</td>
+        
+        
+        <td id="T_1f3c9_row0_col5" class="data row0 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row0_col6" class="data row0 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row0_col7" class="data row0 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row1" class="row_heading level0 row1" >GM.5.0.Mixed.0060</th>
+        
+        
+        <td id="T_1f3c9_row1_col0" class="data row1 col0" ><div title="predicted: FOXA1,STAT3"><span style='color:#666666'>STAT3</span>,<span style='color:#666666'>FOXA1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row1_col1" class="data row1 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Mixed_0060.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row1_col2" class="data row1 col2" >-0.35</td>
+        
+        
+        <td id="T_1f3c9_row1_col3" class="data row1 col3" >-2.98</td>
+        
+        
+        <td id="T_1f3c9_row1_col4" class="data row1 col4" >-3.26</td>
+        
+        
+        <td id="T_1f3c9_row1_col5" class="data row1 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row1_col6" class="data row1 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row1_col7" class="data row1 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row2" class="row_heading level0 row2" >GM.5.0.Nuclear_receptor.0065</th>
+        
+        
+        <td id="T_1f3c9_row2_col0" class="data row2 col0" ><div title="direct: NR4A2&#10;predicted: NR4A1,NR4A3"><span style='color:black'>NR4A2</span>,<span style='color:#666666'>NR4A3</span>,<span style='color:#666666'>NR4A1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row2_col1" class="data row2 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Nuclear_receptor_0065.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row2_col2" class="data row2 col2" >-3.77</td>
+        
+        
+        <td id="T_1f3c9_row2_col3" class="data row2 col3" >-0.90</td>
+        
+        
+        <td id="T_1f3c9_row2_col4" class="data row2 col4" >-0.20</td>
+        
+        
+        <td id="T_1f3c9_row2_col5" class="data row2 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row2_col6" class="data row2 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row2_col7" class="data row2 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row3" class="row_heading level0 row3" >GM.5.0.Runt.0006</th>
+        
+        
+        <td id="T_1f3c9_row3_col0" class="data row3 col0" ><div title="direct: RUNX2,RUNX3&#10;predicted: CBFB,ENSG00000250096,MEF2A,MEF2C,RUNX,RUNX1"><span style='color:black'>RUNX2</span>,<span style='color:black'>RUNX3</span>,<span style='color:#666666'>RUNX1</span>,<span style='color:#666666'>ENSG00000250096</span>,<span style='color:#666666'>CBFB</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row3_col1" class="data row3 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Runt_0006.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row3_col2" class="data row3 col2" >0.05</td>
+        
+        
+        <td id="T_1f3c9_row3_col3" class="data row3 col3" >-3.28</td>
+        
+        
+        <td id="T_1f3c9_row3_col4" class="data row3 col4" >-2.24</td>
+        
+        
+        <td id="T_1f3c9_row3_col5" class="data row3 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row3_col6" class="data row3 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row3_col7" class="data row3 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row4" class="row_heading level0 row4" >GM.5.0.Unknown.0072</th>
+        
+        
+        <td id="T_1f3c9_row4_col0" class="data row4 col0" ><div title="predicted: TRIM28"><span style='color:#666666'>TRIM28</span></div></td>
+        
+        
+        <td id="T_1f3c9_row4_col1" class="data row4 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0072.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row4_col2" class="data row4 col2" >-3.03</td>
+        
+        
+        <td id="T_1f3c9_row4_col3" class="data row4 col3" >-1.52</td>
+        
+        
+        <td id="T_1f3c9_row4_col4" class="data row4 col4" >-1.69</td>
+        
+        
+        <td id="T_1f3c9_row4_col5" class="data row4 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row4_col6" class="data row4 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row4_col7" class="data row4 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row5" class="row_heading level0 row5" >GM.5.0.bZIP.0075</th>
+        
+        
+        <td id="T_1f3c9_row5_col0" class="data row5 col0" ><div title="predicted: FOS"><span style='color:#666666'>FOS</span></div></td>
+        
+        
+        <td id="T_1f3c9_row5_col1" class="data row5 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bZIP_0075.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row5_col2" class="data row5 col2" >-2.62</td>
+        
+        
+        <td id="T_1f3c9_row5_col3" class="data row5 col3" >1.74</td>
+        
+        
+        <td id="T_1f3c9_row5_col4" class="data row5 col4" >3.01</td>
+        
+        
+        <td id="T_1f3c9_row5_col5" class="data row5 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row5_col6" class="data row5 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row5_col7" class="data row5 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row6" class="row_heading level0 row6" >GM.5.0.bZIP.0069</th>
+        
+        
+        <td id="T_1f3c9_row6_col0" class="data row6 col0" ><div title="direct: CEBP,CEBPA"><span style='color:black'>CEBPA</span>,<span style='color:black'>CEBP</span></div></td>
+        
+        
+        <td id="T_1f3c9_row6_col1" class="data row6 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bZIP_0069.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row6_col2" class="data row6 col2" >-3.35</td>
+        
+        
+        <td id="T_1f3c9_row6_col3" class="data row6 col3" >-0.86</td>
+        
+        
+        <td id="T_1f3c9_row6_col4" class="data row6 col4" >0.87</td>
+        
+        
+        <td id="T_1f3c9_row6_col5" class="data row6 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row6_col6" class="data row6 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row6_col7" class="data row6 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row7" class="row_heading level0 row7" >GM.5.0.C2H2_ZF.0106</th>
+        
+        
+        <td id="T_1f3c9_row7_col0" class="data row7 col0" ><div title="direct: OSR1,OSR2"><span style='color:black'>OSR2</span>,<span style='color:black'>OSR1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row7_col1" class="data row7 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_0106.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row7_col2" class="data row7 col2" >-3.25</td>
+        
+        
+        <td id="T_1f3c9_row7_col3" class="data row7 col3" >-3.45</td>
+        
+        
+        <td id="T_1f3c9_row7_col4" class="data row7 col4" >1.65</td>
+        
+        
+        <td id="T_1f3c9_row7_col5" class="data row7 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row7_col6" class="data row7 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row7_col7" class="data row7 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row8" class="row_heading level0 row8" >GM.5.0.Homeodomain.0184</th>
+        
+        
+        <td id="T_1f3c9_row8_col0" class="data row8 col0" ><div title="direct: HOXA7&#10;predicted: AC012531.1,HOXA6,HOXB4,HOXC5,HOXD3,HOXD4"><span style='color:black'>HOXA7</span>,<span style='color:#666666'>HOXB4</span>,<span style='color:#666666'>HOXD3</span>,<span style='color:#666666'>HOXD4</span>,<span style='color:#666666'>AC012531.1</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row8_col1" class="data row8 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Homeodomain_0184.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row8_col2" class="data row8 col2" >1.24</td>
+        
+        
+        <td id="T_1f3c9_row8_col3" class="data row8 col3" >-1.95</td>
+        
+        
+        <td id="T_1f3c9_row8_col4" class="data row8 col4" >-3.31</td>
+        
+        
+        <td id="T_1f3c9_row8_col5" class="data row8 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row8_col6" class="data row8 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row8_col7" class="data row8 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row9" class="row_heading level0 row9" >GM.5.0.C2H2_ZF.0075</th>
+        
+        
+        <td id="T_1f3c9_row9_col0" class="data row9 col0" ><div title="direct: ZNF354C&#10;predicted: GLI1,GLI2,ZBTB7A,ZBTB7B,ZBTB7C,ZFP354C"><span style='color:#666666'>ZBTB7C</span>,<span style='color:#666666'>GLI2</span>,<span style='color:#666666'>ZBTB7A</span>,<span style='color:#666666'>ZBTB7B</span>,<span style='color:black'>ZNF354C</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row9_col1" class="data row9 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_0075.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row9_col2" class="data row9 col2" >-1.04</td>
+        
+        
+        <td id="T_1f3c9_row9_col3" class="data row9 col3" >-1.35</td>
+        
+        
+        <td id="T_1f3c9_row9_col4" class="data row9 col4" >-3.01</td>
+        
+        
+        <td id="T_1f3c9_row9_col5" class="data row9 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row9_col6" class="data row9 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row9_col7" class="data row9 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row10" class="row_heading level0 row10" >GM.5.0.C2H2_ZF_Homeodomain.0003</th>
+        
+        
+        <td id="T_1f3c9_row10_col0" class="data row10 col0" ><div title="direct: ZEB1&#10;predicted: PAX2"><span style='color:black'>ZEB1</span>,<span style='color:#666666'>PAX2</span></div></td>
+        
+        
+        <td id="T_1f3c9_row10_col1" class="data row10 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_Homeodomain_0003.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row10_col2" class="data row10 col2" >1.47</td>
+        
+        
+        <td id="T_1f3c9_row10_col3" class="data row10 col3" >-0.52</td>
+        
+        
+        <td id="T_1f3c9_row10_col4" class="data row10 col4" >-3.92</td>
+        
+        
+        <td id="T_1f3c9_row10_col5" class="data row10 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row10_col6" class="data row10 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row10_col7" class="data row10 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row11" class="row_heading level0 row11" >GM.5.0.C2H2_ZF.0056</th>
+        
+        
+        <td id="T_1f3c9_row11_col0" class="data row11 col0" ><div title="direct: HIC1,HIC2&#10;predicted: THAP1"><span style='color:black'>HIC1</span>,<span style='color:black'>HIC2</span>,<span style='color:#666666'>THAP1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row11_col1" class="data row11 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_0056.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row11_col2" class="data row11 col2" >-0.68</td>
+        
+        
+        <td id="T_1f3c9_row11_col3" class="data row11 col3" >3.13</td>
+        
+        
+        <td id="T_1f3c9_row11_col4" class="data row11 col4" >2.38</td>
+        
+        
+        <td id="T_1f3c9_row11_col5" class="data row11 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row11_col6" class="data row11 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row11_col7" class="data row11 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row12" class="row_heading level0 row12" >GM.5.0.Unknown.0001</th>
+        
+        
+        <td id="T_1f3c9_row12_col0" class="data row12 col0" ><div title="predicted: HES1,HES2,HES4,RAD21,SMC3"><span style='color:#666666'>HES1</span>,<span style='color:#666666'>HES4</span>,<span style='color:#666666'>RAD21</span>,<span style='color:#666666'>SMC3</span>,<span style='color:#666666'>HES2</span></div></td>
+        
+        
+        <td id="T_1f3c9_row12_col1" class="data row12 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0001.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row12_col2" class="data row12 col2" >-3.27</td>
+        
+        
+        <td id="T_1f3c9_row12_col3" class="data row12 col3" >-0.14</td>
+        
+        
+        <td id="T_1f3c9_row12_col4" class="data row12 col4" >1.51</td>
+        
+        
+        <td id="T_1f3c9_row12_col5" class="data row12 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row12_col6" class="data row12 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row12_col7" class="data row12 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row13" class="row_heading level0 row13" >GM.5.0.p53.0002</th>
+        
+        
+        <td id="T_1f3c9_row13_col0" class="data row13 col0" ><div title="direct: TRP53&#10;predicted: TP53,TP63,TP73,TRP63"><span style='color:#666666'>TP53</span>,<span style='color:#666666'>TP73</span>,<span style='color:black'>TRP53</span>,<span style='color:#666666'>TRP63</span>,<span style='color:#666666'>TP63</span></div></td>
+        
+        
+        <td id="T_1f3c9_row13_col1" class="data row13 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_p53_0002.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row13_col2" class="data row13 col2" >0.69</td>
+        
+        
+        <td id="T_1f3c9_row13_col3" class="data row13 col3" >3.14</td>
+        
+        
+        <td id="T_1f3c9_row13_col4" class="data row13 col4" >1.59</td>
+        
+        
+        <td id="T_1f3c9_row13_col5" class="data row13 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row13_col6" class="data row13 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row13_col7" class="data row13 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row14" class="row_heading level0 row14" >GM.5.0.Ets.0046</th>
+        
+        
+        <td id="T_1f3c9_row14_col0" class="data row14 col0" ><div title="direct: SPDEF"><span style='color:black'>SPDEF</span></div></td>
+        
+        
+        <td id="T_1f3c9_row14_col1" class="data row14 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Ets_0046.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row14_col2" class="data row14 col2" >2.29</td>
+        
+        
+        <td id="T_1f3c9_row14_col3" class="data row14 col3" >-2.29</td>
+        
+        
+        <td id="T_1f3c9_row14_col4" class="data row14 col4" >-3.02</td>
+        
+        
+        <td id="T_1f3c9_row14_col5" class="data row14 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row14_col6" class="data row14 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row14_col7" class="data row14 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row15" class="row_heading level0 row15" >GM.5.0.C2H2_ZF.0248</th>
+        
+        
+        <td id="T_1f3c9_row15_col0" class="data row15 col0" ><div title="direct: ZNF384&#10;predicted: BCL6B,PRDM6,ZFP384"><span style='color:black'>ZNF384</span>,<span style='color:#666666'>PRDM6</span>,<span style='color:#666666'>BCL6B</span>,<span style='color:#666666'>ZFP384</span></div></td>
+        
+        
+        <td id="T_1f3c9_row15_col1" class="data row15 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_0248.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row15_col2" class="data row15 col2" >0.58</td>
+        
+        
+        <td id="T_1f3c9_row15_col3" class="data row15 col3" >-3.14</td>
+        
+        
+        <td id="T_1f3c9_row15_col4" class="data row15 col4" >-3.61</td>
+        
+        
+        <td id="T_1f3c9_row15_col5" class="data row15 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row15_col6" class="data row15 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row15_col7" class="data row15 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row16" class="row_heading level0 row16" >GM.5.0.Rel.0024</th>
+        
+        
+        <td id="T_1f3c9_row16_col0" class="data row16 col0" ><div title="predicted: NFKB1"><span style='color:#666666'>NFKB1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row16_col1" class="data row16 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Rel_0024.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row16_col2" class="data row16 col2" >0.34</td>
+        
+        
+        <td id="T_1f3c9_row16_col3" class="data row16 col3" >3.04</td>
+        
+        
+        <td id="T_1f3c9_row16_col4" class="data row16 col4" >1.85</td>
+        
+        
+        <td id="T_1f3c9_row16_col5" class="data row16 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row16_col6" class="data row16 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row16_col7" class="data row16 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row17" class="row_heading level0 row17" >GM.5.0.C2H2_ZF.0134</th>
+        
+        
+        <td id="T_1f3c9_row17_col0" class="data row17 col0" ><div title="direct: ZNF85"><span style='color:black'>ZNF85</span></div></td>
+        
+        
+        <td id="T_1f3c9_row17_col1" class="data row17 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_0134.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row17_col2" class="data row17 col2" >-1.09</td>
+        
+        
+        <td id="T_1f3c9_row17_col3" class="data row17 col3" >-3.10</td>
+        
+        
+        <td id="T_1f3c9_row17_col4" class="data row17 col4" >-1.52</td>
+        
+        
+        <td id="T_1f3c9_row17_col5" class="data row17 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row17_col6" class="data row17 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row17_col7" class="data row17 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row18" class="row_heading level0 row18" >GM.5.0.bHLH.0024</th>
+        
+        
+        <td id="T_1f3c9_row18_col0" class="data row18 col0" ><div title="direct: AHR,ARNT&#10;predicted: AHRR"><span style='color:black'>AHR</span>,<span style='color:black'>ARNT</span>,<span style='color:#666666'>AHRR</span></div></td>
+        
+        
+        <td id="T_1f3c9_row18_col1" class="data row18 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bHLH_0024.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row18_col2" class="data row18 col2" >0.27</td>
+        
+        
+        <td id="T_1f3c9_row18_col3" class="data row18 col3" >-3.54</td>
+        
+        
+        <td id="T_1f3c9_row18_col4" class="data row18 col4" >-1.80</td>
+        
+        
+        <td id="T_1f3c9_row18_col5" class="data row18 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row18_col6" class="data row18 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row18_col7" class="data row18 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row19" class="row_heading level0 row19" >GM.5.0.Unknown.0093</th>
+        
+        
+        <td id="T_1f3c9_row19_col0" class="data row19 col0" ><div title="predicted: BCL3,REST,SIN3A"><span style='color:#666666'>SIN3A</span>,<span style='color:#666666'>BCL3</span>,<span style='color:#666666'>REST</span></div></td>
+        
+        
+        <td id="T_1f3c9_row19_col1" class="data row19 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0093.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row19_col2" class="data row19 col2" >-0.98</td>
+        
+        
+        <td id="T_1f3c9_row19_col3" class="data row19 col3" >1.29</td>
+        
+        
+        <td id="T_1f3c9_row19_col4" class="data row19 col4" >3.42</td>
+        
+        
+        <td id="T_1f3c9_row19_col5" class="data row19 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row19_col6" class="data row19 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row19_col7" class="data row19 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row20" class="row_heading level0 row20" >GM.5.0.Unknown.0176</th>
+        
+        
+        <td id="T_1f3c9_row20_col0" class="data row20 col0" ><div title="predicted: MBD2,MECP2"><span style='color:#666666'>MBD2</span>,<span style='color:#666666'>MECP2</span></div></td>
+        
+        
+        <td id="T_1f3c9_row20_col1" class="data row20 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0176.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row20_col2" class="data row20 col2" >1.86</td>
+        
+        
+        <td id="T_1f3c9_row20_col3" class="data row20 col3" >0.29</td>
+        
+        
+        <td id="T_1f3c9_row20_col4" class="data row20 col4" >-3.67</td>
+        
+        
+        <td id="T_1f3c9_row20_col5" class="data row20 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row20_col6" class="data row20 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row20_col7" class="data row20 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row21" class="row_heading level0 row21" >GM.5.0.Unknown.0121</th>
+        
+        
+        <td id="T_1f3c9_row21_col0" class="data row21 col0" ><div title=""></div></td>
+        
+        
+        <td id="T_1f3c9_row21_col1" class="data row21 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0121.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row21_col2" class="data row21 col2" >-3.34</td>
+        
+        
+        <td id="T_1f3c9_row21_col3" class="data row21 col3" >-0.62</td>
+        
+        
+        <td id="T_1f3c9_row21_col4" class="data row21 col4" >2.49</td>
+        
+        
+        <td id="T_1f3c9_row21_col5" class="data row21 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row21_col6" class="data row21 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row21_col7" class="data row21 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row22" class="row_heading level0 row22" >GM.5.0.C2H2_ZF.0303</th>
+        
+        
+        <td id="T_1f3c9_row22_col0" class="data row22 col0" ><div title="predicted: SP3,SP5,SP8,SP9"><span style='color:#666666'>SP5</span>,<span style='color:#666666'>SP9</span>,<span style='color:#666666'>SP3</span>,<span style='color:#666666'>SP8</span></div></td>
+        
+        
+        <td id="T_1f3c9_row22_col1" class="data row22 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_C2H2_ZF_0303.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row22_col2" class="data row22 col2" >0.65</td>
+        
+        
+        <td id="T_1f3c9_row22_col3" class="data row22 col3" >-3.29</td>
+        
+        
+        <td id="T_1f3c9_row22_col4" class="data row22 col4" >-0.97</td>
+        
+        
+        <td id="T_1f3c9_row22_col5" class="data row22 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row22_col6" class="data row22 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row22_col7" class="data row22 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row23" class="row_heading level0 row23" >GM.5.0.MADS_box.0004</th>
+        
+        
+        <td id="T_1f3c9_row23_col0" class="data row23 col0" ><div title="predicted: SRF"><span style='color:#666666'>SRF</span></div></td>
+        
+        
+        <td id="T_1f3c9_row23_col1" class="data row23 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_MADS_box_0004.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row23_col2" class="data row23 col2" >-1.72</td>
+        
+        
+        <td id="T_1f3c9_row23_col3" class="data row23 col3" >1.72</td>
+        
+        
+        <td id="T_1f3c9_row23_col4" class="data row23 col4" >3.33</td>
+        
+        
+        <td id="T_1f3c9_row23_col5" class="data row23 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row23_col6" class="data row23 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row23_col7" class="data row23 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row24" class="row_heading level0 row24" >GM.5.0.Unknown.0208</th>
+        
+        
+        <td id="T_1f3c9_row24_col0" class="data row24 col0" ><div title="direct: MAFK&#10;predicted: MAF,MAFA,MAFB,MAFF,MAFG,NRL"><span style='color:black'>MAFK</span>,<span style='color:#666666'>MAFF</span>,<span style='color:#666666'>MAFA</span>,<span style='color:#666666'>MAFG</span>,<span style='color:#666666'>MAF</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row24_col1" class="data row24 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0208.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row24_col2" class="data row24 col2" >-1.28</td>
+        
+        
+        <td id="T_1f3c9_row24_col3" class="data row24 col3" >2.39</td>
+        
+        
+        <td id="T_1f3c9_row24_col4" class="data row24 col4" >3.18</td>
+        
+        
+        <td id="T_1f3c9_row24_col5" class="data row24 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row24_col6" class="data row24 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row24_col7" class="data row24 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row25" class="row_heading level0 row25" >GM.5.0.bHLH.0094</th>
+        
+        
+        <td id="T_1f3c9_row25_col0" class="data row25 col0" ><div title="predicted: HES1,HES4"><span style='color:#666666'>HES1</span>,<span style='color:#666666'>HES4</span></div></td>
+        
+        
+        <td id="T_1f3c9_row25_col1" class="data row25 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bHLH_0094.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row25_col2" class="data row25 col2" >4.12</td>
+        
+        
+        <td id="T_1f3c9_row25_col3" class="data row25 col3" >0.14</td>
+        
+        
+        <td id="T_1f3c9_row25_col4" class="data row25 col4" >-1.19</td>
+        
+        
+        <td id="T_1f3c9_row25_col5" class="data row25 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row25_col6" class="data row25 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row25_col7" class="data row25 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row26" class="row_heading level0 row26" >GM.5.0.bZIP.0073</th>
+        
+        
+        <td id="T_1f3c9_row26_col0" class="data row26 col0" ><div title="direct: CREBZF&#10;predicted: ENSG00000250542"><span style='color:black'>CREBZF</span>,<span style='color:#666666'>ENSG00000250542</span></div></td>
+        
+        
+        <td id="T_1f3c9_row26_col1" class="data row26 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bZIP_0073.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row26_col2" class="data row26 col2" >3.70</td>
+        
+        
+        <td id="T_1f3c9_row26_col3" class="data row26 col3" >2.02</td>
+        
+        
+        <td id="T_1f3c9_row26_col4" class="data row26 col4" >0.68</td>
+        
+        
+        <td id="T_1f3c9_row26_col5" class="data row26 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row26_col6" class="data row26 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row26_col7" class="data row26 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row27" class="row_heading level0 row27" >GM.5.0.Unknown.0004</th>
+        
+        
+        <td id="T_1f3c9_row27_col0" class="data row27 col0" ><div title="direct: NF1&#10;predicted: FOXA1,FOXA2,NFIA,NFIB,NFIC,NFIX,NR2E1,TLX1,TLX3"><span style='color:#666666'>NFIA</span>,<span style='color:#666666'>NFIC</span>,<span style='color:#666666'>NFIB</span>,<span style='color:#666666'>TLX1</span>,<span style='color:black'>NF1</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row27_col1" class="data row27 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0004.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row27_col2" class="data row27 col2" >-1.79</td>
+        
+        
+        <td id="T_1f3c9_row27_col3" class="data row27 col3" >2.53</td>
+        
+        
+        <td id="T_1f3c9_row27_col4" class="data row27 col4" >3.06</td>
+        
+        
+        <td id="T_1f3c9_row27_col5" class="data row27 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row27_col6" class="data row27 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row27_col7" class="data row27 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row28" class="row_heading level0 row28" >GM.5.0.bZIP.0080</th>
+        
+        
+        <td id="T_1f3c9_row28_col0" class="data row28 col0" ><div title="predicted: ATF3,CREB1"><span style='color:#666666'>ATF3</span>,<span style='color:#666666'>CREB1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row28_col1" class="data row28 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bZIP_0080.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row28_col2" class="data row28 col2" >3.55</td>
+        
+        
+        <td id="T_1f3c9_row28_col3" class="data row28 col3" >-0.04</td>
+        
+        
+        <td id="T_1f3c9_row28_col4" class="data row28 col4" >-0.57</td>
+        
+        
+        <td id="T_1f3c9_row28_col5" class="data row28 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row28_col6" class="data row28 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row28_col7" class="data row28 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row29" class="row_heading level0 row29" >GM.5.0.GATA.0031</th>
+        
+        
+        <td id="T_1f3c9_row29_col0" class="data row29 col0" ><div title="predicted: GATA1,GATA2"><span style='color:#666666'>GATA2</span>,<span style='color:#666666'>GATA1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row29_col1" class="data row29 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_GATA_0031.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row29_col2" class="data row29 col2" >-1.85</td>
+        
+        
+        <td id="T_1f3c9_row29_col3" class="data row29 col3" >3.00</td>
+        
+        
+        <td id="T_1f3c9_row29_col4" class="data row29 col4" >4.40</td>
+        
+        
+        <td id="T_1f3c9_row29_col5" class="data row29 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row29_col6" class="data row29 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row29_col7" class="data row29 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row30" class="row_heading level0 row30" >GM.5.0.Unknown.0110</th>
+        
+        
+        <td id="T_1f3c9_row30_col0" class="data row30 col0" ><div title="predicted: FERD3L,PTF1A"><span style='color:#666666'>PTF1A</span>,<span style='color:#666666'>FERD3L</span></div></td>
+        
+        
+        <td id="T_1f3c9_row30_col1" class="data row30 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0110.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row30_col2" class="data row30 col2" >-1.72</td>
+        
+        
+        <td id="T_1f3c9_row30_col3" class="data row30 col3" >2.68</td>
+        
+        
+        <td id="T_1f3c9_row30_col4" class="data row30 col4" >3.25</td>
+        
+        
+        <td id="T_1f3c9_row30_col5" class="data row30 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row30_col6" class="data row30 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row30_col7" class="data row30 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row31" class="row_heading level0 row31" >GM.5.0.Unknown.0080</th>
+        
+        
+        <td id="T_1f3c9_row31_col0" class="data row31 col0" ><div title="predicted: MYF,MYF6,OSR2"><span style='color:#666666'>OSR2</span>,<span style='color:#666666'>MYF6</span>,<span style='color:#666666'>MYF</span></div></td>
+        
+        
+        <td id="T_1f3c9_row31_col1" class="data row31 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Unknown_0080.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row31_col2" class="data row31 col2" >-1.63</td>
+        
+        
+        <td id="T_1f3c9_row31_col3" class="data row31 col3" >2.33</td>
+        
+        
+        <td id="T_1f3c9_row31_col4" class="data row31 col4" >3.41</td>
+        
+        
+        <td id="T_1f3c9_row31_col5" class="data row31 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row31_col6" class="data row31 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row31_col7" class="data row31 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row32" class="row_heading level0 row32" >GM.5.0.SMAD.0012</th>
+        
+        
+        <td id="T_1f3c9_row32_col0" class="data row32 col0" ><div title="predicted: SMAD1"><span style='color:#666666'>SMAD1</span></div></td>
+        
+        
+        <td id="T_1f3c9_row32_col1" class="data row32 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_SMAD_0012.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row32_col2" class="data row32 col2" >1.02</td>
+        
+        
+        <td id="T_1f3c9_row32_col3" class="data row32 col3" >-3.04</td>
+        
+        
+        <td id="T_1f3c9_row32_col4" class="data row32 col4" >-2.35</td>
+        
+        
+        <td id="T_1f3c9_row32_col5" class="data row32 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row32_col6" class="data row32 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row32_col7" class="data row32 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row33" class="row_heading level0 row33" >GM.5.0.Homeodomain.0056</th>
+        
+        
+        <td id="T_1f3c9_row33_col0" class="data row33 col0" ><div title="direct: MEIS1,MEIS2&#10;predicted: ENSG00000234254,MEIS3,PKNOX1,PKNOX2,SNAI1,SNAI3,TGIF1,TGIF2,TGIF2LX,TGIF2LY"><span style='color:black'>MEIS2</span>,<span style='color:#666666'>TGIF1</span>,<span style='color:black'>MEIS1</span>,<span style='color:#666666'>MEIS3</span>,<span style='color:#666666'>PKNOX2</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row33_col1" class="data row33 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Homeodomain_0056.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row33_col2" class="data row33 col2" >-0.82</td>
+        
+        
+        <td id="T_1f3c9_row33_col3" class="data row33 col3" >2.31</td>
+        
+        
+        <td id="T_1f3c9_row33_col4" class="data row33 col4" >3.45</td>
+        
+        
+        <td id="T_1f3c9_row33_col5" class="data row33 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row33_col6" class="data row33 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row33_col7" class="data row33 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row34" class="row_heading level0 row34" >GM.5.0.bHLH.0032</th>
+        
+        
+        <td id="T_1f3c9_row34_col0" class="data row34 col0" ><div title="direct: MYF6&#10;predicted: ENSG00000187728,FERD3L,MSC,MYF5,MYOD1,PTF1A,TCF15,TCF21,TCF23"><span style='color:black'>MYF6</span>,<span style='color:#666666'>TCF21</span>,<span style='color:#666666'>MYF5</span>,<span style='color:#666666'>FERD3L</span>,<span style='color:#666666'>MSC</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row34_col1" class="data row34 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bHLH_0032.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row34_col2" class="data row34 col2" >-1.70</td>
+        
+        
+        <td id="T_1f3c9_row34_col3" class="data row34 col3" >2.30</td>
+        
+        
+        <td id="T_1f3c9_row34_col4" class="data row34 col4" >4.11</td>
+        
+        
+        <td id="T_1f3c9_row34_col5" class="data row34 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row34_col6" class="data row34 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row34_col7" class="data row34 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row35" class="row_heading level0 row35" >GM.5.0.bZIP.0003</th>
+        
+        
+        <td id="T_1f3c9_row35_col0" class="data row35 col0" ><div title="direct: BACH1,BACH2,MAFK&#10;predicted: MAF,MAFF,MAFG,NFE2,NFE2L1,NFE2L2,NRF2"><span style='color:#666666'>NFE2</span>,<span style='color:#666666'>NFE2L2</span>,<span style='color:black'>MAFK</span>,<span style='color:black'>BACH1</span>,<span style='color:black'>BACH2</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row35_col1" class="data row35 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bZIP_0003.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row35_col2" class="data row35 col2" >-0.14</td>
+        
+        
+        <td id="T_1f3c9_row35_col3" class="data row35 col3" >3.37</td>
+        
+        
+        <td id="T_1f3c9_row35_col4" class="data row35 col4" >3.49</td>
+        
+        
+        <td id="T_1f3c9_row35_col5" class="data row35 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row35_col6" class="data row35 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row35_col7" class="data row35 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row36" class="row_heading level0 row36" >GM.5.0.bZIP.0013</th>
+        
+        
+        <td id="T_1f3c9_row36_col0" class="data row36 col0" ><div title="direct: ATF3,FOS,FOSB,FOSL1,FOSL2,FRA2,JDP2,JUN,JUNB,JUND,NFE2,SMARCC1&#10;predicted: AP1,BACH1,BACH2,BATF,BATF3,BCL11A,CEBPB,EP300,ETS1,FRA1,GATA2,HMGN3,IRF1,IRF4,MAX,MEF2A,MEF2C,NR3C1,PRDM1,RXRA,SMARCB1,SMARCC2,STAT3,TAL1,TCF12,TCF7L2,TFAP2A,TRIM28"><span style='color:black'>FOS</span>,<span style='color:black'>JUN</span>,<span style='color:black'>JUND</span>,<span style='color:black'>FOSB</span>,<span style='color:black'>FOSL1</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row36_col1" class="data row36 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bZIP_0013.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row36_col2" class="data row36 col2" >-3.35</td>
+        
+        
+        <td id="T_1f3c9_row36_col3" class="data row36 col3" >1.01</td>
+        
+        
+        <td id="T_1f3c9_row36_col4" class="data row36 col4" >3.25</td>
+        
+        
+        <td id="T_1f3c9_row36_col5" class="data row36 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row36_col6" class="data row36 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row36_col7" class="data row36 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row37" class="row_heading level0 row37" >GM.5.0.bHLH.0137</th>
+        
+        
+        <td id="T_1f3c9_row37_col0" class="data row37 col0" ><div title="direct: TAL1&#10;predicted: ASCL1,ASCL2,ATOH1,ATOH7,ATOH8,E2A,FERD3L,FIGLA,HEB,LMO2,LYL1,MYF5,MYF6,MYOD,MYOD1,MYOG,NEUROD1,NEUROD2,NEUROD4,NEUROD6,NEUROG1,NEUROG2,NEUROG3,NHLH1,NHLH2,PTF1A,SCL,TCF12,TCF3,TCF4,TCFAP4,TFAP4,TFCP2,ZEB1"><span style='color:#666666'>NHLH1</span>,<span style='color:#666666'>LYL1</span>,<span style='color:#666666'>TCF3</span>,<span style='color:#666666'>NHLH2</span>,<span style='color:black'>TAL1</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row37_col1" class="data row37 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bHLH_0137.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row37_col2" class="data row37 col2" >-0.90</td>
+        
+        
+        <td id="T_1f3c9_row37_col3" class="data row37 col3" >4.12</td>
+        
+        
+        <td id="T_1f3c9_row37_col4" class="data row37 col4" >4.76</td>
+        
+        
+        <td id="T_1f3c9_row37_col5" class="data row37 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row37_col6" class="data row37 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row37_col7" class="data row37 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row38" class="row_heading level0 row38" >GM.5.0.bHLH.0006</th>
+        
+        
+        <td id="T_1f3c9_row38_col0" class="data row38 col0" ><div title="direct: ATOH1,BHLHA15,NEUROD1,NEUROD2,NEUROG2,OLIG2,PTF1A,TCF21&#10;predicted: ATOH7,BHLHE22,BHLHE23,ENSG00000187728,GATA1,GATA2,HAND1,HAND2,LYL1,MSC,MSGN1,NEUROD4,NEUROD6,NEUROG1,NEUROG3,NHLH1,NHLH2,OLIG1,OLIG3,SCX,SCXA,SCXB,TAL1,TAL2,TCF15,TCF23,TCF3,TWIST1,TWIST2,ZBTB18,ZBTB42,ZFP238,ZNF238"><span style='color:black'>NEUROG2</span>,<span style='color:black'>NEUROD2</span>,<span style='color:black'>NEUROD1</span>,<span style='color:black'>OLIG2</span>,<span style='color:black'>ATOH1</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row38_col1" class="data row38 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_bHLH_0006.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row38_col2" class="data row38 col2" >-4.13</td>
+        
+        
+        <td id="T_1f3c9_row38_col3" class="data row38 col3" >2.24</td>
+        
+        
+        <td id="T_1f3c9_row38_col4" class="data row38 col4" >5.37</td>
+        
+        
+        <td id="T_1f3c9_row38_col5" class="data row38 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row38_col6" class="data row38 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row38_col7" class="data row38 col7" ><div class='circle3 color3_0'>1</div></td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_1f3c9_level0_row39" class="row_heading level0 row39" >GM.5.0.Forkhead.0043</th>
+        
+        
+        <td id="T_1f3c9_row39_col0" class="data row39 col0" ><div title="direct: FOXC1&#10;predicted: FOXA1,FOXA3,FOXB2,FOXD2,FOXD3,FOXD4,FOXD4L1,FOXD4L3,FOXD4L5,FOXD4L6,FOXE1,FOXE3,FOXF1A,FOXF2,FOXI1,FOXI2,FOXI3,FOXK2,FOXL2,FOXQ1,FOXS1,KIAA0415"><span style='color:#666666'>FOXE3</span>,<span style='color:#666666'>FOXB2</span>,<span style='color:#666666'>FOXD4</span>,<span style='color:#666666'>FOXI2</span>,<span style='color:black'>FOXC1</span>, (...)</div></td>
+        
+        
+        <td id="T_1f3c9_row39_col1" class="data row39 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GM_5_0_Forkhead_0043.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_1f3c9_row39_col2" class="data row39 col2" >2.38</td>
+        
+        
+        <td id="T_1f3c9_row39_col3" class="data row39 col3" >-2.64</td>
+        
+        
+        <td id="T_1f3c9_row39_col4" class="data row39 col4" >-3.23</td>
+        
+        
+        <td id="T_1f3c9_row39_col5" class="data row39 col5" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row39_col6" class="data row39 col6" ><div class='circle2 color2_0'><1</div></td>
+        
+        
+        <td id="T_1f3c9_row39_col7" class="data row39 col7" ><div class='circle3 color3_0'><1</div></td>
+        
+    </tr>
+    
+</tbody>
+</table>
+<script>
+/*! sortable.js 0.8.0 */
+(function(){var a,b,c,d,e,f,g;a="table[data-sortable]",d=/^(-?[£$¤]?[\d,.e\-]+%?|inf)$/,g=/^\s+|\s+$/g,c=["click"],f="ontouchstart"in document.documentElement,f&&c.push("touchstart"),b=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent("on"+b,c)},e={init:function(b){var c,d,f,g,h;for(null==b&&(b={}),null==b.selector&&(b.selector=a),d=document.querySelectorAll(b.selector),h=[],f=0,g=d.length;g>f;f++)c=d[f],h.push(e.initTable(c));return h},initTable:function(a){var b,c,d,f,g,h;if(1===(null!=(h=a.tHead)?h.rows.length:void 0)&&"true"!==a.getAttribute("data-sortable-initialized")){for(a.setAttribute("data-sortable-initialized","true"),d=a.querySelectorAll("th"),b=f=0,g=d.length;g>f;b=++f)c=d[b],"false"!==c.getAttribute("data-sortable")&&e.setupClickableTH(a,c,b);return a}},setupClickableTH:function(a,d,f){var g,h,i,j,k,l;for(i=e.getColumnType(a,f),h=function(b){var c,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D;if(b.handled===!0)return!1;for(b.handled=!0,m="true"===this.getAttribute("data-sorted"),n=this.getAttribute("data-sorted-direction"),h=m?"ascending"===n?"descending":"ascending":i.defaultSortDirection,p=this.parentNode.querySelectorAll("th"),s=0,w=p.length;w>s;s++)d=p[s],d.setAttribute("data-sorted","false"),d.removeAttribute("data-sorted-direction");if(this.setAttribute("data-sorted","true"),this.setAttribute("data-sorted-direction",h),o=a.tBodies[0],l=[],m){for(D=o.rows,v=0,z=D.length;z>v;v++)g=D[v],l.push(g);for(l.reverse(),B=0,A=l.length;A>B;B++)k=l[B],o.appendChild(k)}else{for(r=null!=i.compare?i.compare:function(a,b){return b-a},c=function(a,b){return a[0]===b[0]?a[2]-b[2]:i.reverse?r(b[0],a[0]):r(a[0],b[0])},C=o.rows,j=t=0,x=C.length;x>t;j=++t)k=C[j],q=e.getNodeValue(k.cells[f]),null!=i.comparator&&(q=i.comparator(q)),l.push([q,k,j]);for(l.sort(c),u=0,y=l.length;y>u;u++)k=l[u],o.appendChild(k[1])}return"function"==typeof window.CustomEvent&&"function"==typeof a.dispatchEvent?a.dispatchEvent(new CustomEvent("Sortable.sorted",{bubbles:!0})):void 0},l=[],j=0,k=c.length;k>j;j++)g=c[j],l.push(b(d,g,h));return l},getColumnType:function(a,b){var c,d,f,g,h,i,j,k,l,m,n;if(d=null!=(l=a.querySelectorAll("th")[b])?l.getAttribute("data-sortable-type"):void 0,null!=d)return e.typesObject[d];for(m=a.tBodies[0].rows,h=0,j=m.length;j>h;h++)for(c=m[h],f=e.getNodeValue(c.cells[b]),n=e.types,i=0,k=n.length;k>i;i++)if(g=n[i],g.match(f))return g;return e.typesObject.alpha},getNodeValue:function(a){var b;return a?(b=a.getAttribute("data-value"),null!==b?b:"undefined"!=typeof a.innerText?a.innerText.replace(g,""):a.textContent.replace(g,"")):""},setupTypes:function(a){var b,c,d,f;for(e.types=a,e.typesObject={},f=[],c=0,d=a.length;d>c;c++)b=a[c],f.push(e.typesObject[b.name]=b);return f}},e.setupTypes([{name:"numeric",defaultSortDirection:"descending",match:function(a){return a.match(d)},comparator:function(a){if(a=="inf"){return Infinity}else{return parseFloat(a.replace(/^[^0-9\-]+/g,""),10)||0}}},{name:"date",defaultSortDirection:"ascending",reverse:!0,match:function(a){return!isNaN(Date.parse(a))},comparator:function(a){return Date.parse(a)||0}},{name:"alpha",defaultSortDirection:"ascending",match:function(){return!0},compare:function(a,b){return a.localeCompare(b)}}]),setTimeout(e.init,0),"function"==typeof define&&define.amd?define(function(){return e}):"undefined"!=typeof exports?module.exports=e:window.Sortable=e}).call(this);
+</script>

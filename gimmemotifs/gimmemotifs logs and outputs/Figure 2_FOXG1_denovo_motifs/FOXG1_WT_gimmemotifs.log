@@ -1,0 +1,502 @@
+2021-08-09 14:42:02,622 - gimme.config - DEBUG - Using multiprocessing
+2021-08-09 14:42:02,622 - gimme.config - DEBUG - Parameters:
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   fraction: 0.2
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   use_strand: True
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   abs_max: 1000
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   analysis: xl
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   enrichment: 1.5
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   size: 0
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   lsize: 500
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   background: ['random']
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   cluster_threshold: 0.95
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   scan_cutoff: 0.9
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   available_tools: MDmodule,MEME,MEMEW,Weeder,GADEM,MotifSampler,Trawler,Improbizer,BioProspector,Posmo,ChIPMunk,AMD,HMS,Homer,XXmotif,ProSampler,DiNAMO
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   tools: MEME,Homer,BioProspector
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   pvalue: 0.001
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   max_time: -1
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   ncpus: 12
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   motif_db: gimme.vertebrate.v5.0.pfm
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   use_cache: False
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   custom_background: /home/ia1014/gimmemotifs/output/FOXG1_motifs/generated_background.random.fa
+2021-08-09 14:42:02,622 - gimme.config - DEBUG -   genome: mm10
+2021-08-09 14:42:02,622 - gimme.config - DEBUG - No time limit for motif prediction
+2021-08-09 14:42:02,622 - gimme.denovo - INFO - starting full motif analysis
+2021-08-09 14:42:02,623 - gimme.denovo - DEBUG - Using temporary directory /tmp/gimmemotifs.29364.x_z68f9z
+2021-08-09 14:42:02,623 - gimme.denovo - INFO - using original size
+2021-08-09 14:42:02,623 - gimme.denovo - INFO - preparing input from FASTA
+2021-08-09 14:42:02,623 - gimme.denovo - INFO - preparing input (FASTA)
+2021-08-09 14:42:02,623 - gimme.denovo - DEBUG - Splitting /home/ia1014/gimmemotifs/input/Galaxy303-[FOXG1_summits_fasta].fasta into prediction set (/home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/prediction.fa) and validation set (/home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/validation.fa)
+2021-08-09 14:42:10,479 - gimme.denovo - DEBUG - Random background: /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/prediction.bg.fa
+2021-08-09 14:48:16,921 - gimme.denovo - DEBUG - Random background: /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/bg.random.fa
+2021-08-09 14:48:17,697 - gimme.config - DEBUG - Using multiprocessing
+2021-08-09 14:48:17,697 - gimme.config - DEBUG - Parameters:
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   fraction: 0.2
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   use_strand: False
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   abs_max: 1000
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   analysis: xl
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   enrichment: 1.5
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   size: 200
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   lsize: 500
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   background: ['gc', 'random']
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   cluster_threshold: 0.95
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   scan_cutoff: 0.9
+2021-08-09 14:48:17,697 - gimme.config - DEBUG -   available_tools: MDmodule,MEME,MEMEW,Weeder,GADEM,MotifSampler,Trawler,Improbizer,BioProspector,Posmo,ChIPMunk,AMD,HMS,Homer,XXmotif,ProSampler,DiNAMO
+2021-08-09 14:48:17,698 - gimme.config - DEBUG -   tools: MEME,BioProspector,Homer
+2021-08-09 14:48:17,698 - gimme.config - DEBUG -   pvalue: 0.001
+2021-08-09 14:48:17,698 - gimme.config - DEBUG -   max_time: -1
+2021-08-09 14:48:17,698 - gimme.config - DEBUG -   ncpus: 12
+2021-08-09 14:48:17,698 - gimme.config - DEBUG -   motif_db: gimme.vertebrate.v5.0.pfm
+2021-08-09 14:48:17,698 - gimme.config - DEBUG -   use_cache: False
+2021-08-09 14:48:17,698 - gimme.config - DEBUG - No time limit for motif prediction
+2021-08-09 14:48:17,698 - gimme.prediction - INFO - starting motif prediction (xl)
+2021-08-09 14:48:17,698 - gimme.prediction - INFO - tools: MEME, BioProspector, Homer
+2021-08-09 14:48:29,570 - gimme.prediction - DEBUG - Skipping AMD
+2021-08-09 14:48:29,570 - gimme.prediction - DEBUG - Skipping GADEM
+2021-08-09 14:48:29,570 - gimme.prediction - DEBUG - Skipping Improbizer
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping JASPAR
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping MEMEW
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping ProSampler
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping RPMCMC
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping Trawler
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping Weeder
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping XXmotif
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 6
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 8
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 10
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 12
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 14
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 16
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 18
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Starting BioProspector job, width 20
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping ChIPMunk
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping DiNAMO
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping DREME
+2021-08-09 14:48:29,571 - gimme.prediction - DEBUG - Skipping HMS
+2021-08-09 14:48:29,572 - gimme.prediction - DEBUG - Starting Homer job, width 6
+2021-08-09 14:48:29,572 - gimme.prediction - DEBUG - Starting Homer job, width 8
+2021-08-09 14:48:29,572 - gimme.prediction - DEBUG - Starting Homer job, width 10
+2021-08-09 14:48:29,572 - gimme.prediction - DEBUG - Starting Homer job, width 12
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting Homer job, width 14
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting Homer job, width 16
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting Homer job, width 18
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting Homer job, width 20
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Skipping MDmodule
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting MEME job, width 6
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting MEME job, width 8
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting MEME job, width 10
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting MEME job, width 12
+2021-08-09 14:48:29,615 - gimme.prediction - DEBUG - Starting MEME job, width 14
+2021-08-09 14:48:29,616 - gimme.prediction - DEBUG - Starting MEME job, width 16
+2021-08-09 14:48:29,616 - gimme.prediction - DEBUG - Starting MEME job, width 18
+2021-08-09 14:48:29,616 - gimme.prediction - DEBUG - Starting MEME job, width 20
+2021-08-09 14:48:29,616 - gimme.prediction - DEBUG - Skipping MotifSampler
+2021-08-09 14:48:29,616 - gimme.prediction - DEBUG - Skipping Posmo
+2021-08-09 14:48:29,616 - gimme.prediction - DEBUG - Skipping YAMDA
+2021-08-09 14:48:29,616 - gimme.prediction - INFO - all jobs submitted
+2021-08-09 14:48:29,639 - gimme.prediction - INFO - Homer_width_6 finished, found 0 motifs
+2021-08-09 14:48:29,639 - gimme.prediction - DEBUG - stdout Homer_width_6: 
+2021-08-09 14:48:29,639 - gimme.prediction - DEBUG - stdout Homer_width_6: Homer_width_6 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,640 - gimme.prediction - INFO - Homer_width_12 finished, found 0 motifs
+2021-08-09 14:48:29,640 - gimme.prediction - DEBUG - stdout Homer_width_12: 
+2021-08-09 14:48:29,640 - gimme.prediction - DEBUG - stdout Homer_width_12: Homer_width_12 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,640 - gimme.prediction - INFO - Homer_width_14 finished, found 0 motifs
+2021-08-09 14:48:29,641 - gimme.prediction - DEBUG - stdout Homer_width_14: 
+2021-08-09 14:48:29,641 - gimme.prediction - DEBUG - stdout Homer_width_14: Homer_width_14 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,641 - gimme.prediction - INFO - Homer_width_16 finished, found 0 motifs
+2021-08-09 14:48:29,641 - gimme.prediction - DEBUG - stdout Homer_width_16: 
+2021-08-09 14:48:29,641 - gimme.prediction - DEBUG - stdout Homer_width_16: Homer_width_16 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,641 - gimme.prediction - INFO - Homer_width_18 finished, found 0 motifs
+2021-08-09 14:48:29,642 - gimme.prediction - DEBUG - stdout Homer_width_18: 
+2021-08-09 14:48:29,642 - gimme.prediction - DEBUG - stdout Homer_width_18: Homer_width_18 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,642 - gimme.prediction - INFO - Homer_width_20 finished, found 0 motifs
+2021-08-09 14:48:29,642 - gimme.prediction - DEBUG - stdout Homer_width_20: 
+2021-08-09 14:48:29,642 - gimme.prediction - DEBUG - stdout Homer_width_20: Homer_width_20 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,642 - gimme.prediction - INFO - MEME_width_6 finished, found 0 motifs
+2021-08-09 14:48:29,642 - gimme.prediction - DEBUG - stdout MEME_width_6: 
+2021-08-09 14:48:29,642 - gimme.prediction - DEBUG - stdout MEME_width_6: MEME_width_6 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,642 - gimme.prediction - INFO - MEME_width_8 finished, found 0 motifs
+2021-08-09 14:48:29,643 - gimme.prediction - DEBUG - stdout MEME_width_8: 
+2021-08-09 14:48:29,643 - gimme.prediction - DEBUG - stdout MEME_width_8: MEME_width_8 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,643 - gimme.prediction - INFO - MEME_width_10 finished, found 0 motifs
+2021-08-09 14:48:29,643 - gimme.prediction - DEBUG - stdout MEME_width_10: 
+2021-08-09 14:48:29,643 - gimme.prediction - DEBUG - stdout MEME_width_10: MEME_width_10 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,643 - gimme.prediction - INFO - Homer_width_10 finished, found 0 motifs
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout Homer_width_10: 
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout Homer_width_10: Homer_width_10 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:29,644 - gimme.prediction - INFO - MEME_width_14 finished, found 0 motifs
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout MEME_width_14: 
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout MEME_width_14: MEME_width_14 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,644 - gimme.prediction - INFO - MEME_width_16 finished, found 0 motifs
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout MEME_width_16: 
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout MEME_width_16: MEME_width_16 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,644 - gimme.prediction - INFO - MEME_width_18 finished, found 0 motifs
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout MEME_width_18: 
+2021-08-09 14:48:29,644 - gimme.prediction - DEBUG - stdout MEME_width_18: MEME_width_18 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,645 - gimme.prediction - INFO - MEME_width_12 finished, found 0 motifs
+2021-08-09 14:48:29,646 - gimme.prediction - DEBUG - stdout MEME_width_12: 
+2021-08-09 14:48:29,646 - gimme.prediction - DEBUG - stdout MEME_width_12: MEME_width_12 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,646 - gimme.prediction - INFO - MEME_width_20 finished, found 0 motifs
+2021-08-09 14:48:29,646 - gimme.prediction - DEBUG - stdout MEME_width_20: 
+2021-08-09 14:48:29,646 - gimme.prediction - DEBUG - stdout MEME_width_20: MEME_width_20 failed to run: MEME is not installed or not correctly configured
+2021-08-09 14:48:29,647 - gimme.prediction - INFO - Homer_width_8 finished, found 0 motifs
+2021-08-09 14:48:29,647 - gimme.prediction - DEBUG - stdout Homer_width_8: 
+2021-08-09 14:48:29,647 - gimme.prediction - DEBUG - stdout Homer_width_8: Homer_width_8 failed to run: Homer is not installed or not correctly configured
+2021-08-09 14:48:48,875 - gimme.prediction - INFO - BioProspector_width_6 finished, found 5 motifs
+2021-08-09 14:48:48,880 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:48:48,880 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79d35c70>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:48:49,767 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79d35c70>: 
+2021-08-09 14:48:50,636 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:48:50,791 - gimme.scanner - INFO - using 14000 sequences
+2021-08-09 14:48:58,297 - gimme.prediction - INFO - BioProspector_width_8 finished, found 5 motifs
+2021-08-09 14:48:58,298 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:48:58,298 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79db93a0>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:48:58,298 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79db93a0>: 
+2021-08-09 14:48:59,110 - gimme.prediction - INFO - BioProspector_width_10 finished, found 5 motifs
+2021-08-09 14:48:59,112 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:48:59,113 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79db9940>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:48:59,113 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79db9940>: 
+2021-08-09 14:48:59,116 - gimme.prediction - INFO - BioProspector_width_14 finished, found 5 motifs
+2021-08-09 14:48:59,118 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:48:59,118 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d6b1e1370>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:48:59,118 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d6b1e1370>: 
+2021-08-09 14:48:59,120 - gimme.prediction - INFO - BioProspector_width_12 finished, found 5 motifs
+2021-08-09 14:48:59,125 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:48:59,125 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d6b1e1eb0>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:48:59,125 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d6b1e1eb0>: 
+2021-08-09 14:48:59,127 - gimme.prediction - INFO - BioProspector_width_16 finished, found 5 motifs
+2021-08-09 14:48:59,128 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:48:59,128 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79e0c9d0>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:48:59,128 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79e0c9d0>: 
+2021-08-09 14:49:00,073 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:49:00,220 - gimme.prediction - INFO - BioProspector_width_18 finished, found 5 motifs
+2021-08-09 14:49:00,223 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:49:00,223 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d6b1e1f10>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:49:00,223 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d6b1e1f10>: 
+2021-08-09 14:49:01,022 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:49:01,328 - gimme.prediction - INFO - BioProspector_width_20 finished, found 5 motifs
+2021-08-09 14:49:01,329 - gimme.prediction - DEBUG - Starting stats job of 5 motifs
+2021-08-09 14:49:01,329 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79e0ca30>: Read input sequences.
+Look for motifs from the original sequences.
+Print results.
+
+2021-08-09 14:49:01,329 - gimme.prediction - DEBUG - stdout <multiprocessing.pool.ApplyResult object at 0x7f3d79e0ca30>: 
+2021-08-09 14:49:01,330 - gimme.prediction - DEBUG - waiting for statistics to finish
+2021-08-09 14:49:02,149 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:49:03,148 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:49:04,348 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:49:05,409 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:49:06,437 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:50:39,581 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:39,803 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:40,167 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:40,317 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:40,523 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:40,860 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:41,143 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:41,593 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:41,912 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:42,218 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:42,981 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:43,387 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:43,832 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:44,562 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:45,326 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:50:45,552 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:50:45,601 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:45,614 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:50:45,814 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:46,042 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:46,311 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:46,515 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:46,838 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:47,155 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:47,604 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:47,947 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:48,269 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:49,088 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:49,517 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:50,001 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:50,772 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:51,595 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:50:51,787 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:50:51,812 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:51,825 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:50:52,016 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:52,244 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:52,517 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:52,735 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:53,072 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:53,395 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:53,886 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:54,251 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:54,601 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:55,430 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:55,901 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:56,423 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:57,221 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:58,082 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:50:58,261 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:50:58,303 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:58,316 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:50:58,487 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:58,734 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:59,027 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:59,273 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:59,642 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:50:59,999 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:00,513 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:00,921 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:01,327 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:02,194 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:02,744 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:03,342 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:04,219 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:05,168 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:51:05,360 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:51:05,363 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:05,376 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:51:05,609 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:05,840 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:06,127 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:06,353 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:06,706 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:07,052 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:07,545 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:07,934 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:08,317 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:09,174 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:09,691 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:10,253 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:11,094 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:12,071 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:51:12,277 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:51:12,301 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:12,313 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:51:12,513 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:12,883 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:13,062 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:13,314 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:13,698 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:14,079 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:14,615 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:15,047 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:15,479 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:16,471 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:17,035 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:17,669 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:18,585 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:19,582 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:51:19,786 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:51:19,822 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:19,836 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:51:20,113 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:20,512 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:20,688 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:20,949 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:21,348 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:21,740 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:22,307 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:22,760 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:23,218 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:24,230 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:24,823 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:25,491 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:26,450 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:27,536 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:51:27,735 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:51:27,755 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:27,768 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:51:28,008 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:28,396 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:28,581 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:28,854 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:29,267 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:29,678 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:30,257 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:30,621 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:31,214 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:32,170 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:32,796 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:33,518 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:34,398 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-09 14:51:35,580 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-09 14:51:35,791 - gimme.scanner - DEBUG - scanning 106926 sequences...
+2021-08-09 14:51:36,000 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:51:37,012 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:37,383 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:37,550 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:37,710 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:37,898 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:38,090 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:38,268 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:51:38,453 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:02,801 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:02,830 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:03,095 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:04,124 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:04,133 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:04,346 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:05,211 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:05,228 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:05,447 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:06,938 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:06,973 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:07,139 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:07,239 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:07,321 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:07,617 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:08,288 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:08,300 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:08,597 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:09,210 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:09,221 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:09,433 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:52:09,549 - gimme.scanner - DEBUG - scanning 1069260 sequences...
+2021-08-09 14:52:09,561 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-09 14:52:09,809 - gimme.scanner - DEBUG - Scanning
+2021-08-09 14:56:28,119 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:56:34,630 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:56:45,437 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:56:53,723 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:57:00,504 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:57:07,738 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:57:14,975 - gimme.stats - DEBUG - calculating statistics
+2021-08-09 14:57:23,031 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 09:21:46,714 - gimme.prediction - DEBUG - Stats: random {'gimme_1_BioProspector_w6_1_AATATn': {'recall_at_fdr': 0.006153788601462694, 'fraction_fpr': 0.03182574864859809, 'score_at_fpr': 1.6056156729031794, 'enr_at_fpr': 2.839856463323041, 'max_enrichment': 379.99999999999994, 'phyper_at_fpr': 0.0, 'mncp': 1.2298803755619854, 'roc_auc': 0.5339087192719227, 'roc_auc_xlim': 0.005889597854961341, 'pr_auc': 0.11080165606894349, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 8.27871825904991e-33, 'ks_significance': 32.082036897044965}, 'gimme_2_BioProspector_w6_2_AATAwn': {'recall_at_fdr': 0.013355030581897761, 'fraction_fpr': 0.03758674223294615, 'score_at_fpr': 1.5081382929842053, 'enr_at_fpr': 3.708590938451601, 'max_enrichment': 2770.0, 'phyper_at_fpr': 0.0, 'mncp': 1.3182376176848467, 'roc_auc': 0.5366577429145772, 'roc_auc_xlim': 0.00742046097654686, 'pr_auc': 0.1182519377194456, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 5.379705345544171e-66, 'ks_significance': 65.26924151063633}, 'gimme_3_BioProspector_w6_3_TwwwTA': {'recall_at_fdr': 0.01520677851972392, 'fraction_fpr': 0.04509660886968558, 'score_at_fpr': 1.4616870402058606, 'enr_at_fpr': 4.307280035730236, 'max_enrichment': 2389.9999999999995, 'phyper_at_fpr': 0.0, 'mncp': 1.3982194682441904, 'roc_auc': 0.5521855082750634, 'roc_auc_xlim': 0.00800385409797275, 'pr_auc': 0.1250246793877206, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.3982956985450116e-49, 'ks_significance': 48.620097271475174}, 'gimme_4_BioProspector_w6_4_AAwTAn': {'recall_at_fdr': 0.01478592671567252, 'fraction_fpr': 0.04624693713409274, 'score_at_fpr': 1.4181732604772557, 'enr_at_fpr': 4.173347961853321, 'max_enrichment': 864.9999999999999, 'phyper_at_fpr': 0.0, 'mncp': 1.3768236638097628, 'roc_auc': 0.5384402600191107, 'roc_auc_xlim': 0.008294037266363533, 'pr_auc': 0.12331306259014911, 'max_fmeasure': 0.666943370466349, 'ks_pvalue': 5.854061787094167e-73, 'ks_significance': 72.23254269808733}, 'gimme_5_BioProspector_w6_5_CAsATk': {'recall_at_fdr': 0.03076894300731347, 'fraction_fpr': 0.0733497933150029, 'score_at_fpr': 1.0381738383144972, 'enr_at_fpr': 6.951165470176372, 'max_enrichment': 8610.0, 'phyper_at_fpr': 0.0, 'mncp': 1.983872190510999, 'roc_auc': 0.620065254759983, 'roc_auc_xlim': 0.012554593278007987, 'pr_auc': 0.17287314942448723, 'max_fmeasure': 0.670259550728588, 'ks_pvalue': 6.8020409547079774e-96, 'ks_significance': 95.16736075753265}}
+2021-08-10 09:57:39,265 - gimme.prediction - DEBUG - Stats: random {'gimme_6_BioProspector_w8_1_CAkmTGnn': {'recall_at_fdr': 0.003273291809288667, 'fraction_fpr': 0.10204253408899613, 'score_at_fpr': 1.810173082225891, 'enr_at_fpr': 10.173426573426575, 'max_enrichment': 1750.0, 'phyper_at_fpr': 0.0, 'mncp': 2.411353268844495, 'roc_auc': 0.6607862483285032, 'roc_auc_xlim': 0.017916389352466443, 'pr_auc': 0.2177516640622491, 'max_fmeasure': 0.666837647474852, 'ks_pvalue': 5.830020806631054e-29, 'ks_significance': 28.234329895294344}, 'gimme_7_BioProspector_w8_2_wAwAAAyA': {'recall_at_fdr': 0.006995492209565494, 'fraction_fpr': 0.03420122327591044, 'score_at_fpr': 1.619991865409615, 'enr_at_fpr': 2.6675906338901454, 'max_enrichment': 1115.0, 'phyper_at_fpr': 0.0, 'mncp': 1.6430107021763556, 'roc_auc': 0.6272841508651489, 'roc_auc_xlim': 0.009274528039654867, 'pr_auc': 0.14864656216689912, 'max_fmeasure': 0.6681732037319095, 'ks_pvalue': 3.9920917237992863e-13, 'ks_significance': 12.398799488756849}, 'gimme_8_BioProspector_w8_3_wwwAmAnA': {'recall_at_fdr': 0.009857284477115013, 'fraction_fpr': 0.04596636926472514, 'score_at_fpr': 1.4852070212151485, 'enr_at_fpr': 2.7448899810119514, 'max_enrichment': 2170.0, 'phyper_at_fpr': 0.0, 'mncp': 1.6093325484029593, 'roc_auc': 0.6277335346087194, 'roc_auc_xlim': 0.008332041364623914, 'pr_auc': 0.14552873077361692, 'max_fmeasure': 0.6707675195492969, 'ks_pvalue': 4.906753579690333e-25, 'ks_significance': 24.309205752018666}, 'gimme_9_BioProspector_w8_4_wAwwwAyw': {'recall_at_fdr': 0.007491162112114921, 'fraction_fpr': 0.03931691076071302, 'score_at_fpr': 1.5422437880327806, 'enr_at_fpr': 3.0907219526540213, 'max_enrichment': 2150.0, 'phyper_at_fpr': 0.0, 'mncp': 1.3860253479050122, 'roc_auc': 0.5808065127294192, 'roc_auc_xlim': 0.007019676251326537, 'pr_auc': 0.12560194775526407, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.394975698740938e-26, 'ks_significance': 25.62069888891174}, 'gimme_10_BioProspector_w8_5_nAnAmAnA': {'recall_at_fdr': 0.0213231580719376, 'fraction_fpr': 0.06007893309391542, 'score_at_fpr': 1.116621713948741, 'enr_at_fpr': 5.985279045933104, 'max_enrichment': 5615.0, 'phyper_at_fpr': 0.0, 'mncp': 1.7418001654290172, 'roc_auc': 0.6115461282041789, 'roc_auc_xlim': 0.010533281098118186, 'pr_auc': 0.15769568561465905, 'max_fmeasure': 0.6865109504899264, 'ks_pvalue': 1.120680893184094e-08, 'ks_significance': 7.950518032416806}}
+2021-08-10 10:19:31,856 - gimme.prediction - DEBUG - Stats: random {'gimme_16_BioProspector_w14_1_AnAAAnAAAnAAAn': {'recall_at_fdr': 0.006013504666778894, 'fraction_fpr': 0.07175990872191983, 'score_at_fpr': 1.5985511848513236, 'enr_at_fpr': 7.175051430708809, 'max_enrichment': 1110.0, 'phyper_at_fpr': 0.0, 'mncp': 2.1478081160941267, 'roc_auc': 0.6473400916243011, 'roc_auc_xlim': 0.016283465415324973, 'pr_auc': 0.19531870682510852, 'max_fmeasure': 0.6695450781260137, 'ks_pvalue': 1.8987100535264351e-25, 'ks_significance': 24.721541350043196}, 'gimme_17_BioProspector_w14_2_AnAAAnAAAnAmAn': {'recall_at_fdr': 0.005826459420533827, 'fraction_fpr': 0.0647924732992911, 'score_at_fpr': 1.645595889369474, 'enr_at_fpr': 6.479004956513607, 'max_enrichment': 1099.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 2.030830886985922, 'roc_auc': 0.6414690782416248, 'roc_auc_xlim': 0.01483817287551928, 'pr_auc': 0.1847059124053043, 'max_fmeasure': 0.6668103675754794, 'ks_pvalue': 4.846805551351718e-27, 'ks_significance': 26.314544403357274}, 'gimme_18_BioProspector_w14_3_nAAAAAmAnAAnmA': {'recall_at_fdr': 0.006640106241699867, 'fraction_fpr': 0.06758879973065485, 'score_at_fpr': 1.60040642874336, 'enr_at_fpr': 6.757995137460258, 'max_enrichment': 1285.0, 'phyper_at_fpr': 0.0, 'mncp': 2.1636121340565326, 'roc_auc': 0.6602287091690094, 'roc_auc_xlim': 0.01590848040272668, 'pr_auc': 0.19674261097293558, 'max_fmeasure': 0.6709035933662078, 'ks_pvalue': 3.961426579227392e-28, 'ks_significance': 27.40214838884301}, 'gimme_19_BioProspector_w14_4_AAAAnArAAAnAAA': {'recall_at_fdr': 0.009576716607747414, 'fraction_fpr': 0.06585863120288799, 'score_at_fpr': 1.6544950166815011, 'enr_at_fpr': 6.58561675862714, 'max_enrichment': 1053.3333333333333, 'phyper_at_fpr': 0.0, 'mncp': 2.05706397967897, 'roc_auc': 0.6392605672024939, 'roc_auc_xlim': 0.014953973704220566, 'pr_auc': 0.18712967304209377, 'max_fmeasure': 0.6685106709929844, 'ks_pvalue': 2.958928616151247e-43, 'ks_significance': 42.528865512022726}, 'gimme_20_BioProspector_w14_5_nnAAAwAwAwAAAn': {'recall_at_fdr': 0.005817107158221574, 'fraction_fpr': 0.06730823186128725, 'score_at_fpr': 1.6064730526502848, 'enr_at_fpr': 6.729312762973352, 'max_enrichment': 1014.9999999999999, 'phyper_at_fpr': 0.0, 'mncp': 2.042035214707648, 'roc_auc': 0.6359570968455395, 'roc_auc_xlim': 0.014896519535332692, 'pr_auc': 0.1857299025800443, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 1.9510396427564636e-38, 'ks_significance': 37.70973390617931}}
+2021-08-10 10:30:07,296 - gimme.prediction - DEBUG - Stats: random {'gimme_21_BioProspector_w12_1_AAAAAmAnAnAA': {'recall_at_fdr': 0.0033761666947234536, 'fraction_fpr': 0.06025662607784823, 'score_at_fpr': 1.6681880352244287, 'enr_at_fpr': 6.024873760987469, 'max_enrichment': 1030.0, 'phyper_at_fpr': 0.0, 'mncp': 1.8845458618351953, 'roc_auc': 0.6252362380751609, 'roc_auc_xlim': 0.013773401407743994, 'pr_auc': 0.1714593277855645, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.5067216326040043e-30, 'ks_significance': 29.600893891066228}, 'gimme_22_BioProspector_w12_2_wwAwAAAwAnAw': {'recall_at_fdr': 0.003525802891719507, 'fraction_fpr': 0.052728054916484295, 'score_at_fpr': 1.6849972593003897, 'enr_at_fpr': 5.272115204787732, 'max_enrichment': 1099.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 1.8710178762907237, 'roc_auc': 0.6330048938391158, 'roc_auc_xlim': 0.013621472119075589, 'pr_auc': 0.17035357348028185, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 1.8652975440222744e-35, 'ks_significance': 34.72925188159255}, 'gimme_23_BioProspector_w12_3_wnAAAAAnAnAw': {'recall_at_fdr': 0.004395563286759067, 'fraction_fpr': 0.057974674073658417, 'score_at_fpr': 1.6799437125749122, 'enr_at_fpr': 5.796166432912576, 'max_enrichment': 1115.0, 'phyper_at_fpr': 0.0, 'mncp': 1.8857466155804663, 'roc_auc': 0.63240603957002, 'roc_auc_xlim': 0.013530781173561605, 'pr_auc': 0.1715685832137372, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 7.129961772913675e-32, 'ks_significance': 31.14691279859935}, 'gimme_24_BioProspector_w12_4_AwAAAnAwAnAA': {'recall_at_fdr': 0.0037409049249013337, 'fraction_fpr': 0.057825037876662364, 'score_at_fpr': 1.6690280416230305, 'enr_at_fpr': 5.781206171107994, 'max_enrichment': 696.6666666666666, 'phyper_at_fpr': 0.0, 'mncp': 1.8572648685569466, 'roc_auc': 0.6296616297529638, 'roc_auc_xlim': 0.013574958590948807, 'pr_auc': 0.16911143453443322, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 3.9554913856486787e-38, 'ks_significance': 37.4027995569654}, 'gimme_25_BioProspector_w12_5_AwAwAAAnAnAw': {'recall_at_fdr': 0.005433664403419187, 'fraction_fpr': 0.06123861362063483, 'score_at_fpr': 1.6034882772258128, 'enr_at_fpr': 6.123632282801833, 'max_enrichment': 1130.0, 'phyper_at_fpr': 0.0, 'mncp': 2.035990538130861, 'roc_auc': 0.6583654831803879, 'roc_auc_xlim': 0.015020746038457178, 'pr_auc': 0.1851773517619968, 'max_fmeasure': 0.6680194728509748, 'ks_pvalue': 1.065816247761303e-19, 'ks_significance': 18.972317663472765}}
+2021-08-10 10:30:25,669 - gimme.prediction - DEBUG - Stats: random {'gimme_26_BioProspector_w16_1_AAAAAnAAAAAnAAAw': {'recall_at_fdr': 0.014496006583992667, 'fraction_fpr': 0.07353683856124797, 'score_at_fpr': 1.5572715140850826, 'enr_at_fpr': 7.353408772093894, 'max_enrichment': 1514.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 2.1732197743110673, 'roc_auc': 0.6459571370128792, 'roc_auc_xlim': 0.01587848125413342, 'pr_auc': 0.1975816587172142, 'max_fmeasure': 0.6699972666202457, 'ks_pvalue': 3.105109035853742e-33, 'ks_significance': 32.507923144975905}, 'gimme_27_BioProspector_w16_2_nAAAAAwAAAAAmAAn': {'recall_at_fdr': 0.011783850513439201, 'fraction_fpr': 0.06678450517180105, 'score_at_fpr': 1.6153311467142981, 'enr_at_fpr': 6.678200692041523, 'max_enrichment': 1475.0, 'phyper_at_fpr': 0.0, 'mncp': 2.0756173972434553, 'roc_auc': 0.6347849616359523, 'roc_auc_xlim': 0.015318848593791734, 'pr_auc': 0.18871480008432098, 'max_fmeasure': 0.668188598548711, 'ks_pvalue': 1.7100047135876425e-34, 'ks_significance': 33.76700269248371}, 'gimme_28_BioProspector_w16_3_AwAAAAAAAnAnAwAm': {'recall_at_fdr': 0.012466565662233694, 'fraction_fpr': 0.07284477115014122, 'score_at_fpr': 1.5180650394210926, 'enr_at_fpr': 7.284204619844758, 'max_enrichment': 1595.0, 'phyper_at_fpr': 0.0, 'mncp': 2.1235654672372704, 'roc_auc': 0.6356321265774264, 'roc_auc_xlim': 0.015535693835629643, 'pr_auc': 0.19306752227980178, 'max_fmeasure': 0.6667680333568512, 'ks_pvalue': 3.9075273900920124e-45, 'ks_significance': 44.408097969079954}, 'gimme_29_BioProspector_w16_4_AAAwAAAAAAAnAAAw': {'recall_at_fdr': 0.012326281727549895, 'fraction_fpr': 0.07052541009670239, 'score_at_fpr': 1.5739294183131325, 'enr_at_fpr': 7.052277190685496, 'max_enrichment': 1435.0, 'phyper_at_fpr': 0.0, 'mncp': 2.1028957667475683, 'roc_auc': 0.6369514319792806, 'roc_auc_xlim': 0.015404122769254949, 'pr_auc': 0.1912085590391383, 'max_fmeasure': 0.6684864598253879, 'ks_pvalue': 1.2220379442799302e-40, 'ks_significance': 39.91291530903982}, 'gimme_30_BioProspector_w16_5_AAnAAAnAnAnAArmA': {'recall_at_fdr': 0.009464489460000374, 'fraction_fpr': 0.07073115986757196, 'score_at_fpr': 1.5710180129815443, 'enr_at_fpr': 7.072851398110915, 'max_enrichment': 1545.0, 'phyper_at_fpr': 0.0, 'mncp': 2.207688308479823, 'roc_auc': 0.6633991137384588, 'roc_auc_xlim': 0.01591112597708558, 'pr_auc': 0.20072278022422851, 'max_fmeasure': 0.6740207688853922, 'ks_pvalue': 2.1176365500491456e-30, 'ks_significance': 29.67414857579262}}
+2021-08-10 10:31:07,999 - gimme.prediction - DEBUG - Stats: random {'gimme_36_BioProspector_w20_1_AAAnAnAAAmAAAnAmAwnn': {'recall_at_fdr': 0.02100518115332099, 'fraction_fpr': 0.08564801825561603, 'score_at_fpr': 1.3174528277409179, 'enr_at_fpr': 8.564481436453756, 'max_enrichment': 2024.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 2.347719193179092, 'roc_auc': 0.6456769747265837, 'roc_auc_xlim': 0.017626857287740282, 'pr_auc': 0.21343090637184123, 'max_fmeasure': 0.6682738906684753, 'ks_pvalue': 4.215723064216583e-46, 'ks_significance': 45.37512792617143}, 'gimme_37_BioProspector_w20_2_wAAnAnAnAnAmAAAwnmAn': {'recall_at_fdr': 0.016085891177075734, 'fraction_fpr': 0.07820361745506238, 'score_at_fpr': 1.4225106710758406, 'enr_at_fpr': 7.82006920415225, 'max_enrichment': 1180.0, 'phyper_at_fpr': 0.0, 'mncp': 2.261099455859145, 'roc_auc': 0.6469990480835587, 'roc_auc_xlim': 0.016961720068707452, 'pr_auc': 0.205556983043893, 'max_fmeasure': 0.6691733203384506, 'ks_pvalue': 3.0943495831484956e-37, 'ks_significance': 36.50943062358558}, 'gimme_38_BioProspector_w20_3_AAwwAnAnAwAnAAAmAwAn': {'recall_at_fdr': 0.015580869012214055, 'fraction_fpr': 0.07530441613826384, 'score_at_fpr': 1.4680906816810264, 'enr_at_fpr': 7.530159917703171, 'max_enrichment': 1949.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 2.197485228177378, 'roc_auc': 0.639432618531229, 'roc_auc_xlim': 0.01638688502285306, 'pr_auc': 0.1997730470253159, 'max_fmeasure': 0.6678035569342539, 'ks_pvalue': 2.933286394514355e-53, 'ks_significance': 52.53264553214898}, 'gimme_39_BioProspector_w20_4_wwAmAnAAAAAAAwAAAwnm': {'recall_at_fdr': 0.01357948487739184, 'fraction_fpr': 0.07539793876138638, 'score_at_fpr': 1.4694036992651032, 'enr_at_fpr': 7.539511830169269, 'max_enrichment': 2260.0, 'phyper_at_fpr': 0.0, 'mncp': 2.1543860931339855, 'roc_auc': 0.6295759859949444, 'roc_auc_xlim': 0.016177215638957576, 'pr_auc': 0.19585559999143387, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.0030358582312406e-53, 'ks_significance': 52.698311275922315}, 'gimme_40_BioProspector_w20_5_AAwAnAAAAAnAmAnAAAwn': {'recall_at_fdr': 0.01930306941249088, 'fraction_fpr': 0.08460991713895591, 'score_at_fpr': 1.3665647585942642, 'enr_at_fpr': 8.460675208080053, 'max_enrichment': 2365.0, 'phyper_at_fpr': 0.0, 'mncp': 2.328569389392237, 'roc_auc': 0.6434659453569006, 'roc_auc_xlim': 0.01741455139958758, 'pr_auc': 0.21168957910238267, 'max_fmeasure': 0.6671782953839955, 'ks_pvalue': 3.5567112603983473e-41, 'ks_significance': 40.4489513901152}}
+2021-08-10 10:32:27,975 - gimme.prediction - DEBUG - Stats: random {'gimme_31_BioProspector_w18_1_AAAwAnAAAAAnAwwmAn': {'recall_at_fdr': 0.01773188934403232, 'fraction_fpr': 0.07898920748929165, 'score_at_fpr': 1.448673909620452, 'enr_at_fpr': 7.898625268867482, 'max_enrichment': 2325.0, 'phyper_at_fpr': 0.0, 'mncp': 2.2380533870051007, 'roc_auc': 0.6405750205683386, 'roc_auc_xlim': 0.016607844622489903, 'pr_auc': 0.20346546675506888, 'max_fmeasure': 0.6675976363772433, 'ks_pvalue': 2.2164398612251702e-57, 'ks_significance': 56.65434404793892}, 'gimme_32_BioProspector_w18_2_wwAAnAAAAAAAnAAAwn': {'recall_at_fdr': 0.014028393468380002, 'fraction_fpr': 0.07577202925387651, 'score_at_fpr': 1.5219115499715428, 'enr_at_fpr': 7.576919480033667, 'max_enrichment': 2320.0, 'phyper_at_fpr': 0.0, 'mncp': 2.2300950278784817, 'roc_auc': 0.6519810932653054, 'roc_auc_xlim': 0.016451719048234295, 'pr_auc': 0.2027452250838649, 'max_fmeasure': 0.671079642609617, 'ks_pvalue': 1.2734581326553173e-40, 'ks_significance': 39.89501532871816}, 'gimme_33_BioProspector_w18_3_AAwAnAnAAAnwnAwAAA': {'recall_at_fdr': 0.016675083702747694, 'fraction_fpr': 0.07730580027308606, 'score_at_fpr': 1.4265624134446107, 'enr_at_fpr': 7.730290844477696, 'max_enrichment': 2179.9999999999995, 'phyper_at_fpr': 0.0, 'mncp': 2.1827406906120768, 'roc_auc': 0.6313364905201552, 'roc_auc_xlim': 0.01620646006682146, 'pr_auc': 0.19843644292116214, 'max_fmeasure': 0.6668355410246688, 'ks_pvalue': 1.4183761232998438e-46, 'ks_significance': 45.848208588184356}, 'gimme_34_BioProspector_w18_4_AAAwAnAAAwAAAwAmAn': {'recall_at_fdr': 0.013205394384901708, 'fraction_fpr': 0.07237715803452856, 'score_at_fpr': 1.5109458368452673, 'enr_at_fpr': 7.237445057514262, 'max_enrichment': 2174.9999999999995, 'phyper_at_fpr': 0.0, 'mncp': 2.1268242116942306, 'roc_auc': 0.6312816305400492, 'roc_auc_xlim': 0.015674257411838484, 'pr_auc': 0.19335508148675473, 'max_fmeasure': 0.6676424577544414, 'ks_pvalue': 5.8143605243060536e-43, 'ks_significance': 42.2354980429367}, 'gimme_35_BioProspector_w18_5_AAAwAnwAAwwAAwAnAA': {'recall_at_fdr': 0.01520677851972392, 'fraction_fpr': 0.07440659895628753, 'score_at_fpr': 1.464677816326238, 'enr_at_fpr': 7.440381558028617, 'max_enrichment': 1939.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 2.1355785781122387, 'roc_auc': 0.6274474663660623, 'roc_auc_xlim': 0.015856020763144678, 'pr_auc': 0.19415058308346855, 'max_fmeasure': 0.6666670823230286, 'ks_pvalue': 2.3813424142016043e-54, 'ks_significance': 53.6231781527235}}
+2021-08-10 10:33:39,180 - gimme.prediction - DEBUG - Stats: random {'gimme_11_BioProspector_w10_1_wAwAAAnAnA': {'recall_at_fdr': 0.004114995417391467, 'fraction_fpr': 0.04527430185361839, 'score_at_fpr': 1.5781005500056209, 'enr_at_fpr': 4.212862240013924, 'max_enrichment': 1504.9999999999998, 'phyper_at_fpr': 0.0, 'mncp': 1.7389559613619758, 'roc_auc': 0.627848373844922, 'roc_auc_xlim': 0.012036257829805634, 'pr_auc': 0.15805525332628723, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 1.5624992263068858e-21, 'ks_significance': 20.806180189030755}, 'gimme_12_BioProspector_w10_2_AAAwAmAnAn': {'recall_at_fdr': 0.004330097450573294, 'fraction_fpr': 0.04855694592521931, 'score_at_fpr': 1.599520295793016, 'enr_at_fpr': 4.796304849884527, 'max_enrichment': 1260.0, 'phyper_at_fpr': 0.0, 'mncp': 1.8307107400355662, 'roc_auc': 0.6310617423012475, 'roc_auc_xlim': 0.013503227452331708, 'pr_auc': 0.16643790983076828, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 4.496936516645713e-25, 'ks_significance': 24.347083243333785}, 'gimme_13_BioProspector_w10_3_AAAnAAAnAA': {'recall_at_fdr': 0.0040682341058302, 'fraction_fpr': 0.04510596113199783, 'score_at_fpr': 1.6819068391690728, 'enr_at_fpr': 4.3058655477189545, 'max_enrichment': 1225.0, 'phyper_at_fpr': 0.0, 'mncp': 1.7958572249784188, 'roc_auc': 0.6344844429252646, 'roc_auc_xlim': 0.013258703496978767, 'pr_auc': 0.16339439225500757, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.0741651677813164e-29, 'ks_significance': 28.68315666327971}, 'gimme_14_BioProspector_w10_4_kAAAwAnAnA': {'recall_at_fdr': 0.00530273273104764, 'fraction_fpr': 0.04209453266745226, 'score_at_fpr': 1.6222610597851113, 'enr_at_fpr': 4.087359244460589, 'max_enrichment': 1155.0, 'phyper_at_fpr': 0.0, 'mncp': 1.7287164345286592, 'roc_auc': 0.6228478630530535, 'roc_auc_xlim': 0.012287770920312514, 'pr_auc': 0.15711650500706564, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.3058100929415382e-33, 'ks_significance': 32.63717646416353}, 'gimme_15_BioProspector_w10_5_nTAnwnAnAn': {'recall_at_fdr': 0.0060322091914034, 'fraction_fpr': 0.038391036791799935, 'score_at_fpr': 1.6334678542454306, 'enr_at_fpr': 3.8307204180664427, 'max_enrichment': 1440.0, 'phyper_at_fpr': 0.0, 'mncp': 1.4951165700310782, 'roc_auc': 0.6019127984847865, 'roc_auc_xlim': 0.007628883476030926, 'pr_auc': 0.13591293877630423, 'max_fmeasure': 0.6666666666666666, 'ks_pvalue': 2.3427187823536632e-23, 'ks_significance': 22.630279840554547}}
+2021-08-10 10:33:41,183 - gimme.prediction - INFO - predicted 40 motifs
+2021-08-10 10:33:41,183 - gimme.prediction - DEBUG - written to /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/all_motifs.pfm
+2021-08-10 10:33:41,188 - gimme.denovo - INFO - 37 motifs are significant
+2021-08-10 10:33:41,188 - gimme.denovo - DEBUG - written to /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/significant_motifs.pfm
+2021-08-10 10:33:41,239 - gimme.cluster - INFO - clustering 37 motifs.
+2021-08-10 10:34:11,277 - gimme.cluster - DEBUG - Clustering done. See the result in /home/ia1014/gimmemotifs/output/FOXG1_motifs/gimme.clustereds.html
+2021-08-10 10:34:11,493 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 10:34:11,728 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:11,949 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:12,162 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:12,259 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:12,416 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:12,738 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:12,965 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:13,215 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:13,358 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:13,671 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:13,985 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:14,154 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:14,479 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:15,020 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 10:34:15,831 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-10 10:34:16,021 - gimme.scanner - DEBUG - scanning /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/validation.fa...
+2021-08-10 10:34:16,202 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 10:34:16,418 - gimme.scanner - DEBUG - Scanning
+2021-08-10 10:34:27,524 - gimme.scanner - DEBUG - scanning /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/bg.random.fa...
+2021-08-10 10:34:29,773 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 10:34:30,001 - gimme.scanner - DEBUG - Scanning
+2021-08-10 10:36:16,977 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 11:42:55,606 - gimme.report - INFO - creating de novo reports
+2021-08-10 11:42:55,807 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 11:42:55,808 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 11:42:56,204 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:56,363 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:56,543 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:56,627 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:56,748 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:56,863 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,045 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,250 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,338 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,477 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,739 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,848 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:57,988 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:58,274 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:42:58,712 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-10 11:42:58,809 - gimme.scanner - DEBUG - scanning /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/validation.fa...
+2021-08-10 11:42:58,900 - gimme.stats - DEBUG - chunk 1.0 of 1
+2021-08-10 11:42:58,907 - gimme.scanner - DEBUG - scanning /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/validation.fa...
+2021-08-10 11:42:59,091 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 11:42:59,107 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 11:42:59,514 - gimme.scanner - DEBUG - Scanning
+2021-08-10 11:42:59,651 - gimme.scanner - DEBUG - Scanning
+2021-08-10 11:43:10,161 - gimme.scanner - DEBUG - scanning /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/bg.random.fa...
+2021-08-10 11:43:10,535 - gimme.scanner - DEBUG - scanning /home/ia1014/gimmemotifs/output/FOXG1_motifs/intermediate/bg.random.fa...
+2021-08-10 11:43:11,917 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 11:43:12,165 - gimme.scanner - DEBUG - Scanning
+2021-08-10 11:43:12,293 - gimme.scanner - DEBUG - using background: genome mm10 with size 200
+2021-08-10 11:43:12,497 - gimme.scanner - DEBUG - Scanning
+2021-08-10 11:44:58,182 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 11:45:03,791 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 11:45:08,082 - gimme.report - DEBUG - Creating localization plots
+2021-08-10 11:45:08,082 - gimme.report - DEBUG -   GimmeMotifs_1 GimmeMotifs_1_AAAnAnAAAmAAAnAmAwnn
+2021-08-10 11:45:11,821 - gimme.report - DEBUG -   GimmeMotifs_2 GimmeMotifs_2_CAGATG
+2021-08-10 11:45:14,541 - gimme.report - DEBUG - Creating graphical report
+2021-08-10 11:45:17,794 - gimme.denovo - DEBUG - Deleting intermediate files. Please specifify the -k option if you want to keep these files.
+2021-08-10 11:45:17,825 - gimme.denovo - INFO - finished
+2021-08-10 11:45:17,826 - gimme.denovo - INFO - output dir: /home/ia1014/gimmemotifs/output/FOXG1_motifs
+2021-08-10 11:45:17,826 - gimme.denovo - INFO - de novo report: /home/ia1014/gimmemotifs/output/FOXG1_motifs/gimme.denovo.html
+2021-08-10 11:45:28,059 - gimme.motifs - INFO - creating motif scan tables
+2021-08-10 11:45:31,040 - gimme.scanner - DEBUG - using background: genome mm10 with size 201
+2021-08-10 11:45:38,369 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:38,757 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:39,088 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:39,325 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:39,782 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:40,263 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:40,955 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:41,515 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:41,958 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:42,463 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:43,095 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:43,590 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:43,949 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:44,594 - gimme.scanner - DEBUG - Determining mean and stddev for motifs.
+2021-08-10 11:45:45,389 - gimme.scanner - DEBUG - Scanning
+2021-08-10 12:08:02,114 - gimme.scanner - DEBUG - using background: genome mm10 with size 201
+2021-08-10 12:08:10,835 - gimme.scanner - DEBUG - Scanning
+2021-08-10 12:10:51,626 - gimme.motifs - INFO - calculating stats
+2021-08-10 12:10:52,899 - gimme.stats - DEBUG - chunk 1.0 of 8
+2021-08-10 12:11:08,354 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:12:19,581 - gimme.stats - DEBUG - chunk 2.0 of 8
+2021-08-10 12:12:35,892 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:13:47,475 - gimme.stats - DEBUG - chunk 3.0 of 8
+2021-08-10 12:14:03,631 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:15:15,343 - gimme.stats - DEBUG - chunk 4.0 of 8
+2021-08-10 12:15:31,455 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:16:42,846 - gimme.stats - DEBUG - chunk 5.0 of 8
+2021-08-10 12:16:58,970 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:18:10,480 - gimme.stats - DEBUG - chunk 6.0 of 8
+2021-08-10 12:18:26,581 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:19:37,915 - gimme.stats - DEBUG - chunk 7.0 of 8
+2021-08-10 12:19:53,933 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:21:05,512 - gimme.stats - DEBUG - chunk 8.0 of 8
+2021-08-10 12:21:18,250 - gimme.stats - DEBUG - calculating statistics
+2021-08-10 12:24:44,535 - gimme.comparison - DEBUG - Selected 185 motifs for feature elimination
+2021-08-10 12:25:29,562 - gimme.comparison - INFO - selecting non-redundant motifs
+2021-08-10 12:42:54,198 - gimme.comparison - INFO - selected 5 non-redundant motifs: ROC AUC 0.801, PR AUC 0.976

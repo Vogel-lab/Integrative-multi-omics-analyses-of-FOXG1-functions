@@ -1,0 +1,1520 @@
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans"/>
+<style  type="text/css" >
+/* line 2, ../sass/_sortable.sass */
+table[data-sortable] {
+  font-family: 'Nunito Sans';
+  font-size: 90%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 6, ../sass/_sortable.sass */
+table[data-sortable] th {
+  vertical-align: bottom;
+  font-weight: bold;
+}
+/* line 10, ../sass/_sortable.sass */
+table[data-sortable] th, table[data-sortable] td {
+  text-align: left;
+  padding: 2px;
+}
+/* line 14, ../sass/_sortable.sass */
+table[data-sortable] th:not([data-sortable="false"]) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  cursor: pointer;
+}
+/* line 26, ../sass/_sortable.sass */
+table[data-sortable] th:after {
+  content: "";
+  visibility: hidden;
+  display: inline-block;
+  vertical-align: inherit;
+  height: 0;
+  width: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  margin-right: 1px;
+  margin-left: 10px;
+  float: right;
+}
+/* line 40, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted="true"]:after {
+  visibility: visible;
+}
+/* line 43, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted-direction="descending"]:after {
+  border-top-color: inherit;
+  margin-top: 8px;
+}
+/* line 47, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted-direction="ascending"]:after {
+  border-bottom-color: inherit;
+  margin-top: 3px;
+}
+
+/* line 6, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick {
+  color: #333333;
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+/* line 11, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick thead th {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(#ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(#ffffff, #eeeeee);
+  background-image: -o-linear-gradient(#ffffff, #eeeeee);
+  background-image: linear-gradient(#ffffff, #eeeeee);
+  background-color: #f0f0f0;
+}
+/* line 16, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick tbody td {
+  border-top: 1px solid #e0e0e0;
+}
+/* line 19, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick tbody > tr:nth-child(odd) > td {
+  background-color: #f9f9f9;
+}
+/* line 22, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"] {
+  -webkit-box-shadow: inset 1px 0 #bce8f1, inset -1px 0 #bce8f1;
+  -moz-box-shadow: inset 1px 0 #bce8f1, inset -1px 0 #bce8f1;
+  box-shadow: inset 1px 0 #bce8f1, inset -1px 0 #bce8f1;
+  color: #3a87ad;
+  background: #d9edf7;
+  border-bottom-color: #bce8f1;
+}
+/* line 28, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"]:first-child {
+  -webkit-box-shadow: inset -1px 0 #bce8f1;
+  -moz-box-shadow: inset -1px 0 #bce8f1;
+  box-shadow: inset -1px 0 #bce8f1;
+}
+/* line 31, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"]:last-child {
+  -webkit-box-shadow: inset 1px 0 #bce8f1;
+  -moz-box-shadow: inset 1px 0 #bce8f1;
+  box-shadow: inset 1px 0 #bce8f1;
+}
+/* line 34, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"][data-sorted-direction="descending"]:after {
+  border-top-color: #3a87ad;
+}
+/* line 37, ../sass/sortable-theme-slick.sass */
+table[data-sortable].sortable-theme-slick th[data-sorted="true"][data-sorted-direction="ascending"]:after {
+  border-bottom-color: #3a87ad;
+}
+
+
+
+    .col_heading {
+    
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+
+
+
+    .circle1 {
+    
+      height: 25px;
+    
+      width: 25px;
+    
+      border-radius: 50%;
+    
+      color: #000;
+    
+      line-height: 25px;
+    
+      display: inline-block;
+    
+      text-align: center;
+    
+      vertical-align: middle;
+    }
+
+
+    .color1_0 {
+    
+      background-color: #ecebf4;
+    }
+    .color1_1 {
+    
+      background-color: #d1d2e7;
+    }
+    .color1_2 {
+    
+      background-color: #afaed4;
+    }
+    .color1_3 {
+    
+      background-color: #8d89c0;
+    }
+    .color1_4 {
+    
+      background-color: #705eaa;
+    }
+    .color1_5 {
+    
+      background-color: #572c92;
+    }
+
+
+
+
+
+#T_24deb_row0_col2,#T_24deb_row0_col3,#T_24deb_row1_col2,#T_24deb_row1_col3,#T_24deb_row2_col2,#T_24deb_row2_col3,#T_24deb_row3_col2,#T_24deb_row3_col3,#T_24deb_row4_col2,#T_24deb_row4_col3,#T_24deb_row5_col2,#T_24deb_row5_col3,#T_24deb_row6_col2,#T_24deb_row6_col3,#T_24deb_row7_col2,#T_24deb_row7_col3,#T_24deb_row8_col2,#T_24deb_row8_col3,#T_24deb_row9_col2,#T_24deb_row9_col3,#T_24deb_row10_col2,#T_24deb_row10_col3,#T_24deb_row11_col2,#T_24deb_row11_col3,#T_24deb_row12_col2,#T_24deb_row12_col3,#T_24deb_row13_col2,#T_24deb_row13_col3,#T_24deb_row14_col2,#T_24deb_row14_col3,#T_24deb_row15_col2,#T_24deb_row15_col3,#T_24deb_row16_col2,#T_24deb_row16_col3,#T_24deb_row17_col2,#T_24deb_row17_col3,#T_24deb_row18_col2,#T_24deb_row18_col3,#T_24deb_row19_col2,#T_24deb_row19_col3,#T_24deb_row20_col2,#T_24deb_row20_col3,#T_24deb_row21_col2,#T_24deb_row21_col3,#T_24deb_row22_col2,#T_24deb_row22_col3{
+    
+        text-align: center;
+    
+    }#T_24deb_row0_col4{
+    
+        background-color:  #ea362a;
+    
+        color:  #f1f1f1;
+    
+        text-align: center;
+    
+    }#T_24deb_row0_col5{
+    
+        background-color:  #f6553c;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row0_col6{
+    
+        background-color:  #fca082;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row0_col7{
+    
+        background-color:  #e22e27;
+    
+        color:  #f1f1f1;
+    
+        text-align: center;
+    
+    }#T_24deb_row0_col8,#T_24deb_row3_col8,#T_24deb_row4_col8,#T_24deb_row5_col8,#T_24deb_row6_col8,#T_24deb_row7_col8,#T_24deb_row8_col8,#T_24deb_row9_col8,#T_24deb_row10_col8,#T_24deb_row11_col8,#T_24deb_row12_col8,#T_24deb_row13_col8,#T_24deb_row14_col8,#T_24deb_row15_col8,#T_24deb_row16_col8,#T_24deb_row17_col8,#T_24deb_row18_col8,#T_24deb_row19_col8,#T_24deb_row20_col8,#T_24deb_row22_col8{
+    
+        background-color:  #fff5f0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row1_col4{
+    
+        background-color:  #cb181d;
+    
+        color:  #f1f1f1;
+    
+        text-align: center;
+    
+    }#T_24deb_row1_col5{
+    
+        background-color:  #fb7050;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row1_col6{
+    
+        background-color:  #fcaa8d;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row1_col7{
+    
+        background-color:  #ca181d;
+    
+        color:  #f1f1f1;
+    
+        text-align: center;
+    
+    }#T_24deb_row1_col8{
+    
+        background-color:  #fff4ee;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row2_col4,#T_24deb_row2_col7{
+    
+        background-color:  #c5171c;
+    
+        color:  #f1f1f1;
+    
+        text-align: center;
+    
+    }#T_24deb_row2_col5{
+    
+        background-color:  #fc8666;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row2_col6{
+    
+        background-color:  #fcb499;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row2_col8,#T_24deb_row21_col8{
+    
+        background-color:  #fff4ef;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row3_col4{
+    
+        background-color:  #f6563d;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row3_col5{
+    
+        background-color:  #fc9070;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row3_col6{
+    
+        background-color:  #fcbda4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row3_col7{
+    
+        background-color:  #f14331;
+    
+        color:  #f1f1f1;
+    
+        text-align: center;
+    
+    }#T_24deb_row4_col4{
+    
+        background-color:  #fcbba1;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row4_col5,#T_24deb_row4_col7{
+    
+        background-color:  #fc9b7c;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row4_col6{
+    
+        background-color:  #fdc6b0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row5_col4{
+    
+        background-color:  #fff0e9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row5_col5{
+    
+        background-color:  #fcab8f;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row5_col6,#T_24deb_row6_col4,#T_24deb_row6_col6,#T_24deb_row14_col5{
+    
+        background-color:  #fdd3c1;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row5_col7,#T_24deb_row14_col7{
+    
+        background-color:  #fee9df;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row6_col5{
+    
+        background-color:  #fcb69b;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row6_col7{
+    
+        background-color:  #fcbca2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row7_col4{
+    
+        background-color:  #fcaf93;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row7_col5{
+    
+        background-color:  #fcb89e;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row7_col6,#T_24deb_row11_col5,#T_24deb_row12_col5{
+    
+        background-color:  #fdcebb;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row7_col7{
+    
+        background-color:  #fc9272;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row8_col4,#T_24deb_row11_col4,#T_24deb_row20_col7{
+    
+        background-color:  #fee1d4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row8_col5{
+    
+        background-color:  #fcbea5;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row8_col6{
+    
+        background-color:  #fdd4c2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row8_col7,#T_24deb_row11_col7{
+    
+        background-color:  #fdc7b2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row9_col4,#T_24deb_row20_col4{
+    
+        background-color:  #ffece4;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row9_col5{
+    
+        background-color:  #fcc3ab;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row9_col6,#T_24deb_row12_col6{
+    
+        background-color:  #fedaca;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row9_col7,#T_24deb_row17_col7{
+    
+        background-color:  #fee8dd;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row10_col4,#T_24deb_row10_col6{
+    
+        background-color:  #fdd7c6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row10_col5{
+    
+        background-color:  #fdccb8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row10_col7{
+    
+        background-color:  #fcb99f;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row11_col6,#T_24deb_row15_col5{
+    
+        background-color:  #fed9c9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row12_col4{
+    
+        background-color:  #ffefe8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row12_col7{
+    
+        background-color:  #fee5d9;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row13_col4,#T_24deb_row16_col6{
+    
+        background-color:  #fedccd;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row13_col5,#T_24deb_row18_col7{
+    
+        background-color:  #fdd2bf;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row13_col6{
+    
+        background-color:  #fedbcc;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row13_col7{
+    
+        background-color:  #fcc1a8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row14_col4{
+    
+        background-color:  #ffebe2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row14_col6,#T_24deb_row16_col5,#T_24deb_row19_col7{
+    
+        background-color:  #fedfd0;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row15_col4,#T_24deb_row17_col4,#T_24deb_row22_col4{
+    
+        background-color:  #ffeee7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row15_col6,#T_24deb_row17_col6{
+    
+        background-color:  #fedecf;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row15_col7,#T_24deb_row22_col7{
+    
+        background-color:  #fee5d8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row16_col4,#T_24deb_row18_col5{
+    
+        background-color:  #fee3d6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row16_col7{
+    
+        background-color:  #fdcbb6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row17_col5,#T_24deb_row21_col6,#T_24deb_row22_col6{
+    
+        background-color:  #fee1d3;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row18_col4,#T_24deb_row21_col5{
+    
+        background-color:  #fee6da;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row18_col6,#T_24deb_row19_col6,#T_24deb_row20_col6{
+    
+        background-color:  #fee0d2;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row19_col4{
+    
+        background-color:  #ffece3;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row19_col5,#T_24deb_row21_col7{
+    
+        background-color:  #fee3d7;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row20_col5{
+    
+        background-color:  #fee4d8;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row21_col4{
+    
+        background-color:  #ffeee6;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }#T_24deb_row22_col5{
+    
+        background-color:  #fee8de;
+    
+        color:  #000000;
+    
+        text-align: center;
+    
+    }
+</style>
+<table id="T_24deb_" class="sortable-theme-slick" data-sortable>
+<thead>
+    <tr>
+        <th class="blank level0" ></th>
+        <th class="col_heading level0 col0" ><div title='"Direct" means that there is direct evidence of binding or that this assignment is based on curated information. "Predicted" means that the motif comes from a non-curated ChIP-seq experiment or that the factor was computationally predicted to bind this motif based on its DNA binding domain.'>factors<br/>(<span style='color:black'>direct</span> or <span style='color:#666666'>predicted</span>)</div></th>
+        <th class="col_heading level0 col1" >logo</th>
+        <th class="col_heading level0 col2" >% matches<br/>input</th>
+        <th class="col_heading level0 col3" >%matches<br/>background</th>
+        <th class="col_heading level0 col4" >-log10<br/>P-value</th>
+        <th class="col_heading level0 col5" >ROC<br/>AUC</th>
+        <th class="col_heading level0 col6" >PR<br/>AUC</th>
+        <th class="col_heading level0 col7" >Enr. at<br/>1% FPR</th>
+        <th class="col_heading level0 col8" >Recall at<br/>10% FDR</th>
+    </tr>
+</thead>
+<tbody>
+    
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row0" class="row_heading level0 row0" >GimmeMotifs_1</th>
+        
+        
+        <td id="T_24deb_row0_col0" class="data row0 col0" ><div title="direct: de novo&#10;predicted: ATOH1,BHLHA15,NEUROD1,NEUROD2,NEUROG2,OLIG2,PTF1A,TCF21"><span style='color:black'>de novo</span>,<span style='color:#666666'>NEUROD1</span>,<span style='color:#666666'>PTF1A</span>,<span style='color:#666666'>BHLHA15</span>,<span style='color:#666666'>OLIG2</span>, (...)</div></td>
+        
+        
+        <td id="T_24deb_row0_col1" class="data row0 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_1.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row0_col2" class="data row0 col2" ><div class='circle1 color1_0'>9</div></td>
+        
+        
+        <td id="T_24deb_row0_col3" class="data row0 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row0_col4" class="data row0 col4" >56.92</td>
+        
+        
+        <td id="T_24deb_row0_col5" class="data row0 col5" >0.86</td>
+        
+        
+        <td id="T_24deb_row0_col6" class="data row0 col6" >0.44</td>
+        
+        
+        <td id="T_24deb_row0_col7" class="data row0 col7" >9.02</td>
+        
+        
+        <td id="T_24deb_row0_col8" class="data row0 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row1" class="row_heading level0 row1" >GimmeMotifs_5</th>
+        
+        
+        <td id="T_24deb_row1_col0" class="data row1 col0" ><div title="direct: de novo&#10;predicted: ATOH1,BHLHA15,NEUROD1,NEUROD2,NEUROG2,OLIG2,PTF1A,TCF21"><span style='color:black'>de novo</span>,<span style='color:#666666'>NEUROD1</span>,<span style='color:#666666'>PTF1A</span>,<span style='color:#666666'>BHLHA15</span>,<span style='color:#666666'>OLIG2</span>, (...)</div></td>
+        
+        
+        <td id="T_24deb_row1_col1" class="data row1 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_5.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row1_col2" class="data row1 col2" ><div class='circle1 color1_0'>9</div></td>
+        
+        
+        <td id="T_24deb_row1_col3" class="data row1 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row1_col4" class="data row1 col4" >66.48</td>
+        
+        
+        <td id="T_24deb_row1_col5" class="data row1 col5" >0.81</td>
+        
+        
+        <td id="T_24deb_row1_col6" class="data row1 col6" >0.39</td>
+        
+        
+        <td id="T_24deb_row1_col7" class="data row1 col7" >9.99</td>
+        
+        
+        <td id="T_24deb_row1_col8" class="data row1 col8" >0.01</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row2" class="row_heading level0 row2" >GimmeMotifs_2</th>
+        
+        
+        <td id="T_24deb_row2_col0" class="data row2 col0" ><div title="direct: de novo&#10;predicted: ASCL1,SCL"><span style='color:black'>de novo</span>,<span style='color:#666666'>ASCL1</span>,<span style='color:#666666'>SCL</span></div></td>
+        
+        
+        <td id="T_24deb_row2_col1" class="data row2 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_2.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row2_col2" class="data row2 col2" ><div class='circle1 color1_0'>10</div></td>
+        
+        
+        <td id="T_24deb_row2_col3" class="data row2 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row2_col4" class="data row2 col4" >68.30</td>
+        
+        
+        <td id="T_24deb_row2_col5" class="data row2 col5" >0.77</td>
+        
+        
+        <td id="T_24deb_row2_col6" class="data row2 col6" >0.35</td>
+        
+        
+        <td id="T_24deb_row2_col7" class="data row2 col7" >10.19</td>
+        
+        
+        <td id="T_24deb_row2_col8" class="data row2 col8" >0.01</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row3" class="row_heading level0 row3" >GimmeMotifs_3</th>
+        
+        
+        <td id="T_24deb_row3_col0" class="data row3 col0" ><div title="direct: de novo&#10;predicted: ASCL1,ASCL2,MYF5,MYOD1,MYOG,TCF12"><span style='color:black'>de novo</span>,<span style='color:#666666'>MYOG</span>,<span style='color:#666666'>ASCL1</span>,<span style='color:#666666'>MYOD1</span>,<span style='color:#666666'>TCF12</span>, (...)</div></td>
+        
+        
+        <td id="T_24deb_row3_col1" class="data row3 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_3.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row3_col2" class="data row3 col2" ><div class='circle1 color1_0'>8</div></td>
+        
+        
+        <td id="T_24deb_row3_col3" class="data row3 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row3_col4" class="data row3 col4" >48.97</td>
+        
+        
+        <td id="T_24deb_row3_col5" class="data row3 col5" >0.75</td>
+        
+        
+        <td id="T_24deb_row3_col6" class="data row3 col6" >0.32</td>
+        
+        
+        <td id="T_24deb_row3_col7" class="data row3 col7" >8.19</td>
+        
+        
+        <td id="T_24deb_row3_col8" class="data row3 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row4" class="row_heading level0 row4" >GimmeMotifs_8</th>
+        
+        
+        <td id="T_24deb_row4_col0" class="data row4 col0" ><div title="direct: de novo&#10;predicted: ATOH1,BHLHA15,NEUROD1,NEUROD2,NEUROG2,OLIG2,PTF1A,TCF21"><span style='color:black'>de novo</span>,<span style='color:#666666'>NEUROD1</span>,<span style='color:#666666'>PTF1A</span>,<span style='color:#666666'>BHLHA15</span>,<span style='color:#666666'>OLIG2</span>, (...)</div></td>
+        
+        
+        <td id="T_24deb_row4_col1" class="data row4 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_8.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row4_col2" class="data row4 col2" ><div class='circle1 color1_0'>5</div></td>
+        
+        
+        <td id="T_24deb_row4_col3" class="data row4 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row4_col4" class="data row4 col4" >22.28</td>
+        
+        
+        <td id="T_24deb_row4_col5" class="data row4 col5" >0.73</td>
+        
+        
+        <td id="T_24deb_row4_col6" class="data row4 col6" >0.28</td>
+        
+        
+        <td id="T_24deb_row4_col7" class="data row4 col7" >5.16</td>
+        
+        
+        <td id="T_24deb_row4_col8" class="data row4 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row5" class="row_heading level0 row5" >GimmeMotifs_9</th>
+        
+        
+        <td id="T_24deb_row5_col0" class="data row5 col0" ><div title="direct: de novo"><span style='color:black'>de novo</span></div></td>
+        
+        
+        <td id="T_24deb_row5_col1" class="data row5 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_9.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row5_col2" class="data row5 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row5_col3" class="data row5 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row5_col4" class="data row5 col4" >2.66</td>
+        
+        
+        <td id="T_24deb_row5_col5" class="data row5 col5" >0.69</td>
+        
+        
+        <td id="T_24deb_row5_col6" class="data row5 col6" >0.22</td>
+        
+        
+        <td id="T_24deb_row5_col7" class="data row5 col7" >1.85</td>
+        
+        
+        <td id="T_24deb_row5_col8" class="data row5 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row6" class="row_heading level0 row6" >GimmeMotifs_10</th>
+        
+        
+        <td id="T_24deb_row6_col0" class="data row6 col0" ><div title="direct: de novo&#10;predicted: FOXB1"><span style='color:black'>de novo</span>,<span style='color:#666666'>FOXB1</span></div></td>
+        
+        
+        <td id="T_24deb_row6_col1" class="data row6 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_10.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row6_col2" class="data row6 col2" ><div class='circle1 color1_0'>4</div></td>
+        
+        
+        <td id="T_24deb_row6_col3" class="data row6 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row6_col4" class="data row6 col4" >15.09</td>
+        
+        
+        <td id="T_24deb_row6_col5" class="data row6 col5" >0.68</td>
+        
+        
+        <td id="T_24deb_row6_col6" class="data row6 col6" >0.22</td>
+        
+        
+        <td id="T_24deb_row6_col7" class="data row6 col7" >3.96</td>
+        
+        
+        <td id="T_24deb_row6_col8" class="data row6 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row7" class="row_heading level0 row7" >GimmeMotifs_4</th>
+        
+        
+        <td id="T_24deb_row7_col0" class="data row7 col0" ><div title="direct: de novo&#10;predicted: FOXA1,FOXA2,FOXA3,FOXB1,FOXM1"><span style='color:black'>de novo</span>,<span style='color:#666666'>FOXM1</span>,<span style='color:#666666'>FOXA2</span>,<span style='color:#666666'>FOXA3</span>,<span style='color:#666666'>FOXA1</span>, (...)</div></td>
+        
+        
+        <td id="T_24deb_row7_col1" class="data row7 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_4.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row7_col2" class="data row7 col2" ><div class='circle1 color1_0'>5</div></td>
+        
+        
+        <td id="T_24deb_row7_col3" class="data row7 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row7_col4" class="data row7 col4" >25.35</td>
+        
+        
+        <td id="T_24deb_row7_col5" class="data row7 col5" >0.67</td>
+        
+        
+        <td id="T_24deb_row7_col6" class="data row7 col6" >0.24</td>
+        
+        
+        <td id="T_24deb_row7_col7" class="data row7 col7" >5.52</td>
+        
+        
+        <td id="T_24deb_row7_col8" class="data row7 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row8" class="row_heading level0 row8" >GimmeMotifs_6</th>
+        
+        
+        <td id="T_24deb_row8_col0" class="data row8 col0" ><div title="direct: de novo&#10;predicted: MEIS1,MEIS2"><span style='color:black'>de novo</span>,<span style='color:#666666'>MEIS1</span>,<span style='color:#666666'>MEIS2</span></div></td>
+        
+        
+        <td id="T_24deb_row8_col1" class="data row8 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_6.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row8_col2" class="data row8 col2" ><div class='circle1 color1_0'>3</div></td>
+        
+        
+        <td id="T_24deb_row8_col3" class="data row8 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row8_col4" class="data row8 col4" >10.45</td>
+        
+        
+        <td id="T_24deb_row8_col5" class="data row8 col5" >0.66</td>
+        
+        
+        <td id="T_24deb_row8_col6" class="data row8 col6" >0.22</td>
+        
+        
+        <td id="T_24deb_row8_col7" class="data row8 col7" >3.48</td>
+        
+        
+        <td id="T_24deb_row8_col8" class="data row8 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row9" class="row_heading level0 row9" >GimmeMotifs_11</th>
+        
+        
+        <td id="T_24deb_row9_col0" class="data row9 col0" ><div title="direct: de novo&#10;predicted: HIC1"><span style='color:black'>de novo</span>,<span style='color:#666666'>HIC1</span></div></td>
+        
+        
+        <td id="T_24deb_row9_col1" class="data row9 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_11.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row9_col2" class="data row9 col2" ><div class='circle1 color1_0'>3</div></td>
+        
+        
+        <td id="T_24deb_row9_col3" class="data row9 col3" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row9_col4" class="data row9 col4" >4.66</td>
+        
+        
+        <td id="T_24deb_row9_col5" class="data row9 col5" >0.65</td>
+        
+        
+        <td id="T_24deb_row9_col6" class="data row9 col6" >0.19</td>
+        
+        
+        <td id="T_24deb_row9_col7" class="data row9 col7" >1.94</td>
+        
+        
+        <td id="T_24deb_row9_col8" class="data row9 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row10" class="row_heading level0 row10" >GimmeMotifs_13</th>
+        
+        
+        <td id="T_24deb_row10_col0" class="data row10 col0" ><div title="direct: de novo&#10;predicted: POU5F1"><span style='color:black'>de novo</span>,<span style='color:#666666'>POU5F1</span></div></td>
+        
+        
+        <td id="T_24deb_row10_col1" class="data row10 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_13.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row10_col2" class="data row10 col2" ><div class='circle1 color1_0'>4</div></td>
+        
+        
+        <td id="T_24deb_row10_col3" class="data row10 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row10_col4" class="data row10 col4" >14.13</td>
+        
+        
+        <td id="T_24deb_row10_col5" class="data row10 col5" >0.63</td>
+        
+        
+        <td id="T_24deb_row10_col6" class="data row10 col6" >0.20</td>
+        
+        
+        <td id="T_24deb_row10_col7" class="data row10 col7" >4.06</td>
+        
+        
+        <td id="T_24deb_row10_col8" class="data row10 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row11" class="row_heading level0 row11" >GimmeMotifs_12</th>
+        
+        
+        <td id="T_24deb_row11_col0" class="data row11 col0" ><div title="direct: de novo"><span style='color:black'>de novo</span></div></td>
+        
+        
+        <td id="T_24deb_row11_col1" class="data row11 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_12.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row11_col2" class="data row11 col2" ><div class='circle1 color1_0'>3</div></td>
+        
+        
+        <td id="T_24deb_row11_col3" class="data row11 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row11_col4" class="data row11 col4" >10.53</td>
+        
+        
+        <td id="T_24deb_row11_col5" class="data row11 col5" >0.62</td>
+        
+        
+        <td id="T_24deb_row11_col6" class="data row11 col6" >0.19</td>
+        
+        
+        <td id="T_24deb_row11_col7" class="data row11 col7" >3.51</td>
+        
+        
+        <td id="T_24deb_row11_col8" class="data row11 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row12" class="row_heading level0 row12" >GimmeMotifs_15</th>
+        
+        
+        <td id="T_24deb_row12_col0" class="data row12 col0" ><div title="direct: de novo&#10;predicted: NR3C1"><span style='color:black'>de novo</span>,<span style='color:#666666'>NR3C1</span></div></td>
+        
+        
+        <td id="T_24deb_row12_col1" class="data row12 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_15.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row12_col2" class="data row12 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row12_col3" class="data row12 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row12_col4" class="data row12 col4" >3.41</td>
+        
+        
+        <td id="T_24deb_row12_col5" class="data row12 col5" >0.62</td>
+        
+        
+        <td id="T_24deb_row12_col6" class="data row12 col6" >0.19</td>
+        
+        
+        <td id="T_24deb_row12_col7" class="data row12 col7" >2.13</td>
+        
+        
+        <td id="T_24deb_row12_col8" class="data row12 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row13" class="row_heading level0 row13" >GimmeMotifs_14</th>
+        
+        
+        <td id="T_24deb_row13_col0" class="data row13 col0" ><div title="direct: de novo&#10;predicted: ZKSCAN1"><span style='color:black'>de novo</span>,<span style='color:#666666'>ZKSCAN1</span></div></td>
+        
+        
+        <td id="T_24deb_row13_col1" class="data row13 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_14.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row13_col2" class="data row13 col2" ><div class='circle1 color1_0'>3</div></td>
+        
+        
+        <td id="T_24deb_row13_col3" class="data row13 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row13_col4" class="data row13 col4" >12.29</td>
+        
+        
+        <td id="T_24deb_row13_col5" class="data row13 col5" >0.61</td>
+        
+        
+        <td id="T_24deb_row13_col6" class="data row13 col6" >0.19</td>
+        
+        
+        <td id="T_24deb_row13_col7" class="data row13 col7" >3.79</td>
+        
+        
+        <td id="T_24deb_row13_col8" class="data row13 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row14" class="row_heading level0 row14" >GimmeMotifs_16</th>
+        
+        
+        <td id="T_24deb_row14_col0" class="data row14 col0" ><div title="direct: de novo&#10;predicted: NFIB,NFIC"><span style='color:black'>de novo</span>,<span style='color:#666666'>NFIC</span>,<span style='color:#666666'>NFIB</span></div></td>
+        
+        
+        <td id="T_24deb_row14_col1" class="data row14 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_16.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row14_col2" class="data row14 col2" ><div class='circle1 color1_0'>5</div></td>
+        
+        
+        <td id="T_24deb_row14_col3" class="data row14 col3" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row14_col4" class="data row14 col4" >5.26</td>
+        
+        
+        <td id="T_24deb_row14_col5" class="data row14 col5" >0.61</td>
+        
+        
+        <td id="T_24deb_row14_col6" class="data row14 col6" >0.17</td>
+        
+        
+        <td id="T_24deb_row14_col7" class="data row14 col7" >1.86</td>
+        
+        
+        <td id="T_24deb_row14_col8" class="data row14 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row15" class="row_heading level0 row15" >GimmeMotifs_18</th>
+        
+        
+        <td id="T_24deb_row15_col0" class="data row15 col0" ><div title="direct: de novo&#10;predicted: SOX10"><span style='color:black'>de novo</span>,<span style='color:#666666'>SOX10</span></div></td>
+        
+        
+        <td id="T_24deb_row15_col1" class="data row15 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_18.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row15_col2" class="data row15 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row15_col3" class="data row15 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row15_col4" class="data row15 col4" >3.67</td>
+        
+        
+        <td id="T_24deb_row15_col5" class="data row15 col5" >0.60</td>
+        
+        
+        <td id="T_24deb_row15_col6" class="data row15 col6" >0.18</td>
+        
+        
+        <td id="T_24deb_row15_col7" class="data row15 col7" >2.20</td>
+        
+        
+        <td id="T_24deb_row15_col8" class="data row15 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row16" class="row_heading level0 row16" >GimmeMotifs_17</th>
+        
+        
+        <td id="T_24deb_row16_col0" class="data row16 col0" ><div title="direct: de novo&#10;predicted: ZSCAN16"><span style='color:black'>de novo</span>,<span style='color:#666666'>ZSCAN16</span></div></td>
+        
+        
+        <td id="T_24deb_row16_col1" class="data row16 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_17.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row16_col2" class="data row16 col2" ><div class='circle1 color1_0'>3</div></td>
+        
+        
+        <td id="T_24deb_row16_col3" class="data row16 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row16_col4" class="data row16 col4" >9.74</td>
+        
+        
+        <td id="T_24deb_row16_col5" class="data row16 col5" >0.58</td>
+        
+        
+        <td id="T_24deb_row16_col6" class="data row16 col6" >0.18</td>
+        
+        
+        <td id="T_24deb_row16_col7" class="data row16 col7" >3.37</td>
+        
+        
+        <td id="T_24deb_row16_col8" class="data row16 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row17" class="row_heading level0 row17" >GimmeMotifs_19</th>
+        
+        
+        <td id="T_24deb_row17_col0" class="data row17 col0" ><div title="direct: de novo&#10;predicted: AP1,ATF3,BATF,FOS,FOSL2,FRA1,JUN"><span style='color:black'>de novo</span>,<span style='color:#666666'>FOSL2</span>,<span style='color:#666666'>FOS</span>,<span style='color:#666666'>ATF3</span>,<span style='color:#666666'>FRA1</span>, (...)</div></td>
+        
+        
+        <td id="T_24deb_row17_col1" class="data row17 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_19.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row17_col2" class="data row17 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row17_col3" class="data row17 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row17_col4" class="data row17 col4" >3.58</td>
+        
+        
+        <td id="T_24deb_row17_col5" class="data row17 col5" >0.58</td>
+        
+        
+        <td id="T_24deb_row17_col6" class="data row17 col6" >0.17</td>
+        
+        
+        <td id="T_24deb_row17_col7" class="data row17 col7" >1.95</td>
+        
+        
+        <td id="T_24deb_row17_col8" class="data row17 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row18" class="row_heading level0 row18" >GimmeMotifs_7</th>
+        
+        
+        <td id="T_24deb_row18_col0" class="data row18 col0" ><div title="direct: de novo&#10;predicted: SMAD3"><span style='color:black'>de novo</span>,<span style='color:#666666'>SMAD3</span></div></td>
+        
+        
+        <td id="T_24deb_row18_col1" class="data row18 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_7.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row18_col2" class="data row18 col2" ><div class='circle1 color1_0'>3</div></td>
+        
+        
+        <td id="T_24deb_row18_col3" class="data row18 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row18_col4" class="data row18 col4" >8.10</td>
+        
+        
+        <td id="T_24deb_row18_col5" class="data row18 col5" >0.57</td>
+        
+        
+        <td id="T_24deb_row18_col6" class="data row18 col6" >0.17</td>
+        
+        
+        <td id="T_24deb_row18_col7" class="data row18 col7" >3.10</td>
+        
+        
+        <td id="T_24deb_row18_col8" class="data row18 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row19" class="row_heading level0 row19" >GimmeMotifs_20</th>
+        
+        
+        <td id="T_24deb_row19_col0" class="data row19 col0" ><div title="direct: de novo&#10;predicted: TEAD4"><span style='color:black'>de novo</span>,<span style='color:#666666'>TEAD4</span></div></td>
+        
+        
+        <td id="T_24deb_row19_col1" class="data row19 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_20.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row19_col2" class="data row19 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row19_col3" class="data row19 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row19_col4" class="data row19 col4" >5.16</td>
+        
+        
+        <td id="T_24deb_row19_col5" class="data row19 col5" >0.57</td>
+        
+        
+        <td id="T_24deb_row19_col6" class="data row19 col6" >0.17</td>
+        
+        
+        <td id="T_24deb_row19_col7" class="data row19 col7" >2.55</td>
+        
+        
+        <td id="T_24deb_row19_col8" class="data row19 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row20" class="row_heading level0 row20" >GimmeMotifs_21</th>
+        
+        
+        <td id="T_24deb_row20_col0" class="data row20 col0" ><div title="direct: de novo&#10;predicted: SMAD3"><span style='color:black'>de novo</span>,<span style='color:#666666'>SMAD3</span></div></td>
+        
+        
+        <td id="T_24deb_row20_col1" class="data row20 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_21.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row20_col2" class="data row20 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row20_col3" class="data row20 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row20_col4" class="data row20 col4" >4.54</td>
+        
+        
+        <td id="T_24deb_row20_col5" class="data row20 col5" >0.57</td>
+        
+        
+        <td id="T_24deb_row20_col6" class="data row20 col6" >0.16</td>
+        
+        
+        <td id="T_24deb_row20_col7" class="data row20 col7" >2.41</td>
+        
+        
+        <td id="T_24deb_row20_col8" class="data row20 col8" >0.00</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row21" class="row_heading level0 row21" >GimmeMotifs_22</th>
+        
+        
+        <td id="T_24deb_row21_col0" class="data row21 col0" ><div title="direct: de novo&#10;predicted: SNAI2"><span style='color:black'>de novo</span>,<span style='color:#666666'>SNAI2</span></div></td>
+        
+        
+        <td id="T_24deb_row21_col1" class="data row21 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_22.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row21_col2" class="data row21 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row21_col3" class="data row21 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row21_col4" class="data row21 col4" >3.93</td>
+        
+        
+        <td id="T_24deb_row21_col5" class="data row21 col5" >0.56</td>
+        
+        
+        <td id="T_24deb_row21_col6" class="data row21 col6" >0.16</td>
+        
+        
+        <td id="T_24deb_row21_col7" class="data row21 col7" >2.27</td>
+        
+        
+        <td id="T_24deb_row21_col8" class="data row21 col8" >0.01</td>
+        
+    </tr>
+    
+    
+    <tr>
+        
+        
+        <th id="T_24deb_level0_row22" class="row_heading level0 row22" >GimmeMotifs_23</th>
+        
+        
+        <td id="T_24deb_row22_col0" class="data row22 col0" ><div title="direct: de novo&#10;predicted: SNAI2"><span style='color:black'>de novo</span>,<span style='color:#666666'>SNAI2</span></div></td>
+        
+        
+        <td id="T_24deb_row22_col1" class="data row22 col1" ><div style="height:30px;object-fit:contain;"><img src="logos/GimmeMotifs_23.png" style="height:100%;width:100%;object-fit:contain;"/></div></td>
+        
+        
+        <td id="T_24deb_row22_col2" class="data row22 col2" ><div class='circle1 color1_0'>2</div></td>
+        
+        
+        <td id="T_24deb_row22_col3" class="data row22 col3" ><div class='circle1 color1_0'><1</div></td>
+        
+        
+        <td id="T_24deb_row22_col4" class="data row22 col4" >3.67</td>
+        
+        
+        <td id="T_24deb_row22_col5" class="data row22 col5" >0.55</td>
+        
+        
+        <td id="T_24deb_row22_col6" class="data row22 col6" >0.16</td>
+        
+        
+        <td id="T_24deb_row22_col7" class="data row22 col7" >2.20</td>
+        
+        
+        <td id="T_24deb_row22_col8" class="data row22 col8" >0.00</td>
+        
+    </tr>
+    
+</tbody>
+</table>
+<script>
+/*! sortable.js 0.8.0 */
+(function(){var a,b,c,d,e,f,g;a="table[data-sortable]",d=/^(-?[£$¤]?[\d,.e\-]+%?|inf)$/,g=/^\s+|\s+$/g,c=["click"],f="ontouchstart"in document.documentElement,f&&c.push("touchstart"),b=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent("on"+b,c)},e={init:function(b){var c,d,f,g,h;for(null==b&&(b={}),null==b.selector&&(b.selector=a),d=document.querySelectorAll(b.selector),h=[],f=0,g=d.length;g>f;f++)c=d[f],h.push(e.initTable(c));return h},initTable:function(a){var b,c,d,f,g,h;if(1===(null!=(h=a.tHead)?h.rows.length:void 0)&&"true"!==a.getAttribute("data-sortable-initialized")){for(a.setAttribute("data-sortable-initialized","true"),d=a.querySelectorAll("th"),b=f=0,g=d.length;g>f;b=++f)c=d[b],"false"!==c.getAttribute("data-sortable")&&e.setupClickableTH(a,c,b);return a}},setupClickableTH:function(a,d,f){var g,h,i,j,k,l;for(i=e.getColumnType(a,f),h=function(b){var c,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D;if(b.handled===!0)return!1;for(b.handled=!0,m="true"===this.getAttribute("data-sorted"),n=this.getAttribute("data-sorted-direction"),h=m?"ascending"===n?"descending":"ascending":i.defaultSortDirection,p=this.parentNode.querySelectorAll("th"),s=0,w=p.length;w>s;s++)d=p[s],d.setAttribute("data-sorted","false"),d.removeAttribute("data-sorted-direction");if(this.setAttribute("data-sorted","true"),this.setAttribute("data-sorted-direction",h),o=a.tBodies[0],l=[],m){for(D=o.rows,v=0,z=D.length;z>v;v++)g=D[v],l.push(g);for(l.reverse(),B=0,A=l.length;A>B;B++)k=l[B],o.appendChild(k)}else{for(r=null!=i.compare?i.compare:function(a,b){return b-a},c=function(a,b){return a[0]===b[0]?a[2]-b[2]:i.reverse?r(b[0],a[0]):r(a[0],b[0])},C=o.rows,j=t=0,x=C.length;x>t;j=++t)k=C[j],q=e.getNodeValue(k.cells[f]),null!=i.comparator&&(q=i.comparator(q)),l.push([q,k,j]);for(l.sort(c),u=0,y=l.length;y>u;u++)k=l[u],o.appendChild(k[1])}return"function"==typeof window.CustomEvent&&"function"==typeof a.dispatchEvent?a.dispatchEvent(new CustomEvent("Sortable.sorted",{bubbles:!0})):void 0},l=[],j=0,k=c.length;k>j;j++)g=c[j],l.push(b(d,g,h));return l},getColumnType:function(a,b){var c,d,f,g,h,i,j,k,l,m,n;if(d=null!=(l=a.querySelectorAll("th")[b])?l.getAttribute("data-sortable-type"):void 0,null!=d)return e.typesObject[d];for(m=a.tBodies[0].rows,h=0,j=m.length;j>h;h++)for(c=m[h],f=e.getNodeValue(c.cells[b]),n=e.types,i=0,k=n.length;k>i;i++)if(g=n[i],g.match(f))return g;return e.typesObject.alpha},getNodeValue:function(a){var b;return a?(b=a.getAttribute("data-value"),null!==b?b:"undefined"!=typeof a.innerText?a.innerText.replace(g,""):a.textContent.replace(g,"")):""},setupTypes:function(a){var b,c,d,f;for(e.types=a,e.typesObject={},f=[],c=0,d=a.length;d>c;c++)b=a[c],f.push(e.typesObject[b.name]=b);return f}},e.setupTypes([{name:"numeric",defaultSortDirection:"descending",match:function(a){return a.match(d)},comparator:function(a){if(a=="inf"){return Infinity}else{return parseFloat(a.replace(/^[^0-9\-]+/g,""),10)||0}}},{name:"date",defaultSortDirection:"ascending",reverse:!0,match:function(a){return!isNaN(Date.parse(a))},comparator:function(a){return Date.parse(a)||0}},{name:"alpha",defaultSortDirection:"ascending",match:function(){return!0},compare:function(a,b){return a.localeCompare(b)}}]),setTimeout(e.init,0),"function"==typeof define&&define.amd?define(function(){return e}):"undefined"!=typeof exports?module.exports=e:window.Sortable=e}).call(this);
+</script>
