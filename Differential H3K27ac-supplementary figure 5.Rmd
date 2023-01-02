@@ -1,0 +1,234 @@
+---
+title: "Differential H3K27ac upon FOXG1 KD (Supplementary figure 5)"
+output: github_document
+---
+```{r message=FALSE, warning=FALSE}
+library(RColorBrewer)
+library(ggplot2)
+library(clusterProfiler)
+library(org.Mm.eg.db)
+library(GeneOverlap)
+library(ggVennDiagram)
+library(VennDiagram)
+```
+### Differential H3K27ac upon FOXG1 Knockdown
+*Differential binding sites are retrieved from csaw (snakepipes default settings)*
+```{r Differential H3K27ac changes upon reduced levels of FOXG1, echo=FALSE, fig.cap="Supp Fig5A: Differential H3K27ac changes upon reduced levels of FOXG1", fig.align='center', out.width = '70%'}
+knitr::include_graphics("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/FOXG1_K27ac_over diff K27ac_heatmap.png")
+```
+#### Distribution of DEGs at differential H3K27ac (Gain/Loss) genes 
+```{r, echo=TRUE, fig.width=5, fig.height=5, fig.align='center', fig.dim='80%'}
+# Input files
+Foxg1_KD_DEGs<-read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/Figure 1/DE_genes_shrinked_apeglm_DIV11.tabular",
+                          sep="\t", header = TRUE, fill = FALSE,)
+Foxg1_KD_DEGs_df<- as.data.frame(Foxg1_KD_DEGs)
+Foxg1_KD_DEGs_df$log2FoldChange<-as.numeric(gsub(",", ".", Foxg1_KD_DEGs_df$log2FoldChange))
+
+# Filter increased and decreased DEGs upon FOXG1 KD in DIV11 hippocampal neurons
+increased_DEG<-Foxg1_KD_DEGs_df[(Foxg1_KD_DEGs_df$log2FoldChange>=0.5 &
+                                Foxg1_KD_DEGs_df$padj<=0.05),]
+decreased_DEG<-Foxg1_KD_DEGs_df[(Foxg1_KD_DEGs_df$log2FoldChange<=(-0.5) &
+                                  Foxg1_KD_DEGs_df$padj<=0.05),]
+static_DEG<-Foxg1_KD_DEGs_df[(abs(Foxg1_KD_DEGs_df$log2FoldChange)< 0.5) & (Foxg1_KD_DEGs_df$padj>0.05),]
+
+# List increased and decreased (and static) DEGs together
+DEG_list<- list(increased_DEG= increased_DEG$X,
+                decreased_DEG=decreased_DEG$X,
+                static=static_DEG$X)
+
+# Differential H3K27ac-DEG intersection file
+k27ac_diff_DEGs= read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/SF3/Galaxy733-[diff_k27ac_DEG_intersection_long_file].tabular", 
+                            sep="\t", quote="", fill=FALSE,)
+k27ac_diff_DEG_df= as.data.frame(k27ac_diff_DEGs)
+k27ac_diff_DEG_df[,'V8']<-factor(k27ac_diff_DEG_df[,'V8'])
+k27ac_diff_DEG_df$V3<- as.numeric(k27ac_diff_DEG_df$V3)
+
+# Filter increased and decreased DEGs upon FOXG1 KD in DIV11 hippocampal neurons
+k27ac_diff_DEG_filt<- k27ac_diff_DEG_df[(abs(k27ac_diff_DEG_df$V3)>= 0.5 & (k27ac_diff_DEG_df$V6<= 0.01)),] 
+    k27ac_diff_DEG_filt_df<- as.data.frame(k27ac_diff_DEG_filt)
+k27ac_diff_DEG_filt_df[,'V8']<-factor(k27ac_diff_DEG_filt_df[,'V8'])
+k27ac_diff_DEG_filt_df$V3<-as.numeric(k27ac_diff_DEG_filt_df$V3)
+
+# violin plot of DEG distribution in each cluster (LFC.cutoff=0.5)
+my_palette_2 <- c("darkgreen", "darkred", "gray18")
+
+p_k27ac_diff <- ggplot(k27ac_diff_DEG_df, 
+                  aes(x=V8, y=V3, fill=V8, color= V8, alpha=0.5, font=10))+ 
+    scale_color_manual(values = my_palette_2, aesthetics = "fill")+
+    scale_color_manual(values = my_palette_2, aesthetics = "colour")+
+    geom_violin()+ 
+    labs(x="cluster", y = "Log2FC")+ theme_light()+
+    stat_summary(fun=median, geom="point", size=2, color="black")+
+    theme(axis.text = element_text(size=10),
+          axis.title = element_text(size=10))
+
+violin_plot_k27ac_diff<- p_k27ac_diff + geom_jitter( data= k27ac_diff_DEG_filt_df, 
+                                                     shape=16, 
+                                                     size=5,
+                                                     position=position_jitter(width=0.2, height= 0.1))
+violin_plot_k27ac_diff
+
+# export the violin plot to pdf (Supplementary Figure 5C)
+pdf("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Output/SF3/violin plot_diff_k27ac_DEGs_2006.pdf", 
+    width=4, 
+    height=4)
+print(violin_plot_k27ac_diff)
+dev.off()
+```
+#### GeneOverlap to test enrichment of DEGs in gain-loss-random clusters of H3K27ac enrichment
+```{r, echo=TRUE, fig.height=6, fig.width=6, fig.align='center'}
+# Input files
+
+# Gain of H3K27ac 
+k27ac_diff_up<- read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/SF3/Galaxy64-[up_K27ac__Annotated_Peaks].tabular", 
+                           sep="\t", header = TRUE, quote="", fill=FALSE,)
+
+# Loss of H3K27ac
+k27ac_diff_down<-read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/SF3/Galaxy66-[down_K27ac__Annotated_Peaks].tabular", 
+                            sep="\t", header = TRUE, quote="", fill=FALSE,)
+
+# Unchanged/Random H3K27ac
+k27ac_random<-read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/SF3/random_k27ac_Annotated_Peaks.tabular", 
+                         sep="\t", header = TRUE,)
+# List them together
+k27ac_diff_list<- list(gain_k27ac= k27ac_diff_up$geneId,
+                       loss_k27ac= k27ac_diff_down$geneId,
+                       random_k27ac= k27ac_random$geneId)
+
+#H3K27ac clusters-DEGs over-representation matrix with GeneOverlap
+GO_matrix_k27ac_diff<-newGOM(gsetA = k27ac_diff_list, 
+                             gsetB=DEG_list)
+GO_matrix_k27ac_diff
+
+# Oddsratio heatmap for looking at the association between the clusters-DEGs
+heatmap_k27ac_diff<- drawHeatmap(GO_matrix_k27ac_diff, 
+            what = c("odds.ratio"), 
+            adj.p=TRUE, 
+            cutoff=0.1, 
+            ncolused = 5,
+            grid.col = "Blues",
+            note.col = "Black")
+
+# Jaccard heatmap for looking at the similarities between clusters-DEGs
+heatmap_k27ac_diff<- drawHeatmap(GO_matrix_k27ac_diff, 
+            what = c("Jaccard"), 
+            adj.p=TRUE, 
+            cutoff=0.1, 
+            ncolused = 5,
+            grid.col = "Blues",
+            note.col = "Black")
+```
+#### Functional enrichment of differential H3K27ac peaks
+```{r, echo=TRUE, fig.height=7, fig.width=6, fig.align='center'}
+# Symbol to ENTREZ ID annotation for clusterprofiler
+k27ac_diff_up_id<-bitr(k27ac_diff_up$geneId,
+                       fromType = "ENSEMBL",
+                       toType = "ENTREZID", 
+                       OrgDb ="org.Mm.eg.db", 
+                       drop = TRUE)
+k27ac_diff_down_id<-bitr(k27ac_diff_down$geneId,
+                         fromType = "ENSEMBL", 
+                         toType = "ENTREZID", 
+                         OrgDb ="org.Mm.eg.db",
+                         drop = TRUE)
+    # create geneCluster list
+     list_k27ac_diff<-list(k27ac_gain= k27ac_diff_up_id$ENTREZID, 
+                        k27ac_loss= k27ac_diff_down_id$ENTREZID)
+     
+# Differential Functional enrichment by comparecluster
+  k27ac_diff_GO <- compareCluster(geneClusters = list_k27ac_diff,
+                                 fun="enrichGO",
+                                 OrgDb = "org.Mm.eg.db",
+                                 ont = "BP",
+                                 pAdjustMethod = "BH",
+                                 qvalueCutoff = 0.05,
+                                 pvalueCutoff = 0.05,
+                                 readable = TRUE)
+  
+  # simplify the terms to avoid redundancy
+k27ac_diff_GO_simp<-clusterProfiler::simplify(k27ac_diff_GO,
+                                 cutoff = 0.5,
+                                 by = "p.adjust",
+                                 select_fun = min,
+                                 measure = "Wang",
+                                 semData = NULL)
+
+    
+# Dotplot of GO term analysis
+dp_diff_K27ac = dotplot(k27ac_diff_GO,
+             showCategory=10,
+             font.size=10,
+             includeAll=FALSE
+             )
+dp_diff_K27ac
+
+# Dotplot of  simplified GO term analysis
+dp_diff_K27ac_simp = dotplot(k27ac_diff_GO_simp,
+             showCategory=10,
+             font.size=10,
+             includeAll=FALSE)
+dp_diff_K27ac_simp
+
+# create a reference table for GO terms and export to csv
+    k27ac_diff_GO_df = as.data.frame(k27ac_diff_GO)
+    write.table(k27ac_diff_GO_df, 
+                file="~/Integrative-multi-omics-analyses-of-FOXG1-functions/Output/Figure 3/H3K27ac_diff_csaw_GOterms.txt",
+                sep = "\t", quote = FALSE,)
+
+# export the dotplots to pdf
+pdf("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Output/Figure 3/H3K27ac_diff_csaw_GOterms_dotplot_051022.pdf", width=5, height=6)
+print(dp_diff_K27ac)
+dev.off()
+# Supplementary Figure5D
+pdf("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Output/Figure 3/k27ac_diff_csaw_GOterms_dotplot_simp_051022.pdf", width=5.5, height=5.8)
+print(dp_diff_K27ac_simp)
+dev.off()
+```
+#### Compare differential H3K27ac enrichment with H3k27ac enrichment at FOXG1 peaks by intersecting DEGs, k27ac changes at FOXG1 peaks and differential K27ac binding peaks
+```{r, fig.align='center',}
+# Input K-means clustered H3K27ac files (from FIGURE 3A)
+k27ac_c1<- read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/Figure 3/H3K27ac/Galaxy133-[K27ac_FOXG1_filtered_peaks_Cluster1].tabular",
+                      header=TRUE, sep="\t", quote="", fill=FALSE,)
+k27ac_c2<- read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/Figure 3/H3K27ac/Galaxy136-[K27ac_FOXG1_filtered_peaks_Cluster2].tabular", 
+                      header=TRUE, sep="\t", quote="", fill=FALSE,)
+k27ac_c3<- read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/Figure 3/H3K27ac/Galaxy139-[K27ac_FOXG1_filtered_peaks_Cluster3].tabular",
+                      header=TRUE, sep="\t", quote="", fill=FALSE,)
+k27ac_c4<- read.table("~/Integrative-multi-omics-analyses-of-FOXG1-functions/Input Files/Figure 3/H3K27ac/Galaxy142-[K27ac_FOXG1_filtered_peaks_Cluster4].tabular", 
+                      header=TRUE, sep="\t", quote="", fill=FALSE,)
+
+# Intersecting the increase of H3K27ac at FOXG1 peaks (cluster 2), differential gain of H3K27ac, and increased gene expression
+venn_list_k27ac_up<- list(k27ac_gain=k27ac_c2$geneId,
+                       k27ac_diff_up= k27ac_diff_up$geneId,
+                       Foxg1KD_increased=increased_DEG$X)
+venn_k27ac_up<-ggVennDiagram(venn_list_k27ac_up, 
+                             n.sides = 3000)  
+venn_k27ac_up
+
+# list of intersecting genes (increase)
+k27ac_up_intersect<-calculate.overlap(venn_list_k27ac_up)
+intersect.k27ac.up<-bitr(k27ac_up_intersect$a3, 
+                fromType = "ENSEMBL", 
+                toType = "SYMBOL",
+                OrgDb = org.Mm.eg.db)
+intersect.k27ac.up
+
+# Intersecting the decrease of H3K27ac at FOXG1 peaks (cluster 3), differential loss of H3K27ac, and decreased gene expression
+venn_list_k27ac_down<- list(k27ac_loss=k27ac_c3$geneId,
+                          k27ac_diff_down= k27ac_diff_down$geneId,
+                          Foxg1KD_decreased=decreased_DEG$X)
+venn_k27ac_down<-ggVennDiagram(venn_list_k27ac_down, 
+                               n.sides = 3000)  
+venn_k27ac_down
+
+# list of intersecting genes (decrease)
+k27ac_down_intersect<- calculate.overlap(venn_list_k27ac_down)
+intersect.k27ac.down<-bitr(k27ac_down_intersect$a3, 
+                fromType = "ENSEMBL", 
+                toType = "SYMBOL", 
+                OrgDb = org.Mm.eg.db)
+intersect.k27ac.down
+```
+
+```{r}
+sessionInfo()
+```
