@@ -1,0 +1,12 @@
+unique terms	Cluster_1	Cluster_2	Cluster_3	Cluster_4	Cluster_5
+3' UTR	79	88	159	193	154
+5' UTR	23	16	34	50	36
+Distal Intergenic	5475	5590	9643	10279	10332
+Downstream (<1kb)	33	0	34	0	0
+Downstream (1-2kb)	43	0	50	0	0
+Downstream (2-3kb)	41	0	43	0	0
+Exon	304	438	559	0	0
+Intron	3965	3986	6808	13372	12579
+Promoter (<=1kb)	4574	4598	3689	1839	1691
+Promoter (1-2kb)	972	1033	525	769	713
+Promoter (2-3kb)	533	568	486	785	675

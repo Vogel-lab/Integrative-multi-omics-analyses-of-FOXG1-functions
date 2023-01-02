@@ -1,0 +1,45 @@
+Clusters	terms	number
+Cluster 1	3' UTR	67
+Cluster 1	5' UTR	23
+Cluster 1	Distal Intergenic	3054
+Cluster 1	Downstream (<1kb)	28
+Cluster 1	Downstream (1-2kb)	34
+Cluster 1	Downstream (2-3kb)	24
+Cluster 1	exon	225
+Cluster 1	intron	3188
+Cluster 1	Promoter (<=1kb)	7268
+Cluster 1	Promoter (1-2kb)	1199
+Cluster 1	Promoter (2-3kb)	525
+Cluster 2	3' UTR	187
+Cluster 2	5' UTR	43
+Cluster 2	Distal Intergenic	8975
+Cluster 2	Downstream (<1kb)	72
+Cluster 2	Downstream (1-2kb)	79
+Cluster 2	Downstream (2-3kb)	85
+Cluster 2	exon	648
+Cluster 2	intron	7980
+Cluster 2	Promoter (<=1kb)	5444
+Cluster 2	Promoter (1-2kb)	1032
+Cluster 2	Promoter (2-3kb)	819
+Cluster 3	3' UTR	138
+Cluster 3	5' UTR	38
+Cluster 3	Distal Intergenic	12556
+Cluster 3	Downstream (<1kb)	41
+Cluster 3	Downstream (1-2kb)	68
+Cluster 3	Downstream (2-3kb)	68
+Cluster 3	exon	538
+Cluster 3	intron	9060
+Cluster 3	Promoter (<=1kb)	2006
+Cluster 3	Promoter (1-2kb)	748
+Cluster 3	Promoter (2-3kb)	621
+Cluster 4	3' UTR	282
+Cluster 4	5' UTR	55
+Cluster 4	Distal Intergenic	21823
+Cluster 4	Downstream (<1kb)	108
+Cluster 4	Downstream (1-2kb)	119
+Cluster 4	Downstream (2-3kb)	150
+Cluster 4	exon	1050
+Cluster 4	intron	13601
+Cluster 4	Promoter (<=1kb)	1674
+Cluster 4	Promoter (1-2kb)	1032
+Cluster 4	Promoter (2-3kb)	1082

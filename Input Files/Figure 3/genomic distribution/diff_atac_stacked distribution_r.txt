@@ -1,0 +1,23 @@
+Clusters	terms	number
+ATAC gain	3' UTR	9
+ATAC gain	5' UTR	0
+ATAC gain	Distal Intergenic	236
+ATAC gain	Downstream (<1kb)	1
+ATAC gain	Downstream (1-2kb)	1
+ATAC gain	Downstream (2-3kb)	2
+ATAC gain	exon	4
+ATAC gain	intron	200
+ATAC gain	Promoter (<=1kb)	149
+ATAC gain	Promoter (1-2kb)	31
+ATAC gain	Promoter (2-3kb)	27
+ATAC loss	3' UTR	4
+ATAC loss	5' UTR	0
+ATAC loss	Distal Intergenic	117
+ATAC loss	Downstream (<1kb)	0
+ATAC loss	Downstream (1-2kb)	1
+ATAC loss	Downstream (2-3kb)	1
+ATAC loss	exon	0
+ATAC loss	intron	111
+ATAC loss	Promoter (<=1kb)	66
+ATAC loss	Promoter (1-2kb)	22
+ATAC loss	Promoter (2-3kb)	16
