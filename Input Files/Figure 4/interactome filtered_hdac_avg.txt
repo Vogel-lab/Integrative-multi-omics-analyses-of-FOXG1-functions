@@ -1,0 +1,6 @@
+Protein IDs	Majority protein IDs	Peptide counts (all)	Peptide counts (razor+unique)	Peptide counts (unique)	Protein names	Gene names	Protein	Ratio H/L Sample_1	log2 L/H Sample HA_IP	Ratio H/L normalized Sample_1	Ratio H/L variability [%] Sample_1	Ratio H/L count Sample_1	Ratio H/L Sample_2	log2 H/L Sample Fox91	Mean of log FC	average
+"Q60987;Q61850;Q3TAY5;H3BLJ5;E9PYQ6;Q64731;Q61660;E9Q7L6;Q499D0;Q8K3Q3;Q61572;Q9ES18;Q8BUR3;Q61575"	Q60987	"25;2;1;1;1;1;1;1;1;1;1;1;1;1"	"25;2;1;1;1;1;1;1;1;1;1;1;1;1"	"23;2;1;1;1;1;1;1;1;1;1;1;1;1"	Forkhead box protein G1	Foxg1	FOXG1	0,0070206	7,154189952	0,053554	144,02	171	2,6637	1,413431608	4,28381078	average
+"O09106;D3YYI8;O88895;Q3UM33"	"O09106;D3YYI8"	"8;8;1;1"	"8;8;1;1"	"4;4;0;0"	"Histone deacetylase 1;Histone deacetylase"	"Hdac1;Gm10093"	HDAC1	0,08464	3,562516562	0,35213	33,776	6	2,3878	1,255682003	2,409099283	average
+"Q8BQ10;P70288"	"Q8BQ10;P70288"	"6;6"	"2;2"	"2;2"	Histone deacetylase 2	Hdac2	HDAC2	0,068981	3,857657146	0,23213	NaN	1	1,9284	0,947404335	2,402530741	average
+Q8C6B9	Q8C6B9	4	4	4	Active regulator of SIRT1	Rps19bp1	RPS19BP1	0,087181	3,519842438	0,18163	111,85	4	2,953	1,562181356	2,541011897	average
+"Q3UNI1;Q923E4"	"Q3UNI1;Q923E4"	"3;3"	"3;3"	"3;3"	"NAD-dependent protein deacetylase sirtuin-1;SirtT1 75 kDa fragment"	Sirt1	SIRT1	0,05221	4,259530031	0,39219	81,09	5	2,881	1,52656966	2,893049846	average

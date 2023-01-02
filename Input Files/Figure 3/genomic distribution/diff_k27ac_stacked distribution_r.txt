@@ -1,0 +1,23 @@
+Clusters	terms	number
+K27ac gain	3' UTR	0
+K27ac gain	5' UTR	1
+K27ac gain	Distal Intergenic	36
+K27ac gain	Downstream (<1kb)	1
+K27ac gain	Downstream (1-2kb)	0
+K27ac gain	Downstream (2-3kb)	0
+K27ac gain	exon	3
+K27ac gain	intron	35
+K27ac gain	Promoter (<=1kb)	73
+K27ac gain	Promoter (1-2kb)	7
+K27ac gain	Promoter (2-3kb)	9
+K27ac  loss	3' UTR	0
+K27ac  loss	5' UTR	0
+K27ac  loss	Distal Intergenic	120
+K27ac  loss	Downstream (<1kb)	0
+K27ac  loss	Downstream (1-2kb)	0
+K27ac  loss	Downstream (2-3kb)	2
+K27ac  loss	exon	12
+K27ac  loss	intron	91
+K27ac  loss	Promoter (<=1kb)	22
+K27ac  loss	Promoter (1-2kb)	4
+K27ac  loss	Promoter (2-3kb)	4

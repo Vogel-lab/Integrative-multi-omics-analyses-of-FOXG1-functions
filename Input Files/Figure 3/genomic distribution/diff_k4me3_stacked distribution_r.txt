@@ -1,0 +1,23 @@
+Clusters	terms	number
+K4me3 gain	3' UTR	0
+K4me3 gain	5' UTR	0
+K4me3 gain	Distal Intergenic	2
+K4me3 gain	Downstream (<1kb)	0
+K4me3 gain	Downstream (1-2kb)	0
+K4me3 gain	Downstream (2-3kb)	0
+K4me3 gain	exon	0
+K4me3 gain	intron	0
+K4me3 gain	Promoter (<=1kb)	16
+K4me3 gain	Promoter (1-2kb)	0
+K4me3 gain	Promoter (2-3kb)	0
+K4me3 loss	3' UTR	0
+K4me3 loss	5' UTR	0
+K4me3 loss	Distal Intergenic	4
+K4me3 loss	Downstream (<1kb)	0
+K4me3 loss	Downstream (1-2kb)	0
+K4me3 loss	Downstream (2-3kb)	0
+K4me3 loss	exon	2
+K4me3 loss	intron	3
+K4me3 loss	Promoter (<=1kb)	53
+K4me3 loss	Promoter (1-2kb)	0
+K4me3 loss	Promoter (2-3kb)	0
