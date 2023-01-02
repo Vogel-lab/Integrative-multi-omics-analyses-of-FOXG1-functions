@@ -1,0 +1,5 @@
+SystemExit in line 38 of /home/ferrari/anaconda3/envs/snakePipes_new06_2018/lib/python3.6/site-packages/snakePipes/workflows/DNA-mapping/internals.snakefile:
+1
+  File "/home/ferrari/anaconda3/envs/snakePipes_new06_2018/lib/python3.6/site-packages/snakePipes/workflows/DNA-mapping/Snakefile", line 16, in <module>
+  File "/home/ferrari/anaconda3/envs/snakePipes_new06_2018/lib/python3.6/site-packages/snakePipes/workflows/DNA-mapping/internals.snakefile", line 38, in <module>
+  File "/home/ferrari/anaconda3/envs/snakePipes_new06_2018/lib/python3.6/_sitebuiltins.py", line 26, in __call__

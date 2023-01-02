@@ -1,0 +1,2325 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	10	FASTQ1
+	10	STAR
+	1	SalmonIndex
+	10	SalmonQuant
+	1	Salmon_TPM
+	1	Salmon_counts
+	1	Salmon_genes_TPM
+	1	Salmon_genes_counts
+	10	Salmon_symlinks
+	10	Salmon_wasabi
+	1	all
+	1	annotation_bed2fasta
+	1	annotation_bed2gtf
+	10	bamCoverage_RPKM
+	10	bamCoverage_raw
+	10	bamCoverage_unique_mappings
+	10	convert_flagstat_output
+	1	create_annotation_bed
+	10	cutadapt
+	10	estimateReadFiltering
+	10	featureCounts
+	1	filter_annotation_bed
+	1	merge_featureCounts
+	1	multiBigwigSummary_bed
+	1	multiQC
+	1	plotCorr_bed_pearson
+	1	plotCorr_bed_spearman
+	1	plotEnrichment
+	1	plotPCA
+	1	qc_report_all
+	1	report_flagstat_all_data
+	10	sambamba_flagstat
+	10	sambamba_markdup
+	10	samtools_index
+	169
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 121
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 124
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 125
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+[Sun Jul  7 21:52:39 2019]
+Finished job 121.
+1 of 169 steps (0.59%) done
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 127
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+[Sun Jul  7 21:52:39 2019]
+Finished job 124.
+2 of 169 steps (1%) done
+
+[Sun Jul  7 21:52:39 2019]
+rule create_annotation_bed:
+    input: /data/manke/group/ferrari/my_repository/annotations_gencode/mouse/M18/annotation_snakePipes/gencode.vM18.annotation.sorted.gtf
+    output: Annotation/genes.annotated.bed
+    jobid: 11
+
+[Sun Jul  7 21:52:39 2019]
+Finished job 125.
+3 of 169 steps (2%) done
+[Sun Jul  7 21:52:39 2019]
+Finished job 127.
+4 of 169 steps (2%) done
+Submitted job 11 with external jobid '90361'.
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 128
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 120
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 119
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+[Sun Jul  7 21:52:39 2019]
+Finished job 128.
+5 of 169 steps (3%) done
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 122
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+[Sun Jul  7 21:52:39 2019]
+Finished job 120.
+6 of 169 steps (4%) done
+
+[Sun Jul  7 21:52:39 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 123
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+[Sun Jul  7 21:52:39 2019]
+Finished job 119.
+7 of 169 steps (4%) done
+[Sun Jul  7 21:52:39 2019]
+Finished job 122.
+8 of 169 steps (5%) done
+[Sun Jul  7 21:52:39 2019]
+Finished job 123.
+9 of 169 steps (5%) done
+
+[Sun Jul  7 21:52:40 2019]
+rule cutadapt:
+    input: FASTQ/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Foxg1n5_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Foxg1n5_mm_rna_sr_berulavat.err
+    jobid: 4
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 4 with external jobid '90362'.
+
+[Sun Jul  7 21:52:40 2019]
+rule cutadapt:
+    input: FASTQ/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Luciferasen6_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Luciferasen6_mm_rna_sr_berulavat.err
+    jobid: 10
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 10 with external jobid '90363'.
+
+[Sun Jul  7 21:52:40 2019]
+rule cutadapt:
+    input: FASTQ/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Foxg112_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Foxg112_mm_rna_sr_berulavat.err
+    jobid: 2
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 2 with external jobid '90364'.
+
+[Sun Jul  7 21:52:40 2019]
+rule cutadapt:
+    input: FASTQ/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Foxg111_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Foxg111_mm_rna_sr_berulavat.err
+    jobid: 1
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 1 with external jobid '90365'.
+
+[Sun Jul  7 21:52:41 2019]
+rule cutadapt:
+    input: FASTQ/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Luciferase41_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Luciferase41_mm_rna_sr_berulavat.err
+    jobid: 6
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 6 with external jobid '90366'.
+
+[Sun Jul  7 21:52:41 2019]
+rule cutadapt:
+    input: FASTQ/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Luciferase42_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Luciferase42_mm_rna_sr_berulavat.err
+    jobid: 7
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 7 with external jobid '90367'.
+
+[Sun Jul  7 21:52:41 2019]
+rule cutadapt:
+    input: FASTQ/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Luciferasen5_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Luciferasen5_mm_rna_sr_berulavat.err
+    jobid: 9
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 9 with external jobid '90368'.
+
+[Sun Jul  7 21:52:41 2019]
+rule cutadapt:
+    input: FASTQ/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Foxg153_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Foxg153_mm_rna_sr_berulavat.err
+    jobid: 3
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 3 with external jobid '90369'.
+
+[Sun Jul  7 21:52:41 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/fastq_files/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz
+    jobid: 126
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+[Sun Jul  7 21:52:41 2019]
+Finished job 126.
+10 of 169 steps (6%) done
+
+[Sun Jul  7 21:52:41 2019]
+rule cutadapt:
+    input: FASTQ/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Foxg1n6_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Foxg1n6_mm_rna_sr_berulavat.err
+    jobid: 5
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 5 with external jobid '90370'.
+[Sun Jul  7 21:53:44 2019]
+Finished job 6.
+11 of 169 steps (7%) done
+
+[Sun Jul  7 21:53:44 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Luciferase41_mm_rna_sr_berulavat.sorted.bam
+    jobid: 154
+    benchmark: STAR/.benchmark/STAR.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 20
+
+[Sun Jul  7 21:53:44 2019]
+Finished job 3.
+12 of 169 steps (7%) done
+Submitted job 154 with external jobid '90371'.
+
+[Sun Jul  7 21:53:44 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Foxg153_mm_rna_sr_berulavat.sorted.bam
+    jobid: 151
+    benchmark: STAR/.benchmark/STAR.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 151 with external jobid '90372'.
+[Sun Jul  7 21:53:55 2019]
+Finished job 2.
+13 of 169 steps (8%) done
+
+[Sun Jul  7 21:53:55 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Foxg112_mm_rna_sr_berulavat.sorted.bam
+    jobid: 150
+    benchmark: STAR/.benchmark/STAR.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 20
+
+[Sun Jul  7 21:53:55 2019]
+Finished job 1.
+14 of 169 steps (8%) done
+Submitted job 150 with external jobid '90373'.
+
+[Sun Jul  7 21:53:55 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Foxg111_mm_rna_sr_berulavat.sorted.bam
+    jobid: 149
+    benchmark: STAR/.benchmark/STAR.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 149 with external jobid '90374'.
+[Sun Jul  7 21:54:06 2019]
+Finished job 7.
+15 of 169 steps (9%) done
+
+[Sun Jul  7 21:54:06 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Luciferase42_mm_rna_sr_berulavat.sorted.bam
+    jobid: 155
+    benchmark: STAR/.benchmark/STAR.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 20
+
+[Sun Jul  7 21:54:06 2019]
+Finished job 9.
+16 of 169 steps (9%) done
+Submitted job 155 with external jobid '90375'.
+
+[Sun Jul  7 21:54:06 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Luciferasen5_mm_rna_sr_berulavat.sorted.bam
+    jobid: 157
+    benchmark: STAR/.benchmark/STAR.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 157 with external jobid '90376'.
+[Sun Jul  7 21:54:17 2019]
+Finished job 4.
+17 of 169 steps (10%) done
+
+[Sun Jul  7 21:54:17 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Foxg1n5_mm_rna_sr_berulavat.sorted.bam
+    jobid: 152
+    benchmark: STAR/.benchmark/STAR.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 152 with external jobid '90377'.
+[Sun Jul  7 21:54:28 2019]
+Finished job 10.
+18 of 169 steps (11%) done
+
+[Sun Jul  7 21:54:28 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Luciferasen6_mm_rna_sr_berulavat.sorted.bam
+    jobid: 158
+    benchmark: STAR/.benchmark/STAR.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 158 with external jobid '90378'.
+[Sun Jul  7 21:55:12 2019]
+Finished job 5.
+19 of 169 steps (11%) done
+
+[Sun Jul  7 21:55:12 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Foxg1n6_mm_rna_sr_berulavat.sorted.bam
+    jobid: 153
+    benchmark: STAR/.benchmark/STAR.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 153 with external jobid '90379'.
+[Sun Jul  7 21:56:29 2019]
+Finished job 11.
+20 of 169 steps (12%) done
+
+[Sun Jul  7 21:56:29 2019]
+rule cutadapt:
+    input: FASTQ/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz
+    output: FASTQ_Cutadapt/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.Luciferase83_mm_rna_sr_berulavat.out, FASTQ_Cutadapt/logs/Cutadapt.Luciferase83_mm_rna_sr_berulavat.err
+    jobid: 8
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 8 with external jobid '90380'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 21:57:30 2019]
+Finished job 8.
+21 of 169 steps (12%) done
+
+[Sun Jul  7 21:57:30 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz
+    output: STAR/Luciferase83_mm_rna_sr_berulavat.sorted.bam
+    jobid: 156
+    benchmark: STAR/.benchmark/STAR.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 20
+
+Submitted job 156 with external jobid '90381'.
+[Sun Jul  7 21:58:57 2019]
+Finished job 154.
+22 of 169 steps (13%) done
+
+[Sun Jul  7 21:58:57 2019]
+rule sambamba_markdup:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Luciferase41_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Luciferase41_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Luciferase41_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 46
+    benchmark: STAR/.benchmark/sambamba_markdup.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 10
+
+[Sun Jul  7 21:58:57 2019]
+Finished job 151.
+23 of 169 steps (14%) done
+[Sun Jul  7 21:58:57 2019]
+Finished job 150.
+24 of 169 steps (14%) done
+Submitted job 46 with external jobid '90382'.
+
+[Sun Jul  7 21:58:57 2019]
+rule sambamba_markdup:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Foxg153_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Foxg153_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Foxg153_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 43
+    benchmark: STAR/.benchmark/sambamba_markdup.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 10
+
+Submitted job 43 with external jobid '90383'.
+
+[Sun Jul  7 21:58:57 2019]
+rule sambamba_markdup:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Foxg112_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Foxg112_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Foxg112_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 42
+    benchmark: STAR/.benchmark/sambamba_markdup.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 10
+
+Submitted job 42 with external jobid '90384'.
+Removing temporary output file STAR/Luciferase41_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 21:59:30 2019]
+Finished job 46.
+25 of 169 steps (15%) done
+
+[Sun Jul  7 21:59:30 2019]
+rule sambamba_flagstat:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam
+    output: Sambamba/Luciferase41_mm_rna_sr_berulavat.markdup.txt
+    jobid: 164
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+Submitted job 164 with external jobid '90385'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:00:31 2019]
+Finished job 164.
+26 of 169 steps (15%) done
+
+[Sun Jul  7 22:00:31 2019]
+rule samtools_index:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam
+    output: STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai
+    jobid: 56
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+Submitted job 56 with external jobid '90386'.
+[Sun Jul  7 22:00:41 2019]
+Finished job 149.
+27 of 169 steps (16%) done
+
+[Sun Jul  7 22:00:41 2019]
+rule sambamba_markdup:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Foxg111_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Foxg111_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Foxg111_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 41
+    benchmark: STAR/.benchmark/sambamba_markdup.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 10
+
+[Sun Jul  7 22:00:41 2019]
+Finished job 155.
+28 of 169 steps (17%) done
+[Sun Jul  7 22:00:41 2019]
+Finished job 157.
+29 of 169 steps (17%) done
+Submitted job 41 with external jobid '90387'.
+
+[Sun Jul  7 22:00:41 2019]
+rule sambamba_markdup:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Luciferase42_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Luciferase42_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Luciferase42_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 47
+    benchmark: STAR/.benchmark/sambamba_markdup.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 10
+
+[Sun Jul  7 22:00:41 2019]
+Finished job 152.
+30 of 169 steps (18%) done
+[Sun Jul  7 22:00:42 2019]
+Finished job 158.
+31 of 169 steps (18%) done
+Removing temporary output file STAR/Foxg153_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:00:42 2019]
+Finished job 43.
+32 of 169 steps (19%) done
+Removing temporary output file STAR/Foxg112_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:00:42 2019]
+Finished job 42.
+Submitted job 47 with external jobid '90388'.
+33 of 169 steps (20%) done
+
+[Sun Jul  7 22:00:42 2019]
+rule sambamba_markdup:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Luciferasen5_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Luciferasen5_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Luciferasen5_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 49
+    benchmark: STAR/.benchmark/sambamba_markdup.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 10
+
+[Sun Jul  7 22:00:42 2019]
+Finished job 56.
+34 of 169 steps (20%) done
+Submitted job 49 with external jobid '90389'.
+
+[Sun Jul  7 22:00:42 2019]
+rule sambamba_flagstat:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam
+    output: Sambamba/Foxg112_mm_rna_sr_berulavat.markdup.txt
+    jobid: 160
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+Submitted job 160 with external jobid '90390'.
+
+[Sun Jul  7 22:00:42 2019]
+rule samtools_index:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam
+    output: STAR/Foxg112_mm_rna_sr_berulavat.bam.bai
+    jobid: 52
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+Submitted job 52 with external jobid '90391'.
+
+[Sun Jul  7 22:00:42 2019]
+rule sambamba_markdup:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Foxg1n5_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Foxg1n5_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Foxg1n5_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 44
+    benchmark: STAR/.benchmark/sambamba_markdup.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 10
+
+Submitted job 44 with external jobid '90392'.
+
+[Sun Jul  7 22:00:42 2019]
+rule sambamba_markdup:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Luciferasen6_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Luciferasen6_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Luciferasen6_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 50
+    benchmark: STAR/.benchmark/sambamba_markdup.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 10
+
+Submitted job 50 with external jobid '90393'.
+
+[Sun Jul  7 22:00:42 2019]
+rule samtools_index:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam
+    output: STAR/Foxg153_mm_rna_sr_berulavat.bam.bai
+    jobid: 53
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+Submitted job 53 with external jobid '90394'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:01:01 2019]
+Finished job 160.
+35 of 169 steps (21%) done
+
+[Sun Jul  7 22:01:01 2019]
+rule sambamba_flagstat:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam
+    output: Sambamba/Foxg153_mm_rna_sr_berulavat.markdup.txt
+    jobid: 161
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+Waiting at most 300 seconds for missing files.
+Submitted job 161 with external jobid '90395'.
+[Sun Jul  7 22:01:12 2019]
+Finished job 52.
+36 of 169 steps (21%) done
+
+[Sun Jul  7 22:01:12 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam, STAR/Foxg112_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg112_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Foxg112_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Foxg112_mm_rna_sr_berulavat.err
+    jobid: 74
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:01:12 2019]
+Finished job 53.
+37 of 169 steps (22%) done
+Submitted job 74 with external jobid '90396'.
+
+[Sun Jul  7 22:01:13 2019]
+rule bamCoverage_raw:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam, STAR/Foxg112_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg112_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Foxg112_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Foxg112_mm_rna_sr_berulavat.err
+    jobid: 84
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 84 with external jobid '90397'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:01:32 2019]
+Finished job 161.
+38 of 169 steps (22%) done
+
+[Sun Jul  7 22:01:32 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam, STAR/Foxg112_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg112_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg112_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Foxg112_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Foxg112_mm_rna_sr_berulavat.err
+    jobid: 94
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 8
+
+Removing temporary output file STAR/Foxg111_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:01:32 2019]
+Finished job 41.
+39 of 169 steps (23%) done
+Submitted job 94 with external jobid '90398'.
+
+[Sun Jul  7 22:01:32 2019]
+rule sambamba_flagstat:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam
+    output: Sambamba/Foxg111_mm_rna_sr_berulavat.markdup.txt
+    jobid: 159
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+Removing temporary output file STAR/Luciferase42_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:01:32 2019]
+Finished job 47.
+40 of 169 steps (24%) done
+Submitted job 159 with external jobid '90399'.
+
+[Sun Jul  7 22:01:32 2019]
+rule sambamba_flagstat:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam
+    output: Sambamba/Luciferase42_mm_rna_sr_berulavat.markdup.txt
+    jobid: 165
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+Removing temporary output file STAR/Luciferasen5_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:01:32 2019]
+Finished job 49.
+41 of 169 steps (24%) done
+Submitted job 165 with external jobid '90400'.
+
+[Sun Jul  7 22:01:32 2019]
+rule sambamba_flagstat:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam
+    output: Sambamba/Luciferasen5_mm_rna_sr_berulavat.markdup.txt
+    jobid: 167
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+Removing temporary output file STAR/Foxg1n5_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:01:33 2019]
+Finished job 44.
+42 of 169 steps (25%) done
+Submitted job 167 with external jobid '90401'.
+
+[Sun Jul  7 22:01:33 2019]
+rule sambamba_flagstat:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam
+    output: Sambamba/Foxg1n5_mm_rna_sr_berulavat.markdup.txt
+    jobid: 162
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+Submitted job 162 with external jobid '90402'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:02:02 2019]
+Finished job 159.
+43 of 169 steps (25%) done
+
+[Sun Jul  7 22:02:02 2019]
+rule samtools_index:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam
+    output: STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai
+    jobid: 54
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:02:02 2019]
+Finished job 165.
+44 of 169 steps (26%) done
+[Sun Jul  7 22:02:02 2019]
+Finished job 153.
+45 of 169 steps (27%) done
+Submitted job 54 with external jobid '90403'.
+
+[Sun Jul  7 22:02:02 2019]
+rule sambamba_markdup:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Foxg1n6_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Foxg1n6_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Foxg1n6_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 45
+    benchmark: STAR/.benchmark/sambamba_markdup.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 10
+
+[Sun Jul  7 22:02:02 2019]
+Finished job 156.
+46 of 169 steps (27%) done
+Removing temporary output file STAR/Luciferasen6_mm_rna_sr_berulavat.sorted.bam.
+Submitted job 45 with external jobid '90404'.
+[Sun Jul  7 22:02:03 2019]
+Finished job 50.
+47 of 169 steps (28%) done
+
+[Sun Jul  7 22:02:03 2019]
+rule samtools_index:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam
+    output: STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai
+    jobid: 59
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:02:03 2019]
+Finished job 167.
+48 of 169 steps (28%) done
+[Sun Jul  7 22:02:03 2019]
+Finished job 162.
+49 of 169 steps (29%) done
+Submitted job 59 with external jobid '90405'.
+
+[Sun Jul  7 22:02:03 2019]
+rule sambamba_markdup:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.sorted.bam
+    output: STAR/Luciferase83_mm_rna_sr_berulavat.bam
+    log: STAR/logs/Luciferase83_mm_rna_sr_berulavat.sambamba_markdup.out, STAR/logs/Luciferase83_mm_rna_sr_berulavat.sambamba_markdup.err
+    jobid: 48
+    benchmark: STAR/.benchmark/sambamba_markdup.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 10
+
+Submitted job 48 with external jobid '90406'.
+
+[Sun Jul  7 22:02:03 2019]
+rule samtools_index:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam
+    output: STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai
+    jobid: 57
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+Submitted job 57 with external jobid '90407'.
+
+[Sun Jul  7 22:02:03 2019]
+rule sambamba_flagstat:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam
+    output: Sambamba/Luciferasen6_mm_rna_sr_berulavat.markdup.txt
+    jobid: 168
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+Submitted job 168 with external jobid '90408'.
+
+[Sun Jul  7 22:02:03 2019]
+rule samtools_index:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam
+    output: STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai
+    jobid: 60
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+Submitted job 60 with external jobid '90409'.
+[Sun Jul  7 22:02:13 2019]
+Finished job 168.
+50 of 169 steps (30%) done
+
+[Sun Jul  7 22:02:13 2019]
+rule samtools_index:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam
+    output: STAR/Foxg111_mm_rna_sr_berulavat.bam.bai
+    jobid: 51
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+Submitted job 51 with external jobid '90410'.
+[Sun Jul  7 22:02:24 2019]
+Finished job 54.
+51 of 169 steps (30%) done
+
+[Sun Jul  7 22:02:24 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam, STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg1n5_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Foxg1n5_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Foxg1n5_mm_rna_sr_berulavat.err
+    jobid: 76
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:02:24 2019]
+Finished job 74.
+52 of 169 steps (31%) done
+[Sun Jul  7 22:02:24 2019]
+Finished job 84.
+53 of 169 steps (31%) done
+Submitted job 76 with external jobid '90411'.
+
+[Sun Jul  7 22:02:24 2019]
+rule estimateReadFiltering:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam, STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Foxg1n5_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Foxg1n5_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Foxg1n5_mm_rna_sr_berulavat.err
+    jobid: 107
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:02:24 2019]
+Finished job 59.
+54 of 169 steps (32%) done
+Removing temporary output file STAR/Luciferase83_mm_rna_sr_berulavat.sorted.bam.
+Submitted job 107 with external jobid '90412'.
+
+[Sun Jul  7 22:02:24 2019]
+rule bamCoverage_raw:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam, STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg1n5_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Foxg1n5_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Foxg1n5_mm_rna_sr_berulavat.err
+    jobid: 86
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:02:24 2019]
+Finished job 48.
+55 of 169 steps (33%) done
+Submitted job 86 with external jobid '90413'.
+
+[Sun Jul  7 22:02:25 2019]
+rule bamCoverage_raw:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam, STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferasen5_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Luciferasen5_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Luciferasen5_mm_rna_sr_berulavat.err
+    jobid: 91
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:02:25 2019]
+Finished job 57.
+56 of 169 steps (33%) done
+[Sun Jul  7 22:02:25 2019]
+Finished job 60.
+57 of 169 steps (34%) done
+Submitted job 91 with external jobid '90414'.
+
+[Sun Jul  7 22:02:25 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam, STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg1n5_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg1n5_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Foxg1n5_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Foxg1n5_mm_rna_sr_berulavat.err
+    jobid: 96
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:02:25 2019]
+Finished job 51.
+58 of 169 steps (34%) done
+Submitted job 96 with external jobid '90415'.
+
+[Sun Jul  7 22:02:25 2019]
+rule estimateReadFiltering:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam, STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Luciferasen6_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Luciferasen6_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Luciferasen6_mm_rna_sr_berulavat.err
+    jobid: 113
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+Submitted job 113 with external jobid '90416'.
+
+[Sun Jul  7 22:02:25 2019]
+rule bamCoverage_raw:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam, STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferasen6_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Luciferasen6_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Luciferasen6_mm_rna_sr_berulavat.err
+    jobid: 92
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 92 with external jobid '90417'.
+
+[Sun Jul  7 22:02:25 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam, STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferasen6_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferasen6_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Luciferasen6_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Luciferasen6_mm_rna_sr_berulavat.err
+    jobid: 102
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 102 with external jobid '90418'.
+Removing temporary output file STAR/Foxg1n6_mm_rna_sr_berulavat.sorted.bam.
+[Sun Jul  7 22:03:30 2019]
+Finished job 45.
+59 of 169 steps (35%) done
+
+[Sun Jul  7 22:03:30 2019]
+rule sambamba_flagstat:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam
+    output: Sambamba/Foxg1n6_mm_rna_sr_berulavat.markdup.txt
+    jobid: 163
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+Submitted job 163 with external jobid '90419'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:04:31 2019]
+Finished job 163.
+60 of 169 steps (36%) done
+
+[Sun Jul  7 22:04:31 2019]
+rule samtools_index:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam
+    output: STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai
+    jobid: 55
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+Submitted job 55 with external jobid '90420'.
+[Sun Jul  7 22:04:41 2019]
+Finished job 76.
+61 of 169 steps (36%) done
+
+[Sun Jul  7 22:04:41 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam, STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferasen6_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Luciferasen6_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Luciferasen6_mm_rna_sr_berulavat.err
+    jobid: 82
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:04:41 2019]
+Finished job 107.
+62 of 169 steps (37%) done
+[Sun Jul  7 22:04:42 2019]
+Finished job 86.
+63 of 169 steps (37%) done
+Submitted job 82 with external jobid '90421'.
+
+[Sun Jul  7 22:04:42 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam, STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferasen5_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferasen5_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Luciferasen5_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Luciferasen5_mm_rna_sr_berulavat.err
+    jobid: 101
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:04:42 2019]
+Finished job 91.
+64 of 169 steps (38%) done
+[Sun Jul  7 22:04:42 2019]
+Finished job 113.
+65 of 169 steps (38%) done
+Submitted job 101 with external jobid '90422'.
+
+[Sun Jul  7 22:04:42 2019]
+rule estimateReadFiltering:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam, STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Luciferasen5_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Luciferasen5_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Luciferasen5_mm_rna_sr_berulavat.err
+    jobid: 112
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:04:42 2019]
+Finished job 92.
+66 of 169 steps (39%) done
+Submitted job 112 with external jobid '90423'.
+
+[Sun Jul  7 22:04:42 2019]
+rule bamCoverage_raw:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam, STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase42_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Luciferase42_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Luciferase42_mm_rna_sr_berulavat.err
+    jobid: 89
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 89 with external jobid '90424'.
+
+[Sun Jul  7 22:04:42 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam, STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase42_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferase42_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Luciferase42_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Luciferase42_mm_rna_sr_berulavat.err
+    jobid: 99
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 99 with external jobid '90425'.
+
+[Sun Jul  7 22:04:42 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam, STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferasen5_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Luciferasen5_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Luciferasen5_mm_rna_sr_berulavat.err
+    jobid: 81
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 81 with external jobid '90426'.
+[Sun Jul  7 22:05:14 2019]
+Finished job 55.
+67 of 169 steps (40%) done
+
+[Sun Jul  7 22:05:14 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam, STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg1n6_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Foxg1n6_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Foxg1n6_mm_rna_sr_berulavat.err
+    jobid: 77
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 77 with external jobid '90427'.
+[Sun Jul  7 22:05:47 2019]
+Finished job 94.
+68 of 169 steps (40%) done
+
+[Sun Jul  7 22:05:47 2019]
+rule bamCoverage_raw:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam, STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg1n6_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Foxg1n6_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Foxg1n6_mm_rna_sr_berulavat.err
+    jobid: 87
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 87 with external jobid '90428'.
+[Sun Jul  7 22:05:59 2019]
+Finished job 81.
+69 of 169 steps (41%) done
+
+[Sun Jul  7 22:05:59 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam, STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg1n6_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg1n6_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Foxg1n6_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Foxg1n6_mm_rna_sr_berulavat.err
+    jobid: 97
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 97 with external jobid '90429'.
+[Sun Jul  7 22:06:32 2019]
+Finished job 82.
+70 of 169 steps (41%) done
+
+[Sun Jul  7 22:06:32 2019]
+rule estimateReadFiltering:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam, STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Foxg1n6_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Foxg1n6_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Foxg1n6_mm_rna_sr_berulavat.err
+    jobid: 108
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:06:32 2019]
+Finished job 89.
+71 of 169 steps (42%) done
+Submitted job 108 with external jobid '90430'.
+
+[Sun Jul  7 22:06:32 2019]
+rule estimateReadFiltering:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam, STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Luciferase42_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Luciferase42_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Luciferase42_mm_rna_sr_berulavat.err
+    jobid: 110
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+Submitted job 110 with external jobid '90431'.
+[Sun Jul  7 22:07:05 2019]
+Finished job 112.
+72 of 169 steps (43%) done
+
+[Sun Jul  7 22:07:05 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam, STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase42_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Luciferase42_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Luciferase42_mm_rna_sr_berulavat.err
+    jobid: 79
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:07:05 2019]
+Finished job 77.
+73 of 169 steps (43%) done
+Submitted job 79 with external jobid '90432'.
+
+[Sun Jul  7 22:07:05 2019]
+rule bamCoverage_raw:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam, STAR/Foxg111_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg111_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Foxg111_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Foxg111_mm_rna_sr_berulavat.err
+    jobid: 83
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 83 with external jobid '90433'.
+[Sun Jul  7 22:07:38 2019]
+Finished job 96.
+74 of 169 steps (44%) done
+
+[Sun Jul  7 22:07:38 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam, STAR/Foxg111_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg111_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg111_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Foxg111_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Foxg111_mm_rna_sr_berulavat.err
+    jobid: 93
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:07:38 2019]
+Finished job 87.
+75 of 169 steps (44%) done
+Submitted job 93 with external jobid '90434'.
+
+[Sun Jul  7 22:07:38 2019]
+rule estimateReadFiltering:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam, STAR/Foxg111_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Foxg111_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Foxg111_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Foxg111_mm_rna_sr_berulavat.err
+    jobid: 104
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+Submitted job 104 with external jobid '90435'.
+[Sun Jul  7 22:08:44 2019]
+Finished job 102.
+76 of 169 steps (45%) done
+
+[Sun Jul  7 22:08:44 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam, STAR/Foxg111_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg111_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Foxg111_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Foxg111_mm_rna_sr_berulavat.err
+    jobid: 73
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:08:44 2019]
+Finished job 110.
+77 of 169 steps (46%) done
+Submitted job 73 with external jobid '90436'.
+
+[Sun Jul  7 22:08:44 2019]
+rule estimateReadFiltering:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam, STAR/Foxg112_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Foxg112_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Foxg112_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Foxg112_mm_rna_sr_berulavat.err
+    jobid: 105
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:08:44 2019]
+Finished job 79.
+78 of 169 steps (46%) done
+[Sun Jul  7 22:08:44 2019]
+Finished job 83.
+79 of 169 steps (47%) done
+Submitted job 105 with external jobid '90437'.
+
+[Sun Jul  7 22:08:44 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam, STAR/Foxg153_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg153_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Foxg153_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Foxg153_mm_rna_sr_berulavat.err
+    jobid: 75
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 75 with external jobid '90438'.
+
+[Sun Jul  7 22:08:44 2019]
+rule estimateReadFiltering:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam, STAR/Foxg153_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Foxg153_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Foxg153_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Foxg153_mm_rna_sr_berulavat.err
+    jobid: 106
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+Submitted job 106 with external jobid '90439'.
+[Sun Jul  7 22:09:50 2019]
+Finished job 101.
+80 of 169 steps (47%) done
+
+[Sun Jul  7 22:09:50 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam, STAR/Foxg153_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg153_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg153_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Foxg153_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Foxg153_mm_rna_sr_berulavat.err
+    jobid: 95
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:09:50 2019]
+Finished job 99.
+81 of 169 steps (48%) done
+[Sun Jul  7 22:09:50 2019]
+Finished job 108.
+82 of 169 steps (49%) done
+Submitted job 95 with external jobid '90440'.
+
+[Sun Jul  7 22:09:50 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam, STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase41_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Luciferase41_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Luciferase41_mm_rna_sr_berulavat.err
+    jobid: 78
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:09:50 2019]
+Finished job 104.
+83 of 169 steps (49%) done
+[Sun Jul  7 22:09:50 2019]
+Finished job 75.
+84 of 169 steps (50%) done
+Submitted job 78 with external jobid '90441'.
+
+[Sun Jul  7 22:09:50 2019]
+rule bamCoverage_raw:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam, STAR/Foxg153_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Foxg153_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Foxg153_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Foxg153_mm_rna_sr_berulavat.err
+    jobid: 85
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 85 with external jobid '90442'.
+
+[Sun Jul  7 22:09:50 2019]
+rule estimateReadFiltering:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam, STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Luciferase41_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Luciferase41_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Luciferase41_mm_rna_sr_berulavat.err
+    jobid: 109
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+Submitted job 109 with external jobid '90443'.
+
+[Sun Jul  7 22:09:51 2019]
+rule bamCoverage_raw:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam, STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase41_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Luciferase41_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Luciferase41_mm_rna_sr_berulavat.err
+    jobid: 88
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 88 with external jobid '90444'.
+[Sun Jul  7 22:10:23 2019]
+Finished job 73.
+85 of 169 steps (50%) done
+
+[Sun Jul  7 22:10:23 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam, STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase41_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferase41_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Luciferase41_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Luciferase41_mm_rna_sr_berulavat.err
+    jobid: 98
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:10:23 2019]
+Finished job 105.
+86 of 169 steps (51%) done
+Submitted job 98 with external jobid '90445'.
+
+[Sun Jul  7 22:10:23 2019]
+rule sambamba_flagstat:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam
+    output: Sambamba/Luciferase83_mm_rna_sr_berulavat.markdup.txt
+    jobid: 166
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+Submitted job 166 with external jobid '90446'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:10:54 2019]
+Finished job 166.
+87 of 169 steps (51%) done
+
+[Sun Jul  7 22:10:54 2019]
+rule samtools_index:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam
+    output: STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai
+    jobid: 58
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+Submitted job 58 with external jobid '90447'.
+[Sun Jul  7 22:11:04 2019]
+Finished job 106.
+88 of 169 steps (52%) done
+
+[Sun Jul  7 22:11:04 2019]
+rule filter_annotation_bed:
+    input: Annotation/genes.annotated.bed
+    output: Annotation/genes.filtered.bed
+    jobid: 12
+
+[Sun Jul  7 22:11:04 2019]
+Finished job 78.
+89 of 169 steps (53%) done
+[Sun Jul  7 22:11:04 2019]
+Finished job 85.
+90 of 169 steps (53%) done
+Submitted job 12 with external jobid '90448'.
+
+[Sun Jul  7 22:11:04 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Luciferasen6_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Luciferasen6_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 148
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:11:04 2019]
+Finished job 88.
+91 of 169 steps (54%) done
+Waiting at most 300 seconds for missing files.
+Submitted job 148 with external jobid '90449'.
+
+[Sun Jul  7 22:11:05 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Foxg1n6_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Foxg1n6_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 143
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+Submitted job 143 with external jobid '90450'.
+[Sun Jul  7 22:11:25 2019]
+Finished job 58.
+92 of 169 steps (54%) done
+
+[Sun Jul  7 22:11:25 2019]
+rule estimateReadFiltering:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam, STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Luciferase83_mm_rna_sr_berulavat_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.Luciferase83_mm_rna_sr_berulavat.out, bamCoverage/logs/estimateReadFiltering.Luciferase83_mm_rna_sr_berulavat.err
+    jobid: 111
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+Submitted job 111 with external jobid '90451'.
+
+[Sun Jul  7 22:11:25 2019]
+rule bamCoverage_raw:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam, STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase83_mm_rna_sr_berulavat.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.Luciferase83_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_coverage.Luciferase83_mm_rna_sr_berulavat.err
+    jobid: 90
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 90 with external jobid '90452'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:12:05 2019]
+Finished job 12.
+93 of 169 steps (55%) done
+
+[Sun Jul  7 22:12:05 2019]
+rule annotation_bed2fasta:
+    input: Annotation/genes.filtered.bed, /data/repository/organisms/GRCm38_ensembl/genome_fasta/genome.fa
+    output: Annotation/genes.filtered.fa
+    jobid: 14
+    benchmark: Annotation/.benchmark/annotation_bed2fasta.benchmark
+
+[Sun Jul  7 22:12:05 2019]
+Finished job 148.
+94 of 169 steps (56%) done
+[Sun Jul  7 22:12:05 2019]
+Finished job 143.
+95 of 169 steps (56%) done
+Submitted job 14 with external jobid '90453'.
+
+[Sun Jul  7 22:12:05 2019]
+rule bamCoverage_unique_mappings:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam, STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase83_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferase83_mm_rna_sr_berulavat.uniqueMappings.rev.bw
+    log: bamCoverage/logs/bamCoverage_uniqueMappings.Luciferase83_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_uniqueMappings.Luciferase83_mm_rna_sr_berulavat.err
+    jobid: 100
+    benchmark: bamCoverage/.benchmark/bamCoverage_uniqueMappings.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:12:05 2019]
+Finished job 93.
+96 of 169 steps (57%) done
+[Sun Jul  7 22:12:05 2019]
+Finished job 109.
+97 of 169 steps (57%) done
+Submitted job 100 with external jobid '90454'.
+
+[Sun Jul  7 22:12:05 2019]
+rule bamCoverage_RPKM:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam, STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai
+    output: bamCoverage/Luciferase83_mm_rna_sr_berulavat.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.Luciferase83_mm_rna_sr_berulavat.out, bamCoverage/logs/bamCoverage_RPKM.Luciferase83_mm_rna_sr_berulavat.err
+    jobid: 80
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:12:05 2019]
+Finished job 90.
+98 of 169 steps (58%) done
+Submitted job 80 with external jobid '90455'.
+
+[Sun Jul  7 22:12:05 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Foxg111_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Foxg111_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 139
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+Submitted job 139 with external jobid '90456'.
+
+[Sun Jul  7 22:12:06 2019]
+rule annotation_bed2gtf:
+    input: Annotation/genes.filtered.bed
+    output: Annotation/genes.filtered.gtf
+    jobid: 13
+
+Submitted job 13 with external jobid '90457'.
+
+[Sun Jul  7 22:12:06 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Luciferasen5_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Luciferasen5_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 147
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+Submitted job 147 with external jobid '90458'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:12:36 2019]
+Finished job 139.
+99 of 169 steps (59%) done
+
+[Sun Jul  7 22:12:36 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Luciferase42_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Luciferase42_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 145
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:12:36 2019]
+Finished job 147.
+100 of 169 steps (59%) done
+Submitted job 145 with external jobid '90459'.
+
+[Sun Jul  7 22:12:36 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Foxg112_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Foxg112_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 140
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+Submitted job 140 with external jobid '90460'.
+[Sun Jul  7 22:12:46 2019]
+Finished job 14.
+101 of 169 steps (60%) done
+
+[Sun Jul  7 22:12:46 2019]
+rule SalmonIndex:
+    input: Annotation/genes.filtered.fa
+    output: Salmon/SalmonIndex/sa.bin
+    log: Salmon/SalmonIndex/SalmonIndex.out, Salmon/SalmonIndex/SalmonIndex.err
+    jobid: 15
+    benchmark: Salmon/.benchmark/Salmon.index.benchmark
+    threads: 16
+
+[Sun Jul  7 22:12:46 2019]
+Finished job 111.
+102 of 169 steps (60%) done
+Submitted job 15 with external jobid '90461'.
+
+[Sun Jul  7 22:12:46 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Foxg1n5_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Foxg1n5_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 142
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+Waiting at most 300 seconds for missing files.
+Submitted job 142 with external jobid '90462'.
+[Sun Jul  7 22:13:06 2019]
+Finished job 145.
+103 of 169 steps (61%) done
+
+[Sun Jul  7 22:13:06 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Foxg153_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Foxg153_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 141
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:13:06 2019]
+Finished job 140.
+104 of 169 steps (62%) done
+Submitted job 141 with external jobid '90463'.
+
+[Sun Jul  7 22:13:07 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Luciferase41_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Luciferase41_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 144
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+Submitted job 144 with external jobid '90464'.
+[Sun Jul  7 22:13:17 2019]
+Finished job 142.
+105 of 169 steps (62%) done
+
+[Sun Jul  7 22:13:17 2019]
+rule convert_flagstat_output:
+    input: Sambamba/Luciferase83_mm_rna_sr_berulavat.markdup.txt
+    output: Sambamba/Luciferase83_mm_rna_sr_berulavat.dup.converted.tsv
+    jobid: 146
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:13:17 2019]
+Finished job 97.
+106 of 169 steps (63%) done
+Submitted job 146 with external jobid '90465'.
+[Sun Jul  7 22:13:17 2019]
+Finished job 98.
+107 of 169 steps (63%) done
+[Sun Jul  7 22:13:17 2019]
+Finished job 80.
+108 of 169 steps (64%) done
+
+[Sun Jul  7 22:13:17 2019]
+rule multiBigwigSummary_bed:
+    input: bamCoverage/Foxg111_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg112_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg153_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg1n5_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg1n6_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferase41_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferase42_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferase83_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferasen5_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferasen6_mm_rna_sr_berulavat.RPKM.bw, Annotation/genes.filtered.bed
+    output: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    log: deepTools_qc/logs/multiBigwigSummary.out, deepTools_qc/logs/multiBigwigSummary.err
+    jobid: 114
+    benchmark: deepTools_qc/.benchmark/multiBigwigSummary.bed.benchmark
+    threads: 8
+
+[Sun Jul  7 22:13:17 2019]
+Finished job 13.
+109 of 169 steps (64%) done
+[Sun Jul  7 22:13:17 2019]
+Finished job 141.
+110 of 169 steps (65%) done
+Submitted job 114 with external jobid '90466'.
+
+[Sun Jul  7 22:13:17 2019]
+rule featureCounts:
+    input: STAR/Foxg1n6_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Foxg1n6_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Foxg1n6_mm_rna_sr_berulavat.out, featureCounts/Foxg1n6_mm_rna_sr_berulavat.err
+    jobid: 65
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:13:17 2019]
+Finished job 144.
+111 of 169 steps (66%) done
+Submitted job 65 with external jobid '90467'.
+
+[Sun Jul  7 22:13:17 2019]
+rule featureCounts:
+    input: STAR/Foxg1n5_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Foxg1n5_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Foxg1n5_mm_rna_sr_berulavat.out, featureCounts/Foxg1n5_mm_rna_sr_berulavat.err
+    jobid: 64
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 64 with external jobid '90468'.
+
+[Sun Jul  7 22:13:18 2019]
+rule plotEnrichment:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam, STAR/Foxg112_mm_rna_sr_berulavat.bam, STAR/Foxg153_mm_rna_sr_berulavat.bam, STAR/Foxg1n5_mm_rna_sr_berulavat.bam, STAR/Foxg1n6_mm_rna_sr_berulavat.bam, STAR/Luciferase41_mm_rna_sr_berulavat.bam, STAR/Luciferase42_mm_rna_sr_berulavat.bam, STAR/Luciferase83_mm_rna_sr_berulavat.bam, STAR/Luciferasen5_mm_rna_sr_berulavat.bam, STAR/Luciferasen6_mm_rna_sr_berulavat.bam, STAR/Foxg111_mm_rna_sr_berulavat.bam.bai, STAR/Foxg112_mm_rna_sr_berulavat.bam.bai, STAR/Foxg153_mm_rna_sr_berulavat.bam.bai, STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai, STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai, STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai, STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai, STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai, STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai, STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai, Annotation/genes.filtered.gtf
+    output: deepTools_qc/plotEnrichment/plotEnrichment.tsv
+    log: deepTools_qc/logs/plotEnrichment.out, deepTools_qc/logs/plotEnrichment.err
+    jobid: 103
+    benchmark: deepTools_qc/.benchmark/plotEnrichment.benchmark
+    threads: 24
+
+Submitted job 103 with external jobid '90469'.
+
+[Sun Jul  7 22:13:18 2019]
+rule featureCounts:
+    input: STAR/Luciferasen6_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Luciferasen6_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Luciferasen6_mm_rna_sr_berulavat.out, featureCounts/Luciferasen6_mm_rna_sr_berulavat.err
+    jobid: 70
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 70 with external jobid '90470'.
+
+[Sun Jul  7 22:13:18 2019]
+rule featureCounts:
+    input: STAR/Luciferasen5_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Luciferasen5_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Luciferasen5_mm_rna_sr_berulavat.out, featureCounts/Luciferasen5_mm_rna_sr_berulavat.err
+    jobid: 69
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 69 with external jobid '90471'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:13:48 2019]
+Finished job 146.
+112 of 169 steps (66%) done
+
+[Sun Jul  7 22:13:48 2019]
+rule report_flagstat_all_data:
+    input: Sambamba/Foxg111_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Foxg112_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Foxg153_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Foxg1n5_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Foxg1n6_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Luciferase41_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Luciferase42_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Luciferase83_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Luciferasen5_mm_rna_sr_berulavat.dup.converted.tsv, Sambamba/Luciferasen6_mm_rna_sr_berulavat.dup.converted.tsv
+    output: Sambamba/flagstat_report_all.tsv
+    jobid: 40
+
+[Sun Jul  7 22:13:48 2019]
+Finished job 95.
+113 of 169 steps (67%) done
+[Sun Jul  7 22:13:48 2019]
+Finished job 65.
+114 of 169 steps (67%) done
+Submitted job 40 with external jobid '90472'.
+
+[Sun Jul  7 22:13:48 2019]
+rule featureCounts:
+    input: STAR/Foxg111_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Foxg111_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Foxg111_mm_rna_sr_berulavat.out, featureCounts/Foxg111_mm_rna_sr_berulavat.err
+    jobid: 61
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:13:48 2019]
+Finished job 64.
+115 of 169 steps (68%) done
+[Sun Jul  7 22:13:48 2019]
+Finished job 70.
+116 of 169 steps (69%) done
+Submitted job 61 with external jobid '90473'.
+
+[Sun Jul  7 22:13:48 2019]
+rule featureCounts:
+    input: STAR/Luciferase42_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Luciferase42_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Luciferase42_mm_rna_sr_berulavat.out, featureCounts/Luciferase42_mm_rna_sr_berulavat.err
+    jobid: 67
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:13:48 2019]
+Finished job 69.
+117 of 169 steps (69%) done
+Submitted job 67 with external jobid '90474'.
+
+[Sun Jul  7 22:13:48 2019]
+rule featureCounts:
+    input: STAR/Foxg112_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Foxg112_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Foxg112_mm_rna_sr_berulavat.out, featureCounts/Foxg112_mm_rna_sr_berulavat.err
+    jobid: 62
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 62 with external jobid '90475'.
+
+[Sun Jul  7 22:13:48 2019]
+rule featureCounts:
+    input: STAR/Foxg153_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Foxg153_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Foxg153_mm_rna_sr_berulavat.out, featureCounts/Foxg153_mm_rna_sr_berulavat.err
+    jobid: 63
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 63 with external jobid '90476'.
+
+[Sun Jul  7 22:13:49 2019]
+rule featureCounts:
+    input: STAR/Luciferase41_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Luciferase41_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Luciferase41_mm_rna_sr_berulavat.out, featureCounts/Luciferase41_mm_rna_sr_berulavat.err
+    jobid: 66
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 66 with external jobid '90477'.
+Waiting at most 300 seconds for missing files.
+Removing temporary output file Sambamba/Foxg111_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Foxg112_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Foxg153_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Foxg1n5_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Foxg1n6_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Luciferase41_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Luciferase42_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Luciferase83_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Luciferasen5_mm_rna_sr_berulavat.dup.converted.tsv.
+Removing temporary output file Sambamba/Luciferasen6_mm_rna_sr_berulavat.dup.converted.tsv.
+[Sun Jul  7 22:14:19 2019]
+Finished job 40.
+118 of 169 steps (70%) done
+
+[Sun Jul  7 22:14:19 2019]
+rule featureCounts:
+    input: STAR/Luciferase83_mm_rna_sr_berulavat.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/Luciferase83_mm_rna_sr_berulavat.counts.txt
+    log: featureCounts/Luciferase83_mm_rna_sr_berulavat.out, featureCounts/Luciferase83_mm_rna_sr_berulavat.err
+    jobid: 68
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:14:19 2019]
+Finished job 61.
+119 of 169 steps (70%) done
+[Sun Jul  7 22:14:19 2019]
+Finished job 100.
+120 of 169 steps (71%) done
+Submitted job 68 with external jobid '90478'.
+
+[Sun Jul  7 22:14:19 2019]
+rule qc_report_all:
+    input: Sambamba/flagstat_report_all.tsv
+    output: QC_report/QC_report_all.tsv
+    jobid: 72
+
+[Sun Jul  7 22:14:19 2019]
+Finished job 67.
+121 of 169 steps (72%) done
+[Sun Jul  7 22:14:19 2019]
+Finished job 62.
+122 of 169 steps (72%) done
+Submitted job 72 with external jobid '90479'.
+[Sun Jul  7 22:14:19 2019]
+Finished job 63.
+123 of 169 steps (73%) done
+[Sun Jul  7 22:14:19 2019]
+Finished job 66.
+124 of 169 steps (73%) done
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:15:20 2019]
+Finished job 72.
+125 of 169 steps (74%) done
+[Sun Jul  7 22:15:20 2019]
+Finished job 114.
+126 of 169 steps (75%) done
+
+[Sun Jul  7 22:15:20 2019]
+rule plotPCA:
+    input: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    output: deepTools_qc/plotPCA/PCA.bed_coverage.tsv
+    log: deepTools_qc/logs/plotPCA.out, deepTools_qc/logs/plotPCA.err
+    jobid: 117
+    benchmark: deepTools_qc/.benchmark/plotPCA.benchmark
+
+Submitted job 117 with external jobid '90480'.
+
+[Sun Jul  7 22:15:20 2019]
+rule plotCorr_bed_spearman:
+    input: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    output: deepTools_qc/plotCorrelation/correlation.spearman.bed_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_spearman.out, deepTools_qc/logs/plotCorrelation_spearman.err
+    jobid: 116
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_spearman.benchmark
+
+Submitted job 116 with external jobid '90481'.
+
+[Sun Jul  7 22:15:20 2019]
+rule plotCorr_bed_pearson:
+    input: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    output: deepTools_qc/plotCorrelation/correlation.pearson.bed_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_pearson.out, deepTools_qc/logs/plotCorrelation_pearson.err
+    jobid: 115
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_pearson.benchmark
+
+Submitted job 115 with external jobid '90482'.
+[Sun Jul  7 22:15:30 2019]
+Finished job 68.
+127 of 169 steps (75%) done
+
+[Sun Jul  7 22:15:30 2019]
+rule merge_featureCounts:
+    input: featureCounts/Foxg111_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg112_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg153_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg1n5_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg1n6_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferase41_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferase42_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferase83_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferasen5_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferasen6_mm_rna_sr_berulavat.counts.txt
+    output: featureCounts/counts.tsv
+    jobid: 71
+
+[Sun Jul  7 22:15:30 2019]
+Finished job 15.
+128 of 169 steps (76%) done
+Submitted job 71 with external jobid '90483'.
+
+[Sun Jul  7 22:15:30 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Foxg1n6_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 133
+    benchmark: Salmon/.benchmark/SalmonQuant.Foxg1n6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 133 with external jobid '90484'.
+
+[Sun Jul  7 22:15:31 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Foxg1n5_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 132
+    benchmark: Salmon/.benchmark/SalmonQuant.Foxg1n5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 132 with external jobid '90485'.
+
+[Sun Jul  7 22:15:31 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Luciferase42_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 135
+    benchmark: Salmon/.benchmark/SalmonQuant.Luciferase42_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 135 with external jobid '90486'.
+
+[Sun Jul  7 22:15:31 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Luciferasen5_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 137
+    benchmark: Salmon/.benchmark/SalmonQuant.Luciferasen5_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 137 with external jobid '90487'.
+
+[Sun Jul  7 22:15:31 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Luciferasen6_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 138
+    benchmark: Salmon/.benchmark/SalmonQuant.Luciferasen6_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 138 with external jobid '90488'.
+[Sun Jul  7 22:15:40 2019]
+Finished job 103.
+129 of 169 steps (76%) done
+
+[Sun Jul  7 22:15:40 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Foxg111_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg111_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 129
+    benchmark: Salmon/.benchmark/SalmonQuant.Foxg111_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:15:41 2019]
+Finished job 117.
+130 of 169 steps (77%) done
+[Sun Jul  7 22:15:41 2019]
+Finished job 116.
+131 of 169 steps (78%) done
+Submitted job 129 with external jobid '90489'.
+
+[Sun Jul  7 22:15:41 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Foxg112_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 130
+    benchmark: Salmon/.benchmark/SalmonQuant.Foxg112_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+    threads: 8
+
+[Sun Jul  7 22:15:41 2019]
+Finished job 115.
+132 of 169 steps (78%) done
+Submitted job 130 with external jobid '90490'.
+
+[Sun Jul  7 22:15:41 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Foxg153_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 131
+    benchmark: Salmon/.benchmark/SalmonQuant.Foxg153_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 131 with external jobid '90491'.
+
+[Sun Jul  7 22:15:41 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Luciferase41_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 134
+    benchmark: Salmon/.benchmark/SalmonQuant.Luciferase41_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 134 with external jobid '90492'.
+[Sun Jul  7 22:16:14 2019]
+Finished job 71.
+133 of 169 steps (79%) done
+
+[Sun Jul  7 22:16:14 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/Luciferase83_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat/quant.genes.sf
+    jobid: 136
+    benchmark: Salmon/.benchmark/SalmonQuant.Luciferase83_mm_rna_sr_berulavat.benchmark
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+    threads: 8
+
+Submitted job 136 with external jobid '90493'.
+[Sun Jul  7 22:21:22 2019]
+Finished job 136.
+134 of 169 steps (79%) done
+
+[Sun Jul  7 22:21:22 2019]
+rule Salmon_symlinks:
+    input: Salmon/Luciferase83_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Luciferase83_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 23
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+Submitted job 23 with external jobid '90494'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:21:52 2019]
+Finished job 23.
+135 of 169 steps (80%) done
+
+[Sun Jul  7 22:21:52 2019]
+rule Salmon_wasabi:
+    input: Salmon/Luciferase83_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Luciferase83_mm_rna_sr_berulavat/abundance.h5
+    jobid: 37
+    wildcards: sample=Luciferase83_mm_rna_sr_berulavat
+
+Submitted job 37 with external jobid '90495'.
+[Sun Jul  7 22:22:35 2019]
+Finished job 134.
+136 of 169 steps (80%) done
+
+[Sun Jul  7 22:22:35 2019]
+rule Salmon_symlinks:
+    input: Salmon/Luciferase41_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Luciferase41_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 21
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:22:35 2019]
+Finished job 37.
+137 of 169 steps (81%) done
+Submitted job 21 with external jobid '90496'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:23:35 2019]
+Finished job 21.
+138 of 169 steps (82%) done
+
+[Sun Jul  7 22:23:35 2019]
+rule Salmon_wasabi:
+    input: Salmon/Luciferase41_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Luciferase41_mm_rna_sr_berulavat/abundance.h5
+    jobid: 35
+    wildcards: sample=Luciferase41_mm_rna_sr_berulavat
+
+Submitted job 35 with external jobid '90497'.
+[Sun Jul  7 22:23:45 2019]
+Finished job 130.
+139 of 169 steps (82%) done
+
+[Sun Jul  7 22:23:45 2019]
+rule Salmon_symlinks:
+    input: Salmon/Foxg112_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Foxg112_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 17
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+Submitted job 17 with external jobid '90498'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:24:15 2019]
+Finished job 35.
+140 of 169 steps (83%) done
+[Sun Jul  7 22:24:16 2019]
+Finished job 17.
+141 of 169 steps (83%) done
+
+[Sun Jul  7 22:24:16 2019]
+rule Salmon_wasabi:
+    input: Salmon/Foxg112_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Foxg112_mm_rna_sr_berulavat/abundance.h5
+    jobid: 31
+    wildcards: sample=Foxg112_mm_rna_sr_berulavat
+
+Submitted job 31 with external jobid '90499'.
+[Sun Jul  7 22:24:26 2019]
+Finished job 135.
+142 of 169 steps (84%) done
+
+[Sun Jul  7 22:24:26 2019]
+rule Salmon_symlinks:
+    input: Salmon/Luciferase42_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Luciferase42_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 22
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:24:26 2019]
+Finished job 137.
+143 of 169 steps (85%) done
+Submitted job 22 with external jobid '90500'.
+
+[Sun Jul  7 22:24:26 2019]
+rule Salmon_symlinks:
+    input: Salmon/Luciferasen5_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 24
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+Submitted job 24 with external jobid '90501'.
+[Sun Jul  7 22:24:36 2019]
+Finished job 132.
+144 of 169 steps (85%) done
+
+[Sun Jul  7 22:24:36 2019]
+rule Salmon_symlinks:
+    input: Salmon/Foxg1n5_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 19
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:24:36 2019]
+Finished job 131.
+145 of 169 steps (86%) done
+[Sun Jul  7 22:24:36 2019]
+Finished job 31.
+146 of 169 steps (86%) done
+Submitted job 19 with external jobid '90502'.
+
+[Sun Jul  7 22:24:36 2019]
+rule Salmon_symlinks:
+    input: Salmon/Foxg153_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Foxg153_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 18
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:24:36 2019]
+Finished job 22.
+147 of 169 steps (87%) done
+[Sun Jul  7 22:24:36 2019]
+Finished job 24.
+148 of 169 steps (88%) done
+Submitted job 18 with external jobid '90503'.
+
+[Sun Jul  7 22:24:36 2019]
+rule Salmon_wasabi:
+    input: Salmon/Luciferase42_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Luciferase42_mm_rna_sr_berulavat/abundance.h5
+    jobid: 36
+    wildcards: sample=Luciferase42_mm_rna_sr_berulavat
+
+Submitted job 36 with external jobid '90504'.
+
+[Sun Jul  7 22:24:37 2019]
+rule Salmon_wasabi:
+    input: Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Luciferasen5_mm_rna_sr_berulavat/abundance.h5
+    jobid: 38
+    wildcards: sample=Luciferasen5_mm_rna_sr_berulavat
+
+Submitted job 38 with external jobid '90505'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:25:07 2019]
+Finished job 19.
+149 of 169 steps (88%) done
+
+[Sun Jul  7 22:25:07 2019]
+rule Salmon_wasabi:
+    input: Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Foxg1n5_mm_rna_sr_berulavat/abundance.h5
+    jobid: 33
+    wildcards: sample=Foxg1n5_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:25:07 2019]
+Finished job 138.
+150 of 169 steps (89%) done
+Submitted job 33 with external jobid '90506'.
+
+[Sun Jul  7 22:25:07 2019]
+rule Salmon_symlinks:
+    input: Salmon/Luciferasen6_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 25
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:25:07 2019]
+Finished job 18.
+151 of 169 steps (89%) done
+[Sun Jul  7 22:25:07 2019]
+Finished job 36.
+152 of 169 steps (90%) done
+Submitted job 25 with external jobid '90507'.
+
+[Sun Jul  7 22:25:07 2019]
+rule Salmon_wasabi:
+    input: Salmon/Foxg153_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Foxg153_mm_rna_sr_berulavat/abundance.h5
+    jobid: 32
+    wildcards: sample=Foxg153_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:25:07 2019]
+Finished job 38.
+153 of 169 steps (91%) done
+Submitted job 32 with external jobid '90508'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:25:37 2019]
+Finished job 25.
+154 of 169 steps (91%) done
+
+[Sun Jul  7 22:25:37 2019]
+rule Salmon_wasabi:
+    input: Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Luciferasen6_mm_rna_sr_berulavat/abundance.h5
+    jobid: 39
+    wildcards: sample=Luciferasen6_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:25:37 2019]
+Finished job 129.
+155 of 169 steps (92%) done
+[Sun Jul  7 22:25:37 2019]
+Finished job 32.
+156 of 169 steps (92%) done
+Submitted job 39 with external jobid '90509'.
+
+[Sun Jul  7 22:25:37 2019]
+rule Salmon_symlinks:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg111_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Foxg111_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg111_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 16
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+Submitted job 16 with external jobid '90510'.
+[Sun Jul  7 22:25:47 2019]
+Finished job 33.
+157 of 169 steps (93%) done
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:26:08 2019]
+Finished job 16.
+158 of 169 steps (93%) done
+
+[Sun Jul  7 22:26:08 2019]
+rule Salmon_wasabi:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Foxg111_mm_rna_sr_berulavat/abundance.h5
+    jobid: 30
+    wildcards: sample=Foxg111_mm_rna_sr_berulavat
+
+Submitted job 30 with external jobid '90511'.
+[Sun Jul  7 22:26:18 2019]
+Finished job 39.
+159 of 169 steps (94%) done
+[Sun Jul  7 22:26:48 2019]
+Finished job 133.
+160 of 169 steps (95%) done
+
+[Sun Jul  7 22:26:48 2019]
+rule Salmon_symlinks:
+    input: Salmon/Foxg1n6_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat/quant.genes.sf
+    output: Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.genes.sf
+    jobid: 20
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+[Sun Jul  7 22:26:48 2019]
+Finished job 30.
+161 of 169 steps (95%) done
+Submitted job 20 with external jobid '90512'.
+
+[Sun Jul  7 22:26:48 2019]
+rule multiQC:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat/quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat/quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat/quant.sf
+    output: multiQC/multiqc_report.html
+    log: multiQC/multiQC.out, multiQC/multiQC.err
+    jobid: 118
+
+Submitted job 118 with external jobid '90513'.
+Waiting at most 300 seconds for missing files.
+[Sun Jul  7 22:27:48 2019]
+Finished job 20.
+162 of 169 steps (96%) done
+
+[Sun Jul  7 22:27:48 2019]
+rule Salmon_counts:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/counts.tsv
+    log: Salmon/Salmon_counts.log
+    jobid: 28
+    benchmark: Salmon/.benchmark/Salmon_counts.benchmark
+
+Submitted job 28 with external jobid '90514'.
+
+[Sun Jul  7 22:27:48 2019]
+rule Salmon_TPM:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/TPM.tsv
+    log: Salmon/Salmon_TPM.log
+    jobid: 26
+    benchmark: Salmon/.benchmark/Salmon_TPM.benchmark
+
+Submitted job 26 with external jobid '90515'.
+
+[Sun Jul  7 22:27:49 2019]
+rule Salmon_genes_counts:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.genes.sf
+    output: Salmon/counts.genes.tsv
+    log: Salmon/Salmon_genes_counts.log
+    jobid: 29
+    benchmark: Salmon/.benchmark/Salmon_genes_counts.benchmark
+
+Submitted job 29 with external jobid '90516'.
+
+[Sun Jul  7 22:27:49 2019]
+rule Salmon_genes_TPM:
+    input: Salmon/Foxg111_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.genes.sf
+    output: Salmon/TPM.genes.tsv
+    log: Salmon/Salmon_genes_TPM.log
+    jobid: 27
+    benchmark: Salmon/.benchmark/Salmon_genes_TPM.benchmark
+
+Submitted job 27 with external jobid '90517'.
+
+[Sun Jul  7 22:27:49 2019]
+rule Salmon_wasabi:
+    input: Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.sf
+    output: Salmon/Foxg1n6_mm_rna_sr_berulavat/abundance.h5
+    jobid: 34
+    wildcards: sample=Foxg1n6_mm_rna_sr_berulavat
+
+Submitted job 34 with external jobid '90518'.
+[Sun Jul  7 22:28:18 2019]
+Finished job 28.
+163 of 169 steps (96%) done
+[Sun Jul  7 22:28:18 2019]
+Finished job 26.
+164 of 169 steps (97%) done
+[Sun Jul  7 22:28:19 2019]
+Finished job 29.
+165 of 169 steps (98%) done
+[Sun Jul  7 22:28:19 2019]
+Finished job 27.
+166 of 169 steps (98%) done
+[Sun Jul  7 22:28:19 2019]
+Finished job 34.
+167 of 169 steps (99%) done
+[Sun Jul  7 22:31:19 2019]
+Finished job 118.
+168 of 169 steps (99%) done
+
+[Sun Jul  7 22:31:19 2019]
+localrule all:
+    input: FASTQ_Cutadapt/Foxg111_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Foxg112_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Foxg153_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Foxg1n5_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Foxg1n6_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Luciferase41_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Luciferase42_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Luciferase83_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Luciferasen5_mm_rna_sr_berulavat_R1.fastq.gz, FASTQ_Cutadapt/Luciferasen6_mm_rna_sr_berulavat_R1.fastq.gz, Annotation/genes.annotated.bed, Annotation/genes.filtered.bed, Annotation/genes.filtered.gtf, Annotation/genes.filtered.fa, Salmon/SalmonIndex/sa.bin, Salmon/Foxg111_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.sf, Salmon/Foxg111_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg112_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg153_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg1n5_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Foxg1n6_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase41_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase42_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferase83_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferasen5_mm_rna_sr_berulavat.quant.genes.sf, Salmon/Luciferasen6_mm_rna_sr_berulavat.quant.genes.sf, Salmon/TPM.tsv, Salmon/TPM.genes.tsv, Salmon/counts.tsv, Salmon/counts.genes.tsv, Salmon/Foxg111_mm_rna_sr_berulavat/abundance.h5, Salmon/Foxg112_mm_rna_sr_berulavat/abundance.h5, Salmon/Foxg153_mm_rna_sr_berulavat/abundance.h5, Salmon/Foxg1n5_mm_rna_sr_berulavat/abundance.h5, Salmon/Foxg1n6_mm_rna_sr_berulavat/abundance.h5, Salmon/Luciferase41_mm_rna_sr_berulavat/abundance.h5, Salmon/Luciferase42_mm_rna_sr_berulavat/abundance.h5, Salmon/Luciferase83_mm_rna_sr_berulavat/abundance.h5, Salmon/Luciferasen5_mm_rna_sr_berulavat/abundance.h5, Salmon/Luciferasen6_mm_rna_sr_berulavat/abundance.h5, Sambamba/flagstat_report_all.tsv, STAR/Foxg111_mm_rna_sr_berulavat.bam, STAR/Foxg112_mm_rna_sr_berulavat.bam, STAR/Foxg153_mm_rna_sr_berulavat.bam, STAR/Foxg1n5_mm_rna_sr_berulavat.bam, STAR/Foxg1n6_mm_rna_sr_berulavat.bam, STAR/Luciferase41_mm_rna_sr_berulavat.bam, STAR/Luciferase42_mm_rna_sr_berulavat.bam, STAR/Luciferase83_mm_rna_sr_berulavat.bam, STAR/Luciferasen5_mm_rna_sr_berulavat.bam, STAR/Luciferasen6_mm_rna_sr_berulavat.bam, STAR/Foxg111_mm_rna_sr_berulavat.bam.bai, STAR/Foxg112_mm_rna_sr_berulavat.bam.bai, STAR/Foxg153_mm_rna_sr_berulavat.bam.bai, STAR/Foxg1n5_mm_rna_sr_berulavat.bam.bai, STAR/Foxg1n6_mm_rna_sr_berulavat.bam.bai, STAR/Luciferase41_mm_rna_sr_berulavat.bam.bai, STAR/Luciferase42_mm_rna_sr_berulavat.bam.bai, STAR/Luciferase83_mm_rna_sr_berulavat.bam.bai, STAR/Luciferasen5_mm_rna_sr_berulavat.bam.bai, STAR/Luciferasen6_mm_rna_sr_berulavat.bam.bai, featureCounts/Foxg111_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg112_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg153_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg1n5_mm_rna_sr_berulavat.counts.txt, featureCounts/Foxg1n6_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferase41_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferase42_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferase83_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferasen5_mm_rna_sr_berulavat.counts.txt, featureCounts/Luciferasen6_mm_rna_sr_berulavat.counts.txt, featureCounts/counts.tsv, QC_report/QC_report_all.tsv, bamCoverage/Foxg111_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg112_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg153_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg1n5_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg1n6_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferase41_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferase42_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferase83_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferasen5_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Luciferasen6_mm_rna_sr_berulavat.RPKM.bw, bamCoverage/Foxg111_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Foxg112_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Foxg153_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Foxg1n5_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Foxg1n6_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Luciferase41_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Luciferase42_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Luciferase83_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Luciferasen5_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Luciferasen6_mm_rna_sr_berulavat.coverage.bw, bamCoverage/Foxg111_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg112_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg153_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg1n5_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg1n6_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferase41_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferase42_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferase83_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferasen5_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Luciferasen6_mm_rna_sr_berulavat.uniqueMappings.fwd.bw, bamCoverage/Foxg111_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Foxg112_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Foxg153_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Foxg1n5_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Foxg1n6_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Luciferase41_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Luciferase42_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Luciferase83_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Luciferasen5_mm_rna_sr_berulavat.uniqueMappings.rev.bw, bamCoverage/Luciferasen6_mm_rna_sr_berulavat.uniqueMappings.rev.bw, deepTools_qc/plotEnrichment/plotEnrichment.tsv, deepTools_qc/estimateReadFiltering/Foxg111_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Foxg112_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Foxg153_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Foxg1n5_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Foxg1n6_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Luciferase41_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Luciferase42_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Luciferase83_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Luciferasen5_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Luciferasen6_mm_rna_sr_berulavat_filtering_estimation.txt, deepTools_qc/multiBigwigSummary/coverage.bed.npz, deepTools_qc/plotCorrelation/correlation.pearson.bed_coverage.tsv, deepTools_qc/plotCorrelation/correlation.spearman.bed_coverage.tsv, deepTools_qc/plotPCA/PCA.bed_coverage.tsv, multiQC/multiqc_report.html
+    jobid: 0
+
+[Sun Jul  7 22:31:19 2019]
+Finished job 0.
+169 of 169 steps (100%) done
+Complete log: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_inVitroHippo/output_snakepipes/.snakemake/log/2019-07-07T215235.912625.snakemake.log

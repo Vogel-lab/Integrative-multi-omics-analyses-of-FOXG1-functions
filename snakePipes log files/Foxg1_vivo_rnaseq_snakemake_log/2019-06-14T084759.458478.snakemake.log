@@ -1,0 +1,445 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	4	FASTQ1
+	4	FASTQ2
+	8	FastQC
+	8	FastQC_on_trimmed
+	4	STAR
+	1	SalmonIndex
+	4	SalmonQuant
+	1	Salmon_TPM
+	1	Salmon_counts
+	1	Salmon_genes_TPM
+	1	Salmon_genes_counts
+	4	Salmon_symlinks
+	4	Salmon_wasabi
+	1	all
+	1	annotation_bed2fasta
+	1	annotation_bed2gtf
+	4	bamCoverage_RPKM
+	4	bamCoverage_raw
+	1	bamPE_fragment_size
+	4	convert_flagstat_output
+	1	create_annotation_bed
+	4	cutadapt
+	4	estimateReadFiltering
+	4	featureCounts
+	1	filter_annotation_bed
+	1	merge_featureCounts
+	1	multiBigwigSummary_bed
+	1	multiQC
+	1	plotCorr_bed_pearson
+	1	plotCorr_bed_spearman
+	1	plotEnrichment
+	1	plotPCA
+	1	qc_report_all
+	1	report_flagstat_all_data
+	4	sambamba_flagstat
+	4	sambamba_markdup
+	4	samtools_index
+	96
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/373_PlusPlus_hippoc_R1.fastq.gz
+    output: FASTQ/373_PlusPlus_hippoc_R1.fastq.gz
+    jobid: 80
+    wildcards: sample=373_PlusPlus_hippoc
+
+
+[Fri Jun 14 08:48:00 2019]
+rule create_annotation_bed:
+    input: /data/manke/group/ferrari/my_repository/annotations_gencode/mouse/M18/annotation_snakePipes/gencode.vM18.annotation.sorted.gtf
+    output: Annotation/genes.annotated.bed
+    jobid: 3
+
+[Fri Jun 14 08:48:00 2019]
+Finished job 80.
+1 of 96 steps (1%) done
+Submitted job 3 with external jobid '74365'.
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/374_crePlus_hippoc_R1.fastq.gz
+    output: FASTQ/374_crePlus_hippoc_R1.fastq.gz
+    jobid: 74
+    wildcards: sample=374_crePlus_hippoc
+
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/378_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ/378_crePlus_hippoc_R2.fastq.gz
+    jobid: 79
+    wildcards: sample=378_crePlus_hippoc
+
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/377_PlusPlus_hippoc_R1.fastq.gz
+    output: FASTQ/377_PlusPlus_hippoc_R1.fastq.gz
+    jobid: 72
+    wildcards: sample=377_PlusPlus_hippoc
+
+[Fri Jun 14 08:48:00 2019]
+Finished job 74.
+2 of 96 steps (2%) done
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ/377_PlusPlus_hippoc_R2.fastq.gz
+    jobid: 75
+    wildcards: sample=377_PlusPlus_hippoc
+
+[Fri Jun 14 08:48:00 2019]
+Finished job 79.
+3 of 96 steps (3%) done
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/378_crePlus_hippoc_R1.fastq.gz
+    output: FASTQ/378_crePlus_hippoc_R1.fastq.gz
+    jobid: 77
+    wildcards: sample=378_crePlus_hippoc
+
+[Fri Jun 14 08:48:00 2019]
+
+Finished job 72.
+[Fri Jun 14 08:48:00 2019]
+4 of 96 steps (4%) done
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/374_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ/374_crePlus_hippoc_R2.fastq.gz
+    jobid: 73
+    wildcards: sample=374_crePlus_hippoc
+
+
+[Fri Jun 14 08:48:00 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ/373_PlusPlus_hippoc_R2.fastq.gz
+    jobid: 81
+    wildcards: sample=373_PlusPlus_hippoc
+
+[Fri Jun 14 08:48:00 2019]
+Finished job 75.
+5 of 96 steps (5%) done
+[Fri Jun 14 08:48:00 2019]
+Finished job 77.
+6 of 96 steps (6%) done
+[Fri Jun 14 08:48:00 2019]
+Finished job 73.
+7 of 96 steps (7%) done
+[Fri Jun 14 08:48:00 2019]
+Finished job 81.
+8 of 96 steps (8%) done
+
+[Fri Jun 14 08:48:00 2019]
+rule FastQC:
+    input: FASTQ/378_crePlus_hippoc_R2.fastq.gz
+    output: FastQC/378_crePlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.378_crePlus_hippoc_R2.out, FastQC/logs/FastQC.378_crePlus_hippoc_R2.err
+    jobid: 40
+    benchmark: FastQC/.benchmark/FastQC.378_crePlus_hippoc_R2.benchmark
+    wildcards: sample=378_crePlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 40 with external jobid '74366'.
+
+[Fri Jun 14 08:48:01 2019]
+rule FastQC:
+    input: FASTQ/374_crePlus_hippoc_R2.fastq.gz
+    output: FastQC/374_crePlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.374_crePlus_hippoc_R2.out, FastQC/logs/FastQC.374_crePlus_hippoc_R2.err
+    jobid: 6
+    benchmark: FastQC/.benchmark/FastQC.374_crePlus_hippoc_R2.benchmark
+    wildcards: sample=374_crePlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 6 with external jobid '74367'.
+
+[Fri Jun 14 08:48:01 2019]
+rule FastQC:
+    input: FASTQ/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FastQC/377_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.377_PlusPlus_hippoc_R2.out, FastQC/logs/FastQC.377_PlusPlus_hippoc_R2.err
+    jobid: 8
+    benchmark: FastQC/.benchmark/FastQC.377_PlusPlus_hippoc_R2.benchmark
+    wildcards: sample=377_PlusPlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 8 with external jobid '74368'.
+
+[Fri Jun 14 08:48:02 2019]
+rule cutadapt:
+    input: FASTQ/378_crePlus_hippoc_R1.fastq.gz, FASTQ/378_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.378_crePlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.378_crePlus_hippoc.err
+    jobid: 22
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 8
+
+Submitted job 22 with external jobid '74369'.
+
+[Fri Jun 14 08:48:02 2019]
+rule FastQC:
+    input: FASTQ/378_crePlus_hippoc_R1.fastq.gz
+    output: FastQC/378_crePlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.378_crePlus_hippoc_R1.out, FastQC/logs/FastQC.378_crePlus_hippoc_R1.err
+    jobid: 11
+    benchmark: FastQC/.benchmark/FastQC.378_crePlus_hippoc_R1.benchmark
+    wildcards: sample=378_crePlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 11 with external jobid '74370'.
+
+[Fri Jun 14 08:48:02 2019]
+rule cutadapt:
+    input: FASTQ/374_crePlus_hippoc_R1.fastq.gz, FASTQ/374_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.374_crePlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.374_crePlus_hippoc.err
+    jobid: 20
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 8
+
+Submitted job 20 with external jobid '74371'.
+
+[Fri Jun 14 08:48:02 2019]
+rule cutadapt:
+    input: FASTQ/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.377_PlusPlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.377_PlusPlus_hippoc.err
+    jobid: 59
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 59 with external jobid '74372'.
+
+[Fri Jun 14 08:48:02 2019]
+rule FastQC:
+    input: FASTQ/373_PlusPlus_hippoc_R1.fastq.gz
+    output: FastQC/373_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.373_PlusPlus_hippoc_R1.out, FastQC/logs/FastQC.373_PlusPlus_hippoc_R1.err
+    jobid: 43
+    benchmark: FastQC/.benchmark/FastQC.373_PlusPlus_hippoc_R1.benchmark
+    wildcards: sample=373_PlusPlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 43 with external jobid '74373'.
+
+[Fri Jun 14 08:48:02 2019]
+rule FastQC:
+    input: FASTQ/377_PlusPlus_hippoc_R1.fastq.gz
+    output: FastQC/377_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.377_PlusPlus_hippoc_R1.out, FastQC/logs/FastQC.377_PlusPlus_hippoc_R1.err
+    jobid: 4
+    benchmark: FastQC/.benchmark/FastQC.377_PlusPlus_hippoc_R1.benchmark
+    wildcards: sample=377_PlusPlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 4 with external jobid '74374'.
+[Fri Jun 14 08:48:10 2019]
+Error in rule FastQC:
+    jobid: 40
+    output: FastQC/378_crePlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.378_crePlus_hippoc_R2.out, FastQC/logs/FastQC.378_crePlus_hippoc_R2.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74366
+
+Job failed, going on with independent jobs.
+
+[Fri Jun 14 08:48:10 2019]
+rule cutadapt:
+    input: FASTQ/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.373_PlusPlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.373_PlusPlus_hippoc.err
+    jobid: 24
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 8
+
+[Fri Jun 14 08:48:10 2019]
+Error in rule FastQC:
+    jobid: 6
+    output: FastQC/374_crePlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.374_crePlus_hippoc_R2.out, FastQC/logs/FastQC.374_crePlus_hippoc_R2.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74367
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:11 2019]
+Error in rule FastQC:
+    jobid: 8
+    output: FastQC/377_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.377_PlusPlus_hippoc_R2.out, FastQC/logs/FastQC.377_PlusPlus_hippoc_R2.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74368
+
+Job failed, going on with independent jobs.
+Submitted job 24 with external jobid '74375'.
+
+[Fri Jun 14 08:48:11 2019]
+rule FastQC:
+    input: FASTQ/374_crePlus_hippoc_R1.fastq.gz
+    output: FastQC/374_crePlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.374_crePlus_hippoc_R1.out, FastQC/logs/FastQC.374_crePlus_hippoc_R1.err
+    jobid: 7
+    benchmark: FastQC/.benchmark/FastQC.374_crePlus_hippoc_R1.benchmark
+    wildcards: sample=374_crePlus_hippoc_R, read=1
+    threads: 2
+
+[Fri Jun 14 08:48:11 2019]
+Error in rule cutadapt:
+    jobid: 22
+    output: FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.378_crePlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.378_crePlus_hippoc.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74369
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:11 2019]
+Error in rule FastQC:
+    jobid: 11
+    output: FastQC/378_crePlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.378_crePlus_hippoc_R1.out, FastQC/logs/FastQC.378_crePlus_hippoc_R1.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74370
+
+Job failed, going on with independent jobs.
+Submitted job 7 with external jobid '74376'.
+
+[Fri Jun 14 08:48:11 2019]
+rule FastQC:
+    input: FASTQ/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FastQC/373_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.373_PlusPlus_hippoc_R2.out, FastQC/logs/FastQC.373_PlusPlus_hippoc_R2.err
+    jobid: 67
+    benchmark: FastQC/.benchmark/FastQC.373_PlusPlus_hippoc_R2.benchmark
+    wildcards: sample=373_PlusPlus_hippoc_R, read=2
+    threads: 2
+
+[Fri Jun 14 08:48:11 2019]
+Error in rule cutadapt:
+    jobid: 20
+    output: FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.374_crePlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.374_crePlus_hippoc.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74371
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:11 2019]
+Error in rule cutadapt:
+    jobid: 59
+    output: FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.377_PlusPlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.377_PlusPlus_hippoc.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74372
+
+Job failed, going on with independent jobs.
+Submitted job 67 with external jobid '74377'.
+[Fri Jun 14 08:48:11 2019]
+Error in rule FastQC:
+    jobid: 43
+    output: FastQC/373_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.373_PlusPlus_hippoc_R1.out, FastQC/logs/FastQC.373_PlusPlus_hippoc_R1.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74373
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:11 2019]
+Error in rule FastQC:
+    jobid: 4
+    output: FastQC/377_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.377_PlusPlus_hippoc_R1.out, FastQC/logs/FastQC.377_PlusPlus_hippoc_R1.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74374
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:21 2019]
+Error in rule cutadapt:
+    jobid: 24
+    output: FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.373_PlusPlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.373_PlusPlus_hippoc.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74375
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:21 2019]
+Error in rule FastQC:
+    jobid: 7
+    output: FastQC/374_crePlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.374_crePlus_hippoc_R1.out, FastQC/logs/FastQC.374_crePlus_hippoc_R1.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74376
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:48:22 2019]
+Error in rule FastQC:
+    jobid: 67
+    output: FastQC/373_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.373_PlusPlus_hippoc_R2.out, FastQC/logs/FastQC.373_PlusPlus_hippoc_R2.err
+    conda-env: /package/anaconda3/envs/ea8f2d34105a67b38f15955ce95bc78e
+    cluster_jobid: 74377
+
+Job failed, going on with independent jobs.
+[Fri Jun 14 08:51:32 2019]
+Finished job 3.
+9 of 96 steps (9%) done
+
+[Fri Jun 14 08:51:32 2019]
+rule filter_annotation_bed:
+    input: Annotation/genes.annotated.bed
+    output: Annotation/genes.filtered.bed
+    jobid: 55
+
+Submitted job 55 with external jobid '74386'.
+Waiting at most 300 seconds for missing files.
+[Fri Jun 14 08:52:02 2019]
+Finished job 55.
+10 of 96 steps (10%) done
+
+[Fri Jun 14 08:52:02 2019]
+rule annotation_bed2gtf:
+    input: Annotation/genes.filtered.bed
+    output: Annotation/genes.filtered.gtf
+    jobid: 50
+
+Submitted job 50 with external jobid '74387'.
+
+[Fri Jun 14 08:52:02 2019]
+rule annotation_bed2fasta:
+    input: Annotation/genes.filtered.bed, /data/repository/organisms/GRCm38_ensembl/genome_fasta/genome.fa
+    output: Annotation/genes.filtered.fa
+    jobid: 56
+    benchmark: Annotation/.benchmark/annotation_bed2fasta.benchmark
+
+Submitted job 56 with external jobid '74388'.
+[Fri Jun 14 08:52:32 2019]
+Finished job 56.
+11 of 96 steps (11%) done
+
+[Fri Jun 14 08:52:32 2019]
+rule SalmonIndex:
+    input: Annotation/genes.filtered.fa
+    output: Salmon/SalmonIndex/sa.bin
+    log: Salmon/SalmonIndex/SalmonIndex.out, Salmon/SalmonIndex/SalmonIndex.err
+    jobid: 26
+    benchmark: Salmon/.benchmark/Salmon.index.benchmark
+    threads: 16
+
+Submitted job 26 with external jobid '74389'.
+[Fri Jun 14 08:53:02 2019]
+Finished job 50.
+12 of 96 steps (12%) done
+[Fri Jun 14 08:55:43 2019]
+Finished job 26.
+13 of 96 steps (14%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/output_snakepipes/.snakemake/log/2019-06-14T084759.458478.snakemake.log

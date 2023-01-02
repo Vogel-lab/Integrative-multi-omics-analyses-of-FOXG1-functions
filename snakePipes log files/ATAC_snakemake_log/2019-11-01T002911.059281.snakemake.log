@@ -1,0 +1,330 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 5
+Job counts:
+	count	jobs
+	4	MACS2_peak_qc
+	1	all
+	4	bamCompare_subtract
+	4	callOpenChromatin
+	4	filterCoveragePerScaffolds
+	4	filterFragments
+	1	filterMetricsToHtml
+	1	plotFingerprint
+	23
+
+[Fri Nov  1 00:29:14 2019]
+rule filterFragments:
+    input: filtered_bam/HippoN_Ctr_ATAC_rep2.filtered.bam
+    output: MACS2/HippoN_Ctr_ATAC_rep2.short.bam, MACS2/HippoN_Ctr_ATAC_rep2.short.metrics
+    jobid: 19
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 6
+
+Submitted job 19 with external jobid '48266'.
+
+[Fri Nov  1 00:29:14 2019]
+rule filterFragments:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam
+    output: MACS2/HippoN_Foxg1KD_ATAC_rep1.short.bam, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.metrics
+    jobid: 21
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 6
+
+Submitted job 21 with external jobid '48267'.
+
+[Fri Nov  1 00:29:15 2019]
+rule filterFragments:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam
+    output: MACS2/HippoN_Foxg1KD_ATAC_rep2.short.bam, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.metrics
+    jobid: 22
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 6
+
+Submitted job 22 with external jobid '48268'.
+
+[Fri Nov  1 00:29:15 2019]
+rule plotFingerprint:
+    input: filtered_bam/HippoN_Ctr_ATAC_rep2.filtered.bam, filtered_bam/HippoN_Ctr_ATAC_rep1.filtered.bam, filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam, filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam, filtered_bam/HippoN_Ctr_ATAC_rep2.filtered.bam.bai, filtered_bam/HippoN_Ctr_ATAC_rep1.filtered.bam.bai, filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam.bai, filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam.bai
+    output: deepTools_ATAC/plotFingerprint/plotFingerprint.metrics.txt
+    log: deepTools_ATAC/logs/plotFingerprint.out, deepTools_ATAC/logs/plotFingerprint.err
+    jobid: 9
+    benchmark: deepTools_ATAC/.benchmark/plotFingerprint.benchmark
+    threads: 24
+
+Submitted job 9 with external jobid '48269'.
+
+[Fri Nov  1 00:29:15 2019]
+rule filterFragments:
+    input: filtered_bam/HippoN_Ctr_ATAC_rep1.filtered.bam
+    output: MACS2/HippoN_Ctr_ATAC_rep1.short.bam, MACS2/HippoN_Ctr_ATAC_rep1.short.metrics
+    jobid: 20
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 6
+
+Submitted job 20 with external jobid '48270'.
+[Fri Nov  1 00:34:15 2019]
+Finished job 20.
+1 of 23 steps (4%) done
+
+[Fri Nov  1 00:34:15 2019]
+rule filterCoveragePerScaffolds:
+    input: MACS2/HippoN_Ctr_ATAC_rep1.short.bam
+    output: MACS2/HippoN_Ctr_ATAC_rep1.chrom.whitelist, MACS2/HippoN_Ctr_ATAC_rep1.short.bam.bai, MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam, MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam.bai
+    jobid: 15
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 6
+
+Submitted job 15 with external jobid '48274'.
+[Fri Nov  1 00:34:45 2019]
+Finished job 19.
+2 of 23 steps (9%) done
+
+[Fri Nov  1 00:34:45 2019]
+rule filterCoveragePerScaffolds:
+    input: MACS2/HippoN_Ctr_ATAC_rep2.short.bam
+    output: MACS2/HippoN_Ctr_ATAC_rep2.chrom.whitelist, MACS2/HippoN_Ctr_ATAC_rep2.short.bam.bai, MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam, MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam.bai
+    jobid: 14
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 6
+
+[Fri Nov  1 00:34:45 2019]
+Finished job 21.
+3 of 23 steps (13%) done
+Submitted job 14 with external jobid '48275'.
+
+[Fri Nov  1 00:34:45 2019]
+rule filterCoveragePerScaffolds:
+    input: MACS2/HippoN_Foxg1KD_ATAC_rep1.short.bam
+    output: MACS2/HippoN_Foxg1KD_ATAC_rep1.chrom.whitelist, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.bam.bai, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam.bai
+    jobid: 16
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 6
+
+[Fri Nov  1 00:34:45 2019]
+Finished job 22.
+4 of 23 steps (17%) done
+Submitted job 16 with external jobid '48276'.
+
+[Fri Nov  1 00:34:45 2019]
+rule filterCoveragePerScaffolds:
+    input: MACS2/HippoN_Foxg1KD_ATAC_rep2.short.bam
+    output: MACS2/HippoN_Foxg1KD_ATAC_rep2.chrom.whitelist, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.bam.bai, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam.bai
+    jobid: 17
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 6
+
+Submitted job 17 with external jobid '48277'.
+Removing temporary output file MACS2/HippoN_Ctr_ATAC_rep1.short.bam.
+Removing temporary output file MACS2/HippoN_Ctr_ATAC_rep1.short.bam.bai.
+[Fri Nov  1 00:35:26 2019]
+Finished job 15.
+5 of 23 steps (22%) done
+
+[Fri Nov  1 00:35:26 2019]
+rule bamCompare_subtract:
+    input: MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam, MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam.bai
+    output: deepTools_ATAC/bamCompare/HippoN_Ctr_ATAC_rep1.filtered.bw
+    log: deepTools_ATAC/logs/bamCompare.HippoN_Ctr_ATAC_rep1.filtered.out, deepTools_ATAC/logs/bamCompare.HippoN_Ctr_ATAC_rep1.filtered.out
+    jobid: 11
+    benchmark: deepTools_ATAC/.benchmark/deepTools_ATAC/logs/bamCompare.HippoN_Ctr_ATAC_rep1.filtered.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 16
+
+Submitted job 11 with external jobid '48278'.
+Removing temporary output file MACS2/HippoN_Foxg1KD_ATAC_rep1.short.bam.
+Removing temporary output file MACS2/HippoN_Foxg1KD_ATAC_rep1.short.bam.bai.
+[Fri Nov  1 00:35:56 2019]
+Finished job 16.
+6 of 23 steps (26%) done
+
+[Fri Nov  1 00:35:56 2019]
+rule bamCompare_subtract:
+    input: MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam.bai
+    output: deepTools_ATAC/bamCompare/HippoN_Foxg1KD_ATAC_rep1.filtered.bw
+    log: deepTools_ATAC/logs/bamCompare.HippoN_Foxg1KD_ATAC_rep1.filtered.out, deepTools_ATAC/logs/bamCompare.HippoN_Foxg1KD_ATAC_rep1.filtered.out
+    jobid: 12
+    benchmark: deepTools_ATAC/.benchmark/deepTools_ATAC/logs/bamCompare.HippoN_Foxg1KD_ATAC_rep1.filtered.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 16
+
+Removing temporary output file MACS2/HippoN_Foxg1KD_ATAC_rep2.short.bam.
+Submitted job 12 with external jobid '48279'.
+Removing temporary output file MACS2/HippoN_Foxg1KD_ATAC_rep2.short.bam.bai.
+[Fri Nov  1 00:35:57 2019]
+Finished job 17.
+7 of 23 steps (30%) done
+
+[Fri Nov  1 00:35:57 2019]
+rule bamCompare_subtract:
+    input: MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam.bai
+    output: deepTools_ATAC/bamCompare/HippoN_Foxg1KD_ATAC_rep2.filtered.bw
+    log: deepTools_ATAC/logs/bamCompare.HippoN_Foxg1KD_ATAC_rep2.filtered.out, deepTools_ATAC/logs/bamCompare.HippoN_Foxg1KD_ATAC_rep2.filtered.out
+    jobid: 13
+    benchmark: deepTools_ATAC/.benchmark/deepTools_ATAC/logs/bamCompare.HippoN_Foxg1KD_ATAC_rep2.filtered.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 16
+
+Submitted job 13 with external jobid '48280'.
+Removing temporary output file MACS2/HippoN_Ctr_ATAC_rep2.short.bam.
+Removing temporary output file MACS2/HippoN_Ctr_ATAC_rep2.short.bam.bai.
+[Fri Nov  1 00:36:27 2019]
+Finished job 14.
+8 of 23 steps (35%) done
+
+[Fri Nov  1 00:36:27 2019]
+rule bamCompare_subtract:
+    input: MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam, MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam.bai
+    output: deepTools_ATAC/bamCompare/HippoN_Ctr_ATAC_rep2.filtered.bw
+    log: deepTools_ATAC/logs/bamCompare.HippoN_Ctr_ATAC_rep2.filtered.out, deepTools_ATAC/logs/bamCompare.HippoN_Ctr_ATAC_rep2.filtered.out
+    jobid: 10
+    benchmark: deepTools_ATAC/.benchmark/deepTools_ATAC/logs/bamCompare.HippoN_Ctr_ATAC_rep2.filtered.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 16
+
+Submitted job 10 with external jobid '48281'.
+[Fri Nov  1 00:37:58 2019]
+Finished job 11.
+9 of 23 steps (39%) done
+
+[Fri Nov  1 00:37:58 2019]
+rule callOpenChromatin:
+    input: MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam
+    output: MACS2/HippoN_Ctr_ATAC_rep2.filtered.BAM_peaks.narrowPeak, MACS2/HippoN_Ctr_ATAC_rep2.filtered.BAM_peaks.xls
+    log: MACS2/logs/callOpenChromatin/HippoN_Ctr_ATAC_rep2_macs2.out, MACS2/logs/callOpenChromatin/HippoN_Ctr_ATAC_rep2_macs2.err
+    jobid: 1
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 6
+
+Submitted job 1 with external jobid '48282'.
+[Fri Nov  1 00:38:28 2019]
+Finished job 12.
+10 of 23 steps (43%) done
+
+[Fri Nov  1 00:38:28 2019]
+rule callOpenChromatin:
+    input: MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam
+    output: MACS2/HippoN_Foxg1KD_ATAC_rep2.filtered.BAM_peaks.narrowPeak, MACS2/HippoN_Foxg1KD_ATAC_rep2.filtered.BAM_peaks.xls
+    log: MACS2/logs/callOpenChromatin/HippoN_Foxg1KD_ATAC_rep2_macs2.out, MACS2/logs/callOpenChromatin/HippoN_Foxg1KD_ATAC_rep2_macs2.err
+    jobid: 4
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 6
+
+[Fri Nov  1 00:38:28 2019]
+Finished job 9.
+11 of 23 steps (48%) done
+[Fri Nov  1 00:38:28 2019]
+Finished job 13.
+12 of 23 steps (52%) done
+Submitted job 4 with external jobid '48283'.
+
+[Fri Nov  1 00:38:28 2019]
+rule callOpenChromatin:
+    input: MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam
+    output: MACS2/HippoN_Ctr_ATAC_rep1.filtered.BAM_peaks.narrowPeak, MACS2/HippoN_Ctr_ATAC_rep1.filtered.BAM_peaks.xls
+    log: MACS2/logs/callOpenChromatin/HippoN_Ctr_ATAC_rep1_macs2.out, MACS2/logs/callOpenChromatin/HippoN_Ctr_ATAC_rep1_macs2.err
+    jobid: 2
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 6
+
+Submitted job 2 with external jobid '48284'.
+
+[Fri Nov  1 00:38:28 2019]
+rule callOpenChromatin:
+    input: MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam
+    output: MACS2/HippoN_Foxg1KD_ATAC_rep1.filtered.BAM_peaks.narrowPeak, MACS2/HippoN_Foxg1KD_ATAC_rep1.filtered.BAM_peaks.xls
+    log: MACS2/logs/callOpenChromatin/HippoN_Foxg1KD_ATAC_rep1_macs2.out, MACS2/logs/callOpenChromatin/HippoN_Foxg1KD_ATAC_rep1_macs2.err
+    jobid: 3
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 6
+
+Submitted job 3 with external jobid '48285'.
+[Fri Nov  1 00:39:08 2019]
+Finished job 10.
+13 of 23 steps (57%) done
+
+[Fri Nov  1 00:39:08 2019]
+localrule filterMetricsToHtml:
+    input: MACS2/HippoN_Ctr_ATAC_rep2.short.metrics, MACS2/HippoN_Ctr_ATAC_rep1.short.metrics, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.metrics, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.metrics
+    output: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/output_snakepipes/aux_files/ATACseq_QC_report_template.Rmd, Filtering_metrics/Filtering_report.html
+    log: Filtering_metrics/logs/produce_report.err, Filtering_metrics/logs/produce_report.out
+    jobid: 18
+
+Activating conda environment: /package/anaconda3/envs/5d3c050c9c2cf13f34a92c5774407fbd
+[Fri Nov  1 00:39:16 2019]
+Finished job 18.
+14 of 23 steps (61%) done
+[Fri Nov  1 00:42:48 2019]
+Finished job 2.
+15 of 23 steps (65%) done
+
+[Fri Nov  1 00:42:48 2019]
+rule MACS2_peak_qc:
+    input: filtered_bam/HippoN_Ctr_ATAC_rep1.filtered.bam, MACS2/HippoN_Ctr_ATAC_rep1.filtered.BAM_peaks.xls
+    output: MACS2_QC/HippoN_Ctr_ATAC_rep1.filtered.BAM_peaks.qc.txt
+    jobid: 6
+    benchmark: MACS2_QC/.benchmark/ATAC_qc.HippoN_Ctr_ATAC_rep1.filtered.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+
+Submitted job 6 with external jobid '48287'.
+[Fri Nov  1 00:43:19 2019]
+Finished job 4.
+16 of 23 steps (70%) done
+
+[Fri Nov  1 00:43:19 2019]
+rule MACS2_peak_qc:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam, MACS2/HippoN_Foxg1KD_ATAC_rep2.filtered.BAM_peaks.xls
+    output: MACS2_QC/HippoN_Foxg1KD_ATAC_rep2.filtered.BAM_peaks.qc.txt
+    jobid: 8
+    benchmark: MACS2_QC/.benchmark/ATAC_qc.HippoN_Foxg1KD_ATAC_rep2.filtered.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+[Fri Nov  1 00:43:19 2019]
+Finished job 3.
+17 of 23 steps (74%) done
+Submitted job 8 with external jobid '48288'.
+
+[Fri Nov  1 00:43:19 2019]
+rule MACS2_peak_qc:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam, MACS2/HippoN_Foxg1KD_ATAC_rep1.filtered.BAM_peaks.xls
+    output: MACS2_QC/HippoN_Foxg1KD_ATAC_rep1.filtered.BAM_peaks.qc.txt
+    jobid: 7
+    benchmark: MACS2_QC/.benchmark/ATAC_qc.HippoN_Foxg1KD_ATAC_rep1.filtered.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+Submitted job 7 with external jobid '48289'.
+[Fri Nov  1 00:43:59 2019]
+Finished job 1.
+18 of 23 steps (78%) done
+
+[Fri Nov  1 00:43:59 2019]
+rule MACS2_peak_qc:
+    input: filtered_bam/HippoN_Ctr_ATAC_rep2.filtered.bam, MACS2/HippoN_Ctr_ATAC_rep2.filtered.BAM_peaks.xls
+    output: MACS2_QC/HippoN_Ctr_ATAC_rep2.filtered.BAM_peaks.qc.txt
+    jobid: 5
+    benchmark: MACS2_QC/.benchmark/ATAC_qc.HippoN_Ctr_ATAC_rep2.filtered.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+
+Submitted job 5 with external jobid '48291'.
+[Fri Nov  1 00:44:59 2019]
+Finished job 6.
+19 of 23 steps (83%) done
+[Fri Nov  1 00:45:39 2019]
+Finished job 7.
+20 of 23 steps (87%) done
+[Fri Nov  1 00:46:19 2019]
+Finished job 8.
+21 of 23 steps (91%) done
+[Fri Nov  1 00:47:00 2019]
+Finished job 5.
+22 of 23 steps (96%) done
+
+[Fri Nov  1 00:47:00 2019]
+localrule all:
+    input: MACS2/HippoN_Ctr_ATAC_rep2.filtered.BAM_peaks.xls, MACS2/HippoN_Ctr_ATAC_rep1.filtered.BAM_peaks.xls, MACS2/HippoN_Foxg1KD_ATAC_rep1.filtered.BAM_peaks.xls, MACS2/HippoN_Foxg1KD_ATAC_rep2.filtered.BAM_peaks.xls, MACS2_QC/HippoN_Ctr_ATAC_rep2.filtered.BAM_peaks.qc.txt, MACS2_QC/HippoN_Ctr_ATAC_rep1.filtered.BAM_peaks.qc.txt, MACS2_QC/HippoN_Foxg1KD_ATAC_rep1.filtered.BAM_peaks.qc.txt, MACS2_QC/HippoN_Foxg1KD_ATAC_rep2.filtered.BAM_peaks.qc.txt, deepTools_ATAC/plotFingerprint/plotFingerprint.metrics.txt, deepTools_ATAC/bamCompare/HippoN_Ctr_ATAC_rep2.filtered.bw, deepTools_ATAC/bamCompare/HippoN_Ctr_ATAC_rep1.filtered.bw, deepTools_ATAC/bamCompare/HippoN_Foxg1KD_ATAC_rep1.filtered.bw, deepTools_ATAC/bamCompare/HippoN_Foxg1KD_ATAC_rep2.filtered.bw, MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam, MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam, MACS2/HippoN_Ctr_ATAC_rep2.short.cleaned.bam.bai, MACS2/HippoN_Ctr_ATAC_rep1.short.cleaned.bam.bai, MACS2/HippoN_Foxg1KD_ATAC_rep1.short.cleaned.bam.bai, MACS2/HippoN_Foxg1KD_ATAC_rep2.short.cleaned.bam.bai, Filtering_metrics/Filtering_report.html
+    jobid: 0
+
+[Fri Nov  1 00:47:00 2019]
+Finished job 0.
+23 of 23 steps (100%) done
+Complete log: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/output_snakepipes/.snakemake/log/2019-11-01T002911.059281.snakemake.log

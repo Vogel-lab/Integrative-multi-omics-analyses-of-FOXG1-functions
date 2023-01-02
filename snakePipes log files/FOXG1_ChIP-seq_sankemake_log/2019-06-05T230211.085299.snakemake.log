@@ -1,0 +1,1218 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 5
+Job counts:
+	count	jobs
+	8	Bowtie2
+	8	FASTQ1
+	1	all
+	8	bamCoverage
+	8	bamCoverage_filtered
+	1	bamPE_fragment_size
+	8	estimate_read_filtering
+	1	multiBamSummary
+	1	multiQC
+	1	plotCorrelation_pearson
+	1	plotCorrelation_spearman
+	1	plotCoverage
+	1	plotPCA
+	8	sambamba_flagstat
+	8	sambamba_markdup
+	8	samtools_filter
+	8	samtools_index
+	8	samtools_index_filtered
+	88
+
+[Wed Jun  5 23:02:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/DG_FOXG1_mm_i68_R1.fastq.gz
+    output: FASTQ/DG_FOXG1_mm_i68_R1.fastq.gz
+    jobid: 82
+    wildcards: sample=DG_FOXG1_mm_i68
+
+
+[Wed Jun  5 23:02:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/CA1-2_FOXG1_mm_i70_R1.fastq.gz
+    output: FASTQ/CA1-2_FOXG1_mm_i70_R1.fastq.gz
+    jobid: 81
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+
+
+[Wed Jun  5 23:02:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/N1_Input_mm_i94_R1.fastq.gz
+    output: FASTQ/N1_Input_mm_i94_R1.fastq.gz
+    jobid: 84
+    wildcards: sample=N1_Input_mm_i94
+
+[Wed Jun  5 23:02:14 2019]
+Finished job 82.
+1 of 88 steps (1%) done
+
+[Wed Jun  5 23:02:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/Pooled_Input_mm_i79_R1.fastq.gz
+    output: FASTQ/Pooled_Input_mm_i79_R1.fastq.gz
+    jobid: 87
+    wildcards: sample=Pooled_Input_mm_i79
+
+[Wed Jun  5 23:02:14 2019]
+Finished job 81.
+2 of 88 steps (2%) done
+
+[Wed Jun  5 23:02:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/CA1-1_FOXG1_mm_i69_R1.fastq.gz
+    output: FASTQ/CA1-1_FOXG1_mm_i69_R1.fastq.gz
+    jobid: 80
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+
+[Wed Jun  5 23:02:14 2019]
+Finished job 84.
+3 of 88 steps (3%) done
+[Wed Jun  5 23:02:14 2019]
+Finished job 87.
+4 of 88 steps (5%) done
+[Wed Jun  5 23:02:14 2019]
+Finished job 80.
+5 of 88 steps (6%) done
+
+[Wed Jun  5 23:02:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/N2_Input_mm_i95_R1.fastq.gz
+    output: FASTQ/N2_Input_mm_i95_R1.fastq.gz
+    jobid: 86
+    wildcards: sample=N2_Input_mm_i95
+
+
+[Wed Jun  5 23:02:14 2019]
+rule Bowtie2:
+    input: FASTQ/N1_Input_mm_i94_R1.fastq.gz
+    output: Bowtie2/N1_Input_mm_i94.Bowtie2_summary.txt, Bowtie2/N1_Input_mm_i94.sorted.bam
+    jobid: 59
+    benchmark: Bowtie2/.benchmark/Bowtie2.N1_Input_mm_i94.benchmark
+    wildcards: sample=N1_Input_mm_i94
+    threads: 24
+
+[Wed Jun  5 23:02:14 2019]
+Finished job 86.
+6 of 88 steps (7%) done
+Submitted job 59 with external jobid '66675'.
+
+[Wed Jun  5 23:02:14 2019]
+rule Bowtie2:
+    input: FASTQ/CA1-2_FOXG1_mm_i70_R1.fastq.gz
+    output: Bowtie2/CA1-2_FOXG1_mm_i70.Bowtie2_summary.txt, Bowtie2/CA1-2_FOXG1_mm_i70.sorted.bam
+    jobid: 56
+    benchmark: Bowtie2/.benchmark/Bowtie2.CA1-2_FOXG1_mm_i70.benchmark
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+    threads: 24
+
+Submitted job 56 with external jobid '66676'.
+
+[Wed Jun  5 23:02:14 2019]
+rule Bowtie2:
+    input: FASTQ/DG_FOXG1_mm_i68_R1.fastq.gz
+    output: Bowtie2/DG_FOXG1_mm_i68.Bowtie2_summary.txt, Bowtie2/DG_FOXG1_mm_i68.sorted.bam
+    jobid: 57
+    benchmark: Bowtie2/.benchmark/Bowtie2.DG_FOXG1_mm_i68.benchmark
+    wildcards: sample=DG_FOXG1_mm_i68
+    threads: 24
+
+Submitted job 57 with external jobid '66677'.
+
+[Wed Jun  5 23:02:15 2019]
+rule Bowtie2:
+    input: FASTQ/Pooled_Input_mm_i79_R1.fastq.gz
+    output: Bowtie2/Pooled_Input_mm_i79.Bowtie2_summary.txt, Bowtie2/Pooled_Input_mm_i79.sorted.bam
+    jobid: 62
+    benchmark: Bowtie2/.benchmark/Bowtie2.Pooled_Input_mm_i79.benchmark
+    wildcards: sample=Pooled_Input_mm_i79
+    threads: 24
+
+Submitted job 62 with external jobid '66678'.
+
+[Wed Jun  5 23:02:15 2019]
+rule Bowtie2:
+    input: FASTQ/CA1-1_FOXG1_mm_i69_R1.fastq.gz
+    output: Bowtie2/CA1-1_FOXG1_mm_i69.Bowtie2_summary.txt, Bowtie2/CA1-1_FOXG1_mm_i69.sorted.bam
+    jobid: 55
+    benchmark: Bowtie2/.benchmark/Bowtie2.CA1-1_FOXG1_mm_i69.benchmark
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+    threads: 24
+
+Submitted job 55 with external jobid '66679'.
+[Wed Jun  5 23:08:55 2019]
+Finished job 56.
+7 of 88 steps (8%) done
+
+[Wed Jun  5 23:08:55 2019]
+rule sambamba_markdup:
+    input: Bowtie2/CA1-2_FOXG1_mm_i70.sorted.bam
+    output: Bowtie2/CA1-2_FOXG1_mm_i70.bam
+    log: Bowtie2/logs/CA1-2_FOXG1_mm_i70.sambamba_markdup.out, Bowtie2/logs/CA1-2_FOXG1_mm_i70.sambamba_markdup.err
+    jobid: 2
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.CA1-2_FOXG1_mm_i70.benchmark
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+    threads: 10
+
+Submitted job 2 with external jobid '66682'.
+[Wed Jun  5 23:10:55 2019]
+Finished job 57.
+8 of 88 steps (9%) done
+
+[Wed Jun  5 23:10:55 2019]
+rule sambamba_markdup:
+    input: Bowtie2/DG_FOXG1_mm_i68.sorted.bam
+    output: Bowtie2/DG_FOXG1_mm_i68.bam
+    log: Bowtie2/logs/DG_FOXG1_mm_i68.sambamba_markdup.out, Bowtie2/logs/DG_FOXG1_mm_i68.sambamba_markdup.err
+    jobid: 3
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.DG_FOXG1_mm_i68.benchmark
+    wildcards: sample=DG_FOXG1_mm_i68
+    threads: 10
+
+Removing temporary output file Bowtie2/CA1-2_FOXG1_mm_i70.sorted.bam.
+[Wed Jun  5 23:10:55 2019]
+Finished job 2.
+9 of 88 steps (10%) done
+Submitted job 3 with external jobid '66683'.
+
+[Wed Jun  5 23:10:55 2019]
+rule Bowtie2:
+    input: FASTQ/N2_Input_mm_i95_R1.fastq.gz
+    output: Bowtie2/N2_Input_mm_i95.Bowtie2_summary.txt, Bowtie2/N2_Input_mm_i95.sorted.bam
+    jobid: 61
+    benchmark: Bowtie2/.benchmark/Bowtie2.N2_Input_mm_i95.benchmark
+    wildcards: sample=N2_Input_mm_i95
+    threads: 24
+
+Submitted job 61 with external jobid '66684'.
+[Wed Jun  5 23:11:05 2019]
+Finished job 59.
+10 of 88 steps (11%) done
+
+[Wed Jun  5 23:11:05 2019]
+rule sambamba_markdup:
+    input: Bowtie2/N1_Input_mm_i94.sorted.bam
+    output: Bowtie2/N1_Input_mm_i94.bam
+    log: Bowtie2/logs/N1_Input_mm_i94.sambamba_markdup.out, Bowtie2/logs/N1_Input_mm_i94.sambamba_markdup.err
+    jobid: 5
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.N1_Input_mm_i94.benchmark
+    wildcards: sample=N1_Input_mm_i94
+    threads: 10
+
+Submitted job 5 with external jobid '66685'.
+[Wed Jun  5 23:11:35 2019]
+Finished job 62.
+11 of 88 steps (12%) done
+
+[Wed Jun  5 23:11:35 2019]
+rule sambamba_markdup:
+    input: Bowtie2/Pooled_Input_mm_i79.sorted.bam
+    output: Bowtie2/Pooled_Input_mm_i79.bam
+    log: Bowtie2/logs/Pooled_Input_mm_i79.sambamba_markdup.out, Bowtie2/logs/Pooled_Input_mm_i79.sambamba_markdup.err
+    jobid: 8
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.Pooled_Input_mm_i79.benchmark
+    wildcards: sample=Pooled_Input_mm_i79
+    threads: 10
+
+[Wed Jun  5 23:11:36 2019]
+Finished job 55.
+12 of 88 steps (14%) done
+Submitted job 8 with external jobid '66686'.
+
+[Wed Jun  5 23:11:36 2019]
+rule sambamba_markdup:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.sorted.bam
+    output: Bowtie2/CA1-1_FOXG1_mm_i69.bam
+    log: Bowtie2/logs/CA1-1_FOXG1_mm_i69.sambamba_markdup.out, Bowtie2/logs/CA1-1_FOXG1_mm_i69.sambamba_markdup.err
+    jobid: 1
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.CA1-1_FOXG1_mm_i69.benchmark
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+    threads: 10
+
+Submitted job 1 with external jobid '66687'.
+Removing temporary output file Bowtie2/DG_FOXG1_mm_i68.sorted.bam.
+[Wed Jun  5 23:13:16 2019]
+Finished job 3.
+13 of 88 steps (15%) done
+
+[Wed Jun  5 23:13:16 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/DG_FOXG1_mm_i68.bam
+    output: Sambamba/DG_FOXG1_mm_i68.markdup.txt
+    jobid: 11
+    wildcards: sample=DG_FOXG1_mm_i68
+
+Removing temporary output file Bowtie2/N1_Input_mm_i94.sorted.bam.
+Submitted job 11 with external jobid '66688'.
+[Wed Jun  5 23:13:16 2019]
+Finished job 5.
+14 of 88 steps (16%) done
+
+[Wed Jun  5 23:13:16 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/N1_Input_mm_i94.bam
+    output: Sambamba/N1_Input_mm_i94.markdup.txt
+    jobid: 13
+    wildcards: sample=N1_Input_mm_i94
+
+Submitted job 13 with external jobid '66689'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:14:16 2019]
+Finished job 11.
+15 of 88 steps (17%) done
+
+[Wed Jun  5 23:14:16 2019]
+rule samtools_filter:
+    input: Bowtie2/N1_Input_mm_i94.bam, filter_rules
+    output: filtered_bam/N1_Input_mm_i94.filtered.bam
+    log: filtered_bam/logs/samtools_filter.N1_Input_mm_i94.out, filtered_bam/logs/samtools_filter.N1_Input_mm_i94.err
+    jobid: 21
+    benchmark: filtered_bam/.benchmark/samtools_filter.N1_Input_mm_i94.benchmark
+    wildcards: sample=N1_Input_mm_i94
+    threads: 8
+
+Removing temporary output file Bowtie2/Pooled_Input_mm_i79.sorted.bam.
+Submitted job 21 with external jobid '66690'.
+[Wed Jun  5 23:14:17 2019]
+Finished job 8.
+16 of 88 steps (18%) done
+
+[Wed Jun  5 23:14:17 2019]
+rule samtools_filter:
+    input: Bowtie2/Pooled_Input_mm_i79.bam, filter_rules
+    output: filtered_bam/Pooled_Input_mm_i79.filtered.bam
+    log: filtered_bam/logs/samtools_filter.Pooled_Input_mm_i79.out, filtered_bam/logs/samtools_filter.Pooled_Input_mm_i79.err
+    jobid: 24
+    benchmark: filtered_bam/.benchmark/samtools_filter.Pooled_Input_mm_i79.benchmark
+    wildcards: sample=Pooled_Input_mm_i79
+    threads: 8
+
+Removing temporary output file Bowtie2/CA1-1_FOXG1_mm_i69.sorted.bam.
+Submitted job 24 with external jobid '66691'.
+[Wed Jun  5 23:14:17 2019]
+Finished job 1.
+17 of 88 steps (19%) done
+
+[Wed Jun  5 23:14:17 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/Pooled_Input_mm_i79.bam
+    output: Sambamba/Pooled_Input_mm_i79.markdup.txt
+    jobid: 16
+    wildcards: sample=Pooled_Input_mm_i79
+
+[Wed Jun  5 23:14:17 2019]
+Finished job 13.
+18 of 88 steps (20%) done
+Submitted job 16 with external jobid '66692'.
+
+[Wed Jun  5 23:14:17 2019]
+rule samtools_index:
+    input: Bowtie2/Pooled_Input_mm_i79.bam
+    output: Bowtie2/Pooled_Input_mm_i79.bam.bai
+    jobid: 70
+    wildcards: sample=Pooled_Input_mm_i79
+
+Submitted job 70 with external jobid '66693'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:14:47 2019]
+Finished job 21.
+19 of 88 steps (22%) done
+
+[Wed Jun  5 23:14:47 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/N1_Input_mm_i94.filtered.bam
+    output: filtered_bam/N1_Input_mm_i94.filtered.bam.bai
+    jobid: 75
+    wildcards: sample=N1_Input_mm_i94
+
+[Wed Jun  5 23:14:47 2019]
+Finished job 24.
+20 of 88 steps (23%) done
+[Wed Jun  5 23:14:48 2019]
+Finished job 16.
+21 of 88 steps (24%) done
+Submitted job 75 with external jobid '66694'.
+
+[Wed Jun  5 23:14:48 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/Pooled_Input_mm_i79.filtered.bam
+    output: filtered_bam/Pooled_Input_mm_i79.filtered.bam.bai
+    jobid: 78
+    wildcards: sample=Pooled_Input_mm_i79
+
+[Wed Jun  5 23:14:48 2019]
+Finished job 70.
+22 of 88 steps (25%) done
+Submitted job 78 with external jobid '66695'.
+
+[Wed Jun  5 23:14:48 2019]
+rule samtools_index:
+    input: Bowtie2/N1_Input_mm_i94.bam
+    output: Bowtie2/N1_Input_mm_i94.bam.bai
+    jobid: 67
+    wildcards: sample=N1_Input_mm_i94
+
+Submitted job 67 with external jobid '66696'.
+
+[Wed Jun  5 23:14:48 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/Pooled_Input_mm_i79.bam, Bowtie2/Pooled_Input_mm_i79.bam.bai
+    output: deepTools_qc/estimateReadFiltering/Pooled_Input_mm_i79_filtering_estimation.txt
+    log: deepTools_qc/logs/Pooled_Input_mm_i79.estimateReadFiltering.out, deepTools_qc/logs/Pooled_Input_mm_i79.estimateReadFiltering.err
+    jobid: 53
+    wildcards: sample=Pooled_Input_mm_i79
+
+Submitted job 53 with external jobid '66697'.
+[Wed Jun  5 23:15:18 2019]
+Finished job 75.
+23 of 88 steps (26%) done
+
+[Wed Jun  5 23:15:18 2019]
+rule bamCoverage:
+    input: Bowtie2/Pooled_Input_mm_i79.bam, Bowtie2/Pooled_Input_mm_i79.bam.bai
+    output: bamCoverage/Pooled_Input_mm_i79.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.Pooled_Input_mm_i79.out, bamCoverage/logs/bamCoverage.Pooled_Input_mm_i79.err
+    jobid: 32
+    benchmark: bamCoverage/.benchmark/bamCoverage.Pooled_Input_mm_i79.benchmark
+    wildcards: sample=Pooled_Input_mm_i79
+    threads: 16
+
+[Wed Jun  5 23:15:18 2019]
+Finished job 78.
+24 of 88 steps (27%) done
+[Wed Jun  5 23:15:18 2019]
+Finished job 67.
+25 of 88 steps (28%) done
+Submitted job 32 with external jobid '66698'.
+
+[Wed Jun  5 23:15:18 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/Pooled_Input_mm_i79.filtered.bam, filtered_bam/Pooled_Input_mm_i79.filtered.bam.bai
+    output: bamCoverage/Pooled_Input_mm_i79.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.Pooled_Input_mm_i79.filtered.out, bamCoverage/logs/bamCoverage.Pooled_Input_mm_i79.filtered.err
+    jobid: 40
+    benchmark: bamCoverage/.benchmark/bamCoverage.Pooled_Input_mm_i79.filtered.benchmark
+    wildcards: sample=Pooled_Input_mm_i79
+    threads: 16
+
+Submitted job 40 with external jobid '66699'.
+
+[Wed Jun  5 23:15:18 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/N1_Input_mm_i94.filtered.bam, filtered_bam/N1_Input_mm_i94.filtered.bam.bai
+    output: bamCoverage/N1_Input_mm_i94.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N1_Input_mm_i94.filtered.out, bamCoverage/logs/bamCoverage.N1_Input_mm_i94.filtered.err
+    jobid: 37
+    benchmark: bamCoverage/.benchmark/bamCoverage.N1_Input_mm_i94.filtered.benchmark
+    wildcards: sample=N1_Input_mm_i94
+    threads: 16
+
+Submitted job 37 with external jobid '66700'.
+[Wed Jun  5 23:16:58 2019]
+Finished job 53.
+26 of 88 steps (30%) done
+
+[Wed Jun  5 23:16:58 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/N1_Input_mm_i94.bam, Bowtie2/N1_Input_mm_i94.bam.bai
+    output: deepTools_qc/estimateReadFiltering/N1_Input_mm_i94_filtering_estimation.txt
+    log: deepTools_qc/logs/N1_Input_mm_i94.estimateReadFiltering.out, deepTools_qc/logs/N1_Input_mm_i94.estimateReadFiltering.err
+    jobid: 50
+    wildcards: sample=N1_Input_mm_i94
+
+Submitted job 50 with external jobid '66701'.
+[Wed Jun  5 23:18:28 2019]
+Finished job 37.
+27 of 88 steps (31%) done
+
+[Wed Jun  5 23:18:28 2019]
+rule bamCoverage:
+    input: Bowtie2/N1_Input_mm_i94.bam, Bowtie2/N1_Input_mm_i94.bam.bai
+    output: bamCoverage/N1_Input_mm_i94.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N1_Input_mm_i94.out, bamCoverage/logs/bamCoverage.N1_Input_mm_i94.err
+    jobid: 29
+    benchmark: bamCoverage/.benchmark/bamCoverage.N1_Input_mm_i94.benchmark
+    wildcards: sample=N1_Input_mm_i94
+    threads: 16
+
+Submitted job 29 with external jobid '66702'.
+[Wed Jun  5 23:18:59 2019]
+Finished job 32.
+28 of 88 steps (32%) done
+
+[Wed Jun  5 23:18:59 2019]
+rule samtools_index:
+    input: Bowtie2/DG_FOXG1_mm_i68.bam
+    output: Bowtie2/DG_FOXG1_mm_i68.bam.bai
+    jobid: 65
+    wildcards: sample=DG_FOXG1_mm_i68
+
+[Wed Jun  5 23:18:59 2019]
+Finished job 40.
+29 of 88 steps (33%) done
+Submitted job 65 with external jobid '66703'.
+
+[Wed Jun  5 23:18:59 2019]
+rule samtools_filter:
+    input: Bowtie2/DG_FOXG1_mm_i68.bam, filter_rules
+    output: filtered_bam/DG_FOXG1_mm_i68.filtered.bam
+    log: filtered_bam/logs/samtools_filter.DG_FOXG1_mm_i68.out, filtered_bam/logs/samtools_filter.DG_FOXG1_mm_i68.err
+    jobid: 19
+    benchmark: filtered_bam/.benchmark/samtools_filter.DG_FOXG1_mm_i68.benchmark
+    wildcards: sample=DG_FOXG1_mm_i68
+    threads: 8
+
+Submitted job 19 with external jobid '66704'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:19:59 2019]
+Finished job 19.
+30 of 88 steps (34%) done
+
+[Wed Jun  5 23:19:59 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/DG_FOXG1_mm_i68.filtered.bam
+    output: filtered_bam/DG_FOXG1_mm_i68.filtered.bam.bai
+    jobid: 73
+    wildcards: sample=DG_FOXG1_mm_i68
+
+Submitted job 73 with external jobid '66705'.
+[Wed Jun  5 23:20:09 2019]
+Finished job 61.
+31 of 88 steps (35%) done
+
+[Wed Jun  5 23:20:09 2019]
+rule sambamba_markdup:
+    input: Bowtie2/N2_Input_mm_i95.sorted.bam
+    output: Bowtie2/N2_Input_mm_i95.bam
+    log: Bowtie2/logs/N2_Input_mm_i95.sambamba_markdup.out, Bowtie2/logs/N2_Input_mm_i95.sambamba_markdup.err
+    jobid: 7
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.N2_Input_mm_i95.benchmark
+    wildcards: sample=N2_Input_mm_i95
+    threads: 10
+
+[Wed Jun  5 23:20:09 2019]
+Finished job 50.
+32 of 88 steps (36%) done
+[Wed Jun  5 23:20:09 2019]
+Finished job 65.
+33 of 88 steps (38%) done
+Submitted job 7 with external jobid '66706'.
+
+[Wed Jun  5 23:20:09 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/DG_FOXG1_mm_i68.bam, Bowtie2/DG_FOXG1_mm_i68.bam.bai
+    output: deepTools_qc/estimateReadFiltering/DG_FOXG1_mm_i68_filtering_estimation.txt
+    log: deepTools_qc/logs/DG_FOXG1_mm_i68.estimateReadFiltering.out, deepTools_qc/logs/DG_FOXG1_mm_i68.estimateReadFiltering.err
+    jobid: 48
+    wildcards: sample=DG_FOXG1_mm_i68
+
+Submitted job 48 with external jobid '66707'.
+
+[Wed Jun  5 23:20:09 2019]
+rule bamCoverage:
+    input: Bowtie2/DG_FOXG1_mm_i68.bam, Bowtie2/DG_FOXG1_mm_i68.bam.bai
+    output: bamCoverage/DG_FOXG1_mm_i68.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.DG_FOXG1_mm_i68.out, bamCoverage/logs/bamCoverage.DG_FOXG1_mm_i68.err
+    jobid: 27
+    benchmark: bamCoverage/.benchmark/bamCoverage.DG_FOXG1_mm_i68.benchmark
+    wildcards: sample=DG_FOXG1_mm_i68
+    threads: 16
+
+Submitted job 27 with external jobid '66708'.
+[Wed Jun  5 23:20:39 2019]
+Finished job 73.
+34 of 88 steps (39%) done
+
+[Wed Jun  5 23:20:39 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/DG_FOXG1_mm_i68.filtered.bam, filtered_bam/DG_FOXG1_mm_i68.filtered.bam.bai
+    output: bamCoverage/DG_FOXG1_mm_i68.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.DG_FOXG1_mm_i68.filtered.out, bamCoverage/logs/bamCoverage.DG_FOXG1_mm_i68.filtered.err
+    jobid: 35
+    benchmark: bamCoverage/.benchmark/bamCoverage.DG_FOXG1_mm_i68.filtered.benchmark
+    wildcards: sample=DG_FOXG1_mm_i68
+    threads: 16
+
+Submitted job 35 with external jobid '66709'.
+[Wed Jun  5 23:21:40 2019]
+Finished job 29.
+35 of 88 steps (40%) done
+
+[Wed Jun  5 23:21:40 2019]
+rule samtools_index:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.bam
+    output: Bowtie2/CA1-1_FOXG1_mm_i69.bam.bai
+    jobid: 63
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+
+Submitted job 63 with external jobid '66710'.
+Removing temporary output file Bowtie2/N2_Input_mm_i95.sorted.bam.
+[Wed Jun  5 23:22:10 2019]
+Finished job 7.
+36 of 88 steps (41%) done
+
+[Wed Jun  5 23:22:10 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/N2_Input_mm_i95.bam
+    output: Sambamba/N2_Input_mm_i95.markdup.txt
+    jobid: 15
+    wildcards: sample=N2_Input_mm_i95
+
+[Wed Jun  5 23:22:10 2019]
+Finished job 63.
+37 of 88 steps (42%) done
+Submitted job 15 with external jobid '66711'.
+
+[Wed Jun  5 23:22:10 2019]
+rule samtools_filter:
+    input: Bowtie2/N2_Input_mm_i95.bam, filter_rules
+    output: filtered_bam/N2_Input_mm_i95.filtered.bam
+    log: filtered_bam/logs/samtools_filter.N2_Input_mm_i95.out, filtered_bam/logs/samtools_filter.N2_Input_mm_i95.err
+    jobid: 23
+    benchmark: filtered_bam/.benchmark/samtools_filter.N2_Input_mm_i95.benchmark
+    wildcards: sample=N2_Input_mm_i95
+    threads: 8
+
+Submitted job 23 with external jobid '66712'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:23:10 2019]
+Finished job 15.
+38 of 88 steps (43%) done
+
+[Wed Jun  5 23:23:10 2019]
+rule samtools_index:
+    input: Bowtie2/N2_Input_mm_i95.bam
+    output: Bowtie2/N2_Input_mm_i95.bam.bai
+    jobid: 69
+    wildcards: sample=N2_Input_mm_i95
+
+[Wed Jun  5 23:23:10 2019]
+Finished job 23.
+39 of 88 steps (44%) done
+Submitted job 69 with external jobid '66713'.
+
+[Wed Jun  5 23:23:10 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/N2_Input_mm_i95.filtered.bam
+    output: filtered_bam/N2_Input_mm_i95.filtered.bam.bai
+    jobid: 77
+    wildcards: sample=N2_Input_mm_i95
+
+Submitted job 77 with external jobid '66714'.
+[Wed Jun  5 23:23:20 2019]
+Finished job 48.
+40 of 88 steps (45%) done
+
+[Wed Jun  5 23:23:20 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.bam, Bowtie2/CA1-1_FOXG1_mm_i69.bam.bai
+    output: deepTools_qc/estimateReadFiltering/CA1-1_FOXG1_mm_i69_filtering_estimation.txt
+    log: deepTools_qc/logs/CA1-1_FOXG1_mm_i69.estimateReadFiltering.out, deepTools_qc/logs/CA1-1_FOXG1_mm_i69.estimateReadFiltering.err
+    jobid: 46
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+
+[Wed Jun  5 23:23:21 2019]
+Finished job 27.
+41 of 88 steps (47%) done
+[Wed Jun  5 23:23:21 2019]
+Finished job 35.
+42 of 88 steps (48%) done
+Submitted job 46 with external jobid '66715'.
+
+[Wed Jun  5 23:23:21 2019]
+rule bamCoverage:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.bam, Bowtie2/CA1-1_FOXG1_mm_i69.bam.bai
+    output: bamCoverage/CA1-1_FOXG1_mm_i69.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.CA1-1_FOXG1_mm_i69.out, bamCoverage/logs/bamCoverage.CA1-1_FOXG1_mm_i69.err
+    jobid: 25
+    benchmark: bamCoverage/.benchmark/bamCoverage.CA1-1_FOXG1_mm_i69.benchmark
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+    threads: 16
+
+Submitted job 25 with external jobid '66716'.
+
+[Wed Jun  5 23:23:21 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.bam
+    output: Sambamba/CA1-1_FOXG1_mm_i69.markdup.txt
+    jobid: 9
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+
+Submitted job 9 with external jobid '66717'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:23:41 2019]
+Finished job 9.
+43 of 88 steps (49%) done
+
+[Wed Jun  5 23:23:41 2019]
+rule samtools_filter:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.bam, filter_rules
+    output: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam
+    log: filtered_bam/logs/samtools_filter.CA1-1_FOXG1_mm_i69.out, filtered_bam/logs/samtools_filter.CA1-1_FOXG1_mm_i69.err
+    jobid: 17
+    benchmark: filtered_bam/.benchmark/samtools_filter.CA1-1_FOXG1_mm_i69.benchmark
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+    threads: 8
+
+Submitted job 17 with external jobid '66718'.
+[Wed Jun  5 23:23:51 2019]
+Finished job 69.
+44 of 88 steps (50%) done
+
+[Wed Jun  5 23:23:51 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/N2_Input_mm_i95.bam, Bowtie2/N2_Input_mm_i95.bam.bai
+    output: deepTools_qc/estimateReadFiltering/N2_Input_mm_i95_filtering_estimation.txt
+    log: deepTools_qc/logs/N2_Input_mm_i95.estimateReadFiltering.out, deepTools_qc/logs/N2_Input_mm_i95.estimateReadFiltering.err
+    jobid: 52
+    wildcards: sample=N2_Input_mm_i95
+
+[Wed Jun  5 23:23:51 2019]
+Finished job 77.
+45 of 88 steps (51%) done
+[Wed Jun  5 23:23:51 2019]
+Finished job 17.
+46 of 88 steps (52%) done
+Submitted job 52 with external jobid '66719'.
+
+[Wed Jun  5 23:23:51 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/N2_Input_mm_i95.filtered.bam, filtered_bam/N2_Input_mm_i95.filtered.bam.bai
+    output: bamCoverage/N2_Input_mm_i95.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N2_Input_mm_i95.filtered.out, bamCoverage/logs/bamCoverage.N2_Input_mm_i95.filtered.err
+    jobid: 39
+    benchmark: bamCoverage/.benchmark/bamCoverage.N2_Input_mm_i95.filtered.benchmark
+    wildcards: sample=N2_Input_mm_i95
+    threads: 16
+
+Submitted job 39 with external jobid '66720'.
+
+[Wed Jun  5 23:23:51 2019]
+rule bamCoverage:
+    input: Bowtie2/N2_Input_mm_i95.bam, Bowtie2/N2_Input_mm_i95.bam.bai
+    output: bamCoverage/N2_Input_mm_i95.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N2_Input_mm_i95.out, bamCoverage/logs/bamCoverage.N2_Input_mm_i95.err
+    jobid: 31
+    benchmark: bamCoverage/.benchmark/bamCoverage.N2_Input_mm_i95.benchmark
+    wildcards: sample=N2_Input_mm_i95
+    threads: 16
+
+Submitted job 31 with external jobid '66721'.
+[Wed Jun  5 23:25:21 2019]
+Finished job 25.
+47 of 88 steps (53%) done
+
+[Wed Jun  5 23:25:21 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam
+    output: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam.bai
+    jobid: 71
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+
+Submitted job 71 with external jobid '66722'.
+[Wed Jun  5 23:25:52 2019]
+Finished job 46.
+48 of 88 steps (55%) done
+
+[Wed Jun  5 23:25:52 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/N1_FOXG1_mm_i92_R1.fastq.gz
+    output: FASTQ/N1_FOXG1_mm_i92_R1.fastq.gz
+    jobid: 83
+    wildcards: sample=N1_FOXG1_mm_i92
+
+[Wed Jun  5 23:25:52 2019]
+Finished job 83.
+49 of 88 steps (56%) done
+
+[Wed Jun  5 23:25:52 2019]
+rule Bowtie2:
+    input: FASTQ/N1_FOXG1_mm_i92_R1.fastq.gz
+    output: Bowtie2/N1_FOXG1_mm_i92.Bowtie2_summary.txt, Bowtie2/N1_FOXG1_mm_i92.sorted.bam
+    jobid: 58
+    benchmark: Bowtie2/.benchmark/Bowtie2.N1_FOXG1_mm_i92.benchmark
+    wildcards: sample=N1_FOXG1_mm_i92
+    threads: 24
+
+[Wed Jun  5 23:25:52 2019]
+Finished job 71.
+50 of 88 steps (57%) done
+Submitted job 58 with external jobid '66723'.
+
+[Wed Jun  5 23:25:52 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam, filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam.bai
+    output: bamCoverage/CA1-1_FOXG1_mm_i69.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.CA1-1_FOXG1_mm_i69.filtered.out, bamCoverage/logs/bamCoverage.CA1-1_FOXG1_mm_i69.filtered.err
+    jobid: 33
+    benchmark: bamCoverage/.benchmark/bamCoverage.CA1-1_FOXG1_mm_i69.filtered.benchmark
+    wildcards: sample=CA1-1_FOXG1_mm_i69
+    threads: 16
+
+Submitted job 33 with external jobid '66724'.
+[Wed Jun  5 23:26:22 2019]
+Finished job 52.
+51 of 88 steps (58%) done
+
+[Wed Jun  5 23:26:22 2019]
+rule samtools_filter:
+    input: Bowtie2/CA1-2_FOXG1_mm_i70.bam, filter_rules
+    output: filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam
+    log: filtered_bam/logs/samtools_filter.CA1-2_FOXG1_mm_i70.out, filtered_bam/logs/samtools_filter.CA1-2_FOXG1_mm_i70.err
+    jobid: 18
+    benchmark: filtered_bam/.benchmark/samtools_filter.CA1-2_FOXG1_mm_i70.benchmark
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+    threads: 8
+
+Submitted job 18 with external jobid '66725'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:26:52 2019]
+Finished job 18.
+52 of 88 steps (59%) done
+
+[Wed Jun  5 23:26:52 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/CA1-2_FOXG1_mm_i70.bam
+    output: Sambamba/CA1-2_FOXG1_mm_i70.markdup.txt
+    jobid: 10
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+
+Submitted job 10 with external jobid '66726'.
+[Wed Jun  5 23:27:02 2019]
+Finished job 31.
+53 of 88 steps (60%) done
+
+[Wed Jun  5 23:27:02 2019]
+rule samtools_index:
+    input: Bowtie2/CA1-2_FOXG1_mm_i70.bam
+    output: Bowtie2/CA1-2_FOXG1_mm_i70.bam.bai
+    jobid: 64
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+
+Waiting at most 300 seconds for missing files.
+Submitted job 64 with external jobid '66727'.
+[Wed Jun  5 23:27:22 2019]
+Finished job 10.
+54 of 88 steps (61%) done
+
+[Wed Jun  5 23:27:22 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam
+    output: filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam.bai
+    jobid: 72
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+
+Submitted job 72 with external jobid '66728'.
+[Wed Jun  5 23:27:32 2019]
+Finished job 64.
+55 of 88 steps (62%) done
+
+[Wed Jun  5 23:27:32 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/CA1-2_FOXG1_mm_i70.bam, Bowtie2/CA1-2_FOXG1_mm_i70.bam.bai
+    output: deepTools_qc/estimateReadFiltering/CA1-2_FOXG1_mm_i70_filtering_estimation.txt
+    log: deepTools_qc/logs/CA1-2_FOXG1_mm_i70.estimateReadFiltering.out, deepTools_qc/logs/CA1-2_FOXG1_mm_i70.estimateReadFiltering.err
+    jobid: 47
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+
+[Wed Jun  5 23:27:32 2019]
+Finished job 39.
+56 of 88 steps (64%) done
+Submitted job 47 with external jobid '66729'.
+
+[Wed Jun  5 23:27:33 2019]
+rule bamCoverage:
+    input: Bowtie2/CA1-2_FOXG1_mm_i70.bam, Bowtie2/CA1-2_FOXG1_mm_i70.bam.bai
+    output: bamCoverage/CA1-2_FOXG1_mm_i70.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.CA1-2_FOXG1_mm_i70.out, bamCoverage/logs/bamCoverage.CA1-2_FOXG1_mm_i70.err
+    jobid: 26
+    benchmark: bamCoverage/.benchmark/bamCoverage.CA1-2_FOXG1_mm_i70.benchmark
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+    threads: 16
+
+Submitted job 26 with external jobid '66730'.
+[Wed Jun  5 23:28:03 2019]
+Finished job 33.
+57 of 88 steps (65%) done
+
+[Wed Jun  5 23:28:03 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/N2_FOXG1_mm_i93_R1.fastq.gz
+    output: FASTQ/N2_FOXG1_mm_i93_R1.fastq.gz
+    jobid: 85
+    wildcards: sample=N2_FOXG1_mm_i93
+
+[Wed Jun  5 23:28:03 2019]
+Finished job 85.
+58 of 88 steps (66%) done
+
+[Wed Jun  5 23:28:03 2019]
+rule Bowtie2:
+    input: FASTQ/N2_FOXG1_mm_i93_R1.fastq.gz
+    output: Bowtie2/N2_FOXG1_mm_i93.Bowtie2_summary.txt, Bowtie2/N2_FOXG1_mm_i93.sorted.bam
+    jobid: 60
+    benchmark: Bowtie2/.benchmark/Bowtie2.N2_FOXG1_mm_i93.benchmark
+    wildcards: sample=N2_FOXG1_mm_i93
+    threads: 24
+
+[Wed Jun  5 23:28:03 2019]
+Finished job 72.
+59 of 88 steps (67%) done
+Submitted job 60 with external jobid '66731'.
+
+[Wed Jun  5 23:28:03 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam.bai
+    output: bamCoverage/CA1-2_FOXG1_mm_i70.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.CA1-2_FOXG1_mm_i70.filtered.out, bamCoverage/logs/bamCoverage.CA1-2_FOXG1_mm_i70.filtered.err
+    jobid: 34
+    benchmark: bamCoverage/.benchmark/bamCoverage.CA1-2_FOXG1_mm_i70.filtered.benchmark
+    wildcards: sample=CA1-2_FOXG1_mm_i70
+    threads: 16
+
+Submitted job 34 with external jobid '66732'.
+[Wed Jun  5 23:28:43 2019]
+Finished job 26.
+60 of 88 steps (68%) done
+[Wed Jun  5 23:29:23 2019]
+Finished job 34.
+61 of 88 steps (69%) done
+[Wed Jun  5 23:30:23 2019]
+Finished job 47.
+62 of 88 steps (70%) done
+[Wed Jun  5 23:32:33 2019]
+Finished job 58.
+63 of 88 steps (72%) done
+
+[Wed Jun  5 23:32:33 2019]
+rule sambamba_markdup:
+    input: Bowtie2/N1_FOXG1_mm_i92.sorted.bam
+    output: Bowtie2/N1_FOXG1_mm_i92.bam
+    log: Bowtie2/logs/N1_FOXG1_mm_i92.sambamba_markdup.out, Bowtie2/logs/N1_FOXG1_mm_i92.sambamba_markdup.err
+    jobid: 4
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.N1_FOXG1_mm_i92.benchmark
+    wildcards: sample=N1_FOXG1_mm_i92
+    threads: 10
+
+Submitted job 4 with external jobid '66733'.
+[Wed Jun  5 23:34:34 2019]
+Finished job 60.
+64 of 88 steps (73%) done
+
+[Wed Jun  5 23:34:34 2019]
+rule sambamba_markdup:
+    input: Bowtie2/N2_FOXG1_mm_i93.sorted.bam
+    output: Bowtie2/N2_FOXG1_mm_i93.bam
+    log: Bowtie2/logs/N2_FOXG1_mm_i93.sambamba_markdup.out, Bowtie2/logs/N2_FOXG1_mm_i93.sambamba_markdup.err
+    jobid: 6
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.N2_FOXG1_mm_i93.benchmark
+    wildcards: sample=N2_FOXG1_mm_i93
+    threads: 10
+
+Removing temporary output file Bowtie2/N1_FOXG1_mm_i92.sorted.bam.
+Submitted job 6 with external jobid '66735'.
+[Wed Jun  5 23:34:34 2019]
+Finished job 4.
+65 of 88 steps (74%) done
+
+[Wed Jun  5 23:34:34 2019]
+rule samtools_filter:
+    input: Bowtie2/N1_FOXG1_mm_i92.bam, filter_rules
+    output: filtered_bam/N1_FOXG1_mm_i92.filtered.bam
+    log: filtered_bam/logs/samtools_filter.N1_FOXG1_mm_i92.out, filtered_bam/logs/samtools_filter.N1_FOXG1_mm_i92.err
+    jobid: 20
+    benchmark: filtered_bam/.benchmark/samtools_filter.N1_FOXG1_mm_i92.benchmark
+    wildcards: sample=N1_FOXG1_mm_i92
+    threads: 8
+
+Submitted job 20 with external jobid '66736'.
+
+[Wed Jun  5 23:34:35 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/N1_FOXG1_mm_i92.bam
+    output: Sambamba/N1_FOXG1_mm_i92.markdup.txt
+    jobid: 12
+    wildcards: sample=N1_FOXG1_mm_i92
+
+Submitted job 12 with external jobid '66737'.
+
+[Wed Jun  5 23:34:35 2019]
+rule samtools_index:
+    input: Bowtie2/N1_FOXG1_mm_i92.bam
+    output: Bowtie2/N1_FOXG1_mm_i92.bam.bai
+    jobid: 66
+    wildcards: sample=N1_FOXG1_mm_i92
+
+Submitted job 66 with external jobid '66738'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:35:04 2019]
+Finished job 20.
+66 of 88 steps (75%) done
+
+[Wed Jun  5 23:35:04 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/N1_FOXG1_mm_i92.filtered.bam
+    output: filtered_bam/N1_FOXG1_mm_i92.filtered.bam.bai
+    jobid: 74
+    wildcards: sample=N1_FOXG1_mm_i92
+
+Waiting at most 300 seconds for missing files.
+Submitted job 74 with external jobid '66739'.
+[Wed Jun  5 23:35:05 2019]
+Finished job 12.
+67 of 88 steps (76%) done
+[Wed Jun  5 23:35:06 2019]
+Finished job 66.
+68 of 88 steps (77%) done
+
+[Wed Jun  5 23:35:06 2019]
+rule bamCoverage:
+    input: Bowtie2/N1_FOXG1_mm_i92.bam, Bowtie2/N1_FOXG1_mm_i92.bam.bai
+    output: bamCoverage/N1_FOXG1_mm_i92.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N1_FOXG1_mm_i92.out, bamCoverage/logs/bamCoverage.N1_FOXG1_mm_i92.err
+    jobid: 28
+    benchmark: bamCoverage/.benchmark/bamCoverage.N1_FOXG1_mm_i92.benchmark
+    wildcards: sample=N1_FOXG1_mm_i92
+    threads: 16
+
+Submitted job 28 with external jobid '66740'.
+
+[Wed Jun  5 23:35:06 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/N1_FOXG1_mm_i92.bam, Bowtie2/N1_FOXG1_mm_i92.bam.bai
+    output: deepTools_qc/estimateReadFiltering/N1_FOXG1_mm_i92_filtering_estimation.txt
+    log: deepTools_qc/logs/N1_FOXG1_mm_i92.estimateReadFiltering.out, deepTools_qc/logs/N1_FOXG1_mm_i92.estimateReadFiltering.err
+    jobid: 49
+    wildcards: sample=N1_FOXG1_mm_i92
+
+Submitted job 49 with external jobid '66741'.
+[Wed Jun  5 23:35:46 2019]
+Finished job 74.
+69 of 88 steps (78%) done
+
+[Wed Jun  5 23:35:46 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/N1_FOXG1_mm_i92.filtered.bam, filtered_bam/N1_FOXG1_mm_i92.filtered.bam.bai
+    output: bamCoverage/N1_FOXG1_mm_i92.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N1_FOXG1_mm_i92.filtered.out, bamCoverage/logs/bamCoverage.N1_FOXG1_mm_i92.filtered.err
+    jobid: 36
+    benchmark: bamCoverage/.benchmark/bamCoverage.N1_FOXG1_mm_i92.filtered.benchmark
+    wildcards: sample=N1_FOXG1_mm_i92
+    threads: 16
+
+Submitted job 36 with external jobid '66743'.
+Removing temporary output file Bowtie2/N2_FOXG1_mm_i93.sorted.bam.
+[Wed Jun  5 23:36:16 2019]
+Finished job 6.
+70 of 88 steps (80%) done
+
+[Wed Jun  5 23:36:16 2019]
+rule samtools_filter:
+    input: Bowtie2/N2_FOXG1_mm_i93.bam, filter_rules
+    output: filtered_bam/N2_FOXG1_mm_i93.filtered.bam
+    log: filtered_bam/logs/samtools_filter.N2_FOXG1_mm_i93.out, filtered_bam/logs/samtools_filter.N2_FOXG1_mm_i93.err
+    jobid: 22
+    benchmark: filtered_bam/.benchmark/samtools_filter.N2_FOXG1_mm_i93.benchmark
+    wildcards: sample=N2_FOXG1_mm_i93
+    threads: 8
+
+Submitted job 22 with external jobid '66744'.
+
+[Wed Jun  5 23:36:16 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/N2_FOXG1_mm_i93.bam
+    output: Sambamba/N2_FOXG1_mm_i93.markdup.txt
+    jobid: 14
+    wildcards: sample=N2_FOXG1_mm_i93
+
+Submitted job 14 with external jobid '66745'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:36:46 2019]
+Finished job 22.
+71 of 88 steps (81%) done
+
+[Wed Jun  5 23:36:46 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/N2_FOXG1_mm_i93.filtered.bam
+    output: filtered_bam/N2_FOXG1_mm_i93.filtered.bam.bai
+    jobid: 76
+    wildcards: sample=N2_FOXG1_mm_i93
+
+[Wed Jun  5 23:36:46 2019]
+Finished job 14.
+72 of 88 steps (82%) done
+Submitted job 76 with external jobid '66746'.
+
+[Wed Jun  5 23:36:46 2019]
+rule samtools_index:
+    input: Bowtie2/N2_FOXG1_mm_i93.bam
+    output: Bowtie2/N2_FOXG1_mm_i93.bam.bai
+    jobid: 68
+    wildcards: sample=N2_FOXG1_mm_i93
+
+Submitted job 68 with external jobid '66747'.
+[Wed Jun  5 23:37:26 2019]
+Finished job 28.
+73 of 88 steps (83%) done
+[Wed Jun  5 23:37:26 2019]
+Finished job 49.
+74 of 88 steps (84%) done
+[Wed Jun  5 23:37:27 2019]
+Finished job 76.
+75 of 88 steps (85%) done
+
+[Wed Jun  5 23:37:27 2019]
+rule bamPE_fragment_size:
+    input: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam, filtered_bam/DG_FOXG1_mm_i68.filtered.bam, filtered_bam/N1_FOXG1_mm_i92.filtered.bam, filtered_bam/N1_Input_mm_i94.filtered.bam, filtered_bam/N2_FOXG1_mm_i93.filtered.bam, filtered_bam/N2_Input_mm_i95.filtered.bam, filtered_bam/Pooled_Input_mm_i79.filtered.bam, filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam.bai, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam.bai, filtered_bam/DG_FOXG1_mm_i68.filtered.bam.bai, filtered_bam/N1_FOXG1_mm_i92.filtered.bam.bai, filtered_bam/N1_Input_mm_i94.filtered.bam.bai, filtered_bam/N2_FOXG1_mm_i93.filtered.bam.bai, filtered_bam/N2_Input_mm_i95.filtered.bam.bai, filtered_bam/Pooled_Input_mm_i79.filtered.bam.bai
+    output: deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv
+    log: deepTools_qc/logs/bamPEFragmentSize.out, deepTools_qc/logs/bamPEFragmentSize.err
+    jobid: 41
+    threads: 24
+
+[Wed Jun  5 23:37:27 2019]
+Finished job 68.
+76 of 88 steps (86%) done
+Submitted job 41 with external jobid '66748'.
+
+[Wed Jun  5 23:37:27 2019]
+rule plotCoverage:
+    input: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam, filtered_bam/DG_FOXG1_mm_i68.filtered.bam, filtered_bam/N1_FOXG1_mm_i92.filtered.bam, filtered_bam/N1_Input_mm_i94.filtered.bam, filtered_bam/N2_FOXG1_mm_i93.filtered.bam, filtered_bam/N2_Input_mm_i95.filtered.bam, filtered_bam/Pooled_Input_mm_i79.filtered.bam, filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam.bai, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam.bai, filtered_bam/DG_FOXG1_mm_i68.filtered.bam.bai, filtered_bam/N1_FOXG1_mm_i92.filtered.bam.bai, filtered_bam/N1_Input_mm_i94.filtered.bam.bai, filtered_bam/N2_FOXG1_mm_i93.filtered.bam.bai, filtered_bam/N2_Input_mm_i95.filtered.bam.bai, filtered_bam/Pooled_Input_mm_i79.filtered.bam.bai
+    output: deepTools_qc/plotCoverage/read_coverage.tsv
+    log: deepTools_qc/logs/plotCoverage.out, deepTools_qc/logs/plotCoverage.err
+    jobid: 42
+    benchmark: deepTools_qc/.benchmark/plotCoverage.benchmark
+    threads: 24
+
+Submitted job 42 with external jobid '66749'.
+
+[Wed Jun  5 23:37:27 2019]
+rule multiBamSummary:
+    input: filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam, filtered_bam/DG_FOXG1_mm_i68.filtered.bam, filtered_bam/N1_FOXG1_mm_i92.filtered.bam, filtered_bam/N1_Input_mm_i94.filtered.bam, filtered_bam/N2_FOXG1_mm_i93.filtered.bam, filtered_bam/N2_Input_mm_i95.filtered.bam, filtered_bam/Pooled_Input_mm_i79.filtered.bam, filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam.bai, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam.bai, filtered_bam/DG_FOXG1_mm_i68.filtered.bam.bai, filtered_bam/N1_FOXG1_mm_i92.filtered.bam.bai, filtered_bam/N1_Input_mm_i94.filtered.bam.bai, filtered_bam/N2_FOXG1_mm_i93.filtered.bam.bai, filtered_bam/N2_Input_mm_i95.filtered.bam.bai, filtered_bam/Pooled_Input_mm_i79.filtered.bam.bai
+    output: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    log: deepTools_qc/logs/multiBamSummary.out, deepTools_qc/logs/multiBamSummary.err
+    jobid: 79
+    benchmark: deepTools_qc/.benchmark/multiBamSummary.benchmark
+    threads: 24
+
+Submitted job 79 with external jobid '66750'.
+
+[Wed Jun  5 23:37:27 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/N2_FOXG1_mm_i93.bam, Bowtie2/N2_FOXG1_mm_i93.bam.bai
+    output: deepTools_qc/estimateReadFiltering/N2_FOXG1_mm_i93_filtering_estimation.txt
+    log: deepTools_qc/logs/N2_FOXG1_mm_i93.estimateReadFiltering.out, deepTools_qc/logs/N2_FOXG1_mm_i93.estimateReadFiltering.err
+    jobid: 51
+    wildcards: sample=N2_FOXG1_mm_i93
+
+Submitted job 51 with external jobid '66751'.
+[Wed Jun  5 23:38:27 2019]
+Finished job 36.
+77 of 88 steps (88%) done
+
+[Wed Jun  5 23:38:27 2019]
+rule bamCoverage:
+    input: Bowtie2/N2_FOXG1_mm_i93.bam, Bowtie2/N2_FOXG1_mm_i93.bam.bai
+    output: bamCoverage/N2_FOXG1_mm_i93.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N2_FOXG1_mm_i93.out, bamCoverage/logs/bamCoverage.N2_FOXG1_mm_i93.err
+    jobid: 30
+    benchmark: bamCoverage/.benchmark/bamCoverage.N2_FOXG1_mm_i93.benchmark
+    wildcards: sample=N2_FOXG1_mm_i93
+    threads: 16
+
+Submitted job 30 with external jobid '66752'.
+[Wed Jun  5 23:38:57 2019]
+Finished job 41.
+78 of 88 steps (89%) done
+
+[Wed Jun  5 23:38:57 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/N2_FOXG1_mm_i93.filtered.bam, filtered_bam/N2_FOXG1_mm_i93.filtered.bam.bai
+    output: bamCoverage/N2_FOXG1_mm_i93.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.N2_FOXG1_mm_i93.filtered.out, bamCoverage/logs/bamCoverage.N2_FOXG1_mm_i93.filtered.err
+    jobid: 38
+    benchmark: bamCoverage/.benchmark/bamCoverage.N2_FOXG1_mm_i93.filtered.benchmark
+    wildcards: sample=N2_FOXG1_mm_i93
+    threads: 16
+
+Submitted job 38 with external jobid '66753'.
+[Wed Jun  5 23:39:27 2019]
+Finished job 51.
+79 of 88 steps (90%) done
+
+[Wed Jun  5 23:39:27 2019]
+rule multiQC:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.Bowtie2_summary.txt, Bowtie2/CA1-2_FOXG1_mm_i70.Bowtie2_summary.txt, Bowtie2/DG_FOXG1_mm_i68.Bowtie2_summary.txt, Bowtie2/N1_FOXG1_mm_i92.Bowtie2_summary.txt, Bowtie2/N1_Input_mm_i94.Bowtie2_summary.txt, Bowtie2/N2_FOXG1_mm_i93.Bowtie2_summary.txt, Bowtie2/N2_Input_mm_i95.Bowtie2_summary.txt, Bowtie2/Pooled_Input_mm_i79.Bowtie2_summary.txt, Sambamba/CA1-1_FOXG1_mm_i69.markdup.txt, Sambamba/CA1-2_FOXG1_mm_i70.markdup.txt, Sambamba/DG_FOXG1_mm_i68.markdup.txt, Sambamba/N1_FOXG1_mm_i92.markdup.txt, Sambamba/N1_Input_mm_i94.markdup.txt, Sambamba/N2_FOXG1_mm_i93.markdup.txt, Sambamba/N2_Input_mm_i95.markdup.txt, Sambamba/Pooled_Input_mm_i79.markdup.txt, deepTools_qc/estimateReadFiltering/CA1-1_FOXG1_mm_i69_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/CA1-2_FOXG1_mm_i70_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/DG_FOXG1_mm_i68_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N1_FOXG1_mm_i92_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N1_Input_mm_i94_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N2_FOXG1_mm_i93_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N2_Input_mm_i95_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Pooled_Input_mm_i79_filtering_estimation.txt
+    output: multiQC/multiqc_report.html
+    log: multiQC/multiQC.out, multiQC/multiQC.err
+    jobid: 54
+
+Submitted job 54 with external jobid '66754'.
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:40:27 2019]
+Finished job 54.
+80 of 88 steps (91%) done
+[Wed Jun  5 23:41:08 2019]
+Finished job 79.
+81 of 88 steps (92%) done
+
+[Wed Jun  5 23:41:08 2019]
+rule plotCorrelation_spearman:
+    input: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    output: deepTools_qc/plotCorrelation/correlation.spearman.read_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_spearman.out, deepTools_qc/logs/plotCorrelation_spearman.err
+    jobid: 44
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_spearman.benchmark
+
+[Wed Jun  5 23:41:08 2019]
+Finished job 30.
+82 of 88 steps (93%) done
+Submitted job 44 with external jobid '66755'.
+
+[Wed Jun  5 23:41:08 2019]
+rule plotPCA:
+    input: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    output: deepTools_qc/plotPCA/PCA.read_coverage.tsv
+    log: deepTools_qc/logs/plotPCA.out, deepTools_qc/logs/plotPCA.err
+    jobid: 45
+    benchmark: deepTools_qc/.benchmark/plotPCA.benchmark
+
+Submitted job 45 with external jobid '66756'.
+
+[Wed Jun  5 23:41:08 2019]
+rule plotCorrelation_pearson:
+    input: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    output: deepTools_qc/plotCorrelation/correlation.pearson.read_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_pearson.out, deepTools_qc/logs/plotCorrelation_pearson.err
+    jobid: 43
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_pearson.benchmark
+
+Submitted job 43 with external jobid '66757'.
+[Wed Jun  5 23:41:48 2019]
+Finished job 38.
+83 of 88 steps (94%) done
+Waiting at most 300 seconds for missing files.
+[Wed Jun  5 23:42:08 2019]
+Finished job 45.
+84 of 88 steps (95%) done
+[Wed Jun  5 23:42:08 2019]
+Finished job 43.
+85 of 88 steps (97%) done
+[Wed Jun  5 23:42:18 2019]
+Finished job 44.
+86 of 88 steps (98%) done
+[Wed Jun  5 23:46:19 2019]
+Finished job 42.
+87 of 88 steps (99%) done
+
+[Wed Jun  5 23:46:19 2019]
+localrule all:
+    input: Bowtie2/CA1-1_FOXG1_mm_i69.bam, Bowtie2/CA1-2_FOXG1_mm_i70.bam, Bowtie2/DG_FOXG1_mm_i68.bam, Bowtie2/N1_FOXG1_mm_i92.bam, Bowtie2/N1_Input_mm_i94.bam, Bowtie2/N2_FOXG1_mm_i93.bam, Bowtie2/N2_Input_mm_i95.bam, Bowtie2/Pooled_Input_mm_i79.bam, Sambamba/CA1-1_FOXG1_mm_i69.markdup.txt, Sambamba/CA1-2_FOXG1_mm_i70.markdup.txt, Sambamba/DG_FOXG1_mm_i68.markdup.txt, Sambamba/N1_FOXG1_mm_i92.markdup.txt, Sambamba/N1_Input_mm_i94.markdup.txt, Sambamba/N2_FOXG1_mm_i93.markdup.txt, Sambamba/N2_Input_mm_i95.markdup.txt, Sambamba/Pooled_Input_mm_i79.markdup.txt, filtered_bam/CA1-1_FOXG1_mm_i69.filtered.bam, filtered_bam/CA1-2_FOXG1_mm_i70.filtered.bam, filtered_bam/DG_FOXG1_mm_i68.filtered.bam, filtered_bam/N1_FOXG1_mm_i92.filtered.bam, filtered_bam/N1_Input_mm_i94.filtered.bam, filtered_bam/N2_FOXG1_mm_i93.filtered.bam, filtered_bam/N2_Input_mm_i95.filtered.bam, filtered_bam/Pooled_Input_mm_i79.filtered.bam, bamCoverage/CA1-1_FOXG1_mm_i69.seq_depth_norm.bw, bamCoverage/CA1-2_FOXG1_mm_i70.seq_depth_norm.bw, bamCoverage/DG_FOXG1_mm_i68.seq_depth_norm.bw, bamCoverage/N1_FOXG1_mm_i92.seq_depth_norm.bw, bamCoverage/N1_Input_mm_i94.seq_depth_norm.bw, bamCoverage/N2_FOXG1_mm_i93.seq_depth_norm.bw, bamCoverage/N2_Input_mm_i95.seq_depth_norm.bw, bamCoverage/Pooled_Input_mm_i79.seq_depth_norm.bw, bamCoverage/CA1-1_FOXG1_mm_i69.filtered.seq_depth_norm.bw, bamCoverage/CA1-2_FOXG1_mm_i70.filtered.seq_depth_norm.bw, bamCoverage/DG_FOXG1_mm_i68.filtered.seq_depth_norm.bw, bamCoverage/N1_FOXG1_mm_i92.filtered.seq_depth_norm.bw, bamCoverage/N1_Input_mm_i94.filtered.seq_depth_norm.bw, bamCoverage/N2_FOXG1_mm_i93.filtered.seq_depth_norm.bw, bamCoverage/N2_Input_mm_i95.filtered.seq_depth_norm.bw, bamCoverage/Pooled_Input_mm_i79.filtered.seq_depth_norm.bw, deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv, deepTools_qc/plotCoverage/read_coverage.tsv, deepTools_qc/plotCorrelation/correlation.pearson.read_coverage.tsv, deepTools_qc/plotCorrelation/correlation.spearman.read_coverage.tsv, deepTools_qc/plotPCA/PCA.read_coverage.tsv, deepTools_qc/estimateReadFiltering/CA1-1_FOXG1_mm_i69_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/CA1-2_FOXG1_mm_i70_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/DG_FOXG1_mm_i68_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N1_FOXG1_mm_i92_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N1_Input_mm_i94_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N2_FOXG1_mm_i93_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/N2_Input_mm_i95_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/Pooled_Input_mm_i79_filtering_estimation.txt, multiQC/multiqc_report.html
+    jobid: 0
+
+[Wed Jun  5 23:46:19 2019]
+Finished job 0.
+88 of 88 steps (100%) done
+Complete log: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/output_snakepipes/.snakemake/log/2019-06-05T230211.085299.snakemake.log

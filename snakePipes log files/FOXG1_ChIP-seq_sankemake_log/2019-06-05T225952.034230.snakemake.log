@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 36 of /home/ferrari/anaconda3/envs/snakePipes/lib/python3.6/site-packages/snakePipes/shared/rules/FASTQ.snakefile:
+Missing input files for rule FASTQ1:
+/data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_ChIP-Seq_AdultHippo_6w/fastq_files/N2_Input_mm_i95_R1_R1.fastq.gz

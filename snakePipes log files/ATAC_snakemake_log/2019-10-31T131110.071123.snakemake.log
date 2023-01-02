@@ -1,0 +1,750 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	4	Bowtie2
+	4	FASTQ1
+	4	FASTQ2
+	8	FastQC
+	8	FastQC_on_trimmed
+	1	all
+	4	bamCoverage
+	4	bamCoverage_filtered
+	1	bamPE_fragment_size
+	4	cutadapt
+	4	estimate_read_filtering
+	1	multiBamSummary
+	1	multiQC
+	1	plotCorrelation_pearson
+	1	plotCorrelation_spearman
+	1	plotCoverage
+	1	plotPCA
+	4	sambamba_flagstat
+	4	sambamba_markdup
+	4	samtools_filter
+	4	samtools_index
+	4	samtools_index_filtered
+	72
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    output: FASTQ/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    jobid: 52
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz
+    output: FASTQ/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz
+    jobid: 55
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz
+    output: FASTQ/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz
+    jobid: 57
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+[Thu Oct 31 13:11:14 2019]
+Finished job 52.
+1 of 72 steps (1%) done
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    output: FASTQ/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    jobid: 58
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+[Thu Oct 31 13:11:14 2019]
+Finished job 55.
+
+2 of 72 steps (3%) done
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    output: FASTQ/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    jobid: 56
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Ctr_ATAC_rep1_R1.fastq.gz
+    output: FASTQ/HippoN_Ctr_ATAC_rep1_R1.fastq.gz
+    jobid: 51
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+
+[Thu Oct 31 13:11:14 2019]
+Finished job 57.
+3 of 72 steps (4%) done
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    output: FASTQ/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    jobid: 54
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+
+[Thu Oct 31 13:11:14 2019]
+Finished job 58.
+4 of 72 steps (6%) done
+[Thu Oct 31 13:11:14 2019]
+Finished job 56.
+5 of 72 steps (7%) done
+
+[Thu Oct 31 13:11:14 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/fastq_files/HippoN_Ctr_ATAC_rep2_R1.fastq.gz
+    output: FASTQ/HippoN_Ctr_ATAC_rep2_R1.fastq.gz
+    jobid: 53
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+
+[Thu Oct 31 13:11:14 2019]
+Finished job 51.
+6 of 72 steps (8%) done
+[Thu Oct 31 13:11:14 2019]
+Finished job 54.
+7 of 72 steps (10%) done
+[Thu Oct 31 13:11:14 2019]
+Finished job 53.
+8 of 72 steps (11%) done
+
+[Thu Oct 31 13:11:14 2019]
+rule cutadapt:
+    input: FASTQ/HippoN_Ctr_ATAC_rep1_R1.fastq.gz, FASTQ/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    output: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep1_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.HippoN_Ctr_ATAC_rep1.out, FASTQ_Cutadapt/logs/Cutadapt.HippoN_Ctr_ATAC_rep1.err
+    jobid: 9
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.HippoN_Ctr_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 8
+
+Submitted job 9 with external jobid '47358'.
+
+[Thu Oct 31 13:11:14 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    output: FastQC/HippoN_Foxg1KD_ATAC_rep2_R2_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep2_R2.out, FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep2_R2.err
+    jobid: 8
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Foxg1KD_ATAC_rep2_R2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2_R, read=2
+    threads: 2
+
+Submitted job 8 with external jobid '47359'.
+
+[Thu Oct 31 13:11:15 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz
+    output: FastQC/HippoN_Foxg1KD_ATAC_rep2_R1_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep2_R1.out, FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep2_R1.err
+    jobid: 7
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Foxg1KD_ATAC_rep2_R1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2_R, read=1
+    threads: 2
+
+Submitted job 7 with external jobid '47360'.
+
+[Thu Oct 31 13:11:15 2019]
+rule cutadapt:
+    input: FASTQ/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz, FASTQ/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    output: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.HippoN_Foxg1KD_ATAC_rep1.out, FASTQ_Cutadapt/logs/Cutadapt.HippoN_Foxg1KD_ATAC_rep1.err
+    jobid: 11
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.HippoN_Foxg1KD_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 8
+
+Submitted job 11 with external jobid '47361'.
+
+[Thu Oct 31 13:11:15 2019]
+rule cutadapt:
+    input: FASTQ/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz, FASTQ/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    output: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.HippoN_Foxg1KD_ATAC_rep2.out, FASTQ_Cutadapt/logs/Cutadapt.HippoN_Foxg1KD_ATAC_rep2.err
+    jobid: 12
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.HippoN_Foxg1KD_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 8
+
+Submitted job 12 with external jobid '47362'.
+
+[Thu Oct 31 13:11:15 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    output: FastQC/HippoN_Ctr_ATAC_rep2_R2_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep2_R2.out, FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep2_R2.err
+    jobid: 4
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Ctr_ATAC_rep2_R2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2_R, read=2
+    threads: 2
+
+Submitted job 4 with external jobid '47363'.
+
+[Thu Oct 31 13:11:15 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    output: FastQC/HippoN_Foxg1KD_ATAC_rep1_R2_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep1_R2.out, FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep1_R2.err
+    jobid: 6
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Foxg1KD_ATAC_rep1_R2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1_R, read=2
+    threads: 2
+
+Submitted job 6 with external jobid '47364'.
+
+[Thu Oct 31 13:11:16 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Ctr_ATAC_rep1_R1.fastq.gz
+    output: FastQC/HippoN_Ctr_ATAC_rep1_R1_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep1_R1.out, FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep1_R1.err
+    jobid: 1
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Ctr_ATAC_rep1_R1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1_R, read=1
+    threads: 2
+
+Submitted job 1 with external jobid '47365'.
+
+[Thu Oct 31 13:11:16 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz
+    output: FastQC/HippoN_Foxg1KD_ATAC_rep1_R1_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep1_R1.out, FastQC/logs/FastQC.HippoN_Foxg1KD_ATAC_rep1_R1.err
+    jobid: 5
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Foxg1KD_ATAC_rep1_R1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1_R, read=1
+    threads: 2
+
+Submitted job 5 with external jobid '47366'.
+
+[Thu Oct 31 13:11:16 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    output: FastQC/HippoN_Ctr_ATAC_rep1_R2_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep1_R2.out, FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep1_R2.err
+    jobid: 2
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Ctr_ATAC_rep1_R2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1_R, read=2
+    threads: 2
+
+Submitted job 2 with external jobid '47367'.
+[Thu Oct 31 13:20:02 2019]
+Finished job 1.
+9 of 72 steps (12%) done
+
+[Thu Oct 31 13:20:02 2019]
+rule cutadapt:
+    input: FASTQ/HippoN_Ctr_ATAC_rep2_R1.fastq.gz, FASTQ/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    output: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep2_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.HippoN_Ctr_ATAC_rep2.out, FASTQ_Cutadapt/logs/Cutadapt.HippoN_Ctr_ATAC_rep2.err
+    jobid: 10
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.HippoN_Ctr_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 8
+
+Submitted job 10 with external jobid '47369'.
+[Thu Oct 31 13:20:35 2019]
+Finished job 2.
+10 of 72 steps (14%) done
+
+[Thu Oct 31 13:20:35 2019]
+rule FastQC:
+    input: FASTQ/HippoN_Ctr_ATAC_rep2_R1.fastq.gz
+    output: FastQC/HippoN_Ctr_ATAC_rep2_R1_fastqc.html
+    log: FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep2_R1.out, FastQC/logs/FastQC.HippoN_Ctr_ATAC_rep2_R1.err
+    jobid: 3
+    benchmark: FastQC/.benchmark/FastQC.HippoN_Ctr_ATAC_rep2_R1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2_R, read=1
+    threads: 2
+
+Submitted job 3 with external jobid '47370'.
+[Thu Oct 31 13:21:41 2019]
+Finished job 5.
+11 of 72 steps (15%) done
+[Thu Oct 31 13:23:22 2019]
+Finished job 7.
+12 of 72 steps (17%) done
+[Thu Oct 31 13:23:22 2019]
+Finished job 6.
+13 of 72 steps (18%) done
+[Thu Oct 31 13:23:32 2019]
+Finished job 8.
+14 of 72 steps (19%) done
+[Thu Oct 31 13:25:12 2019]
+Finished job 4.
+15 of 72 steps (21%) done
+[Thu Oct 31 13:28:53 2019]
+Finished job 9.
+16 of 72 steps (22%) done
+
+[Thu Oct 31 13:28:53 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep1_R1.fastq.gz
+    output: FastQC_trimmed/HippoN_Ctr_ATAC_rep1_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep1_R1.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep1_R1.err
+    jobid: 13
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Ctr_ATAC_rep1_R1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1_R, read=1
+    threads: 2
+
+Submitted job 13 with external jobid '47371'.
+
+[Thu Oct 31 13:28:53 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    output: FastQC_trimmed/HippoN_Ctr_ATAC_rep1_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep1_R2.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep1_R2.err
+    jobid: 14
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Ctr_ATAC_rep1_R2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1_R, read=2
+    threads: 2
+
+Submitted job 14 with external jobid '47372'.
+
+[Thu Oct 31 13:28:53 2019]
+rule Bowtie2:
+    input: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep1_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep1_R2.fastq.gz
+    output: Bowtie2/HippoN_Ctr_ATAC_rep1.Bowtie2_summary.txt, Bowtie2/HippoN_Ctr_ATAC_rep1.sorted.bam
+    jobid: 59
+    benchmark: Bowtie2/.benchmark/Bowtie2.HippoN_Ctr_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 24
+
+Submitted job 59 with external jobid '47373'.
+[Thu Oct 31 13:32:23 2019]
+Finished job 11.
+17 of 72 steps (24%) done
+
+[Thu Oct 31 13:32:23 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    output: FastQC_trimmed/HippoN_Foxg1KD_ATAC_rep1_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep1_R2.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep1_R2.err
+    jobid: 18
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep1_R2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1_R, read=2
+    threads: 2
+
+Submitted job 18 with external jobid '47375'.
+
+[Thu Oct 31 13:32:23 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz
+    output: FastQC_trimmed/HippoN_Foxg1KD_ATAC_rep1_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep1_R1.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep1_R1.err
+    jobid: 17
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep1_R1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1_R, read=1
+    threads: 2
+
+Submitted job 17 with external jobid '47376'.
+
+[Thu Oct 31 13:32:23 2019]
+rule Bowtie2:
+    input: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep1_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep1_R2.fastq.gz
+    output: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.Bowtie2_summary.txt, Bowtie2/HippoN_Foxg1KD_ATAC_rep1.sorted.bam
+    jobid: 61
+    benchmark: Bowtie2/.benchmark/Bowtie2.HippoN_Foxg1KD_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 24
+
+Submitted job 61 with external jobid '47377'.
+[Thu Oct 31 13:34:23 2019]
+Finished job 12.
+18 of 72 steps (25%) done
+
+[Thu Oct 31 13:34:23 2019]
+rule Bowtie2:
+    input: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    output: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.Bowtie2_summary.txt, Bowtie2/HippoN_Foxg1KD_ATAC_rep2.sorted.bam
+    jobid: 62
+    benchmark: Bowtie2/.benchmark/Bowtie2.HippoN_Foxg1KD_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 24
+
+Submitted job 62 with external jobid '47378'.
+
+[Thu Oct 31 13:34:23 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep2_R2.fastq.gz
+    output: FastQC_trimmed/HippoN_Foxg1KD_ATAC_rep2_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep2_R2.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep2_R2.err
+    jobid: 20
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep2_R2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2_R, read=2
+    threads: 2
+
+Submitted job 20 with external jobid '47379'.
+[Thu Oct 31 13:36:35 2019]
+Finished job 3.
+19 of 72 steps (26%) done
+
+[Thu Oct 31 13:36:35 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Foxg1KD_ATAC_rep2_R1.fastq.gz
+    output: FastQC_trimmed/HippoN_Foxg1KD_ATAC_rep2_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep2_R1.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep2_R1.err
+    jobid: 19
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Foxg1KD_ATAC_rep2_R1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2_R, read=1
+    threads: 2
+
+Submitted job 19 with external jobid '47380'.
+[Thu Oct 31 13:41:43 2019]
+Finished job 13.
+20 of 72 steps (28%) done
+[Thu Oct 31 13:44:54 2019]
+Finished job 14.
+21 of 72 steps (29%) done
+[Thu Oct 31 13:46:34 2019]
+Finished job 10.
+22 of 72 steps (31%) done
+
+[Thu Oct 31 13:46:34 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep2_R1.fastq.gz
+    output: FastQC_trimmed/HippoN_Ctr_ATAC_rep2_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep2_R1.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep2_R1.err
+    jobid: 15
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Ctr_ATAC_rep2_R1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2_R, read=1
+    threads: 2
+
+Submitted job 15 with external jobid '47381'.
+
+[Thu Oct 31 13:46:34 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    output: FastQC_trimmed/HippoN_Ctr_ATAC_rep2_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep2_R2.out, FastQC_trimmed/logs/FastQC_trimmed.HippoN_Ctr_ATAC_rep2_R2.err
+    jobid: 16
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.HippoN_Ctr_ATAC_rep2_R2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2_R, read=2
+    threads: 2
+
+Submitted job 16 with external jobid '47382'.
+
+[Thu Oct 31 13:46:35 2019]
+rule Bowtie2:
+    input: FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep2_R1.fastq.gz, FASTQ_Cutadapt/HippoN_Ctr_ATAC_rep2_R2.fastq.gz
+    output: Bowtie2/HippoN_Ctr_ATAC_rep2.Bowtie2_summary.txt, Bowtie2/HippoN_Ctr_ATAC_rep2.sorted.bam
+    jobid: 60
+    benchmark: Bowtie2/.benchmark/Bowtie2.HippoN_Ctr_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 24
+
+Submitted job 60 with external jobid '47383'.
+[Thu Oct 31 13:49:52 2019]
+Finished job 17.
+23 of 72 steps (32%) done
+[Thu Oct 31 13:50:33 2019]
+Finished job 18.
+24 of 72 steps (33%) done
+[Thu Oct 31 13:53:13 2019]
+Finished job 19.
+25 of 72 steps (35%) done
+[Thu Oct 31 13:55:23 2019]
+Finished job 20.
+26 of 72 steps (36%) done
+[Thu Oct 31 14:08:04 2019]
+Finished job 15.
+27 of 72 steps (38%) done
+[Thu Oct 31 14:09:14 2019]
+Finished job 16.
+28 of 72 steps (39%) done
+[Thu Oct 31 14:40:56 2019]
+Finished job 59.
+29 of 72 steps (40%) done
+
+[Thu Oct 31 14:40:56 2019]
+rule sambamba_markdup:
+    input: Bowtie2/HippoN_Ctr_ATAC_rep1.sorted.bam
+    output: Bowtie2/HippoN_Ctr_ATAC_rep1.bam
+    log: Bowtie2/logs/HippoN_Ctr_ATAC_rep1.sambamba_markdup.out, Bowtie2/logs/HippoN_Ctr_ATAC_rep1.sambamba_markdup.err
+    jobid: 21
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.HippoN_Ctr_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep1
+    threads: 10
+
+Submitted job 21 with external jobid '47411'.
+[Thu Oct 31 14:45:27 2019]
+Error in rule sambamba_markdup:
+    jobid: 21
+    output: Bowtie2/HippoN_Ctr_ATAC_rep1.bam
+    log: Bowtie2/logs/HippoN_Ctr_ATAC_rep1.sambamba_markdup.out, Bowtie2/logs/HippoN_Ctr_ATAC_rep1.sambamba_markdup.err (check log file(s) for error message)
+    conda-env: /package/anaconda3/envs/a914d5b45fd63db44c6694eb764bc275
+    shell:
+        
+           sambamba markdup -t 10 --sort-buffer-size=6000 --overflow-list-size 600000 Bowtie2/HippoN_Ctr_ATAC_rep1.sorted.bam Bowtie2/HippoN_Ctr_ATAC_rep1.bam 2> Bowtie2/logs/HippoN_Ctr_ATAC_rep1.sambamba_markdup.err > Bowtie2/logs/HippoN_Ctr_ATAC_rep1.sambamba_markdup.out
+           
+        (exited with non-zero exit code)
+    cluster_jobid: 47411
+
+Error executing rule sambamba_markdup on cluster (jobid: 21, external: 47411, jobscript: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/output_snakepipes/.snakemake/tmp.iuqoy84m/snakejob.sambamba_markdup.21.sh). For detailed error see the cluster log.
+Job failed, going on with independent jobs.
+[Thu Oct 31 15:04:58 2019]
+Finished job 61.
+30 of 72 steps (42%) done
+
+[Thu Oct 31 15:04:58 2019]
+rule sambamba_markdup:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.sorted.bam
+    output: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam
+    log: Bowtie2/logs/HippoN_Foxg1KD_ATAC_rep1.sambamba_markdup.out, Bowtie2/logs/HippoN_Foxg1KD_ATAC_rep1.sambamba_markdup.err
+    jobid: 23
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.HippoN_Foxg1KD_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 10
+
+Submitted job 23 with external jobid '47463'.
+[Thu Oct 31 15:09:29 2019]
+Finished job 62.
+31 of 72 steps (43%) done
+
+[Thu Oct 31 15:09:29 2019]
+rule sambamba_markdup:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.sorted.bam
+    output: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam
+    log: Bowtie2/logs/HippoN_Foxg1KD_ATAC_rep2.sambamba_markdup.out, Bowtie2/logs/HippoN_Foxg1KD_ATAC_rep2.sambamba_markdup.err
+    jobid: 24
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.HippoN_Foxg1KD_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 10
+
+Submitted job 24 with external jobid '47466'.
+Removing temporary output file Bowtie2/HippoN_Foxg1KD_ATAC_rep1.sorted.bam.
+[Thu Oct 31 15:12:59 2019]
+Finished job 23.
+32 of 72 steps (44%) done
+
+[Thu Oct 31 15:12:59 2019]
+rule samtools_filter:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam, filter_rules
+    output: filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam
+    log: filtered_bam/logs/samtools_filter.HippoN_Foxg1KD_ATAC_rep1.out, filtered_bam/logs/samtools_filter.HippoN_Foxg1KD_ATAC_rep1.err
+    jobid: 31
+    benchmark: filtered_bam/.benchmark/samtools_filter.HippoN_Foxg1KD_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 8
+
+Submitted job 31 with external jobid '47469'.
+
+[Thu Oct 31 15:13:00 2019]
+rule samtools_index:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam
+    output: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam.bai
+    jobid: 65
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+Submitted job 65 with external jobid '47470'.
+
+[Thu Oct 31 15:13:00 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam
+    output: Sambamba/HippoN_Foxg1KD_ATAC_rep1.markdup.txt
+    jobid: 27
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+Submitted job 27 with external jobid '47471'.
+Waiting at most 300 seconds for missing files.
+[Thu Oct 31 15:14:00 2019]
+Finished job 27.
+33 of 72 steps (46%) done
+[Thu Oct 31 15:14:31 2019]
+Finished job 31.
+34 of 72 steps (47%) done
+
+[Thu Oct 31 15:14:31 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam
+    output: filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam.bai
+    jobid: 69
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+Submitted job 69 with external jobid '47472'.
+[Thu Oct 31 15:15:01 2019]
+Finished job 65.
+35 of 72 steps (49%) done
+
+[Thu Oct 31 15:15:01 2019]
+rule bamCoverage:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam, Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam.bai
+    output: bamCoverage/HippoN_Foxg1KD_ATAC_rep1.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep1.out, bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep1.err
+    jobid: 35
+    benchmark: bamCoverage/.benchmark/bamCoverage.HippoN_Foxg1KD_ATAC_rep1.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 16
+
+Submitted job 35 with external jobid '47473'.
+
+[Thu Oct 31 15:15:01 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam, Bowtie2/HippoN_Foxg1KD_ATAC_rep1.bam.bai
+    output: deepTools_qc/estimateReadFiltering/HippoN_Foxg1KD_ATAC_rep1_filtering_estimation.txt
+    log: deepTools_qc/logs/HippoN_Foxg1KD_ATAC_rep1.estimateReadFiltering.out, deepTools_qc/logs/HippoN_Foxg1KD_ATAC_rep1.estimateReadFiltering.err
+    jobid: 48
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+
+Submitted job 48 with external jobid '47474'.
+[Thu Oct 31 15:16:01 2019]
+Finished job 69.
+36 of 72 steps (50%) done
+
+[Thu Oct 31 15:16:01 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam, filtered_bam/HippoN_Foxg1KD_ATAC_rep1.filtered.bam.bai
+    output: bamCoverage/HippoN_Foxg1KD_ATAC_rep1.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep1.filtered.out, bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep1.filtered.err
+    jobid: 39
+    benchmark: bamCoverage/.benchmark/bamCoverage.HippoN_Foxg1KD_ATAC_rep1.filtered.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep1
+    threads: 16
+
+Submitted job 39 with external jobid '47475'.
+Removing temporary output file Bowtie2/HippoN_Foxg1KD_ATAC_rep2.sorted.bam.
+[Thu Oct 31 15:18:01 2019]
+Finished job 24.
+37 of 72 steps (51%) done
+
+[Thu Oct 31 15:18:01 2019]
+rule samtools_filter:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam, filter_rules
+    output: filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam
+    log: filtered_bam/logs/samtools_filter.HippoN_Foxg1KD_ATAC_rep2.out, filtered_bam/logs/samtools_filter.HippoN_Foxg1KD_ATAC_rep2.err
+    jobid: 32
+    benchmark: filtered_bam/.benchmark/samtools_filter.HippoN_Foxg1KD_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 8
+
+Submitted job 32 with external jobid '47479'.
+
+[Thu Oct 31 15:18:02 2019]
+rule samtools_index:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam
+    output: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam.bai
+    jobid: 66
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+Submitted job 66 with external jobid '47480'.
+
+[Thu Oct 31 15:18:02 2019]
+rule sambamba_flagstat:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam
+    output: Sambamba/HippoN_Foxg1KD_ATAC_rep2.markdup.txt
+    jobid: 28
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+Submitted job 28 with external jobid '47481'.
+Waiting at most 300 seconds for missing files.
+[Thu Oct 31 15:19:03 2019]
+Finished job 28.
+38 of 72 steps (53%) done
+[Thu Oct 31 15:20:03 2019]
+Finished job 32.
+39 of 72 steps (54%) done
+
+[Thu Oct 31 15:20:03 2019]
+rule samtools_index_filtered:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam
+    output: filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam.bai
+    jobid: 70
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+Submitted job 70 with external jobid '47482'.
+[Thu Oct 31 15:20:33 2019]
+Finished job 48.
+40 of 72 steps (56%) done
+[Thu Oct 31 15:20:33 2019]
+Finished job 66.
+41 of 72 steps (57%) done
+
+[Thu Oct 31 15:20:33 2019]
+rule bamCoverage:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam, Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam.bai
+    output: bamCoverage/HippoN_Foxg1KD_ATAC_rep2.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep2.out, bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep2.err
+    jobid: 36
+    benchmark: bamCoverage/.benchmark/bamCoverage.HippoN_Foxg1KD_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 16
+
+Submitted job 36 with external jobid '47483'.
+
+[Thu Oct 31 15:20:33 2019]
+rule estimate_read_filtering:
+    input: Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam, Bowtie2/HippoN_Foxg1KD_ATAC_rep2.bam.bai
+    output: deepTools_qc/estimateReadFiltering/HippoN_Foxg1KD_ATAC_rep2_filtering_estimation.txt
+    log: deepTools_qc/logs/HippoN_Foxg1KD_ATAC_rep2.estimateReadFiltering.out, deepTools_qc/logs/HippoN_Foxg1KD_ATAC_rep2.estimateReadFiltering.err
+    jobid: 49
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+
+Submitted job 49 with external jobid '47484'.
+[Thu Oct 31 15:21:03 2019]
+Finished job 39.
+42 of 72 steps (58%) done
+[Thu Oct 31 15:21:13 2019]
+Finished job 60.
+43 of 72 steps (60%) done
+
+[Thu Oct 31 15:21:13 2019]
+rule sambamba_markdup:
+    input: Bowtie2/HippoN_Ctr_ATAC_rep2.sorted.bam
+    output: Bowtie2/HippoN_Ctr_ATAC_rep2.bam
+    log: Bowtie2/logs/HippoN_Ctr_ATAC_rep2.sambamba_markdup.out, Bowtie2/logs/HippoN_Ctr_ATAC_rep2.sambamba_markdup.err
+    jobid: 22
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.HippoN_Ctr_ATAC_rep2.benchmark
+    wildcards: sample=HippoN_Ctr_ATAC_rep2
+    threads: 10
+
+[Thu Oct 31 15:21:13 2019]
+Finished job 70.
+44 of 72 steps (61%) done
+Submitted job 22 with external jobid '47489'.
+
+[Thu Oct 31 15:21:14 2019]
+rule bamCoverage_filtered:
+    input: filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam, filtered_bam/HippoN_Foxg1KD_ATAC_rep2.filtered.bam.bai
+    output: bamCoverage/HippoN_Foxg1KD_ATAC_rep2.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep2.filtered.out, bamCoverage/logs/bamCoverage.HippoN_Foxg1KD_ATAC_rep2.filtered.err
+    jobid: 40
+    benchmark: bamCoverage/.benchmark/bamCoverage.HippoN_Foxg1KD_ATAC_rep2.filtered.benchmark
+    wildcards: sample=HippoN_Foxg1KD_ATAC_rep2
+    threads: 16
+
+Submitted job 40 with external jobid '47490'.
+[Thu Oct 31 15:25:15 2019]
+Finished job 35.
+45 of 72 steps (62%) done
+[Thu Oct 31 15:26:25 2019]
+Finished job 49.
+46 of 72 steps (64%) done
+[Thu Oct 31 15:26:25 2019]
+Error in rule sambamba_markdup:
+    jobid: 22
+    output: Bowtie2/HippoN_Ctr_ATAC_rep2.bam
+    log: Bowtie2/logs/HippoN_Ctr_ATAC_rep2.sambamba_markdup.out, Bowtie2/logs/HippoN_Ctr_ATAC_rep2.sambamba_markdup.err (check log file(s) for error message)
+    conda-env: /package/anaconda3/envs/a914d5b45fd63db44c6694eb764bc275
+    shell:
+        
+           sambamba markdup -t 10 --sort-buffer-size=6000 --overflow-list-size 600000 Bowtie2/HippoN_Ctr_ATAC_rep2.sorted.bam Bowtie2/HippoN_Ctr_ATAC_rep2.bam 2> Bowtie2/logs/HippoN_Ctr_ATAC_rep2.sambamba_markdup.err > Bowtie2/logs/HippoN_Ctr_ATAC_rep2.sambamba_markdup.out
+           
+        (exited with non-zero exit code)
+    cluster_jobid: 47489
+
+Error executing rule sambamba_markdup on cluster (jobid: 22, external: 47489, jobscript: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/output_snakepipes/.snakemake/tmp.iuqoy84m/snakejob.sambamba_markdup.22.sh). For detailed error see the cluster log.
+Job failed, going on with independent jobs.
+[Thu Oct 31 15:27:05 2019]
+Finished job 40.
+47 of 72 steps (65%) done
+[Thu Oct 31 15:30:35 2019]
+Finished job 36.
+48 of 72 steps (67%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/ATAC_inVitroHippo/output_snakepipes/.snakemake/log/2019-10-31T131110.071123.snakemake.log

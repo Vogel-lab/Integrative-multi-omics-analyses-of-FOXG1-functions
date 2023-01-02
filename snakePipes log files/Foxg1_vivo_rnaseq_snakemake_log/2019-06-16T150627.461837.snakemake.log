@@ -1,0 +1,1359 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	4	FASTQ1
+	4	FASTQ2
+	8	FastQC
+	8	FastQC_on_trimmed
+	4	STAR
+	1	SalmonIndex
+	4	SalmonQuant
+	1	Salmon_TPM
+	1	Salmon_counts
+	1	Salmon_genes_TPM
+	1	Salmon_genes_counts
+	4	Salmon_symlinks
+	4	Salmon_wasabi
+	1	all
+	1	annotation_bed2fasta
+	1	annotation_bed2gtf
+	4	bamCoverage_RPKM
+	4	bamCoverage_raw
+	1	bamPE_fragment_size
+	4	convert_flagstat_output
+	1	create_annotation_bed
+	4	cutadapt
+	4	estimateReadFiltering
+	4	featureCounts
+	1	filter_annotation_bed
+	1	merge_featureCounts
+	1	multiBigwigSummary_bed
+	1	multiQC
+	1	plotCorr_bed_pearson
+	1	plotCorr_bed_spearman
+	1	plotEnrichment
+	1	plotPCA
+	1	qc_report_all
+	1	report_flagstat_all_data
+	4	sambamba_flagstat
+	4	sambamba_markdup
+	4	samtools_index
+	96
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/373_PlusPlus_hippoc_R1.fastq.gz
+    output: FASTQ/373_PlusPlus_hippoc_R1.fastq.gz
+    jobid: 72
+    wildcards: sample=373_PlusPlus_hippoc
+
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/378_crePlus_hippoc_R1.fastq.gz
+    output: FASTQ/378_crePlus_hippoc_R1.fastq.gz
+    jobid: 81
+    wildcards: sample=378_crePlus_hippoc
+
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/374_crePlus_hippoc_R1.fastq.gz
+    output: FASTQ/374_crePlus_hippoc_R1.fastq.gz
+    jobid: 73
+    wildcards: sample=374_crePlus_hippoc
+
+
+[Sun Jun 16 15:06:28 2019]
+[Sun Jun 16 15:06:28 2019]
+Finished job 72.
+localrule FASTQ1:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/377_PlusPlus_hippoc_R1.fastq.gz
+    output: FASTQ/377_PlusPlus_hippoc_R1.fastq.gz
+    jobid: 76
+    wildcards: sample=377_PlusPlus_hippoc
+1 of 96 steps (1%) done
+
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ/377_PlusPlus_hippoc_R2.fastq.gz
+    jobid: 75
+    wildcards: sample=377_PlusPlus_hippoc
+
+[Sun Jun 16 15:06:28 2019]
+Finished job 81.
+2 of 96 steps (2%) done
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ/373_PlusPlus_hippoc_R2.fastq.gz
+    jobid: 74
+    wildcards: sample=373_PlusPlus_hippoc
+
+[Sun Jun 16 15:06:28 2019]
+Finished job 73.
+3 of 96 steps (3%) done
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/378_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ/378_crePlus_hippoc_R2.fastq.gz
+    jobid: 82
+    wildcards: sample=378_crePlus_hippoc
+
+[Sun Jun 16 15:06:28 2019]
+Finished job 76.
+4 of 96 steps (4%) done
+
+[Sun Jun 16 15:06:28 2019]
+localrule FASTQ2:
+    input: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/fastq_files/374_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ/374_crePlus_hippoc_R2.fastq.gz
+    jobid: 84
+    wildcards: sample=374_crePlus_hippoc
+
+[Sun Jun 16 15:06:28 2019]
+Finished job 75.
+5 of 96 steps (5%) done
+
+[Sun Jun 16 15:06:28 2019]
+rule create_annotation_bed:
+    input: /data/manke/group/ferrari/my_repository/annotations_gencode/mouse/M18/annotation_snakePipes/gencode.vM18.annotation.sorted.gtf
+    output: Annotation/genes.annotated.bed
+    jobid: 5
+
+[Sun Jun 16 15:06:28 2019]
+Finished job 74.
+6 of 96 steps (6%) done
+[Sun Jun 16 15:06:28 2019]
+Finished job 82.
+7 of 96 steps (7%) done
+[Sun Jun 16 15:06:28 2019]
+Finished job 84.
+8 of 96 steps (8%) done
+Submitted job 5 with external jobid '75247'.
+
+[Sun Jun 16 15:06:29 2019]
+rule FastQC:
+    input: FASTQ/378_crePlus_hippoc_R1.fastq.gz
+    output: FastQC/378_crePlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.378_crePlus_hippoc_R1.out, FastQC/logs/FastQC.378_crePlus_hippoc_R1.err
+    jobid: 18
+    benchmark: FastQC/.benchmark/FastQC.378_crePlus_hippoc_R1.benchmark
+    wildcards: sample=378_crePlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 18 with external jobid '75248'.
+
+[Sun Jun 16 15:06:29 2019]
+rule FastQC:
+    input: FASTQ/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FastQC/373_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.373_PlusPlus_hippoc_R2.out, FastQC/logs/FastQC.373_PlusPlus_hippoc_R2.err
+    jobid: 35
+    benchmark: FastQC/.benchmark/FastQC.373_PlusPlus_hippoc_R2.benchmark
+    wildcards: sample=373_PlusPlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 35 with external jobid '75249'.
+
+[Sun Jun 16 15:06:30 2019]
+rule cutadapt:
+    input: FASTQ/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.373_PlusPlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.373_PlusPlus_hippoc.err
+    jobid: 7
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 7 with external jobid '75250'.
+
+[Sun Jun 16 15:06:30 2019]
+rule FastQC:
+    input: FASTQ/373_PlusPlus_hippoc_R1.fastq.gz
+    output: FastQC/373_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.373_PlusPlus_hippoc_R1.out, FastQC/logs/FastQC.373_PlusPlus_hippoc_R1.err
+    jobid: 3
+    benchmark: FastQC/.benchmark/FastQC.373_PlusPlus_hippoc_R1.benchmark
+    wildcards: sample=373_PlusPlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 3 with external jobid '75251'.
+
+[Sun Jun 16 15:06:30 2019]
+rule FastQC:
+    input: FASTQ/378_crePlus_hippoc_R2.fastq.gz
+    output: FastQC/378_crePlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.378_crePlus_hippoc_R2.out, FastQC/logs/FastQC.378_crePlus_hippoc_R2.err
+    jobid: 22
+    benchmark: FastQC/.benchmark/FastQC.378_crePlus_hippoc_R2.benchmark
+    wildcards: sample=378_crePlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 22 with external jobid '75252'.
+
+[Sun Jun 16 15:06:30 2019]
+rule cutadapt:
+    input: FASTQ/378_crePlus_hippoc_R1.fastq.gz, FASTQ/378_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.378_crePlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.378_crePlus_hippoc.err
+    jobid: 39
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 8
+
+Submitted job 39 with external jobid '75253'.
+
+[Sun Jun 16 15:06:30 2019]
+rule cutadapt:
+    input: FASTQ/374_crePlus_hippoc_R1.fastq.gz, FASTQ/374_crePlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.374_crePlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.374_crePlus_hippoc.err
+    jobid: 34
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 8
+
+Submitted job 34 with external jobid '75254'.
+
+[Sun Jun 16 15:06:30 2019]
+rule cutadapt:
+    input: FASTQ/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz
+    log: FASTQ_Cutadapt/logs/Cutadapt.377_PlusPlus_hippoc.out, FASTQ_Cutadapt/logs/Cutadapt.377_PlusPlus_hippoc.err
+    jobid: 9
+    benchmark: FASTQ_Cutadapt/.benchmark/Cutadapt.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 9 with external jobid '75255'.
+
+[Sun Jun 16 15:06:31 2019]
+rule FastQC:
+    input: FASTQ/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FastQC/377_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.377_PlusPlus_hippoc_R2.out, FastQC/logs/FastQC.377_PlusPlus_hippoc_R2.err
+    jobid: 8
+    benchmark: FastQC/.benchmark/FastQC.377_PlusPlus_hippoc_R2.benchmark
+    wildcards: sample=377_PlusPlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 8 with external jobid '75256'.
+[Sun Jun 16 15:12:31 2019]
+Finished job 5.
+9 of 96 steps (9%) done
+
+[Sun Jun 16 15:12:31 2019]
+rule FastQC:
+    input: FASTQ/377_PlusPlus_hippoc_R1.fastq.gz
+    output: FastQC/377_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.377_PlusPlus_hippoc_R1.out, FastQC/logs/FastQC.377_PlusPlus_hippoc_R1.err
+    jobid: 43
+    benchmark: FastQC/.benchmark/FastQC.377_PlusPlus_hippoc_R1.benchmark
+    wildcards: sample=377_PlusPlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 43 with external jobid '75257'.
+[Sun Jun 16 15:19:18 2019]
+Finished job 39.
+10 of 96 steps (10%) done
+
+[Sun Jun 16 15:19:18 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz
+    output: STAR/378_crePlus_hippoc.sorted.bam
+    jobid: 83
+    benchmark: STAR/.benchmark/STAR.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 20
+
+[Sun Jun 16 15:19:19 2019]
+Finished job 34.
+11 of 96 steps (11%) done
+[Sun Jun 16 15:19:19 2019]
+Finished job 9.
+12 of 96 steps (12%) done
+Submitted job 83 with external jobid '75258'.
+
+[Sun Jun 16 15:19:19 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz
+    output: STAR/377_PlusPlus_hippoc.sorted.bam
+    jobid: 85
+    benchmark: STAR/.benchmark/STAR.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 20
+
+Submitted job 85 with external jobid '75259'.
+
+[Sun Jun 16 15:19:19 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz
+    output: STAR/374_crePlus_hippoc.sorted.bam
+    jobid: 86
+    benchmark: STAR/.benchmark/STAR.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 20
+
+Submitted job 86 with external jobid '75260'.
+[Sun Jun 16 15:19:51 2019]
+Finished job 7.
+13 of 96 steps (14%) done
+
+[Sun Jun 16 15:19:51 2019]
+rule STAR:
+    input: FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz
+    output: STAR/373_PlusPlus_hippoc.sorted.bam
+    jobid: 87
+    benchmark: STAR/.benchmark/STAR.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 20
+
+[Sun Jun 16 15:19:52 2019]
+Finished job 8.
+14 of 96 steps (15%) done
+Submitted job 87 with external jobid '75261'.
+
+[Sun Jun 16 15:19:52 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz
+    output: FastQC_trimmed/373_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.373_PlusPlus_hippoc_R2.out, FastQC_trimmed/logs/FastQC_trimmed.373_PlusPlus_hippoc_R2.err
+    jobid: 60
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.373_PlusPlus_hippoc_R2.benchmark
+    wildcards: sample=373_PlusPlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 60 with external jobid '75262'.
+[Sun Jun 16 15:20:24 2019]
+Finished job 18.
+15 of 96 steps (16%) done
+
+[Sun Jun 16 15:20:24 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz
+    output: FastQC_trimmed/373_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.373_PlusPlus_hippoc_R1.out, FastQC_trimmed/logs/FastQC_trimmed.373_PlusPlus_hippoc_R1.err
+    jobid: 63
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.373_PlusPlus_hippoc_R1.benchmark
+    wildcards: sample=373_PlusPlus_hippoc_R, read=1
+    threads: 2
+
+[Sun Jun 16 15:20:25 2019]
+Finished job 35.
+16 of 96 steps (17%) done
+[Sun Jun 16 15:20:25 2019]
+Finished job 22.
+17 of 96 steps (18%) done
+Submitted job 63 with external jobid '75263'.
+
+[Sun Jun 16 15:20:25 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz
+    output: FastQC_trimmed/378_crePlus_hippoc_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.378_crePlus_hippoc_R2.out, FastQC_trimmed/logs/FastQC_trimmed.378_crePlus_hippoc_R2.err
+    jobid: 4
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.378_crePlus_hippoc_R2.benchmark
+    wildcards: sample=378_crePlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 4 with external jobid '75264'.
+
+[Sun Jun 16 15:20:25 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz
+    output: FastQC_trimmed/377_PlusPlus_hippoc_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.377_PlusPlus_hippoc_R2.out, FastQC_trimmed/logs/FastQC_trimmed.377_PlusPlus_hippoc_R2.err
+    jobid: 25
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.377_PlusPlus_hippoc_R2.benchmark
+    wildcards: sample=377_PlusPlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 25 with external jobid '75265'.
+[Sun Jun 16 15:20:58 2019]
+Finished job 3.
+18 of 96 steps (19%) done
+
+[Sun Jun 16 15:20:58 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz
+    output: FastQC_trimmed/378_crePlus_hippoc_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.378_crePlus_hippoc_R1.out, FastQC_trimmed/logs/FastQC_trimmed.378_crePlus_hippoc_R1.err
+    jobid: 53
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.378_crePlus_hippoc_R1.benchmark
+    wildcards: sample=378_crePlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 53 with external jobid '75266'.
+[Sun Jun 16 15:23:54 2019]
+Finished job 43.
+19 of 96 steps (20%) done
+
+[Sun Jun 16 15:23:54 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz
+    output: FastQC_trimmed/377_PlusPlus_hippoc_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.377_PlusPlus_hippoc_R1.out, FastQC_trimmed/logs/FastQC_trimmed.377_PlusPlus_hippoc_R1.err
+    jobid: 33
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.377_PlusPlus_hippoc_R1.benchmark
+    wildcards: sample=377_PlusPlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 33 with external jobid '75267'.
+[Sun Jun 16 15:29:37 2019]
+Finished job 60.
+20 of 96 steps (21%) done
+
+[Sun Jun 16 15:29:37 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz
+    output: FastQC_trimmed/374_crePlus_hippoc_R2_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.374_crePlus_hippoc_R2.out, FastQC_trimmed/logs/FastQC_trimmed.374_crePlus_hippoc_R2.err
+    jobid: 57
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.374_crePlus_hippoc_R2.benchmark
+    wildcards: sample=374_crePlus_hippoc_R, read=2
+    threads: 2
+
+[Sun Jun 16 15:29:37 2019]
+Finished job 25.
+21 of 96 steps (22%) done
+Submitted job 57 with external jobid '75268'.
+
+[Sun Jun 16 15:29:37 2019]
+rule FastQC:
+    input: FASTQ/374_crePlus_hippoc_R2.fastq.gz
+    output: FastQC/374_crePlus_hippoc_R2_fastqc.html
+    log: FastQC/logs/FastQC.374_crePlus_hippoc_R2.out, FastQC/logs/FastQC.374_crePlus_hippoc_R2.err
+    jobid: 44
+    benchmark: FastQC/.benchmark/FastQC.374_crePlus_hippoc_R2.benchmark
+    wildcards: sample=374_crePlus_hippoc_R, read=2
+    threads: 2
+
+Submitted job 44 with external jobid '75269'.
+[Sun Jun 16 15:30:10 2019]
+Finished job 4.
+22 of 96 steps (23%) done
+
+[Sun Jun 16 15:30:10 2019]
+rule FastQC_on_trimmed:
+    input: FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz
+    output: FastQC_trimmed/374_crePlus_hippoc_R1_fastqc.html
+    log: FastQC_trimmed/logs/FastQC_trimmed.374_crePlus_hippoc_R1.out, FastQC_trimmed/logs/FastQC_trimmed.374_crePlus_hippoc_R1.err
+    jobid: 13
+    benchmark: FastQC_trimmed/.benchmark/FastQC_trimmed.374_crePlus_hippoc_R1.benchmark
+    wildcards: sample=374_crePlus_hippoc_R, read=1
+    threads: 2
+
+[Sun Jun 16 15:30:10 2019]
+Finished job 53.
+23 of 96 steps (24%) done
+Submitted job 13 with external jobid '75270'.
+
+[Sun Jun 16 15:30:10 2019]
+rule FastQC:
+    input: FASTQ/374_crePlus_hippoc_R1.fastq.gz
+    output: FastQC/374_crePlus_hippoc_R1_fastqc.html
+    log: FastQC/logs/FastQC.374_crePlus_hippoc_R1.out, FastQC/logs/FastQC.374_crePlus_hippoc_R1.err
+    jobid: 6
+    benchmark: FastQC/.benchmark/FastQC.374_crePlus_hippoc_R1.benchmark
+    wildcards: sample=374_crePlus_hippoc_R, read=1
+    threads: 2
+
+Submitted job 6 with external jobid '75271'.
+[Sun Jun 16 15:30:43 2019]
+Finished job 63.
+24 of 96 steps (25%) done
+
+[Sun Jun 16 15:30:43 2019]
+rule filter_annotation_bed:
+    input: Annotation/genes.annotated.bed
+    output: Annotation/genes.filtered.bed
+    jobid: 1
+
+Submitted job 1 with external jobid '75272'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 15:31:43 2019]
+Finished job 1.
+25 of 96 steps (26%) done
+
+[Sun Jun 16 15:31:43 2019]
+rule annotation_bed2fasta:
+    input: Annotation/genes.filtered.bed, /data/repository/organisms/GRCm38_ensembl/genome_fasta/genome.fa
+    output: Annotation/genes.filtered.fa
+    jobid: 42
+    benchmark: Annotation/.benchmark/annotation_bed2fasta.benchmark
+
+Submitted job 42 with external jobid '75273'.
+[Sun Jun 16 15:31:53 2019]
+Finished job 85.
+26 of 96 steps (27%) done
+
+[Sun Jun 16 15:31:53 2019]
+rule sambamba_markdup:
+    input: STAR/377_PlusPlus_hippoc.sorted.bam
+    output: STAR/377_PlusPlus_hippoc.bam
+    log: STAR/logs/377_PlusPlus_hippoc.sambamba_markdup.out, STAR/logs/377_PlusPlus_hippoc.sambamba_markdup.err
+    jobid: 41
+    benchmark: STAR/.benchmark/sambamba_markdup.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 10
+
+[Sun Jun 16 15:31:53 2019]
+Finished job 86.
+27 of 96 steps (28%) done
+Submitted job 41 with external jobid '75274'.
+
+[Sun Jun 16 15:31:54 2019]
+rule sambamba_markdup:
+    input: STAR/374_crePlus_hippoc.sorted.bam
+    output: STAR/374_crePlus_hippoc.bam
+    log: STAR/logs/374_crePlus_hippoc.sambamba_markdup.out, STAR/logs/374_crePlus_hippoc.sambamba_markdup.err
+    jobid: 49
+    benchmark: STAR/.benchmark/sambamba_markdup.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 10
+
+Submitted job 49 with external jobid '75275'.
+[Sun Jun 16 15:32:26 2019]
+Finished job 42.
+28 of 96 steps (29%) done
+
+[Sun Jun 16 15:32:26 2019]
+rule SalmonIndex:
+    input: Annotation/genes.filtered.fa
+    output: Salmon/SalmonIndex/sa.bin
+    log: Salmon/SalmonIndex/SalmonIndex.out, Salmon/SalmonIndex/SalmonIndex.err
+    jobid: 20
+    benchmark: Salmon/.benchmark/Salmon.index.benchmark
+    threads: 16
+
+Submitted job 20 with external jobid '75276'.
+[Sun Jun 16 15:32:59 2019]
+Finished job 87.
+29 of 96 steps (30%) done
+
+[Sun Jun 16 15:32:59 2019]
+rule sambamba_markdup:
+    input: STAR/373_PlusPlus_hippoc.sorted.bam
+    output: STAR/373_PlusPlus_hippoc.bam
+    log: STAR/logs/373_PlusPlus_hippoc.sambamba_markdup.out, STAR/logs/373_PlusPlus_hippoc.sambamba_markdup.err
+    jobid: 54
+    benchmark: STAR/.benchmark/sambamba_markdup.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 10
+
+[Sun Jun 16 15:33:00 2019]
+Finished job 33.
+30 of 96 steps (31%) done
+Submitted job 54 with external jobid '75277'.
+
+[Sun Jun 16 15:33:00 2019]
+rule annotation_bed2gtf:
+    input: Annotation/genes.filtered.bed
+    output: Annotation/genes.filtered.gtf
+    jobid: 48
+
+Submitted job 48 with external jobid '75278'.
+[Sun Jun 16 15:34:05 2019]
+Finished job 48.
+31 of 96 steps (32%) done
+[Sun Jun 16 15:34:16 2019]
+Finished job 83.
+32 of 96 steps (33%) done
+
+[Sun Jun 16 15:34:17 2019]
+rule sambamba_markdup:
+    input: STAR/378_crePlus_hippoc.sorted.bam
+    output: STAR/378_crePlus_hippoc.bam
+    log: STAR/logs/378_crePlus_hippoc.sambamba_markdup.out, STAR/logs/378_crePlus_hippoc.sambamba_markdup.err
+    jobid: 24
+    benchmark: STAR/.benchmark/sambamba_markdup.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 10
+
+Submitted job 24 with external jobid '75279'.
+[Sun Jun 16 15:36:57 2019]
+Finished job 20.
+33 of 96 steps (34%) done
+
+[Sun Jun 16 15:36:57 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/377_PlusPlus_hippoc/quant.sf, Salmon/377_PlusPlus_hippoc/quant.genes.sf
+    jobid: 79
+    benchmark: Salmon/.benchmark/SalmonQuant.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 79 with external jobid '75280'.
+
+[Sun Jun 16 15:36:57 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/373_PlusPlus_hippoc/quant.sf, Salmon/373_PlusPlus_hippoc/quant.genes.sf
+    jobid: 78
+    benchmark: Salmon/.benchmark/SalmonQuant.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 78 with external jobid '75281'.
+[Sun Jun 16 15:39:08 2019]
+Finished job 57.
+34 of 96 steps (35%) done
+
+[Sun Jun 16 15:39:08 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/378_crePlus_hippoc/quant.sf, Salmon/378_crePlus_hippoc/quant.genes.sf
+    jobid: 80
+    benchmark: Salmon/.benchmark/SalmonQuant.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 8
+
+[Sun Jun 16 15:39:08 2019]
+Finished job 44.
+35 of 96 steps (36%) done
+Submitted job 80 with external jobid '75282'.
+
+[Sun Jun 16 15:39:08 2019]
+rule SalmonQuant:
+    input: FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz, Salmon/SalmonIndex/sa.bin
+    output: Salmon/374_crePlus_hippoc/quant.sf, Salmon/374_crePlus_hippoc/quant.genes.sf
+    jobid: 77
+    benchmark: Salmon/.benchmark/SalmonQuant.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 8
+
+Submitted job 77 with external jobid '75283'.
+[Sun Jun 16 15:39:42 2019]
+Finished job 13.
+36 of 96 steps (38%) done
+[Sun Jun 16 15:39:42 2019]
+Finished job 6.
+37 of 96 steps (39%) done
+Removing temporary output file STAR/374_crePlus_hippoc.sorted.bam.
+[Sun Jun 16 15:40:53 2019]
+Finished job 49.
+38 of 96 steps (40%) done
+
+[Sun Jun 16 15:40:53 2019]
+rule featureCounts:
+    input: STAR/374_crePlus_hippoc.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/374_crePlus_hippoc.counts.txt
+    log: featureCounts/374_crePlus_hippoc.out, featureCounts/374_crePlus_hippoc.err
+    jobid: 15
+    wildcards: sample=374_crePlus_hippoc
+    threads: 8
+
+Submitted job 15 with external jobid '75284'.
+
+[Sun Jun 16 15:40:54 2019]
+rule samtools_index:
+    input: STAR/374_crePlus_hippoc.bam
+    output: STAR/374_crePlus_hippoc.bam.bai
+    jobid: 67
+    wildcards: sample=374_crePlus_hippoc
+
+Submitted job 67 with external jobid '75285'.
+
+[Sun Jun 16 15:40:54 2019]
+rule sambamba_flagstat:
+    input: STAR/374_crePlus_hippoc.bam
+    output: Sambamba/374_crePlus_hippoc.markdup.txt
+    jobid: 93
+    wildcards: sample=374_crePlus_hippoc
+
+Submitted job 93 with external jobid '75286'.
+Removing temporary output file STAR/377_PlusPlus_hippoc.sorted.bam.
+[Sun Jun 16 15:41:04 2019]
+Finished job 41.
+39 of 96 steps (41%) done
+
+[Sun Jun 16 15:41:04 2019]
+rule featureCounts:
+    input: STAR/377_PlusPlus_hippoc.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/377_PlusPlus_hippoc.counts.txt
+    log: featureCounts/377_PlusPlus_hippoc.out, featureCounts/377_PlusPlus_hippoc.err
+    jobid: 2
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 2 with external jobid '75287'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 15:41:55 2019]
+Finished job 93.
+40 of 96 steps (42%) done
+
+[Sun Jun 16 15:41:55 2019]
+rule sambamba_flagstat:
+    input: STAR/377_PlusPlus_hippoc.bam
+    output: Sambamba/377_PlusPlus_hippoc.markdup.txt
+    jobid: 94
+    wildcards: sample=377_PlusPlus_hippoc
+
+Submitted job 94 with external jobid '75288'.
+[Sun Jun 16 15:42:27 2019]
+Finished job 94.
+41 of 96 steps (43%) done
+
+[Sun Jun 16 15:42:27 2019]
+rule samtools_index:
+    input: STAR/377_PlusPlus_hippoc.bam
+    output: STAR/377_PlusPlus_hippoc.bam.bai
+    jobid: 45
+    wildcards: sample=377_PlusPlus_hippoc
+
+Submitted job 45 with external jobid '75289'.
+Removing temporary output file STAR/373_PlusPlus_hippoc.sorted.bam.
+[Sun Jun 16 15:43:00 2019]
+Finished job 54.
+42 of 96 steps (44%) done
+
+[Sun Jun 16 15:43:00 2019]
+rule featureCounts:
+    input: STAR/373_PlusPlus_hippoc.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/373_PlusPlus_hippoc.counts.txt
+    log: featureCounts/373_PlusPlus_hippoc.out, featureCounts/373_PlusPlus_hippoc.err
+    jobid: 66
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 66 with external jobid '75290'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 15:43:30 2019]
+Finished job 67.
+43 of 96 steps (45%) done
+
+[Sun Jun 16 15:43:30 2019]
+rule samtools_index:
+    input: STAR/373_PlusPlus_hippoc.bam
+    output: STAR/373_PlusPlus_hippoc.bam.bai
+    jobid: 29
+    wildcards: sample=373_PlusPlus_hippoc
+
+Submitted job 29 with external jobid '75291'.
+Removing temporary output file STAR/378_crePlus_hippoc.sorted.bam.
+[Sun Jun 16 15:44:03 2019]
+Finished job 24.
+44 of 96 steps (46%) done
+
+[Sun Jun 16 15:44:03 2019]
+rule sambamba_flagstat:
+    input: STAR/373_PlusPlus_hippoc.bam
+    output: Sambamba/373_PlusPlus_hippoc.markdup.txt
+    jobid: 95
+    wildcards: sample=373_PlusPlus_hippoc
+
+Submitted job 95 with external jobid '75292'.
+[Sun Jun 16 15:44:03 2019]
+Finished job 15.
+45 of 96 steps (47%) done
+
+[Sun Jun 16 15:44:03 2019]
+rule featureCounts:
+    input: STAR/378_crePlus_hippoc.bam, Annotation/genes.filtered.gtf
+    output: featureCounts/378_crePlus_hippoc.counts.txt
+    log: featureCounts/378_crePlus_hippoc.out, featureCounts/378_crePlus_hippoc.err
+    jobid: 19
+    wildcards: sample=378_crePlus_hippoc
+    threads: 8
+
+Submitted job 19 with external jobid '75293'.
+[Sun Jun 16 15:44:36 2019]
+Finished job 95.
+46 of 96 steps (48%) done
+
+[Sun Jun 16 15:44:36 2019]
+rule samtools_index:
+    input: STAR/378_crePlus_hippoc.bam
+    output: STAR/378_crePlus_hippoc.bam.bai
+    jobid: 11
+    wildcards: sample=378_crePlus_hippoc
+
+[Sun Jun 16 15:44:36 2019]
+Finished job 2.
+47 of 96 steps (49%) done
+Submitted job 11 with external jobid '75294'.
+
+[Sun Jun 16 15:44:36 2019]
+rule sambamba_flagstat:
+    input: STAR/378_crePlus_hippoc.bam
+    output: Sambamba/378_crePlus_hippoc.markdup.txt
+    jobid: 92
+    wildcards: sample=378_crePlus_hippoc
+
+[Sun Jun 16 15:44:36 2019]
+Finished job 45.
+48 of 96 steps (50%) done
+Submitted job 92 with external jobid '75295'.
+
+[Sun Jun 16 15:44:36 2019]
+rule estimateReadFiltering:
+    input: STAR/377_PlusPlus_hippoc.bam, STAR/377_PlusPlus_hippoc.bam.bai
+    output: deepTools_qc/estimateReadFiltering/377_PlusPlus_hippoc_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.377_PlusPlus_hippoc.out, bamCoverage/logs/estimateReadFiltering.377_PlusPlus_hippoc.err
+    jobid: 68
+    wildcards: sample=377_PlusPlus_hippoc
+
+Submitted job 68 with external jobid '75296'.
+[Sun Jun 16 15:45:09 2019]
+Finished job 92.
+49 of 96 steps (51%) done
+
+[Sun Jun 16 15:45:09 2019]
+rule bamCoverage_raw:
+    input: STAR/377_PlusPlus_hippoc.bam, STAR/377_PlusPlus_hippoc.bam.bai
+    output: bamCoverage/377_PlusPlus_hippoc.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.377_PlusPlus_hippoc.out, bamCoverage/logs/bamCoverage_coverage.377_PlusPlus_hippoc.err
+    jobid: 71
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 71 with external jobid '75297'.
+[Sun Jun 16 15:45:42 2019]
+Finished job 29.
+50 of 96 steps (52%) done
+
+[Sun Jun 16 15:45:42 2019]
+rule estimateReadFiltering:
+    input: STAR/373_PlusPlus_hippoc.bam, STAR/373_PlusPlus_hippoc.bam.bai
+    output: deepTools_qc/estimateReadFiltering/373_PlusPlus_hippoc_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.373_PlusPlus_hippoc.out, bamCoverage/logs/estimateReadFiltering.373_PlusPlus_hippoc.err
+    jobid: 38
+    wildcards: sample=373_PlusPlus_hippoc
+
+Submitted job 38 with external jobid '75298'.
+[Sun Jun 16 15:46:15 2019]
+Finished job 66.
+51 of 96 steps (53%) done
+
+[Sun Jun 16 15:46:15 2019]
+rule bamCoverage_RPKM:
+    input: STAR/373_PlusPlus_hippoc.bam, STAR/373_PlusPlus_hippoc.bam.bai
+    output: bamCoverage/373_PlusPlus_hippoc.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.373_PlusPlus_hippoc.out, bamCoverage/logs/bamCoverage_RPKM.373_PlusPlus_hippoc.err
+    jobid: 17
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 17 with external jobid '75299'.
+[Sun Jun 16 15:46:48 2019]
+Finished job 11.
+52 of 96 steps (54%) done
+
+[Sun Jun 16 15:46:48 2019]
+rule plotEnrichment:
+    input: STAR/373_PlusPlus_hippoc.bam, STAR/374_crePlus_hippoc.bam, STAR/377_PlusPlus_hippoc.bam, STAR/378_crePlus_hippoc.bam, STAR/373_PlusPlus_hippoc.bam.bai, STAR/374_crePlus_hippoc.bam.bai, STAR/377_PlusPlus_hippoc.bam.bai, STAR/378_crePlus_hippoc.bam.bai, Annotation/genes.filtered.gtf
+    output: deepTools_qc/plotEnrichment/plotEnrichment.tsv
+    log: deepTools_qc/logs/plotEnrichment.out, deepTools_qc/logs/plotEnrichment.err
+    jobid: 30
+    benchmark: deepTools_qc/.benchmark/plotEnrichment.benchmark
+    threads: 24
+
+Submitted job 30 with external jobid '75300'.
+[Sun Jun 16 15:48:27 2019]
+Finished job 19.
+53 of 96 steps (55%) done
+
+[Sun Jun 16 15:48:27 2019]
+rule bamPE_fragment_size:
+    input: STAR/373_PlusPlus_hippoc.bam, STAR/374_crePlus_hippoc.bam, STAR/377_PlusPlus_hippoc.bam, STAR/378_crePlus_hippoc.bam, STAR/373_PlusPlus_hippoc.bam.bai, STAR/374_crePlus_hippoc.bam.bai, STAR/377_PlusPlus_hippoc.bam.bai, STAR/378_crePlus_hippoc.bam.bai
+    output: deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv
+    log: deepTools_qc/logs/bamPEFragmentSize.out, deepTools_qc/logs/bamPEFragmentSize.err
+    jobid: 46
+    threads: 24
+
+Submitted job 46 with external jobid '75301'.
+[Sun Jun 16 15:49:00 2019]
+Finished job 79.
+54 of 96 steps (56%) done
+
+[Sun Jun 16 15:49:00 2019]
+rule bamCoverage_raw:
+    input: STAR/373_PlusPlus_hippoc.bam, STAR/373_PlusPlus_hippoc.bam.bai
+    output: bamCoverage/373_PlusPlus_hippoc.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.373_PlusPlus_hippoc.out, bamCoverage/logs/bamCoverage_coverage.373_PlusPlus_hippoc.err
+    jobid: 62
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.373_PlusPlus_hippoc.benchmark
+    wildcards: sample=373_PlusPlus_hippoc
+    threads: 8
+
+Submitted job 62 with external jobid '75302'.
+[Sun Jun 16 15:49:44 2019]
+Finished job 78.
+55 of 96 steps (57%) done
+
+[Sun Jun 16 15:49:44 2019]
+rule estimateReadFiltering:
+    input: STAR/378_crePlus_hippoc.bam, STAR/378_crePlus_hippoc.bam.bai
+    output: deepTools_qc/estimateReadFiltering/378_crePlus_hippoc_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.378_crePlus_hippoc.out, bamCoverage/logs/estimateReadFiltering.378_crePlus_hippoc.err
+    jobid: 55
+    wildcards: sample=378_crePlus_hippoc
+
+Submitted job 55 with external jobid '75303'.
+[Sun Jun 16 15:50:18 2019]
+Finished job 46.
+56 of 96 steps (58%) done
+
+[Sun Jun 16 15:50:18 2019]
+rule bamCoverage_RPKM:
+    input: STAR/378_crePlus_hippoc.bam, STAR/378_crePlus_hippoc.bam.bai
+    output: bamCoverage/378_crePlus_hippoc.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.378_crePlus_hippoc.out, bamCoverage/logs/bamCoverage_RPKM.378_crePlus_hippoc.err
+    jobid: 27
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 8
+
+Submitted job 27 with external jobid '75304'.
+[Sun Jun 16 15:50:51 2019]
+Finished job 80.
+57 of 96 steps (59%) done
+
+[Sun Jun 16 15:50:51 2019]
+rule bamCoverage_raw:
+    input: STAR/378_crePlus_hippoc.bam, STAR/378_crePlus_hippoc.bam.bai
+    output: bamCoverage/378_crePlus_hippoc.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.378_crePlus_hippoc.out, bamCoverage/logs/bamCoverage_coverage.378_crePlus_hippoc.err
+    jobid: 12
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.378_crePlus_hippoc.benchmark
+    wildcards: sample=378_crePlus_hippoc
+    threads: 8
+
+Submitted job 12 with external jobid '75305'.
+[Sun Jun 16 15:51:02 2019]
+Finished job 77.
+58 of 96 steps (60%) done
+
+[Sun Jun 16 15:51:02 2019]
+rule multiQC:
+    input: FastQC_trimmed/373_PlusPlus_hippoc_R1_fastqc.html, FastQC_trimmed/373_PlusPlus_hippoc_R2_fastqc.html, FastQC_trimmed/374_crePlus_hippoc_R1_fastqc.html, FastQC_trimmed/374_crePlus_hippoc_R2_fastqc.html, FastQC_trimmed/377_PlusPlus_hippoc_R1_fastqc.html, FastQC_trimmed/377_PlusPlus_hippoc_R2_fastqc.html, FastQC_trimmed/378_crePlus_hippoc_R1_fastqc.html, FastQC_trimmed/378_crePlus_hippoc_R2_fastqc.html, FASTQ_Cutadapt/373_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/373_PlusPlus_hippoc_R2.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/374_crePlus_hippoc_R2.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/377_PlusPlus_hippoc_R2.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R1.fastq.gz, FASTQ_Cutadapt/378_crePlus_hippoc_R2.fastq.gz, Salmon/373_PlusPlus_hippoc/quant.sf, Salmon/374_crePlus_hippoc/quant.sf, Salmon/377_PlusPlus_hippoc/quant.sf, Salmon/378_crePlus_hippoc/quant.sf
+    output: multiQC/multiqc_report.html
+    log: multiQC/multiQC.out, multiQC/multiQC.err
+    jobid: 14
+
+Submitted job 14 with external jobid '75306'.
+[Sun Jun 16 15:52:08 2019]
+Finished job 68.
+59 of 96 steps (61%) done
+
+[Sun Jun 16 15:52:08 2019]
+rule bamCoverage_RPKM:
+    input: STAR/377_PlusPlus_hippoc.bam, STAR/377_PlusPlus_hippoc.bam.bai
+    output: bamCoverage/377_PlusPlus_hippoc.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.377_PlusPlus_hippoc.out, bamCoverage/logs/bamCoverage_RPKM.377_PlusPlus_hippoc.err
+    jobid: 69
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.377_PlusPlus_hippoc.benchmark
+    wildcards: sample=377_PlusPlus_hippoc
+    threads: 8
+
+[Sun Jun 16 15:52:08 2019]
+Finished job 14.
+60 of 96 steps (62%) done
+Submitted job 69 with external jobid '75307'.
+
+[Sun Jun 16 15:52:08 2019]
+rule estimateReadFiltering:
+    input: STAR/374_crePlus_hippoc.bam, STAR/374_crePlus_hippoc.bam.bai
+    output: deepTools_qc/estimateReadFiltering/374_crePlus_hippoc_filtering_estimation.txt
+    log: deepTools_qc/logs/estimateReadFiltering.374_crePlus_hippoc.out, bamCoverage/logs/estimateReadFiltering.374_crePlus_hippoc.err
+    jobid: 51
+    wildcards: sample=374_crePlus_hippoc
+
+Submitted job 51 with external jobid '75308'.
+[Sun Jun 16 15:53:47 2019]
+Finished job 38.
+61 of 96 steps (64%) done
+
+[Sun Jun 16 15:53:47 2019]
+rule bamCoverage_RPKM:
+    input: STAR/374_crePlus_hippoc.bam, STAR/374_crePlus_hippoc.bam.bai
+    output: bamCoverage/374_crePlus_hippoc.RPKM.bw
+    log: bamCoverage/logs/bamCoverage_RPKM.374_crePlus_hippoc.out, bamCoverage/logs/bamCoverage_RPKM.374_crePlus_hippoc.err
+    jobid: 21
+    benchmark: bamCoverage/.benchmark/bamCoverage_RPKM.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 8
+
+Submitted job 21 with external jobid '75309'.
+[Sun Jun 16 15:57:16 2019]
+Finished job 55.
+62 of 96 steps (65%) done
+
+[Sun Jun 16 15:57:16 2019]
+rule bamCoverage_raw:
+    input: STAR/374_crePlus_hippoc.bam, STAR/374_crePlus_hippoc.bam.bai
+    output: bamCoverage/374_crePlus_hippoc.coverage.bw
+    log: bamCoverage/logs/bamCoverage_coverage.374_crePlus_hippoc.out, bamCoverage/logs/bamCoverage_coverage.374_crePlus_hippoc.err
+    jobid: 50
+    benchmark: bamCoverage/.benchmark/bamCoverage_coverage.374_crePlus_hippoc.benchmark
+    wildcards: sample=374_crePlus_hippoc
+    threads: 8
+
+Submitted job 50 with external jobid '75310'.
+[Sun Jun 16 15:57:49 2019]
+Finished job 71.
+63 of 96 steps (66%) done
+
+[Sun Jun 16 15:57:49 2019]
+rule merge_featureCounts:
+    input: featureCounts/373_PlusPlus_hippoc.counts.txt, featureCounts/374_crePlus_hippoc.counts.txt, featureCounts/377_PlusPlus_hippoc.counts.txt, featureCounts/378_crePlus_hippoc.counts.txt
+    output: featureCounts/counts.tsv
+    jobid: 70
+
+[Sun Jun 16 15:57:49 2019]
+Finished job 17.
+64 of 96 steps (67%) done
+Submitted job 70 with external jobid '75311'.
+
+[Sun Jun 16 15:57:50 2019]
+rule Salmon_symlinks:
+    input: Salmon/377_PlusPlus_hippoc/quant.sf, Salmon/377_PlusPlus_hippoc/quant.genes.sf
+    output: Salmon/377_PlusPlus_hippoc.quant.sf, Salmon/377_PlusPlus_hippoc.quant.genes.sf
+    jobid: 26
+    wildcards: sample=377_PlusPlus_hippoc
+
+Submitted job 26 with external jobid '75312'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 15:58:51 2019]
+Finished job 26.
+65 of 96 steps (68%) done
+
+[Sun Jun 16 15:58:51 2019]
+rule Salmon_symlinks:
+    input: Salmon/374_crePlus_hippoc/quant.sf, Salmon/374_crePlus_hippoc/quant.genes.sf
+    output: Salmon/374_crePlus_hippoc.quant.sf, Salmon/374_crePlus_hippoc.quant.genes.sf
+    jobid: 10
+    wildcards: sample=374_crePlus_hippoc
+
+Submitted job 10 with external jobid '75313'.
+[Sun Jun 16 15:59:01 2019]
+Finished job 70.
+66 of 96 steps (69%) done
+
+[Sun Jun 16 15:59:01 2019]
+rule Salmon_symlinks:
+    input: Salmon/373_PlusPlus_hippoc/quant.sf, Salmon/373_PlusPlus_hippoc/quant.genes.sf
+    output: Salmon/373_PlusPlus_hippoc.quant.sf, Salmon/373_PlusPlus_hippoc.quant.genes.sf
+    jobid: 52
+    wildcards: sample=373_PlusPlus_hippoc
+
+Waiting at most 300 seconds for missing files.
+Submitted job 52 with external jobid '75314'.
+[Sun Jun 16 15:59:21 2019]
+Finished job 10.
+67 of 96 steps (70%) done
+
+[Sun Jun 16 15:59:21 2019]
+rule Salmon_symlinks:
+    input: Salmon/378_crePlus_hippoc/quant.sf, Salmon/378_crePlus_hippoc/quant.genes.sf
+    output: Salmon/378_crePlus_hippoc.quant.sf, Salmon/378_crePlus_hippoc.quant.genes.sf
+    jobid: 28
+    wildcards: sample=378_crePlus_hippoc
+
+Submitted job 28 with external jobid '75315'.
+[Sun Jun 16 15:59:31 2019]
+Finished job 52.
+68 of 96 steps (71%) done
+
+[Sun Jun 16 15:59:31 2019]
+rule Salmon_wasabi:
+    input: Salmon/377_PlusPlus_hippoc.quant.sf
+    output: Salmon/377_PlusPlus_hippoc/abundance.h5
+    jobid: 61
+    wildcards: sample=377_PlusPlus_hippoc
+
+[Sun Jun 16 15:59:31 2019]
+Finished job 27.
+69 of 96 steps (72%) done
+[Sun Jun 16 15:59:31 2019]
+Finished job 28.
+70 of 96 steps (73%) done
+Submitted job 61 with external jobid '75316'.
+
+[Sun Jun 16 15:59:31 2019]
+rule Salmon_counts:
+    input: Salmon/373_PlusPlus_hippoc.quant.sf, Salmon/374_crePlus_hippoc.quant.sf, Salmon/377_PlusPlus_hippoc.quant.sf, Salmon/378_crePlus_hippoc.quant.sf
+    output: Salmon/counts.tsv
+    log: Salmon/Salmon_counts.log
+    jobid: 40
+    benchmark: Salmon/.benchmark/Salmon_counts.benchmark
+
+Submitted job 40 with external jobid '75317'.
+
+[Sun Jun 16 15:59:31 2019]
+rule Salmon_TPM:
+    input: Salmon/373_PlusPlus_hippoc.quant.sf, Salmon/374_crePlus_hippoc.quant.sf, Salmon/377_PlusPlus_hippoc.quant.sf, Salmon/378_crePlus_hippoc.quant.sf
+    output: Salmon/TPM.tsv
+    log: Salmon/Salmon_TPM.log
+    jobid: 23
+    benchmark: Salmon/.benchmark/Salmon_TPM.benchmark
+
+Submitted job 23 with external jobid '75318'.
+[Sun Jun 16 15:59:42 2019]
+Error in rule Salmon_wasabi:
+    jobid: 61
+    output: Salmon/377_PlusPlus_hippoc/abundance.h5
+    conda-env: /package/anaconda3/envs/866191ce0ed1fbaaeaeb9fa4dd490e61
+    cluster_jobid: 75316
+
+Job failed, going on with independent jobs.
+
+[Sun Jun 16 15:59:42 2019]
+rule Salmon_genes_counts:
+    input: Salmon/373_PlusPlus_hippoc.quant.genes.sf, Salmon/374_crePlus_hippoc.quant.genes.sf, Salmon/377_PlusPlus_hippoc.quant.genes.sf, Salmon/378_crePlus_hippoc.quant.genes.sf
+    output: Salmon/counts.genes.tsv
+    log: Salmon/Salmon_genes_counts.log
+    jobid: 36
+    benchmark: Salmon/.benchmark/Salmon_genes_counts.benchmark
+
+[Sun Jun 16 15:59:42 2019]
+Error in rule Salmon_counts:
+    jobid: 40
+    output: Salmon/counts.tsv
+    log: Salmon/Salmon_counts.log
+    conda-env: /package/anaconda3/envs/866191ce0ed1fbaaeaeb9fa4dd490e61
+    cluster_jobid: 75317
+
+Job failed, going on with independent jobs.
+[Sun Jun 16 15:59:42 2019]
+Error in rule Salmon_TPM:
+    jobid: 23
+    output: Salmon/TPM.tsv
+    log: Salmon/Salmon_TPM.log
+    conda-env: /package/anaconda3/envs/866191ce0ed1fbaaeaeb9fa4dd490e61
+    cluster_jobid: 75318
+
+Job failed, going on with independent jobs.
+Submitted job 36 with external jobid '75319'.
+
+[Sun Jun 16 15:59:42 2019]
+rule Salmon_wasabi:
+    input: Salmon/374_crePlus_hippoc.quant.sf
+    output: Salmon/374_crePlus_hippoc/abundance.h5
+    jobid: 64
+    wildcards: sample=374_crePlus_hippoc
+
+Submitted job 64 with external jobid '75320'.
+
+[Sun Jun 16 15:59:42 2019]
+rule Salmon_genes_TPM:
+    input: Salmon/373_PlusPlus_hippoc.quant.genes.sf, Salmon/374_crePlus_hippoc.quant.genes.sf, Salmon/377_PlusPlus_hippoc.quant.genes.sf, Salmon/378_crePlus_hippoc.quant.genes.sf
+    output: Salmon/TPM.genes.tsv
+    log: Salmon/Salmon_genes_TPM.log
+    jobid: 37
+    benchmark: Salmon/.benchmark/Salmon_genes_TPM.benchmark
+
+Submitted job 37 with external jobid '75321'.
+[Sun Jun 16 15:59:53 2019]
+Finished job 51.
+71 of 96 steps (74%) done
+
+[Sun Jun 16 15:59:53 2019]
+rule Salmon_wasabi:
+    input: Salmon/373_PlusPlus_hippoc.quant.sf
+    output: Salmon/373_PlusPlus_hippoc/abundance.h5
+    jobid: 47
+    wildcards: sample=373_PlusPlus_hippoc
+
+[Sun Jun 16 15:59:53 2019]
+Finished job 36.
+72 of 96 steps (75%) done
+[Sun Jun 16 15:59:53 2019]
+Error in rule Salmon_wasabi:
+    jobid: 64
+    output: Salmon/374_crePlus_hippoc/abundance.h5
+    conda-env: /package/anaconda3/envs/866191ce0ed1fbaaeaeb9fa4dd490e61
+    cluster_jobid: 75320
+
+Job failed, going on with independent jobs.
+Submitted job 47 with external jobid '75322'.
+
+[Sun Jun 16 15:59:53 2019]
+rule Salmon_wasabi:
+    input: Salmon/378_crePlus_hippoc.quant.sf
+    output: Salmon/378_crePlus_hippoc/abundance.h5
+    jobid: 65
+    wildcards: sample=378_crePlus_hippoc
+
+Submitted job 65 with external jobid '75323'.
+
+[Sun Jun 16 15:59:53 2019]
+rule convert_flagstat_output:
+    input: Sambamba/377_PlusPlus_hippoc.markdup.txt
+    output: Sambamba/377_PlusPlus_hippoc.dup.converted.tsv
+    jobid: 90
+    wildcards: sample=377_PlusPlus_hippoc
+
+Submitted job 90 with external jobid '75324'.
+[Sun Jun 16 16:00:04 2019]
+Finished job 62.
+73 of 96 steps (76%) done
+
+[Sun Jun 16 16:00:04 2019]
+rule convert_flagstat_output:
+    input: Sambamba/378_crePlus_hippoc.markdup.txt
+    output: Sambamba/378_crePlus_hippoc.dup.converted.tsv
+    jobid: 88
+    wildcards: sample=378_crePlus_hippoc
+
+[Sun Jun 16 16:00:04 2019]
+Finished job 37.
+74 of 96 steps (77%) done
+Submitted job 88 with external jobid '75325'.
+
+[Sun Jun 16 16:00:04 2019]
+rule convert_flagstat_output:
+    input: Sambamba/374_crePlus_hippoc.markdup.txt
+    output: Sambamba/374_crePlus_hippoc.dup.converted.tsv
+    jobid: 89
+    wildcards: sample=374_crePlus_hippoc
+
+[Sun Jun 16 16:00:04 2019]
+Error in rule Salmon_wasabi:
+    jobid: 47
+    output: Salmon/373_PlusPlus_hippoc/abundance.h5
+    conda-env: /package/anaconda3/envs/866191ce0ed1fbaaeaeb9fa4dd490e61
+    cluster_jobid: 75322
+
+Job failed, going on with independent jobs.
+[Sun Jun 16 16:00:04 2019]
+Error in rule Salmon_wasabi:
+    jobid: 65
+    output: Salmon/378_crePlus_hippoc/abundance.h5
+    conda-env: /package/anaconda3/envs/866191ce0ed1fbaaeaeb9fa4dd490e61
+    cluster_jobid: 75323
+
+Job failed, going on with independent jobs.
+Submitted job 89 with external jobid '75326'.
+
+[Sun Jun 16 16:00:04 2019]
+rule convert_flagstat_output:
+    input: Sambamba/373_PlusPlus_hippoc.markdup.txt
+    output: Sambamba/373_PlusPlus_hippoc.dup.converted.tsv
+    jobid: 91
+    wildcards: sample=373_PlusPlus_hippoc
+
+Waiting at most 300 seconds for missing files.
+Submitted job 91 with external jobid '75327'.
+[Sun Jun 16 16:00:54 2019]
+Finished job 90.
+75 of 96 steps (78%) done
+[Sun Jun 16 16:01:04 2019]
+Finished job 88.
+76 of 96 steps (79%) done
+[Sun Jun 16 16:01:04 2019]
+Finished job 89.
+77 of 96 steps (80%) done
+[Sun Jun 16 16:01:04 2019]
+Finished job 91.
+78 of 96 steps (81%) done
+
+[Sun Jun 16 16:01:04 2019]
+rule report_flagstat_all_data:
+    input: Sambamba/373_PlusPlus_hippoc.dup.converted.tsv, Sambamba/374_crePlus_hippoc.dup.converted.tsv, Sambamba/377_PlusPlus_hippoc.dup.converted.tsv, Sambamba/378_crePlus_hippoc.dup.converted.tsv
+    output: Sambamba/flagstat_report_all.tsv
+    jobid: 58
+
+Submitted job 58 with external jobid '75328'.
+Waiting at most 300 seconds for missing files.
+Removing temporary output file Sambamba/378_crePlus_hippoc.dup.converted.tsv.
+Removing temporary output file Sambamba/374_crePlus_hippoc.dup.converted.tsv.
+Removing temporary output file Sambamba/377_PlusPlus_hippoc.dup.converted.tsv.
+Removing temporary output file Sambamba/373_PlusPlus_hippoc.dup.converted.tsv.
+[Sun Jun 16 16:01:34 2019]
+Finished job 58.
+79 of 96 steps (82%) done
+
+[Sun Jun 16 16:01:34 2019]
+rule qc_report_all:
+    input: Sambamba/flagstat_report_all.tsv
+    output: QC_report/QC_report_all.tsv
+    jobid: 32
+
+Submitted job 32 with external jobid '75329'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 16:02:35 2019]
+Finished job 32.
+80 of 96 steps (83%) done
+[Sun Jun 16 16:02:45 2019]
+Finished job 12.
+81 of 96 steps (84%) done
+[Sun Jun 16 16:03:55 2019]
+Finished job 69.
+82 of 96 steps (85%) done
+[Sun Jun 16 16:03:55 2019]
+Finished job 21.
+83 of 96 steps (86%) done
+
+[Sun Jun 16 16:03:55 2019]
+rule multiBigwigSummary_bed:
+    input: bamCoverage/373_PlusPlus_hippoc.RPKM.bw, bamCoverage/374_crePlus_hippoc.RPKM.bw, bamCoverage/377_PlusPlus_hippoc.RPKM.bw, bamCoverage/378_crePlus_hippoc.RPKM.bw, Annotation/genes.filtered.bed
+    output: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    log: deepTools_qc/logs/multiBigwigSummary.out, deepTools_qc/logs/multiBigwigSummary.err
+    jobid: 56
+    benchmark: deepTools_qc/.benchmark/multiBigwigSummary.bed.benchmark
+    threads: 8
+
+Submitted job 56 with external jobid '75330'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 16:04:55 2019]
+Finished job 56.
+84 of 96 steps (88%) done
+
+[Sun Jun 16 16:04:55 2019]
+rule plotPCA:
+    input: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    output: deepTools_qc/plotPCA/PCA.bed_coverage.tsv
+    log: deepTools_qc/logs/plotPCA.out, deepTools_qc/logs/plotPCA.err
+    jobid: 16
+    benchmark: deepTools_qc/.benchmark/plotPCA.benchmark
+
+Submitted job 16 with external jobid '75331'.
+
+[Sun Jun 16 16:04:55 2019]
+rule plotCorr_bed_pearson:
+    input: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    output: deepTools_qc/plotCorrelation/correlation.pearson.bed_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_pearson.out, deepTools_qc/logs/plotCorrelation_pearson.err
+    jobid: 59
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_pearson.benchmark
+
+Submitted job 59 with external jobid '75332'.
+
+[Sun Jun 16 16:04:56 2019]
+rule plotCorr_bed_spearman:
+    input: deepTools_qc/multiBigwigSummary/coverage.bed.npz
+    output: deepTools_qc/plotCorrelation/correlation.spearman.bed_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_spearman.out, deepTools_qc/logs/plotCorrelation_spearman.err
+    jobid: 31
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_spearman.benchmark
+
+Submitted job 31 with external jobid '75333'.
+Waiting at most 300 seconds for missing files.
+[Sun Jun 16 16:05:25 2019]
+Finished job 16.
+85 of 96 steps (89%) done
+[Sun Jun 16 16:05:25 2019]
+Finished job 59.
+86 of 96 steps (90%) done
+[Sun Jun 16 16:05:26 2019]
+Finished job 31.
+87 of 96 steps (91%) done
+[Sun Jun 16 16:07:16 2019]
+Finished job 30.
+88 of 96 steps (92%) done
+[Sun Jun 16 16:08:56 2019]
+Finished job 50.
+89 of 96 steps (93%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: /data/manke/group/ferrari/PhD_project/reference_datasets/FOXG1_project/Foxg1_RNA-Seq_AdultHippo_6w/output_snakepipes/.snakemake/log/2019-06-16T150627.461837.snakemake.log
