@@ -1,5 +1,5 @@
 # Multimodal epigenetic changes and altered NEUROD1 chromatin binding in the mouse hippocampus underlie FOXG1 syndrome
-### 10.1073/pnas.2122467120
+### https://www.pnas.org/doi/10.1073/pnas.2122467120
 This repository is a collection of Galaxy workflows, R markdown files, and snakepipe and python log files used in the analyses reported in the article "Multimodal epigenetic changes and altered NEUROD1 chromatin binding in the mouse hippocampus underlie FOXG1 syndrome".
 
 
